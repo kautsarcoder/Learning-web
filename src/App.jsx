@@ -98,7 +98,6 @@ export default function KelasNotesters() {
   const [feedbackName, setFeedbackName] = useState("");
   const [feedbacks, setFeedbacks] = useState(feedbackData);
   const [search, setSearch] = useState("");
-  const [searchOpen, setSearchOpen] = useState(false);
   const [exploreOpen, setExploreOpen] = useState(false);
 
   const openCourse = (course) => {
