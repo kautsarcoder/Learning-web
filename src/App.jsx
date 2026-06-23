@@ -39,23 +39,46 @@ const courses = [
   },
   {
     id: 2,
-    title: "Inflasi & Kebijakan Moneter",
-    description: "Memahami inflasi, uang, dan peran bank sentral",
-    emoji: "💹",
+    title: "Sirah Nabawiyah",
+    description: "Sejarah kehidupan Nabi Muhammad SAW dan pelajaran dari sirahnya",
+    emoji: "🕌",
     lessons: [
       {
         id: 1,
-        title: "Apa itu Inflasi?",
+        title: "Kerajaan di Yaman",
         type: "lesson",
-        content: `Inflasi adalah kenaikan harga barang dan jasa secara umum dan terus-menerus dalam jangka waktu tertentu.\n\n**Jenis-jenis Inflasi:**\n\n• **Inflasi Ringan** (< 10%/tahun): Masih terkendali, bahkan bisa mendorong pertumbuhan ekonomi\n• **Inflasi Sedang** (10-30%/tahun): Menurunkan daya beli masyarakat\n• **Inflasi Berat** (30-100%/tahun): Sangat merusak ekonomi\n• **Hiperinflasi** (> 100%/tahun): Kondisi ekstrem, contoh: Zimbabwe 2008\n\n**Penyebab Inflasi:**\n1. Terlalu banyak uang beredar di masyarakat\n2. Permintaan melebihi penawaran (Demand-Pull)\n3. Kenaikan biaya produksi (Cost-Push)\n\n**Dampak Inflasi:**\nInflasi menurunkan nilai uang. Jika inflasi 10%, maka uang Rp 100.000 tahun ini hanya memiliki daya beli Rp 90.909 tahun depan.`,
-        catatan: "Inflasi ringan bisa positif! Target inflasi Bank Indonesia biasanya 2-4% per tahun.",
-      },
-      {
+        content: `
+Kita akan bagi menjadi 4 tahapan.
+=================================
+
+TAHAPAN PERTAMA: KEJAYAAN KERAJAAN SABA' (650 SM)
+
+  Kerajaan Saba adalah kerajaan Arab tertua dan paling maju di Yaman dimana kota Sharawah sebagai ibu kotanya.Kerajaan ini dikenal dengan bendungannya yang bernama Ma'rib, bendungan ini mengairi sawah sehingga Yaman menjadi sangat subur.
+Kerajaan Saba' makmur karena pertanian dan perdagangannya.
+
+---------------------------------
+
+TAHAPAN KEDUA: KERAJAAN SABA' (650 SM - 110 SM)
+
+  Kerajaan Saba' mengalami beberapa perubahan seperti ibu kota yang dipindahkan ke daerah yang bernama Ma'rib.
+
+---------------------------------
+
+TAHAPAN KETIGA: KERAJAAN HIMYAR MENGAMBIL ALIH (115 - 300 SM)
+
+  Kerajaan Saba' diambil alih oleh kabilah Himyar, kemudian mereka memindahkan ibu kota yang sebelumnya di Ma'rib menjadi Raidan (nama daerah di Yaman), kemudian dipindahkan lagi ke daerah yang bernama Raidan.
+
+  Kemunduran mulai terjadi di masa ini yang sebabnya dimulai dari wilayah Hijaz (wilayah di Arab Saudi yang meliputi Mekkah, Madinah, Tabuk dsb) yang diambil alih
+dan dikuasai oleh Bangsa Nabat, karena Hijaz merupakan jalur perdagangan. Awalnya barang dagang sampai di Yaman dan diteruskan ke Romawi melewati Hijaz sehingga Bangsa Nabat yang menguasainya memperoleh banyak keuntungan dan membuat posisi kerajaan Himyar di Yaman rugi dan melemah.
+
+  Sebab kemunduran lainnya adalah ketika Kekaisaran Romawi menguasai Mesir dan laut merah, mereka memanfaatkan laut merah sebagai jalur perdagangan baru yang mengakibatkan Yaman tidak lagi menjadi jalur perdagangan.
+`,
+  },
+  {
         id: 2,
-        title: "Inflasi dijelaskan dengan mudah",
+        title: "Video version",
         type: "video",
         videoId: "zIbNJCSCEjk",
-        catatan: "Video penjelasan inflasi dengan analogi sederhana yang mudah dipahami.",
       },
     ],
   },
@@ -88,7 +111,7 @@ const feedbackData = [
   { name: "Sari", pesan: "Video-videonya sangat membantu belajar!", waktu: "5 hari lalu" },
 ];
 
-export default function KelasNotesters() {
+export default function KelasNoteskey() {
   const [page, setPage] = useState("home");
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
