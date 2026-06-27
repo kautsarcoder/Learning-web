@@ -25,7 +25,7 @@ const courses = [
         id: 3,
         title: "Permintaan & Penawaran",
         type: "lesson",
-        content: `Hukum Permintaan dan Penawaran adalah inti dari ekonomi pasar.\n\n**Hukum Permintaan**\nJika harga suatu barang naik, maka jumlah yang diminta akan turun (ceteris paribus). Sebaliknya, jika harga turun, permintaan naik.\n\nContoh: Ketika harga bensin naik, orang cenderung mengurangi penggunaan kendaraan pribadi.\n\n**Hukum Penawaran**\nJika harga suatu barang naik, maka jumlah yang ditawarkan produsen akan naik. Karena produsen ingin mendapat keuntungan lebih besar.\n\n**Keseimbangan Pasar**\nHarga keseimbangan terjadi ketika jumlah yang diminta sama dengan jumlah yang ditawarkan. Di sinilah pasar bekerja secara efisien.`,
+        content: `Hukum Permintaan dan Penawaran adalah inti dari ekonomi pasar.\n\n**Hukum Permintaan**\nJika harga suatu barang naik, maka jumlah yang diminta akan turun (ceteris paribus). Sebaliknya, jika harga turun, permintaan naik.\n\nContoh: Ketika harga bensin naik, orang cenderung mengurangi penggunaan kendaraan pribadi.\n\n**Hukum Penawaran**\nJika harga suatu barang naik, maka jumlah yang ditawarkan produsen akan naik. Karena produsen ingin mendapat keuntungan lebih besar.\n\n**Keseimbangan Pasar**\nHarga keseimbangan terjadi ketika jumlah yang diminta sama dengan jumlah yang ditawarkan.`,
         catatan: "Ingat: Permintaan & harga berbanding TERBALIK. Penawaran & harga berbanding LURUS.",
       },
       {
@@ -73,12 +73,6 @@ dan dikuasai oleh Bangsa Nabat, karena Hijaz merupakan jalur perdagangan. Awalny
 
   Sebab kemunduran lainnya adalah ketika Kekaisaran Romawi menguasai Mesir dan laut merah, mereka memanfaatkan laut merah sebagai jalur perdagangan baru yang mengakibatkan Yaman tidak lagi menjadi jalur perdagangan.
 `,
-  },
-  {
-        id: 2,
-        title: "Video version",
-        type: "video",
-        videoId: "zIbNJCSCEjk",
       },
     ],
   },
@@ -92,7 +86,7 @@ dan dikuasai oleh Bangsa Nabat, karena Hijaz merupakan jalur perdagangan. Awalny
         id: 1,
         title: "Prinsip Dasar Ekonomi Islam",
         type: "lesson",
-        content: `Ekonomi Islam adalah sistem ekonomi yang berlandaskan nilai-nilai dan prinsip-prinsip Al-Quran dan Hadis.\n\n**Prinsip Utama:**\n\n**1. Larangan Riba**\nRiba (bunga) dilarang dalam Islam karena dianggap mengeksploitasi. Penggantinya adalah sistem bagi hasil seperti mudharabah dan musyarakah.\n\n**2. Larangan Gharar**\nGharar berarti ketidakpastian atau spekulasi berlebihan. Kontrak harus jelas dan transparan.\n\n**3. Larangan Maysir**\nMaysir adalah perjudian atau untung-untungan. Semua transaksi harus berbasis aset nyata.\n\n**4. Zakat**\nKewajiban menyisihkan sebagian harta untuk kaum yang membutuhkan. Ini adalah instrumen redistribusi kekayaan dalam Islam.\n\n**5. Takaful (Asuransi Islam)**\nSistem saling menanggung risiko bersama berdasarkan prinsip tabarru' (hibah/donasi) bukan premi komersial biasa.`,
+        content: `Ekonomi Islam adalah sistem ekonomi yang berlandaskan nilai-nilai Al-Quran dan Hadis.\n\n**Prinsip Utama:**\n\n**1. Larangan Riba**\nRiba (bunga) dilarang dalam Islam. Penggantinya adalah sistem bagi hasil seperti mudharabah dan musyarakah.\n\n**2. Larangan Gharar**\nGharar berarti ketidakpastian berlebihan. Kontrak harus jelas dan transparan.\n\n**3. Larangan Maysir**\nMaysir adalah perjudian. Semua transaksi harus berbasis aset nyata.\n\n**4. Zakat**\nKewajiban menyisihkan sebagian harta untuk kaum yang membutuhkan.\n\n**5. Takaful (Asuransi Islam)**\nSistem saling menanggung risiko bersama berdasarkan prinsip tabarru'.`,
         catatan: "Kunci: Ekonomi Islam bertujuan pada keadilan, bukan sekadar keuntungan.",
       },
       {
@@ -104,30 +98,28 @@ dan dikuasai oleh Bangsa Nabat, karena Hijaz merupakan jalur perdagangan. Awalny
       },
     ],
   },
-];
+]
 
-const feedbackData = [
-  { name: "Andi", pesan: "Materinya mudah dipahami, terima kasih!", waktu: "2 hari lalu" },
-  { name: "Sari", pesan: "Video-videonya sangat membantu belajar!", waktu: "5 hari lalu" },
-];
-
-export default function KelasNoteskey() {
+export default function KelasNotesters() {
   const [page, setPage] = useState("home");
+  const [showCourses, setShowCourses] = useState(false);
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackMsg, setFeedbackMsg] = useState("");
   const [feedbackName, setFeedbackName] = useState("");
-  const [feedbacks, setFeedbacks] = useState(feedbackData);
+  const [feedbackEmail, setFeedbackEmail] = useState("");
   const [search, setSearch] = useState("");
   const [exploreOpen, setExploreOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openCourse = (course) => {
     setActiveCourse(course);
     setActiveLesson(course.lessons[0]);
     setPage("course");
     setExploreOpen(false);
+    setSidebarOpen(false);
   };
 
   const filteredCourses = courses.filter(
@@ -137,10 +129,16 @@ export default function KelasNoteskey() {
   );
 
   const submitFeedback = () => {
-    if (feedbackMsg.trim() && feedbackName.trim()) {
-      setFeedbacks([{ name: feedbackName, pesan: feedbackMsg, waktu: "Baru saja" }, ...feedbacks]);
+    if (feedbackMsg.trim() && feedbackName.trim() && feedbackEmail.trim()) {
+      const subject = encodeURIComponent(`Kritik & Saran dari ${feedbackName}`);
+      const body = encodeURIComponent(
+        `Nama: ${feedbackName}\nEmail: ${feedbackEmail}\n\nPesan:\n${feedbackMsg}`
+      );
+      window.open(`mailto:EMAILKAMU@gmail.com?subject=${subject}&body=${body}`);
       setFeedbackMsg("");
       setFeedbackName("");
+      setFeedbackEmail("");
+      setShowFeedback(false);
     }
   };
 
@@ -153,11 +151,11 @@ export default function KelasNoteskey() {
     },
     navbar: {
       background: "#1C2B4A",
-      padding: "0 28px",
+      padding: "0 16px",
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      height: 60,
+      height: 56,
       position: "sticky",
       top: 0,
       zIndex: 100,
@@ -165,83 +163,96 @@ export default function KelasNoteskey() {
     },
     navLogo: {
       color: "#E8D5A3",
-      fontSize: 20,
+      fontSize: 18,
       fontWeight: "bold",
-      letterSpacing: 1,
       cursor: "pointer",
       fontStyle: "italic",
+      letterSpacing: 1,
     },
     navRight: {
       display: "flex",
       alignItems: "center",
-      gap: 12,
+      gap: 8,
     },
     navBtn: {
       background: "transparent",
       border: "1.5px solid #E8D5A3",
       color: "#E8D5A3",
-      padding: "6px 16px",
+      padding: "5px 12px",
       borderRadius: 6,
       cursor: "pointer",
-      fontSize: 13,
+      fontSize: 12,
       fontFamily: "inherit",
-      transition: "all 0.2s",
     },
     exploreBtn: {
       background: "#E8D5A3",
       border: "none",
       color: "#1C2B4A",
-      padding: "6px 16px",
+      padding: "5px 12px",
       borderRadius: 6,
       cursor: "pointer",
-      fontSize: 13,
+      fontSize: 12,
       fontWeight: "bold",
       fontFamily: "inherit",
       position: "relative",
     },
+    donateBtn: {
+      background: "#E8D5A3",
+      color: "#1C2B4A",
+      border: "none",
+      padding: "5px 12px",
+      borderRadius: 6,
+      fontSize: 12,
+      fontWeight: "bold",
+      cursor: "pointer",
+      fontFamily: "inherit",
+    },
     dropdown: {
       position: "absolute",
-      top: 68,
-      left: 20,
+      top: 60,
+      left: 0,
       background: "white",
       border: "1px solid #e0e0e0",
       borderRadius: 10,
       boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
       zIndex: 200,
-      minWidth: 280,
+      minWidth: 260,
       overflow: "hidden",
     },
     dropdownItem: {
-      padding: "14px 18px",
+      padding: "12px 16px",
       cursor: "pointer",
       borderBottom: "1px solid #f0f0f0",
       display: "flex",
       alignItems: "center",
-      gap: 12,
-      transition: "background 0.15s",
+      gap: 10,
     },
+    // HOME
     hero: {
       background: "linear-gradient(135deg, #1C2B4A 0%, #2D4A7A 60%, #1C2B4A 100%)",
       color: "white",
-      padding: "80px 40px",
+      padding: "60px 24px",
       textAlign: "center",
-      position: "relative",
-      overflow: "hidden",
+      minHeight: showCourses ? "auto" : "calc(100vh - 56px)",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
     },
     heroTitle: {
-      fontSize: 48,
+      fontSize: "clamp(32px, 8vw, 52px)",
       fontWeight: "bold",
-      marginBottom: 16,
+      marginBottom: 12,
       fontStyle: "italic",
       color: "#E8D5A3",
       letterSpacing: 2,
     },
     heroSub: {
-      fontSize: 18,
+      fontSize: "clamp(14px, 3vw, 18px)",
       color: "#B8C9E0",
-      maxWidth: 500,
+      maxWidth: 480,
       margin: "0 auto 32px",
-      lineHeight: 1.6,
+      lineHeight: 1.7,
     },
     heroBtn: {
       background: "#E8D5A3",
@@ -253,120 +264,160 @@ export default function KelasNoteskey() {
       fontWeight: "bold",
       cursor: "pointer",
       fontFamily: "inherit",
-      letterSpacing: 0.5,
     },
     section: {
-      padding: "48px 40px",
-      maxWidth: 1100,
+      padding: "40px 20px",
+      maxWidth: 1000,
       margin: "0 auto",
     },
     sectionTitle: {
-      fontSize: 26,
+      fontSize: 22,
       fontWeight: "bold",
-      marginBottom: 8,
+      marginBottom: 6,
       color: "#1C2B4A",
     },
     sectionSub: {
       color: "#666",
-      marginBottom: 32,
-      fontSize: 15,
+      marginBottom: 24,
+      fontSize: 14,
     },
     grid: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-      gap: 24,
+      gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+      gap: 20,
     },
     card: {
       background: "white",
       border: "1px solid #E8E8E0",
       borderRadius: 12,
-      padding: 24,
+      padding: 20,
       cursor: "pointer",
-      transition: "all 0.2s",
       boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
     },
-    cardEmoji: {
-      fontSize: 36,
-      marginBottom: 12,
-    },
+    cardEmoji: { fontSize: 32, marginBottom: 10 },
     cardTitle: {
-      fontSize: 17,
+      fontSize: 16,
       fontWeight: "bold",
       color: "#1C2B4A",
-      marginBottom: 8,
+      marginBottom: 6,
     },
     cardDesc: {
-      fontSize: 14,
+      fontSize: 13,
       color: "#666",
       lineHeight: 1.5,
-      marginBottom: 16,
+      marginBottom: 14,
     },
     cardBtn: {
       background: "#1C2B4A",
       color: "#E8D5A3",
       border: "none",
-      padding: "8px 18px",
+      padding: "8px 16px",
       borderRadius: 6,
       fontSize: 13,
       cursor: "pointer",
       fontFamily: "inherit",
       fontWeight: "bold",
     },
+    tag: {
+      display: "inline-block",
+      background: "#EDF2FF",
+      color: "#1C2B4A",
+      fontSize: 11,
+      padding: "3px 8px",
+      borderRadius: 20,
+      marginRight: 6,
+      fontWeight: "bold",
+    },
+    // COURSE LAYOUT
     courseLayout: {
       display: "flex",
-      minHeight: "calc(100vh - 60px)",
+      minHeight: "calc(100vh - 56px)",
+      position: "relative",
+    },
+    overlay: {
+      position: "fixed",
+      top: 0, left: 0, right: 0, bottom: 0,
+      background: "rgba(0,0,0,0.4)",
+      zIndex: 250,
     },
     sidebar: {
       width: 240,
       background: "#1C2B4A",
       color: "white",
-      padding: "24px 0",
-      flexShrink: 0,
+      padding: "16px 0",
+      position: "fixed",
+      top: 56,
+      left: 0,
+      height: "calc(100vh - 56px)",
       overflowY: "auto",
+      zIndex: 300,
+      transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
+      transition: "transform 0.3s ease",
     },
     sidebarTitle: {
-      padding: "0 20px 16px",
+      padding: "0 16px 14px",
       borderBottom: "1px solid rgba(255,255,255,0.1)",
-      fontSize: 14,
+      fontSize: 13,
       fontWeight: "bold",
       color: "#E8D5A3",
       lineHeight: 1.4,
     },
     lessonItem: {
-      padding: "12px 20px",
+      padding: "11px 16px",
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
-      gap: 10,
+      gap: 8,
       fontSize: 13,
       borderLeft: "3px solid transparent",
-      transition: "all 0.15s",
     },
     lessonItemActive: {
       background: "rgba(232,213,163,0.15)",
       borderLeft: "3px solid #E8D5A3",
       color: "#E8D5A3",
     },
+    toggleBtn: {
+      position: "fixed",
+      top: 66,
+      left: 10,
+      zIndex: 200,
+      background: "#1C2B4A",
+      color: "#E8D5A3",
+      border: "none",
+      borderRadius: 8,
+      padding: "8px 12px",
+      cursor: "pointer",
+      fontSize: 18,
+      boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+    },
     mainContent: {
       flex: 1,
-      padding: 32,
+      padding: "20px 16px 40px",
+      paddingTop: 56,
       overflowY: "auto",
+      maxWidth: "100%",
+    },
+    contentTitle: {
+      fontSize: "clamp(18px, 4vw, 24px)",
+      fontWeight: "bold",
+      color: "#1C2B4A",
+      marginBottom: 18,
+      paddingBottom: 12,
+      borderBottom: "2px solid #E8D5A3",
     },
     videoWrapper: {
       position: "relative",
       paddingBottom: "56.25%",
       height: 0,
-      borderRadius: 12,
+      borderRadius: 10,
       overflow: "hidden",
-      marginBottom: 24,
+      marginBottom: 20,
       boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
     },
     videoIframe: {
       position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
+      top: 0, left: 0,
+      width: "100%", height: "100%",
       border: "none",
     },
     noteBox: {
@@ -374,36 +425,31 @@ export default function KelasNoteskey() {
       border: "1px solid #E8D5A3",
       borderLeft: "4px solid #E8D5A3",
       borderRadius: 8,
-      padding: "16px 20px",
-      marginTop: 24,
+      padding: "14px 16px",
+      marginTop: 20,
     },
     noteTitle: {
-      fontSize: 12,
+      fontSize: 11,
       fontWeight: "bold",
       color: "#1C2B4A",
-      marginBottom: 8,
+      marginBottom: 6,
       textTransform: "uppercase",
       letterSpacing: 1,
     },
-    noteText: {
-      fontSize: 14,
-      color: "#555",
-      lineHeight: 1.6,
-    },
+    noteText: { fontSize: 13, color: "#555", lineHeight: 1.6 },
     contentText: {
-      fontSize: 15,
+      fontSize: 14,
       lineHeight: 1.8,
       color: "#333",
       whiteSpace: "pre-line",
     },
-    contentTitle: {
-      fontSize: 22,
-      fontWeight: "bold",
-      color: "#1C2B4A",
-      marginBottom: 20,
-      paddingBottom: 12,
-      borderBottom: "2px solid #E8D5A3",
+    navButtons: {
+      display: "flex",
+      gap: 10,
+      marginTop: 28,
+      flexWrap: "wrap",
     },
+    // MODAL
     modal: {
       position: "fixed",
       top: 0, left: 0, right: 0, bottom: 0,
@@ -412,71 +458,65 @@ export default function KelasNoteskey() {
       alignItems: "center",
       justifyContent: "center",
       zIndex: 500,
+      padding: 16,
     },
     modalBox: {
       background: "white",
       borderRadius: 16,
-      padding: 36,
-      maxWidth: 420,
-      width: "90%",
+      padding: 28,
+      width: "100%",
+      maxWidth: 400,
       boxShadow: "0 16px 48px rgba(0,0,0,0.2)",
     },
     modalTitle: {
-      fontSize: 20,
+      fontSize: 18,
       fontWeight: "bold",
       color: "#1C2B4A",
-      marginBottom: 16,
+      marginBottom: 14,
     },
     input: {
       width: "100%",
-      padding: "10px 14px",
+      padding: "10px 12px",
       border: "1px solid #ddd",
       borderRadius: 8,
       fontSize: 14,
       fontFamily: "inherit",
-      marginBottom: 12,
+      marginBottom: 10,
       boxSizing: "border-box",
     },
     textarea: {
       width: "100%",
-      padding: "10px 14px",
+      padding: "10px 12px",
       border: "1px solid #ddd",
       borderRadius: 8,
       fontSize: 14,
       fontFamily: "inherit",
-      marginBottom: 12,
+      marginBottom: 10,
       boxSizing: "border-box",
-      minHeight: 100,
+      minHeight: 90,
       resize: "vertical",
     },
     submitBtn: {
       background: "#1C2B4A",
       color: "#E8D5A3",
       border: "none",
-      padding: "10px 24px",
+      padding: "10px 22px",
       borderRadius: 8,
       fontSize: 14,
       cursor: "pointer",
       fontFamily: "inherit",
       fontWeight: "bold",
-      marginRight: 10,
+      marginRight: 8,
     },
     cancelBtn: {
       background: "#f0f0f0",
       color: "#555",
       border: "none",
-      padding: "10px 24px",
+      padding: "10px 22px",
       borderRadius: 8,
       fontSize: 14,
       cursor: "pointer",
       fontFamily: "inherit",
-    },
-    feedbackCard: {
-      background: "#f9f9f9",
-      border: "1px solid #eee",
-      borderRadius: 10,
-      padding: "14px 18px",
-      marginBottom: 12,
     },
     searchBar: {
       display: "flex",
@@ -484,10 +524,10 @@ export default function KelasNoteskey() {
       background: "white",
       border: "1.5px solid #1C2B4A",
       borderRadius: 8,
-      padding: "8px 14px",
+      padding: "8px 12px",
       gap: 8,
-      marginBottom: 28,
-      maxWidth: 400,
+      marginBottom: 24,
+      maxWidth: 360,
     },
     searchInput: {
       border: "none",
@@ -495,120 +535,89 @@ export default function KelasNoteskey() {
       fontSize: 14,
       fontFamily: "inherit",
       width: "100%",
-    },
-    tag: {
-      display: "inline-block",
-      background: "#EDF2FF",
-      color: "#1C2B4A",
-      fontSize: 11,
-      padding: "3px 10px",
-      borderRadius: 20,
-      marginRight: 6,
-      fontWeight: "bold",
+      background: "transparent",
     },
     footer: {
       background: "#1C2B4A",
       color: "#B8C9E0",
       textAlign: "center",
-      padding: "24px",
-      fontSize: 13,
+      padding: "20px",
+      fontSize: 12,
     },
   };
 
   const renderHome = () => (
     <div>
-      {/* Hero */}
+      {/* Hero — full screen kalau belum klik mulai belajar */}
       <div style={styles.hero}>
-        <div style={{ fontSize: 14, color: "#E8D5A3", letterSpacing: 3, marginBottom: 12, textTransform: "uppercase" }}>
+        <div style={{ fontSize: 12, color: "#E8D5A3", letterSpacing: 3, marginBottom: 10, textTransform: "uppercase" }}>
           Platform Belajar Ekonomi
         </div>
         <div style={styles.heroTitle}>Kelas Notesters</div>
         <div style={styles.heroSub}>
           Belajar ekonomi dengan cara yang menyenangkan — materi terstruktur, video, dan catatan ringkas.
         </div>
-        <button style={styles.heroBtn} onClick={() => setExploreOpen(true)}>
-          Mulai Belajar →
-        </button>
+        {!showCourses && (
+          <button style={styles.heroBtn} onClick={() => setShowCourses(true)}>
+            Mulai Belajar →
+          </button>
+        )}
       </div>
 
-      {/* Courses */}
-      <div style={styles.section}>
-        <div style={styles.sectionTitle}>Kelas Tersedia</div>
-        <div style={styles.sectionSub}>Pilih kelas yang ingin kamu pelajari hari ini</div>
+      {/* Daftar Kelas — muncul setelah klik Mulai Belajar */}
+      {showCourses && (
+        <div style={styles.section}>
+          <div style={styles.sectionTitle}>Kelas Tersedia</div>
+          <div style={styles.sectionSub}>Pilih kelas yang ingin kamu pelajari hari ini</div>
 
-        {/* Search */}
-        <div style={styles.searchBar}>
-          <span>🔍</span>
-          <input
-            style={styles.searchInput}
-            placeholder="Cari kelas..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-
-        <div style={styles.grid}>
-          {filteredCourses.map((course) => (
-            <div
-              key={course.id}
-              style={styles.card}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.04)";
-              }}
-            >
-              <div style={styles.cardEmoji}>{course.emoji}</div>
-              <div style={styles.cardTitle}>{course.title}</div>
-              <div style={styles.cardDesc}>{course.description}</div>
-              <div style={{ marginBottom: 16 }}>
-                <span style={styles.tag}>{course.lessons.length} Pelajaran</span>
-                <span style={styles.tag}>
-                  {course.lessons.filter((l) => l.type === "video").length} Video
-                </span>
-              </div>
-              <button style={styles.cardBtn} onClick={() => openCourse(course)}>
-                Buka Kelas →
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Feedback Section */}
-      <div style={{ ...styles.section, background: "#F4F1E8", borderRadius: 16, marginBottom: 40 }}>
-        <div style={styles.sectionTitle}>Kritik & Saran</div>
-        <div style={styles.sectionSub}>Bantu kami berkembang dengan masukan kamu</div>
-        <button
-          style={{ ...styles.cardBtn, marginBottom: 24 }}
-          onClick={() => setShowFeedback(true)}
-        >
-          + Tulis Kritik & Saran
-        </button>
-        {feedbacks.map((f, i) => (
-          <div key={i} style={styles.feedbackCard}>
-            <div style={{ fontWeight: "bold", fontSize: 14, marginBottom: 4 }}>
-              {f.name} <span style={{ color: "#aaa", fontWeight: "normal", fontSize: 12 }}>· {f.waktu}</span>
-            </div>
-            <div style={{ fontSize: 14, color: "#444" }}>{f.pesan}</div>
+          <div style={styles.searchBar}>
+            <span>🔍</span>
+            <input
+              style={styles.searchInput}
+              placeholder="Cari kelas..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
-        ))}
-      </div>
+
+          <div style={styles.grid}>
+            {filteredCourses.map((course) => (
+              <div key={course.id} style={styles.card}>
+                <div style={styles.cardEmoji}>{course.emoji}</div>
+                <div style={styles.cardTitle}>{course.title}</div>
+                <div style={styles.cardDesc}>{course.description}</div>
+                <div style={{ marginBottom: 14 }}>
+                  <span style={styles.tag}>{course.lessons.length} Pelajaran</span>
+                  <span style={styles.tag}>
+                    {course.lessons.filter((l) => l.type === "video").length} Video
+                  </span>
+                </div>
+                <button style={styles.cardBtn} onClick={() => openCourse(course)}>
+                  Buka Kelas →
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div style={styles.footer}>
-        <div style={{ marginBottom: 6, fontStyle: "italic", color: "#E8D5A3", fontSize: 15 }}>
+        <div style={{ marginBottom: 4, fontStyle: "italic", color: "#E8D5A3", fontSize: 14 }}>
           Kelas Notesters
         </div>
-        Platform belajar ekonomi gratis untuk semua. Dukung kami dengan donasi.
+        Platform belajar ekonomi gratis untuk semua.
       </div>
     </div>
   );
 
   const renderCourse = () => (
     <div style={styles.courseLayout}>
+
+      {/* Overlay gelap kalau sidebar terbuka di mobile */}
+      {sidebarOpen && (
+        <div style={styles.overlay} onClick={() => setSidebarOpen(false)} />
+      )}
+
       {/* Sidebar */}
       <div style={styles.sidebar}>
         <div style={styles.sidebarTitle}>
@@ -621,47 +630,51 @@ export default function KelasNoteskey() {
               ...styles.lessonItem,
               ...(activeLesson?.id === lesson.id ? styles.lessonItemActive : {}),
             }}
-            onClick={() => setActiveLesson(lesson)}
+            onClick={() => {
+              setActiveLesson(lesson);
+              setSidebarOpen(false);
+            }}
           >
             <span>{lesson.type === "video" ? "▶" : "📄"}</span>
             <span>{lesson.title}</span>
           </div>
         ))}
-        <div style={{ padding: "20px 20px 0", marginTop: 12 }}>
+        <div style={{ padding: "16px 16px 0" }}>
           <button
-            style={{ ...styles.navBtn, width: "100%", fontSize: 12 }}
-            onClick={() => setPage("home")}
+            style={{ ...styles.cancelBtn, width: "100%", fontSize: 12 }}
+            onClick={() => { setPage("home"); setSidebarOpen(false); }}
           >
             ← Kembali
           </button>
         </div>
       </div>
 
-      {/* Main */}
+      {/* Tombol toggle sidebar */}
+      <button style={styles.toggleBtn} onClick={() => setSidebarOpen(!sidebarOpen)}>
+        {sidebarOpen ? "✕" : "☰"}
+      </button>
+
+      {/* Konten Utama */}
       <div style={styles.mainContent}>
         {activeLesson && (
           <>
             <div style={styles.contentTitle}>{activeLesson.title}</div>
 
             {activeLesson.type === "video" ? (
-              <>
-                <div style={styles.videoWrapper}>
-                  <iframe
-                    style={styles.videoIframe}
-                    src={`https://www.youtube.com/embed/${activeLesson.videoId}`}
-                    title={activeLesson.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </>
+              <div style={styles.videoWrapper}>
+                <iframe
+                  style={styles.videoIframe}
+                  src={`https://www.youtube.com/embed/${activeLesson.videoId}`}
+                  title={activeLesson.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             ) : (
               <div style={styles.contentText}>
                 {activeLesson.content.split("**").map((part, i) =>
                   i % 2 === 1 ? (
-                    <strong key={i} style={{ color: "#1C2B4A" }}>
-                      {part}
-                    </strong>
+                    <strong key={i} style={{ color: "#1C2B4A" }}>{part}</strong>
                   ) : (
                     <span key={i}>{part}</span>
                   )
@@ -676,8 +689,8 @@ export default function KelasNoteskey() {
               </div>
             )}
 
-            {/* Navigation */}
-            <div style={{ display: "flex", gap: 12, marginTop: 32 }}>
+            {/* Navigasi Pelajaran */}
+            <div style={styles.navButtons}>
               {activeCourse.lessons.findIndex((l) => l.id === activeLesson.id) > 0 && (
                 <button
                   style={styles.cancelBtn}
@@ -710,38 +723,35 @@ export default function KelasNoteskey() {
 
   return (
     <div style={styles.root}>
+
       {/* Navbar */}
       <div style={styles.navbar}>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ position: "relative" }}>
-            <button style={styles.exploreBtn} onClick={() => setExploreOpen(!exploreOpen)}>
-              Explore ▾
-            </button>
-            {exploreOpen && (
-              <div style={styles.dropdown}>
-                {courses.map((c) => (
-                  <div
-                    key={c.id}
-                    style={styles.dropdownItem}
-                    onClick={() => openCourse(c)}
-                    onMouseEnter={(e) => (e.currentTarget.style.background = "#f5f5f5")}
-                    onMouseLeave={(e) => (e.currentTarget.style.background = "white")}
-                  >
-                    <span style={{ fontSize: 24 }}>{c.emoji}</span>
-                    <div>
-                      <div style={{ fontWeight: "bold", fontSize: 14 }}>{c.title}</div>
-                      <div style={{ fontSize: 12, color: "#888" }}>{c.description}</div>
-                    </div>
+        <div style={{ position: "relative" }}>
+          <button style={styles.exploreBtn} onClick={() => setExploreOpen(!exploreOpen)}>
+            Explore ▾
+          </button>
+          {exploreOpen && (
+            <div style={styles.dropdown}>
+              {courses.map((c) => (
+                <div
+                  key={c.id}
+                  style={styles.dropdownItem}
+                  onClick={() => openCourse(c)}
+                >
+                  <span style={{ fontSize: 22 }}>{c.emoji}</span>
+                  <div>
+                    <div style={{ fontWeight: "bold", fontSize: 13 }}>{c.title}</div>
+                    <div style={{ fontSize: 11, color: "#888" }}>{c.description}</div>
                   </div>
-                ))}
-              </div>
-            )}
-          </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div
           style={styles.navLogo}
-          onClick={() => { setPage("home"); setExploreOpen(false); }}
+          onClick={() => { setPage("home"); setExploreOpen(false); setSidebarOpen(false); }}
         >
           Kelas Notesters
         </div>
@@ -750,49 +760,54 @@ export default function KelasNoteskey() {
           <button style={styles.navBtn} onClick={() => setShowFeedback(true)}>
             Kritik & Saran
           </button>
-          <button
-            style={{ ...styles.navBtn, background: "#E8D5A3", color: "#1C2B4A", border: "none", fontWeight: "bold" }}
-            onClick={() => setShowDonate(true)}
-          >
+          <button style={styles.donateBtn} onClick={() => setShowDonate(true)}>
             Donate ♥
           </button>
         </div>
       </div>
 
-      {/* Pages */}
+      {/* Halaman */}
       {page === "home" && renderHome()}
       {page === "course" && renderCourse()}
 
-      {/* Donate Modal */}
+      {/* Modal Donate */}
       {showDonate && (
         <div style={styles.modal} onClick={() => setShowDonate(false)}>
           <div style={styles.modalBox} onClick={(e) => e.stopPropagation()}>
             <div style={styles.modalTitle}>♥ Dukung Kelas Notesters</div>
-            <p style={{ color: "#555", fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
-              Platform ini gratis untuk semua. Donasi kamu membantu kami terus membuat konten berkualitas dan menjaga platform tetap berjalan.
+            <p style={{ color: "#555", fontSize: 14, lineHeight: 1.6, marginBottom: 18 }}>
+              Platform ini gratis untuk semua. Donasi kamu membantu kami terus membuat konten berkualitas.
             </p>
-            <div style={{ background: "#f5f5f5", borderRadius: 10, padding: 16, marginBottom: 20, textAlign: "center" }}>
-              <div style={{ fontSize: 13, color: "#888", marginBottom: 4 }}>Transfer ke</div>
+            <div style={{ background: "#f5f5f5", borderRadius: 10, padding: 14, marginBottom: 18, textAlign: "center" }}>
+              <div style={{ fontSize: 12, color: "#888", marginBottom: 4 }}>Transfer ke</div>
               <div style={{ fontWeight: "bold", fontSize: 16, color: "#1C2B4A" }}>BCA: 1234567890</div>
-              <div style={{ fontSize: 13, color: "#888", marginTop: 4 }}>a.n. Kelas Notesters</div>
+              <div style={{ fontSize: 12, color: "#888", marginTop: 4 }}>a.n. Kelas Notesters</div>
             </div>
-            <button style={styles.submitBtn} onClick={() => setShowDonate(false)}>
-              Tutup
-            </button>
+            <button style={styles.submitBtn} onClick={() => setShowDonate(false)}>Tutup</button>
           </div>
         </div>
       )}
 
-      {/* Feedback Modal */}
+      {/* Modal Kritik & Saran */}
       {showFeedback && (
         <div style={styles.modal} onClick={() => setShowFeedback(false)}>
           <div style={styles.modalBox} onClick={(e) => e.stopPropagation()}>
             <div style={styles.modalTitle}>💬 Kritik & Saran</div>
+            <p style={{ color: "#888", fontSize: 13, marginBottom: 14 }}>
+              Pesanmu akan dikirim langsung ke email kami.
+            </p>
             <input
               style={styles.input}
               placeholder="Nama kamu"
               value={feedbackName}
               onChange={(e) => setFeedbackName(e.target.value)}
+            />
+            <input
+              style={styles.input}
+              placeholder="Email kamu"
+              type="email"
+              value={feedbackEmail}
+              onChange={(e) => setFeedbackEmail(e.target.value)}
             />
             <textarea
               style={styles.textarea}
@@ -801,11 +816,8 @@ export default function KelasNoteskey() {
               onChange={(e) => setFeedbackMsg(e.target.value)}
             />
             <div>
-              <button
-                style={styles.submitBtn}
-                onClick={() => { submitFeedback(); setShowFeedback(false); }}
-              >
-                Kirim
+              <button style={styles.submitBtn} onClick={submitFeedback}>
+                Kirim via Email
               </button>
               <button style={styles.cancelBtn} onClick={() => setShowFeedback(false)}>
                 Batal
@@ -814,6 +826,7 @@ export default function KelasNoteskey() {
           </div>
         </div>
       )}
+
     </div>
   );
 }
