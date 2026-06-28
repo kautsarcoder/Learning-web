@@ -342,7 +342,6 @@ export default function KelasNotesters() {
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
-  const [showContact, setShowContact] = useState(false);
   const [search, setSearch] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [contactName, setContactName] = useState("");
