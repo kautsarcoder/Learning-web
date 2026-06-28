@@ -373,7 +373,7 @@ export default function KelasNotesters() {
       setContactName("");
       setContactEmail("");
       setContactMsg("");
-      setShowContact(false);
+      
     }
   };
 
