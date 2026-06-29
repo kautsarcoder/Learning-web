@@ -1,4 +1,6 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+
 
 const courses = [
   {
@@ -76,7 +78,7 @@ Harga keseimbangan terjadi ketika jumlah yang diminta sama dengan jumlah yang di
     id: 2,
     title: "Inflasi & Kebijakan Moneter",
     description: "Memahami inflasi, uang, dan peran bank sentral",
-    thumbnail: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&q=80",
+    thumbnail: "siasah.png",
     lessons: [
       {
         id: 1,
@@ -171,29 +173,60 @@ Sistem saling menanggung risiko bersama berdasarkan prinsip **tabarru'** (hibah/
     id: 4,
     title: "Sirah Nabawiyah",
     description: "Sejarah kehidupan Nabi Muhammad SAW",
-    thumbnail: "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=400&q=80",
+    thumbnail: "sirah.png",
     lessons: [
       {
         id: 1,
-        title: "Kelahiran Nabi Muhammad SAW",
+        title: "Sejarah di Yaman",
         type: "lesson",
-        content: `# Kelahiran Nabi Muhammad SAW
+        content: `# Sejarah singkat kerajaan di Yaman
+Terbagi menjadi empat tahapan sejarah
 
-Nabi Muhammad SAW lahir di Makkah pada tahun **570 M**, yang dikenal sebagai **Tahun Gajah** — tahun ketika pasukan Abrahah menyerang Ka'bah.
+## Tahapan pertama : Kejayaan kerajaan Saba’ (650 SM)
 
-## Nasab Nabi Muhammad SAW
+Kerajaan Saba adalah kerajaan Arab tertua dan paling maju di Yaman dimana kota Sharawah sebagai ibu kotanya. Kerajaan ini dikenal dengan bendungannya yang bernama ma’rib, bendungan ini mengairi sawah 
+sehingga Yaman menjadi sangat subur. Kerajaan Saba’ makmur karena pertanian dan perdagangannya.
 
-Beliau berasal dari suku Quraisy, kabilah Bani Hasyim. Ayahnya bernama **Abdullah bin Abdul Muthalib** dan ibunya bernama **Aminah binti Wahab**.
+## Tahapan kedua : Kerajaan Saba’ (650 SM - 110 SM)
 
-### Yatim Sejak Dini
-Ayah beliau wafat sebelum beliau lahir. Ibunya wafat saat beliau berusia 6 tahun. Setelah itu, beliau diasuh oleh kakeknya **Abdul Muthalib**, kemudian pamannya **Abu Thalib**.
+kerajaan saba’ mengalami beberapa perubahan seperti ibu kota yang dipindahkan ke daerah yang bernama Ma’rib 
 
-## Masa Muda
+## Tahapan ketiga : kabilah Himyar mengambil alih (115 - 300 SM)
+Kerajaan Saba’ diambil alih oleh kabilah Himyar, kemudian mereka memindahkan ibu kota yang sebelumnya di Ma’rib menjadi Raidan (nama daerah di Yaman), kemudian dipindahkan lagi ke daerah yang bernama 
+Raidan.
 
-Nabi Muhammad SAW dikenal sebagai **Al-Amin** (yang terpercaya) sejak muda. Beliau bekerja sebagai pedagang dan dikenal jujur dalam setiap transaksi.
+mulai terjadi kemunduran di masa ini yang sebabnya dimulai dari wilayah Hijaz (wilayah di Arab Saudi yang meliputi Mekkah, Madinah, Tabuk dsb) yang diambil alih dan dikuasai oleh Bangsa Nabat, karena 
+Hijaz merupakan jalur perdagangan. Awalnya barang dagang sampai di Yaman dan diteruskan ke Romawi melewati Hijaz sehingga Bangsa Nabat yang menguasainya memperoleh banyak keuntungan dan membuat posisi 
+kerajaan  di Yaman rugi dan melemah.
 
-**Fakta menarik:** Beliau menikah dengan Khadijah binti Khuwaylid pada usia 25 tahun, sementara Khadijah berusia 40 tahun.`,
-        catatan: "Nabi Muhammad SAW lahir tahun 570 M, dikenal sebagai Al-Amin.",
+Sebab kemunduran lainnya adalah ketika Kekaisaran Romawi menguasai Mesir dan laut merah, mereka memanfaatkan laut merah sebagai jalur perdagangan baru yang mengakibatkan Yaman tidak lagi menjadi jalur 
+perdagangan.
+
+Sebab lainnya adalah persaingan antar kabilah yang mengakibatkan perpecahan internal kerajaan dan membuat sebagian kabilah pindah ke wilayah lain di jazirah arab.
+
+## Tahapan keempat: Perebutan wilayah Yaman (300 M sampai Islam)
+
+  sejak awal 300 M Yaman dipenuhi dengan keributan, persaingan antar kabilah dan revolusi sehingga hal ini menjadi peluang bagi bangsa lain untuk merebut wilayah Yaman. Bangsa Romawi mulai menguasai 
+wilayah bernama Adn di Yaman, wilayah ini adalah pelabuhan di ujung selatan Yaman. Pada awal tahun 340 M, Bangsa Habasyah (Ethiopia sekarang) yang merupakan sekutu bangsa Romawi menyerbu Yaman, dibantu 
+oleh Romawi hingga tahun 378 M . Setelah itu Yaman berhasil mendapatkan kemerdekaanya lagi, tetapi setelahnya terjadi musibah besar. Bendungan Ma’rib yang menjadi sumber kehidupan Yaman jebol yang 
+mengakibatkan banjir, ekonomi hancur dan banyak penduduknya yang pindah ke wilayah lain.
+
+  Pada tahun 523 M Penguasa Yaman saat itu adalah Dhu Nuwas, seorang raja dari kabilah Himyar yang menganut agama Yahudi. Dhu Nuwas memimpin pasukannya menyerang orang - orang masehi (para pengikut agama 
+isa al -masih) yang beragama Nasrani di kota Najran (kota di Arab Saudi sekarang)  dan memaksa mereka meninggalkan agama mereka. Karena mereka menolak, Dhu Nuwas kemudian membuat parit-parit besar yang 
+didalamnya dinyalakan api dan melempar orang - orang Nasrani kedalamnya. Peristiwa ini dikenal dalam Al-Qur’an sebagai kisah Ashabul Ukhdud (para penghuni parit) dalam Surah Al-Buruj.Peristiwa ini juga 
+membuat Bangsa Romawi marah (karena mereka juga beragama Nasrani) dan ingin membalas pembantaian itu dan sekaligus memperluas pengaruh di Yaman. Romawi meminta bantuan orang - orang Habasyah untuk menyerang 
+Yaman, Habasyah mengirim 70.000 tentara yang dipimpin oleh Ariyath seorang panglima militer Habasyah dan mereka berhasil mengalahkan Dhu Nuwas, menguasai Yaman untuk kedua kalinya pada tahun 525 M.
+Kemudian terjadi konfik internal Habasyah antara Ariyath dan Abraha (bawahan Ariyath) hingga Ariyath dibunuh oleh Abraha. Abraha kemudian menjadi gubernur Yaman setelah mendapat persetujuan raja Habasyah.
+Abraha yang menjadi Gubernur ingin menjadikan gereja besarnya di Sana’ah (nama daerah di Yaman sekarang ibu kota Yaman) sebagai pusat ibadah sehingga orang tidak lagi pergi ke Ka’bah untuk beribadah.
+Ketika usahanya gagal, ia membawa pasukan besar yang disertai gajah untuk menghancurkan Ka’bah. Namun Allah menghancurkan pasukannya dengan burung-burung yang melempar batu kecil, sebagaimana dikisahkan dalam 
+Surah Al-Fil. Peristiwa ini terjadi pada Tahun Gajah, yaitu tahun kelahiran Nabi Muhammad ﷺ (sekitar 570 M). Setelah dijajah Habasyah cukup lama, orang-orang Yaman tidak suka lagi kepada penguasa Habasyah. 
+Mereka meminta bantuan kepada orang-orang Persia (sekarang Iran), mereka bekerjasama untuk mengusir orang-orang Habasyah dari Yaman. Pada tahun 575 M, dipimpin oleh Ma’di Yakrib bin Saif Dzi Yazan Al - Himyari
+Yaman kembali mendapatkan kemerdekaannya. Ma’di Yakrib kemudian diangkat menjadi raja. Selama Ma’di Yakrib masih menjadi Raja, ia mempertahankan beberapa orang-orang Habasyah untuk menjadi pengawal. Suatu hari 
+para pengawal itu berhasil membunuhnya sehingga keluarganya tidak lagi berkuasa. Setelah meninggalnya Ma’di Yakrib, raja Persia (Kisra) tidak mengangkat raja Arab lagi. Sebaliknya, ia mengirim gubernur-gubernur 
+Persia untuk memerintah Yaman secara langsung, dengan begitu Yaman menjadi salah satu wilayah kekuasaan Persia. Silih bergantinya pemimpin Persi di Yaman dan terakhir Yaman dipimpin oleh gubernur yang bernama 
+Badzan. Badzan kemudian memeluk islam pada tahun 638 M. Dengan masuk islamnya Badzan, kekuasaan Persia di Yaman berakhir dan Yaman bergabung dengan negara islam tanpa peperangan besar.
+`,
+        catatan: "-",
       },
       {
         id: 2,
@@ -342,6 +375,8 @@ export default function KelasNotesters() {
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
+  const [contactSending, setContactSending] = useState(false);
+  const [contactSuccess, setContactSuccess] = useState(false);
   const [search, setSearch] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [contactName, setContactName] = useState("");
@@ -366,16 +401,34 @@ export default function KelasNotesters() {
   };
 
   const submitContact = () => {
-    if (contactMsg.trim() && contactName.trim() && contactEmail.trim()) {
-      const subject = encodeURIComponent(`Pesan dari ${contactName} - Kelas Notesters`);
-      const body = encodeURIComponent(`Nama: ${contactName}\nEmail: ${contactEmail}\n\nPesan:\n${contactMsg}`);
-      window.open(`mailto:EMAILKAMU@gmail.com?subject=${subject}&body=${body}`);
-      setContactName("");
-      setContactEmail("");
-      setContactMsg("");
-      
-    }
-  };
+    if (!contactName.trim() || !contactEmail.trim() || !contactMsg.trim()) {
+        alert("Mohon isi semua kolom terlebih dahulu.");
+        return;
+      }
+      setContactSending(true);
+      emailjs.send(
+        'service_noteskey',
+        'template_z4bedwg',
+        {
+          name: contactName,
+          email: contactEmail,
+          message: contactMsg,
+          title: "LearningSpace by Noteskey",
+        },
+        '0KyhWRhvLRanJLeOf'
+      )
+      .then(() => {
+        setContactSending(false);
+        setContactSuccess(true);
+        setContactName("");
+        setContactEmail("");
+        setContactMsg("");
+      })
+      .catch(() => {
+        setContactSending(false);
+        alert("Gagal mengirim pesan. Coba lagi.");
+      });
+    };
 
   const filteredCourses = courses.filter(
     (c) =>
@@ -430,8 +483,8 @@ export default function KelasNotesters() {
 
     // HERO
     hero: {
-      background: `linear-gradient(135deg, ${GREEN} 0%, ${GREEN_DARK} 100%)`,
-      minHeight: "calc(100vh - 56px)",
+      background: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url("background.png")`,
+      backgroundSize: "cover",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -584,12 +637,25 @@ export default function KelasNotesters() {
   const renderFooter = () => (
     <div style={s.footer}>
       <div style={s.footerLeft}>
-        <div style={{ marginBottom: 8 }}>
-          <span style={{ fontSize: 14, color: "#333", background: "rgba(255,255,255,0.3)", padding: "2px 8px", borderRadius: 4 }}>YouTube</span>
-          {" "}
-          <span style={{ fontSize: 14, color: "#333", background: "rgba(255,255,255,0.3)", padding: "2px 8px", borderRadius: 4 }}>Instagram</span>
+        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.7)", marginBottom: 8 }}>Our social Media</div>
+        <div style={{ display: "flex", gap: 8 }}>
+          <a
+            href="https://youtube.com/@noteskey?si=8m9rWk59J66TGPAa"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.2)", padding: "5px 12px", borderRadius: 6, color: "white", textDecoration: "none", fontSize: 13 }}
+          >
+            ▶ YouTube
+          </a>
+          <a
+            href="https://www.instagram.com/islamneconomic.id?igsh=cjBqNWwwajB1NzBo&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.2)", padding: "5px 12px", borderRadius: 6, color: "white", textDecoration: "none", fontSize: 13 }}
+          >
+            ◉ Instagram
+          </a>
         </div>
-        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.7)" }}>Our social Media</div>
       </div>
       <div style={s.footerRight}>
         <button style={s.footerLink} onClick={goHome}>Home</button>
@@ -603,7 +669,7 @@ export default function KelasNotesters() {
   const renderHome = () => (
     <div>
       <div style={s.hero}>
-        <div style={s.heroTag}>Platform Belajar Gratis</div>
+        <div style={s.heroTag}>Learning Web</div>
         <div style={s.heroTitle}>LearningSpace</div>
         <div style={s.heroTitleSub}>by Noteskey</div>
         <div style={{ fontWeight: "bold", color: "white", fontSize: 16, marginBottom: 12 }}>Education for Everyone</div>
@@ -722,14 +788,28 @@ export default function KelasNotesters() {
         <div style={s.contactDesc}>
           We welcome feedback that helps us improve the learning experience. If you had questions, suggestions, or ideas, send us a message and we'll do our best to respond within a few business days.
         </div>
-        <div style={s.contactSection}>Contact Us</div>
-        <div style={s.formRow}>
-          <input style={s.formInput} placeholder="First name" value={contactName} onChange={(e) => setContactName(e.target.value)} />
-          <input style={s.formInput} placeholder="Last name" />
-        </div>
-        <input style={{ ...s.formInput, width: "100%", marginBottom: 12, boxSizing: "border-box" }} placeholder="Email address" type="email" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} />
-        <textarea style={s.formTextarea} placeholder="Enter your question or message" value={contactMsg} onChange={(e) => setContactMsg(e.target.value)} />
-        <button style={s.submitBtn} onClick={submitContact}>Submit</button>
+        {contactSuccess ? (
+          <div style={{ background: "#e8f5e9", border: "1px solid #81c784", borderRadius: 10, padding: "24px", textAlign: "center" }}>
+            <div style={{ fontSize: 36, marginBottom: 12 }}>✅</div>
+            <div style={{ fontSize: 16, fontWeight: "bold", color: "#2e7d32", marginBottom: 8 }}>Pesan Terkirim!</div>
+            <div style={{ fontSize: 14, color: "#555", marginBottom: 16 }}>Terima kasih, kami akan segera merespons pesanmu.</div>
+            <button style={{ ...s.submitBtn, width: "auto", padding: "10px 24px" }} onClick={() => setContactSuccess(false)}>
+              Kirim Pesan Lain
+            </button>
+          </div>
+        ) : (
+          <>
+            <div style={s.contactSection}>Contact Us</div>
+            <div style={s.formRow}>
+              <input style={s.formInput} placeholder="Nama kamu" value={contactName} onChange={(e) => setContactName(e.target.value)} />
+            </div>
+            <input style={{ ...s.formInput, width: "100%", marginBottom: 12, boxSizing: "border-box" }} placeholder="Email address" type="email" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)} />
+            <textarea style={s.formTextarea} placeholder="Enter your question or message" value={contactMsg} onChange={(e) => setContactMsg(e.target.value)} />
+            <button style={{ ...s.submitBtn, opacity: contactSending ? 0.7 : 1 }} onClick={submitContact} disabled={contactSending}>
+              {contactSending ? "Mengirim..." : "Submit"}
+            </button>
+          </>
+        )}
       </div>
       {renderFooter()}
     </div>
