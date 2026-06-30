@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 
 
-const courses = [
+const fallbackCourses = [
   {
     id: 1,
     title: "Pengantar Ilmu Ekonomi",
@@ -328,6 +328,31 @@ Islam melarang **riba al-fadl** (kelebihan dalam pertukaran barang sejenis) dan 
   },
 ];
 
+// Mengubah data flat dari Notion (per-lesson) jadi struktur per-course
+function groupLessonsByCourse(lessons) {
+  const grouped = {};
+  lessons.forEach((lesson) => {
+    if (!grouped[lesson.course]) {
+      grouped[lesson.course] = {
+        id: lesson.course,
+        title: lesson.course,
+        description: "",
+        thumbnail: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&q=80",
+        lessons: [],
+      };
+    }
+    grouped[lesson.course].lessons.push({
+      id: lesson.id,
+      title: lesson.title,
+      type: lesson.type,
+      videoId: lesson.videoId,
+      catatan: lesson.catatan,
+      content: lesson.content,
+    });
+  });
+  return Object.values(grouped);
+}
+
 // Render konten dengan markdown sederhana
 function renderContent(content) {
   return content.split("\n").map((line, i) => {
@@ -372,6 +397,8 @@ function renderContent(content) {
 
 export default function KelasNotesters() {
   const [page, setPage] = useState("home");
+  const [courses, setCourses] = useState(fallbackCourses);
+  const [loadingMateri, setLoadingMateri] = useState(true);
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
@@ -382,6 +409,22 @@ export default function KelasNotesters() {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
+
+  // Ambil materi dari Notion saat web pertama kali dibuka
+  useEffect(() => {
+    fetch("/api/materi")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.lessons && data.lessons.length > 0) {
+          setCourses(groupLessonsByCourse(data.lessons));
+        }
+        setLoadingMateri(false);
+      })
+      .catch(() => {
+        // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh
+        setLoadingMateri(false);
+      });
+  }, []);
 
   const openCourse = (course) => {
     setActiveCourse(course);
@@ -814,32 +857,81 @@ export default function KelasNotesters() {
       {renderFooter()}
     </div>
   );
-
   return (
-    <div style={s.root}>
-      {renderNavbar()}
-      {page === "home" && renderHome()}
-      {page === "explore" && renderExplore()}
-      {page === "course" && renderCourse()}
-      {page === "contact" && renderContact()}
+  <div style={s.root}>
+    {renderNavbar()}
+    {page === "home" && renderHome()}
+    {page === "explore" && renderExplore()}
+    {page === "course" && renderCourse()}
+    {page === "contact" && renderContact()}
 
-      {/* Modal Donate */}
-      {showDonate && (
-        <div style={s.modal} onClick={() => setShowDonate(false)}>
-          <div style={s.modalBox} onClick={(e) => e.stopPropagation()}>
-            <div style={s.modalTitle}>♥ Support LearningSpace</div>
-            <p style={{ color: "#555", fontSize: 14, lineHeight: 1.6, marginBottom: 18 }}>
-              Platform ini gratis untuk semua. Donasi kamu membantu kami terus membuat konten berkualitas.
-            </p>
-            <div style={{ background: "#f5f5f5", borderRadius: 10, padding: 14, marginBottom: 18, textAlign: "center" }}>
-              <div style={{ fontSize: 12, color: "#888", marginBottom: 4 }}>Transfer ke</div>
-              <div style={{ fontWeight: "bold", fontSize: 16 }}>BCA: 1234567890</div>
-              <div style={{ fontSize: 12, color: "#888", marginTop: 4 }}>a.n. Kelas Notesters</div>
+    {/* Modal Donate */}
+    {showDonate && (
+      <div style={s.modal} onClick={() => setShowDonate(false)}>
+        <div style={s.modalBox} onClick={(e) => e.stopPropagation()}>
+          <div style={s.modalTitle}>Support LearningSpace</div>
+
+          <p
+            style={{
+              color: "#555",
+              fontSize: 14,
+              lineHeight: 1.6,
+              marginBottom: 18,
+            }}
+          >
+            Platform ini gratis untuk semua. Donasi kamu membantu kami terus
+            membuat konten berkualitas.
+          </p>
+
+          <div
+            style={{
+              background: "#f5f5f5",
+              borderRadius: 10,
+              padding: 16,
+              marginBottom: 18,
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 14,
+                fontWeight: "bold",
+                marginBottom: 12,
+              }}
+            >
+              Scan QRIS untuk Donasi
             </div>
-            <button style={{ ...s.submitBtn, marginTop: 0 }} onClick={() => setShowDonate(false)}>Tutup</button>
+
+            <img
+              src="/qris.jpeg"
+              alt="QRIS"
+              style={{
+                width: "250px",
+                maxWidth: "100%",
+                borderRadius: "8px",
+              }}
+            />
+
+            <div
+              style={{
+                fontSize: 12,
+                color: "#666",
+                marginTop: 10,
+              }}
+            >
+              Scan menggunakan aplikasi e-wallet atau mobile banking.
+            </div>
           </div>
+
+          <button
+            style={{ ...s.submitBtn, marginTop: 0 }}
+            onClick={() => setShowDonate(false)}
+          >
+            Tutup
+          </button>
         </div>
-      )}
-    </div>
-  );
+      </div>
+    )}
+  </div>
+);
 }
