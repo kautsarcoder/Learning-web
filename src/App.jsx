@@ -398,7 +398,6 @@ function renderContent(content) {
 export default function KelasNotesters() {
   const [page, setPage] = useState("home");
   const [courses, setCourses] = useState(fallbackCourses);
-  const [loadingMateri, setLoadingMateri] = useState(false);
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
@@ -418,11 +417,11 @@ export default function KelasNotesters() {
         if (data.lessons && data.lessons.length > 0) {
           setCourses(groupLessonsByCourse(data.lessons));
         }
-        setLoadingMateri(false);
+        // setLoadingMateri(false);
       })
       .catch(() => {
         // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh
-        setLoadingMateri(false);
+        //   setLoadingMateri(false);
       });
   }, []);
 
