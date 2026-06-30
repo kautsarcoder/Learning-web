@@ -1,35 +1,70 @@
 // File ini adalah "perantara" antara web React dan Notion.
-// Ini berjalan di server Vercel, bukan di browser, jadi token aman.
-
-const { Client } = require('@notionhq/client');
+// Versi ini pakai fetch langsung ke Notion API (tanpa SDK)
+// supaya lebih stabil dan tidak tergantung versi package.
 
 module.exports = async (req, res) => {
-  // Izinkan akses dari mana saja (CORS)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
-  try {
-    const notion = new Client({ auth: process.env.NOTION_TOKEN });
-    const databaseId = process.env.NOTION_DATABASE_ID;
+  const NOTION_TOKEN = process.env.NOTION_TOKEN;
+  const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
-    // Ambil semua baris dari database Notion
-    const response = await notion.databases.query({
-      database_id: databaseId,
+  // Cek dulu apakah env variable terbaca
+  if (!NOTION_TOKEN || !DATABASE_ID) {
+    return res.status(500).json({
+      error: 'Environment variable belum terbaca',
+      hasToken: !!NOTION_TOKEN,
+      hasDatabaseId: !!DATABASE_ID,
     });
+  }
 
+  try {
+    // Step 1: Query database untuk dapat semua row
+    const queryResponse = await fetch(
+      `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${NOTION_TOKEN}`,
+          'Notion-Version': '2022-06-28',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({}),
+      }
+    );
+
+    if (!queryResponse.ok) {
+      const errText = await queryResponse.text();
+      return res.status(500).json({
+        error: 'Gagal query database',
+        status: queryResponse.status,
+        detail: errText,
+      });
+    }
+
+    const queryData = await queryResponse.json();
     const lessons = [];
 
-    for (const page of response.results) {
+    // Step 2: Untuk setiap row, ambil isi kontennya
+    for (const page of queryData.results) {
       const props = page.properties;
 
-      // Ambil isi konten lengkap dari halaman (block-block teks)
-      const blocks = await notion.blocks.children.list({
-        block_id: page.id,
-      });
+      const blocksResponse = await fetch(
+        `https://api.notion.com/v1/blocks/${page.id}/children`,
+        {
+          headers: {
+            'Authorization': `Bearer ${NOTION_TOKEN}`,
+            'Notion-Version': '2022-06-28',
+          },
+        }
+      );
 
       let content = '';
-      for (const block of blocks.results) {
-        content += blockToMarkdown(block);
+      if (blocksResponse.ok) {
+        const blocksData = await blocksResponse.json();
+        for (const block of blocksData.results) {
+          content += blockToMarkdown(block);
+        }
       }
 
       lessons.push({
@@ -45,11 +80,10 @@ module.exports = async (req, res) => {
 
     res.status(200).json({ lessons });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message, stack: error.stack });
   }
 };
 
-// Mengubah block Notion jadi format markdown sederhana (#, ##, **bold**)
 function blockToMarkdown(block) {
   const type = block.type;
   const text = block[type]?.rich_text?.map((t) => {
