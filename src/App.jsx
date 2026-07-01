@@ -337,7 +337,7 @@ function groupLessonsByCourse(lessons) {
         id: lesson.course,
         title: lesson.course,
         description: "",
-        thumbnail: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&q=80",
+        thumbnail: lesson.Thumbnail || "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80",
         lessons: [],
       };
     }
@@ -358,31 +358,88 @@ function renderContent(content) {
   return content.split("\n").map((line, i) => {
     if (line.startsWith("# ")) {
       return (
-        <div key={i} style={{ fontSize: 26, fontWeight: "bold", color: "#1a1a1a", marginTop: 0, marginBottom: 8, paddingBottom: 8, borderBottom: "2px solid #7BAE9B" }}>
+        <div key={i} style={{
+          fontSize: 26,
+          fontWeight: "bold",
+          color: "#1a1a1a",
+          marginTop: 0,
+          marginBottom: 16,
+          paddingBottom: 12,
+          borderBottom: "2px solid #e0e0e0",
+          fontFamily: "' Segoe UI', Arial, sans-serif",
+          lineHeight: 1.3,
+        }}>
           {line.replace("# ", "")}
         </div>
       );
     }
     if (line.startsWith("## ")) {
       return (
-        <div key={i} style={{ fontSize: 18, fontWeight: "bold", color: "#2d5a4e", marginTop: 20, marginBottom: 6 }}>
+        <div key={i} style={{
+          fontSize: 19,
+          fontWeight: "bold",
+          color: "#1a1a1a",
+          marginTop: 28,
+          marginBottom: 10,
+          paddingLeft: 12,
+          borderLeft: "3px solid #7BAE9B",
+          fontFamily: "' Segoe UI', Arial, sans-serif",
+          lineHeight: 1.4,
+        }}>
           {line.replace("## ", "")}
         </div>
       );
     }
     if (line.startsWith("### ")) {
       return (
-        <div key={i} style={{ fontSize: 15, fontWeight: "bold", color: "#1a1a1a", marginTop: 14, marginBottom: 4 }}>
+        <div key={i} style={{
+          fontSize: 16,
+          fontWeight: "bold",
+          color: "#1a1a1a",
+          marginTop: 20,
+          marginBottom: 6,
+          fontFamily: "' Segoe UI', Arial, sans-serif",
+        }}>
           {line.replace("### ", "")}
         </div>
       );
     }
+    if (line.startsWith("• ")) {
+      const parts = line.replace("• ", "").split("**");
+      return (
+        <div key={i} style={{
+          display: "flex",
+          gap: 10,
+          marginBottom: 6,
+          paddingLeft: 8,
+        }}>
+          <span style={{ color: "#7BAE9B", fontWeight: "bold", flexShrink: 0 }}>•</span>
+          <span style={{ fontSize: 15, lineHeight: 1.8, color: "#333", textAlign: "justify" }}>
+            {parts.map((part, j) =>
+              j % 2 === 1 ? (
+                <strong key={j} style={{ color: "#1a1a1a" }}>{part}</strong>
+              ) : (
+                <span key={j}>{part}</span>
+              )
+            )}
+          </span>
+        </div>
+      );
+    }
     if (line.trim() === "") {
-      return <div key={i} style={{ height: 8 }} />;
+      return <div key={i} style={{ height: 10 }} />;
     }
     const parts = line.split("**");
     return (
-      <div key={i} style={{ marginBottom: 4, lineHeight: 1.8, fontSize: 14, color: "#333" }}>
+      <p key={i} style={{
+        marginBottom: 0,
+        marginTop: 0,
+        lineHeight: 1.85,
+        fontSize: 15,
+        color: "#333",
+        textAlign: "justify",
+        fontFamily: "' Segoe UI', Arial, sans-serif",
+      }}>
         {parts.map((part, j) =>
           j % 2 === 1 ? (
             <strong key={j} style={{ color: "#1a1a1a" }}>{part}</strong>
@@ -390,7 +447,7 @@ function renderContent(content) {
             <span key={j}>{part}</span>
           )
         )}
-      </div>
+      </p>
     );
   });
 }
@@ -398,6 +455,7 @@ function renderContent(content) {
 export default function KelasNotesters() {
   const [page, setPage] = useState("home");
   const [courses, setCourses] = useState(fallbackCourses);
+  const [loadingMateri, setLoadingMateri] = useState(true);
   const [activeCourse, setActiveCourse] = useState(null);
   const [activeLesson, setActiveLesson] = useState(null);
   const [showDonate, setShowDonate] = useState(false);
@@ -417,11 +475,11 @@ export default function KelasNotesters() {
         if (data.lessons && data.lessons.length > 0) {
           setCourses(groupLessonsByCourse(data.lessons));
         }
-        // setLoadingMateri(false);
+        setLoadingMateri(false);
       })
       .catch(() => {
         // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh
-        //   setLoadingMateri(false);
+        setLoadingMateri(false);
       });
   }, []);
 
@@ -632,9 +690,20 @@ export default function KelasNotesters() {
       fontSize: 18,
       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
     },
-    mainContent: { flex: 1, padding: "24px 20px 40px", paddingTop: 60, maxWidth: "100%", overflowY: "auto" },
-    contentTitle: { fontSize: "clamp(18px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginBottom: 4, paddingBottom: 10, borderBottom: `2px solid ${GREEN}` },
-    contentSubTitle: { fontSize: 15, fontWeight: "bold", color: "#555", marginBottom: 20, paddingBottom: 10, borderBottom: "1px solid #eee" },
+    mainContent: {
+      flex: 1,
+      padding: "32px 24px 60px",
+      paddingTop: 70,
+      overflowY: "auto",
+      background: "white",
+      minHeight: "calc(100vh - 56px)",
+    },
+    articleWrap: {
+      maxWidth: 720,
+      margin: "0 auto",
+    },
+    contentTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: "clamp(18px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginBottom: 4, paddingBottom: 10, borderBottom: `2px solid ${GREEN}` },
+    contentSubTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: 15, fontWeight: "bold", color: "#555", marginBottom: 20, paddingBottom: 10, borderBottom: "1px solid #eee" },
     videoWrapper: { position: "relative", paddingBottom: "56.25%", height: 0, borderRadius: 10, overflow: "hidden", marginBottom: 20, background: "#e0e0e0" },
     videoIframe: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: "none" },
     noteBox: { background: GREEN_BG, border: `1px solid ${GREEN}`, borderLeft: `4px solid ${GREEN}`, borderRadius: 8, padding: "12px 16px", marginTop: 20 },
@@ -732,17 +801,23 @@ export default function KelasNotesters() {
           <span style={{ color: "#aaa" }}>🔍</span>
           <input style={s.searchInput} placeholder="Search" value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
-        <div style={s.grid}>
-          {filteredCourses.map((course) => (
-            <div key={course.id} style={s.courseCard} onClick={() => openCourse(course)}>
-              <img src={course.thumbnail} alt={course.title} style={s.courseThumb} onError={(e) => { e.target.style.background = GREEN_BG; e.target.src = ""; }} />
-              <div style={s.courseCardBody}>
-                <div style={s.courseCardTitle}>{course.title}</div>
-                <div style={s.courseCardDesc}>{course.description}</div>
+        {loadingMateri ? (
+          <div style={{ textAlign: "center", padding: "60px 20px", color: "#999" }}>
+            Memuat materi...
+          </div>
+          ) : (
+            <div style={s.grid}>
+              {filteredCourses.map((course) => (
+                <div key={course.id} style={s.courseCard} onClick={() => openCourse(course)}>
+                  <img src={course.thumbnail} alt={course.title} style={s.courseThumb} onError={(e) => { e.target.style.background = GREEN_BG; e.target.src = ""; }} />
+                  <div style={s.courseCardBody}>
+                    <div style={s.courseCardTitle}>{course.title}</div>
+                    <div style={s.courseCardDesc}>{course.description}</div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       {renderFooter()}
     </div>

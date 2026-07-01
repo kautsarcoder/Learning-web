@@ -29,8 +29,15 @@ module.exports = async (req, res) => {
           'Notion-Version': '2022-06-28',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({}),
-      }
+        body: JSON.stringify({
+          sorts: [
+           {
+            property: "Order",
+            direction: "ascending"
+          }
+      ]
+   }),
+  }
     );
 
     if (!queryResponse.ok) {
@@ -70,6 +77,8 @@ module.exports = async (req, res) => {
       lessons.push({
         id: page.id,
         title: props.Title?.title?.[0]?.plain_text || 'Tanpa Judul',
+        Thumbnail: props.Thumbnail?.url ||
+                   props.Thumbnail?.rich_text?.[0]?.plain_text || '',
         course: props.Course?.select?.name || 'Umum',
         type: props.Type?.select?.name || 'lesson',
         videoId: props.VideoID?.rich_text?.[0]?.plain_text || '',
