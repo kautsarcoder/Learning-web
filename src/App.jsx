@@ -513,7 +513,7 @@ export default function KelasNotesters() {
           name: contactName,
           email: contactEmail,
           message: contactMsg,
-          title: "LearningSpace by Noteskey",
+          title: "LearningSpace by Kyo",
         },
         '0KyhWRhvLRanJLeOf'
       )
@@ -734,7 +734,7 @@ export default function KelasNotesters() {
     <div style={s.navbar}>
       <div style={{ cursor: "pointer" }} onClick={goHome}>
         <div style={s.navLogo}>LearningSpace</div>
-        <div style={s.navLogoSub}>by Noteskey</div>
+        <div style={s.navLogoSub}>by Kyo</div>
       </div>
       <div style={s.navLinks}>
         <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
@@ -782,7 +782,7 @@ export default function KelasNotesters() {
       <div style={s.hero}>
         <div style={s.heroTag}>Learning Web</div>
         <div style={s.heroTitle}>LearningSpace</div>
-        <div style={s.heroTitleSub}>by Noteskey</div>
+        <div style={s.heroTitleSub}>by Kyo</div>
         <div style={{ fontWeight: "bold", color: "white", fontSize: 16, marginBottom: 12 }}>Education for Everyone</div>
         <div style={s.heroDesc}>
           A free learning platform that provides educational resources for everyone, anywhere. Our mission is to make knowledge accessible, empower lifelong learning and help people grow without barriers.
@@ -856,7 +856,6 @@ export default function KelasNotesters() {
           {activeLesson && (
             <>
               <div style={s.contentTitle}>{activeCourse.title.split(" ")[0]} {activeCourse.title.split(" ").slice(1).join(" ")}</div>
-              <div style={s.contentSubTitle}>{activeLesson.title}</div>
 
               {activeLesson.type === "video" ? (
                 <div style={s.videoWrapper}>
