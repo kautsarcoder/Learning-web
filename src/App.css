@@ -35,4 +35,34 @@
   to {
     transform: rotate(360deg);
   }
+} 
+.mainContent {
+  flex: 1;
+  padding: 70px 15% 60px;
+  overflow-y: auto;
+  background: white;
+  min-height: calc(100vh - 56px);
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .mainContent {
+    padding: 70px 10% 50px;
+  }
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 70px 20px 40px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 70px 16px 32px;
+  }
+
 }

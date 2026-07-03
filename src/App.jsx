@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
+import "./App.css";
 
 
 const fallbackCourses = [
@@ -690,18 +691,11 @@ export default function KelasNotesters() {
       fontSize: 18,
       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
     },
-    mainContent: {
-      flex: 1,
-      padding: "0",
-      paddingTop: 70,
-      overflowY: "auto",
-      background: "white",
-      minHeight: "calc(100vh - 56px)",
-    },
+    
     articleWrap: {
-      maxWidth: 600,
+      maxWidth: 680,
       margin: "0 auto",
-      padding: "0 clamp(16px, 5%, 64px) 60px",
+      padding: "0 64px ",
     },
     contentTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: "clamp(18px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginBottom: 4, paddingBottom: 10, borderBottom: `2px solid ${GREEN}` },
     contentSubTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: 15, fontWeight: "bold", color: "#555", marginBottom: 20, paddingBottom: 10, borderBottom: "1px solid #eee" },
@@ -742,8 +736,8 @@ export default function KelasNotesters() {
     <div style={s.navLinks}>
       <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
       <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
-      <button style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
-      <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+      <button className="nav-donate" style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
+      <button className={page === "contact" ? s.navLinkActive : s.navLink} style={s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
       </div>
     </div>
   );
@@ -857,10 +851,10 @@ export default function KelasNotesters() {
           {sidebarOpen ? "✕" : "≡"}
         </button>
 
-        <div style={s.mainContent}>
+        <div className="mainContent">
           {activeLesson && (
             <>
-              <div style={s.contentTitle}>{activeCourse.title.split(" ")[0]} {activeCourse.title.split(" ").slice(1).join(" ")}</div>
+              <div className="contentTitle">{activeCourse.title.split(" ")[0]} {activeCourse.title.split(" ").slice(1).join(" ")}</div>
 
               {activeLesson.type === "video" ? (
                 <div style={s.videoWrapper}>
