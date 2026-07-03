@@ -558,7 +558,7 @@ export default function KelasNotesters() {
     },
     navLogo: { color: "white", fontSize: 20, fontWeight: "bold", cursor: "pointer", lineHeight: 1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 2 },
     navLogoSub: { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "normal" },
-    navLinks: { display: "flex", alignItems: "center", gap: 4 },
+    navLinks: { display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap", justifyContent: "flex-end" },
     navLink: {
       color: "white",
       background: "transparent",
@@ -597,7 +597,7 @@ export default function KelasNotesters() {
     heroTag: { color: "rgba(255,255,255,0.85)", fontSize: 13, fontWeight: "bold", letterSpacing: 2, marginBottom: 12, textTransform: "uppercase" },
     heroTitle: { color: "white", fontSize: "clamp(36px, 8vw, 60px)", fontWeight: "normal", marginBottom: 20, lineHeight: 1.1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 4 },
     heroTitleSub: { color: "rgba(255,255,255,0.85)", fontSize: "clamp(13px, 2vw, 16px)", fontWeight: "bold", marginBottom: 16, letterSpacing: 1 },
-    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", width: 1118, maxWidth: "90%", lineHeight: 1.7, marginBottom: 32, textAlign: "center", margin: "0 auto 32px" },
+    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", width: "100%", maxWidth: "600", lineHeight: 1.7, textAlign: "center", margin: "0 auto 32px", padding: "0 24px" },
     heroBtn: {
       background: "#1a1a1a",
       color: "white",
@@ -692,7 +692,7 @@ export default function KelasNotesters() {
     },
     mainContent: {
       flex: 1,
-      padding: "70px 15% 60px",
+      padding: "0",
       paddingTop: 70,
       overflowY: "auto",
       background: "white",
@@ -701,7 +701,7 @@ export default function KelasNotesters() {
     articleWrap: {
       maxWidth: 600,
       margin: "0 auto",
-      padding: "0 54px",
+      padding: "0 clamp(16px, 5%, 64px) 60px",
     },
     contentTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: "clamp(18px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginBottom: 4, paddingBottom: 10, borderBottom: `2px solid ${GREEN}` },
     contentSubTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: 15, fontWeight: "bold", color: "#555", marginBottom: 20, paddingBottom: 10, borderBottom: "1px solid #eee" },
