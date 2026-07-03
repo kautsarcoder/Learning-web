@@ -556,7 +556,7 @@ export default function KelasNotesters() {
       top: 0,
       zIndex: 100,
     },
-    navLogo: { color: "white", fontSize: 20, fontWeight: "bold", cursor: "pointer", lineHeight: 1 },
+    navLogo: { color: "white", fontSize: 20, fontWeight: "bold", cursor: "pointer", lineHeight: 1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 2 },
     navLogoSub: { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "normal" },
     navLinks: { display: "flex", alignItems: "center", gap: 4 },
     navLink: {
@@ -595,9 +595,9 @@ export default function KelasNotesters() {
       overflow: "hidden",
     },
     heroTag: { color: "rgba(255,255,255,0.85)", fontSize: 13, fontWeight: "bold", letterSpacing: 2, marginBottom: 12, textTransform: "uppercase" },
-    heroTitle: { color: "white", fontSize: "clamp(36px, 8vw, 60px)", fontWeight: "bold", marginBottom: 4, lineHeight: 1.1 },
+    heroTitle: { color: "white", fontSize: "clamp(36px, 8vw, 60px)", fontWeight: "normal", marginBottom: 20, lineHeight: 1.1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 4 },
     heroTitleSub: { color: "rgba(255,255,255,0.85)", fontSize: "clamp(13px, 2vw, 16px)", fontWeight: "bold", marginBottom: 16, letterSpacing: 1 },
-    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", maxWidth: 520, lineHeight: 1.7, marginBottom: 32 },
+    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", width: 1118, maxWidth: "90%", lineHeight: 1.7, marginBottom: 32, textAlign: "center", margin: "0 auto 32px" },
     heroBtn: {
       background: "#1a1a1a",
       color: "white",
@@ -692,15 +692,16 @@ export default function KelasNotesters() {
     },
     mainContent: {
       flex: 1,
-      padding: "32px 24px 60px",
+      padding: "70px 15% 60px",
       paddingTop: 70,
       overflowY: "auto",
       background: "white",
       minHeight: "calc(100vh - 56px)",
     },
     articleWrap: {
-      maxWidth: 720,
+      maxWidth: 600,
       margin: "0 auto",
+      padding: "0 54px",
     },
     contentTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: "clamp(18px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginBottom: 4, paddingBottom: 10, borderBottom: `2px solid ${GREEN}` },
     contentSubTitle: { fontFamily: "' Segoe UI', Arial, sans-serif", fontSize: 15, fontWeight: "bold", color: "#555", marginBottom: 20, paddingBottom: 10, borderBottom: "1px solid #eee" },
@@ -733,14 +734,16 @@ export default function KelasNotesters() {
   const renderNavbar = () => (
     <div style={s.navbar}>
       <div style={{ cursor: "pointer" }} onClick={goHome}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
         <div style={s.navLogo}>LearningSpace</div>
         <div style={s.navLogoSub}>by Kyo</div>
       </div>
-      <div style={s.navLinks}>
-        <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
-        <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
-        <button style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
-        <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+    </div>  
+    <div style={s.navLinks}>
+      <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
+      <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
+      <button style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
+      <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
       </div>
     </div>
   );
@@ -777,14 +780,16 @@ export default function KelasNotesters() {
     </div>
   );
 
-  const renderHome = () => (
+ const renderHome = () => (
     <div>
       <div style={s.hero}>
         <div style={s.heroTag}>Learning Web</div>
-        <div style={s.heroTitle}>LearningSpace</div>
-        <div style={s.heroTitleSub}>by Kyo</div>
+        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 8, flexWrap: "wrap" }}>
+          <div style={s.heroTitle}>Learning Space</div>
+          <div style={{ color: "rgba(255,255,255,0.85)", fontSize: "clamp(13px, 2vw, 18px)" }}>by Kyo</div>
+        </div>
         <div style={{ fontWeight: "bold", color: "white", fontSize: 16, marginBottom: 12 }}>Education for Everyone</div>
-        <div style={s.heroDesc}>
+        <div style={{ ...s.heroDesc }}>
           A free learning platform that provides educational resources for everyone, anywhere. Our mission is to make knowledge accessible, empower lifelong learning and help people grow without barriers.
         </div>
         <button style={s.heroBtn} onClick={goExplore}>Let's roll</button>
@@ -1006,6 +1011,5 @@ export default function KelasNotesters() {
       </div>
     )}
   </div>
-);
+  );
 }
-
