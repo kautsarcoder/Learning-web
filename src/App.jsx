@@ -353,106 +353,137 @@ function groupLessonsByCourse(lessons) {
   });
   return Object.values(grouped);
 }
+function renderInlineBold(text) {
+  const parts = text.split("**");
+  return parts.map((part, j) =>
+    j % 2 === 1 ? <strong key={j}>{part}</strong> : <span key={j}>{part}</span>
+  );
+}
 
-// Render konten dengan markdown sederhana
+function renderTableCell(cell) {
+  const lines = cell.split("\\n");
+  const result = [];
+  lines.forEach((l, idx) => {
+    if (idx > 0) result.push(<br key={`br-${idx}`} />);
+    result.push(<span key={`t-${idx}`}>{l}</span>);
+  });
+  return result;
+}
+
 function renderContent(content) {
-  return content.split("\n").map((line, i) => {
-    if (line.startsWith("# ")) {
-      return (
+  const lines = content.split("\n");
+  const elements = [];
+  let tableRows = [];
+  let inTable = false;
+
+  lines.forEach((line, i) => {
+    if (line === 'TABLE_START') {
+      inTable = true;
+      tableRows = [];
+      return;
+    }
+
+    if (line === 'TABLE_END') {
+      inTable = false;
+      elements.push(
         <div key={i} style={{
-          fontSize: 26,
-          fontWeight: "bold",
-          color: "#1a1a1a",
-          marginTop: 0,
+          overflowX: "auto",
+          marginTop: 16,
           marginBottom: 16,
-          paddingBottom: 12,
-          borderBottom: "2px solid #e0e0e0",
-          fontFamily: "' Segoe UI', Arial, sans-serif",
-          lineHeight: 1.3,
+          borderRadius: 8,
+          border: "1px solid #e0e0e0",
         }}>
-          {line.replace("# ", "")}
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <tbody>
+              {tableRows.map((row, ri) => (
+                <tr key={ri} style={{
+                  background: ri === 0 ? "#f5f5f5" : "white",
+                  borderBottom: "1px solid #e0e0e0",
+                }}>
+                  {row.map((cell, ci) => (
+                    ri === 0 ? (
+                      <th key={ci} style={{
+                        padding: "10px 14px",
+                        textAlign: "left",
+                        fontSize: 13,
+                        fontWeight: "bold",
+                        color: "#1a1a1a",
+                        borderRight: ci < row.length - 1 ? "1px solid #e0e0e0" : "none",
+                        whiteSpace: "nowrap",
+                      }}>
+                        {renderTableCell(cell)}
+                      </th>
+                    ) : (
+                      <td key={ci} style={{
+                        padding: "10px 14px",
+                        fontSize: 13,
+                        color: "#333",
+                        borderRight: ci < row.length - 1 ? "1px solid #e0e0e0" : "none",
+                      }}>
+                        {renderTableCell(cell)}
+                      </td>
+                    )
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       );
+      tableRows = [];
+      return;
     }
-    if (line.startsWith("## ")) {
-      return (
-        <div key={i} style={{
-          fontSize: 19,
-          fontWeight: "bold",
-          color: "#1a1a1a",
-          marginTop: 28,
-          marginBottom: 10,
-          paddingLeft: 12,
-          borderLeft: "3px solid #7BAE9B",
-          fontFamily: "' Segoe UI', Arial, sans-serif",
-          lineHeight: 1.4,
-        }}>
-          {line.replace("## ", "")}
+
+    if (inTable && line.startsWith('TABLE_ROW:')) {
+      const cells = line.replace('TABLE_ROW:', '').split('|||');
+      tableRows.push(cells);
+      return;
+    }
+
+    // Render normal (heading, paragraf, dll)
+    if (line.startsWith("# ")) {
+      elements.push(
+        <div key={i} style={{ fontSize: "clamp(20px, 4vw, 26px)", fontWeight: "bold", color: "#1a1a1a", marginTop: 0, marginBottom: 16, paddingBottom: 12, borderBottom: "2px solid #e0e0e0" }}>
+          {renderInlineBold(line.replace("# ", ""))}
         </div>
       );
-    }
-    if (line.startsWith("### ")) {
-      return (
-        <div key={i} style={{
-          fontSize: 16,
-          fontWeight: "bold",
-          color: "#1a1a1a",
-          marginTop: 20,
-          marginBottom: 6,
-          fontFamily: "' Segoe UI', Arial, sans-serif",
-        }}>
-          {line.replace("### ", "")}
+    } else if (line.startsWith("## ")) {
+      elements.push(
+        <div key={i} style={{ fontSize: "clamp(16px, 3vw, 19px)", fontWeight: "bold", color: "#1a1a1a", marginTop: 28, marginBottom: 10, paddingLeft: 12, borderLeft: "3px solid #7BAE9B" }}>
+         {renderInlineBold(line.replace("## ", ""))}
         </div>
       );
-    }
-    if (line.startsWith("• ")) {
+    } else if (line.startsWith("### ")) {
+      elements.push(
+        <div key={i} style={{ fontSize: 16, fontWeight: "bold", color: "#1a1a1a", marginTop: 20, marginBottom: 6 }}>
+          {renderInlineBold(line.replace("### ", ""))}
+        </div>
+      );
+    } else if (line.startsWith("• ")) {
       const parts = line.replace("• ", "").split("**");
-      return (
-        <div key={i} style={{
-          display: "flex",
-          gap: 10,
-          marginBottom: 6,
-          paddingLeft: 8,
-        }}>
+      elements.push(
+        <div key={i} style={{ display: "flex", gap: 10, marginBottom: 6, paddingLeft: 8 }}>
           <span style={{ color: "#7BAE9B", fontWeight: "bold", flexShrink: 0 }}>•</span>
-          <span style={{ fontSize: 15, lineHeight: 1.8, color: "#333", textAlign: "justify" }}>
-            {parts.map((part, j) =>
-              j % 2 === 1 ? (
-                <strong key={j} style={{ color: "#1a1a1a" }}>{part}</strong>
-              ) : (
-                <span key={j}>{part}</span>
-              )
-            )}
+          <span style={{ fontSize: "clamp(13px, 2.5vw, 15px)", lineHeight: 1.8, color: "#333" }}>
+            {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : <span key={j}>{part}</span>)}
           </span>
         </div>
       );
+    } else if (line.trim() === "") {
+      elements.push(<div key={i} style={{ height: 10 }} />);
+    } else {
+      const parts = line.split("**");
+      elements.push(
+        <p key={i} style={{ marginBottom: 0, marginTop: 0, lineHeight: 1.85, fontSize: "clamp(13px, 2.5vw, 15px)", color: "#333", textAlign: "justify" }}>
+          {parts.map((part, j) => j % 2 === 1 ? <strong key={j} style={{ color: "#1a1a1a" }}>{part}</strong> : <span key={j}>{part}</span>)}
+        </p>
+      );
     }
-    if (line.trim() === "") {
-      return <div key={i} style={{ height: 10 }} />;
-    }
-    const parts = line.split("**");
-    return (
-      <p key={i} style={{
-        marginBottom: 0,
-        marginTop: 0,
-        lineHeight: 1.85,
-        fontSize: 15,
-        color: "#333",
-        textAlign: "justify",
-        fontFamily: "' Segoe UI', Arial, sans-serif",
-      }}>
-        {parts.map((part, j) =>
-          j % 2 === 1 ? (
-            <strong key={j} style={{ color: "#1a1a1a" }}>{part}</strong>
-          ) : (
-            <span key={j}>{part}</span>
-          )
-        )}
-      </p>
-    );
   });
-}
 
+  return elements;
+}
+// Render konten dengan markdown sederhana
 export default function KelasNotesters() {
   const [page, setPage] = useState("home");
   const [courses, setCourses] = useState(fallbackCourses);
