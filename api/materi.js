@@ -233,6 +233,9 @@ function blockToMarkdown(block) {
     case "heading_3":
       return `### ${text}\n\n`;
 
+    case "heading_4":
+      return `#### ${text}\n\n`;
+
     case "paragraph":
       return `${text}\n\n`;
 

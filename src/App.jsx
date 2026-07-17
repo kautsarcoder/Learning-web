@@ -459,6 +459,12 @@ function renderContent(content) {
           {renderInlineBold(line.replace("### ", ""))}
         </div>
       );
+    } else if (line.startsWith("#### ")) {
+      elements.push(
+        <div key={i} style={{ fontSize: 14, fontWeight: "bold", color: "#555", marginTop: 14, marginBottom: 4, fontStyle: "italic" }}>
+          {renderInlineBold(line.replace("#### ", ""))}
+        </div>
+      );  
     } else if (line.startsWith("• ")) {
       const parts = line.replace("• ", "").split("**");
       elements.push(
