@@ -131,6 +131,16 @@ module.exports = async (req, res) => {
           continue;
         }
 
+        const isEmptyParagraph =
+          block.type === "paragraph" &&
+          !(block.paragraph?.rich_text || []).some(
+            (t) => t.plain_text.trim() !== ""
+          );
+ 
+        if (isEmptyParagraph) {
+          content += blockToMarkdown(block);
+          continue;
+        }
 
         // Jika bukan numbered list, reset nomor
         numberedCounter = 0;
