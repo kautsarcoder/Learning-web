@@ -115,7 +115,7 @@ module.exports = async (req, res) => {
         if (block.type === "numbered_list_item") {
           numberedCounter++;
 
-          const text = block.numbered_list_item.rich_text
+          let text = block.numbered_list_item.rich_text
               .map((t) => {
                 let txt = t.plain_text;
 
@@ -125,23 +125,14 @@ module.exports = async (req, res) => {
                 return txt;
             })
             .join("");
+          text = text.replace(/^\s*\d+[.)]\s*/, "");
 
           content += `${numberedCounter}. ${text}\n`;
 
           continue;
         }
-
-        const isEmptyParagraph =
-          block.type === "paragraph" &&
-          !(block.paragraph?.rich_text || []).some(
-            (t) => t.plain_text.trim() !== ""
-          );
+        
  
-        if (isEmptyParagraph) {
-          content += blockToMarkdown(block);
-          continue;
-        }
-
         // Jika bukan numbered list, reset nomor
         numberedCounter = 0;
 

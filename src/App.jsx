@@ -504,6 +504,16 @@ export default function KelasNotesters() {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= 640 : false
+  );
+
+  // Pantau lebar layar supaya navbar bisa berubah jadi mode scroll di HP
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Ambil materi dari Notion saat web pertama kali dibuka
   useEffect(() => {
@@ -596,7 +606,17 @@ export default function KelasNotesters() {
     },
     navLogo: { color: "white", fontSize: 20, fontWeight: "bold", cursor: "pointer", lineHeight: 1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 2 },
     navLogoSub: { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "normal" },
-    navLinks: { display: "flex", alignItems: "center", gap: 4, flexWrap: "wrap", justifyContent: "flex-end" },
+    navLinks: { 
+      display: "flex",
+      alignItems: "center",
+      gap: 4,
+      flexWrap: isMobile ? "nowrap" : "wrap",
+      justifyContent: isMobile ? "flex-start" : "flex-end",
+      overflowX: isMobile ? "auto" : "visible",
+      WebkitOverflowScrolling: "touch",
+      scrollbarWidth: "none",
+      maxWidth: isMobile ? "calc(100vw - 120px)" : "none",
+    },
     navLink: {
       color: "white",
       background: "transparent",
@@ -606,6 +626,8 @@ export default function KelasNotesters() {
       cursor: "pointer",
       fontSize: 13,
       fontFamily: "inherit",
+      flexShrink: 0,
+      whiteSpace: "nowrap",
     },
     navLinkActive: {
       color: GREEN,
@@ -617,6 +639,8 @@ export default function KelasNotesters() {
       fontSize: 13,
       fontFamily: "inherit",
       fontWeight: "bold",
+      flexShrink: 0,
+      whiteSpace: "nowrap",
     },
 
     // HERO
@@ -770,11 +794,11 @@ export default function KelasNotesters() {
         <div style={s.navLogoSub}>by Kyo</div>
       </div>
     </div>  
-    <div style={s.navLinks}>
+    <div style={s.navLinks} className="nav-links-scroll">
       <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
       <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
       <button className="nav-donate" style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
-      <button className={page === "contact" ? s.navLinkActive : s.navLink} style={s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+      <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
       </div>
     </div>
   );
@@ -968,6 +992,12 @@ export default function KelasNotesters() {
   );
   return (
   <div style={s.root}>
+    <style>{`
+      .nav-links-scroll::-webkit-scrollbar { height: 3px; }
+      .nav-links-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.5); border-radius: 4px; }
+      .nav-links-scroll::-webkit-scrollbar-track { background: transparent; }
+      .nav-links-scroll { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.5) transparent; }
+     `}</style>
     {renderNavbar()}
     {page === "home" && renderHome()}
     {page === "explore" && renderExplore()}
