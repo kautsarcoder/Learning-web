@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import "./App.css";
 
@@ -504,9 +504,17 @@ export default function KelasNotesters() {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
+  const mainContentRef = useRef(null);
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth <= 640 : false
   );
+  // Setiap ganti materi/lesson, otomatis scroll balik ke paling atas
+  useEffect(() => {
+    if (mainContentRef.current) {
+      mainContentRef.current.scrollTo({ top: 0, behavior: "auto" });
+    }
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [activeLesson]);
 
   // Pantau lebar layar supaya navbar bisa berubah jadi mode scroll di HP
   useEffect(() => {
