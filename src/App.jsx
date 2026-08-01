@@ -450,7 +450,7 @@ function renderContent(content) {
     } else if (line.startsWith("## ")) {
       elements.push(
         <div key={i} style={{ fontSize: "clamp(16px, 3vw, 19px)", fontWeight: "bold", color: "#1a1a1a", marginTop: 28, marginBottom: 10, paddingLeft: 12, borderLeft: "3px solid #7BAE9B" }}>
-         {renderInlineBold(line.replace("## ", ""))}
+          {renderInlineBold(line.replace("## ", ""))}
         </div>
       );
     } else if (line.startsWith("### ")) {
@@ -461,10 +461,10 @@ function renderContent(content) {
       );
     } else if (line.startsWith("#### ")) {
       elements.push(
-        <div key={i} style={{ fontSize: 14, fontWeight: "bold", color: "#555", marginTop: 14, marginBottom: 4 }}>
+        <div key={i} style={{ fontSize: 15, fontWeight: "bold", color: "#1a1a1a", marginTop: 14, marginBottom: 4 }}>
           {renderInlineBold(line.replace("#### ", ""))}
         </div>
-      );  
+      );
     } else if (line.startsWith("• ")) {
       const parts = line.replace("• ", "").split("**");
       elements.push(
@@ -505,9 +505,7 @@ export default function KelasNotesters() {
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
   const mainContentRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth <= 640 : false
-  );
+
   // Setiap ganti materi/lesson, otomatis scroll balik ke paling atas
   useEffect(() => {
     if (mainContentRef.current) {
@@ -515,6 +513,9 @@ export default function KelasNotesters() {
     }
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [activeLesson]);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth <= 640 : false
+  );
 
   // Pantau lebar layar supaya navbar bisa berubah jadi mode scroll di HP
   useEffect(() => {
@@ -614,7 +615,7 @@ export default function KelasNotesters() {
     },
     navLogo: { color: "white", fontSize: 20, fontWeight: "bold", cursor: "pointer", lineHeight: 1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 2 },
     navLogoSub: { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "normal" },
-    navLinks: { 
+    navLinks: {
       display: "flex",
       alignItems: "center",
       gap: 4,
@@ -723,15 +724,27 @@ export default function KelasNotesters() {
       width: 240,
       background: "white",
       borderRight: "1px solid #e0e0e0",
-      padding: "16px 0",
       position: "fixed",
       top: 56,
       left: 0,
       height: "calc(100vh - 56px)",
-      overflowY: "auto",
       zIndex: 300,
       transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
       transition: "transform 0.3s ease",
+      display: "flex",
+      flexDirection: "column",
+    },
+    sidebarList: {
+      flex: 1,
+      minHeight: 0,
+      overflowY: "auto",
+      padding: "16px 0",
+    },
+    sidebarFooter: {
+      flexShrink: 0,
+      borderTop: "1px solid #eee",
+      background: "white",
+      padding: 12,
     },
     sidebarTitle: { padding: "0 16px 12px", borderBottom: "1px solid #eee", fontSize: 14, fontWeight: "bold", color: "#1a1a1a", lineHeight: 1.4 },
     lessonItem: {
@@ -776,7 +789,7 @@ export default function KelasNotesters() {
     navBtns: { display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 28 },
     prevBtn: { background: "white", color: "#1a1a1a", border: "1px solid #ddd", padding: "10px 20px", borderRadius: 50, fontSize: 18, cursor: "pointer" },
     nextBtn: { background: "white", color: "#1a1a1a", border: "1px solid #ddd", padding: "10px 20px", borderRadius: 50, fontSize: 18, cursor: "pointer" },
-    backBtn: { background: "white", color: "#555", border: "1px solid #ddd", padding: "7px 16px", borderRadius: 6, fontSize: 12, cursor: "pointer", fontFamily: "inherit", margin: "16px 16px 0" },
+    backBtn: { background: "white", color: "#555", border: "1px solid #ddd", padding: "8px 16px", borderRadius: 6, fontSize: 12, cursor: "pointer", fontFamily: "inherit", width: "100%" },
 
     // CONTACT PAGE
     contactPage: { maxWidth: 520, margin: "40px auto", padding: "0 20px" },
@@ -802,11 +815,22 @@ export default function KelasNotesters() {
         <div style={s.navLogoSub}>by Kyo</div>
       </div>
     </div>  
-    <div style={s.navLinks} className="nav-links-scroll">
-      <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
-      <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
-      <button className="nav-donate" style={s.navLink} onClick={() => setShowDonate(true)}>Donate</button>
-      <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+    <div style={{ position: "relative", overflow: "hidden", flex: isMobile ? 1 : "none", minWidth: 0 }}>
+      <div style={s.navLinks} className="nav-links-scroll">
+        <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
+        <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
+        <button
+          className="nav-donate"
+          style={{ ...s.navLink, display: "inline-flex", alignItems: "center", visibility: "visible", opacity: 1 }}
+          onClick={() => setShowDonate(true)}
+        >
+          Donate
+        </button>
+        <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+      </div>
+      {isMobile && (
+        <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 24, pointerEvents: "none", background: `linear-gradient(to right, transparent, ${GREEN})` }} />
+      )}
       </div>
     </div>
   );
@@ -898,29 +922,33 @@ export default function KelasNotesters() {
         {sidebarOpen && <div style={s.overlay} onClick={() => setSidebarOpen(false)} />}
 
         <div style={s.sidebar}>
-          <div style={s.sidebarTitle}>≡ &nbsp;{activeCourse.title}</div>
-          {activeCourse.lessons.map((lesson, idx) => (
-            <div key={lesson.id}>
-              <div
-                style={{ ...s.lessonItem, ...(activeLesson?.id === lesson.id ? s.lessonItemActive : {}) }}
-                onClick={() => { setActiveLesson(lesson); setSidebarOpen(false); }}
-              >
-                <span>{lesson.type === "video" ? "🎬" : "📖"}</span>
-                <span>{lesson.title}</span>
+          <div style={s.sidebarList}>
+            <div style={s.sidebarTitle}>≡ &nbsp;{activeCourse.title}</div>
+            {activeCourse.lessons.map((lesson, idx) => (
+              <div key={lesson.id}>
+                <div
+                  style={{ ...s.lessonItem, ...(activeLesson?.id === lesson.id ? s.lessonItemActive : {}) }}
+                  onClick={() => { setActiveLesson(lesson); setSidebarOpen(false); }}
+                >
+                  <span>{lesson.type === "video" ? "🎬" : "📖"}</span>
+                  <span>{lesson.title}</span>
+                </div>
+                {lesson.type === "video" && idx < activeCourse.lessons.length - 1 && (
+                  <div style={s.lessonDivider} />
+                )}
               </div>
-              {lesson.type === "video" && idx < activeCourse.lessons.length - 1 && (
-                <div style={s.lessonDivider} />
-              )}
-            </div>
-          ))}
-          <button style={s.backBtn} onClick={() => { setPage("explore"); setSidebarOpen(false); }}>Back</button>
+            ))}
+          </div>
+          <div style={s.sidebarFooter}>
+            <button style={s.backBtn} onClick={() => { setPage("explore"); setSidebarOpen(false); }}>Back</button>
+          </div>
         </div>
 
         <button style={s.toggleBtn} onClick={() => setSidebarOpen(!sidebarOpen)}>
           {sidebarOpen ? "✕" : "≡"}
         </button>
 
-        <div className="mainContent">
+        <div className="mainContent" ref={mainContentRef}>
           {activeLesson && (
             <>
               <div className="contentTitle">{activeCourse.title.split(" ")[0]} {activeCourse.title.split(" ").slice(1).join(" ")}</div>
@@ -1005,7 +1033,7 @@ export default function KelasNotesters() {
       .nav-links-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.5); border-radius: 4px; }
       .nav-links-scroll::-webkit-scrollbar-track { background: transparent; }
       .nav-links-scroll { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.5) transparent; }
-     `}</style>
+    `}</style>
     {renderNavbar()}
     {page === "home" && renderHome()}
     {page === "explore" && renderExplore()}
