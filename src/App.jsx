@@ -489,13 +489,66 @@ function renderContent(content) {
 
   return elements;
 }
+const COURSES_CACHE_KEY = "ls_courses_cache_v1";
+
+// Baca cache course dari localStorage (kalau ada & valid), supaya halaman
+// bisa langsung tampil tanpa nunggu fetch API selesai dulu.
+function readCachedCourses() {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(COURSES_CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+  } catch (e) {
+    // cache rusak/gak valid, abaikan aja
+  }
+  return null;
+}
+
+function saveCoursesCache(courses) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(COURSES_CACHE_KEY, JSON.stringify(courses));
+  } catch (e) {
+    // storage penuh/diblokir, gak masalah, cuma gak ke-cache
+  }
+}
+
+// Tentukan page/course/lesson dari query string URL saat ini, secara SINKRON
+// (tanpa nunggu network) — dicocokkan ke daftar courses yang tersedia saat itu
+// (bisa dari cache localStorage, atau data yang baru selesai di-fetch).
+function readUrlState(coursesForLookup) {
+  if (typeof window === "undefined") {
+    return { page: "home", course: null, lesson: null };
+  }
+  const params = new URLSearchParams(window.location.search);
+  const p = params.get("page");
+  const courseId = params.get("course");
+  const lessonId = params.get("lesson");
+
+  if (p === "course" && courseId) {
+    const course = (coursesForLookup || []).find((c) => c.id === courseId);
+    if (course) {
+      const lesson = lessonId ? course.lessons.find((l) => l.id === lessonId) : null;
+      return { page: "course", course, lesson: lesson || course.lessons[0] };
+    }
+    // Course belum ketemu (mungkin data belum ke-load) — anggap sementara Explore
+    return { page: "explore", course: null, lesson: null };
+  }
+  if (p === "explore" || p === "contact") {
+    return { page: p, course: null, lesson: null };
+  }
+  return { page: "home", course: null, lesson: null };
+}
+
 // Render konten dengan markdown sederhana
 export default function KelasNotesters() {
-  const [page, setPage] = useState("home");
-  const [courses, setCourses] = useState(fallbackCourses);
-  const [loadingMateri, setLoadingMateri] = useState(true);
-  const [activeCourse, setActiveCourse] = useState(null);
-  const [activeLesson, setActiveLesson] = useState(null);
+  const [page, setPage] = useState(() => readUrlState(readCachedCourses() || fallbackCourses).page);
+  const [courses, setCourses] = useState(() => readCachedCourses() || fallbackCourses);
+  const [loadingMateri, setLoadingMateri] = useState(() => !readCachedCourses());
+  const [activeCourse, setActiveCourse] = useState(() => readUrlState(readCachedCourses() || fallbackCourses).course);
+  const [activeLesson, setActiveLesson] = useState(() => readUrlState(readCachedCourses() || fallbackCourses).lesson);
   const [showDonate, setShowDonate] = useState(false);
   const [contactSending, setContactSending] = useState(false);
   const [contactSuccess, setContactSuccess] = useState(false);
@@ -505,12 +558,6 @@ export default function KelasNotesters() {
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
   const mainContentRef = useRef(null);
-  // Simpan parameter URL saat pertama kali halaman dibuka (untuk shared link / reload)
-  const initialUrlParamsRef = useRef(
-    typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams()
-  );
-  // Flag: true setelah proses restore dari URL selesai (baik berhasil maupun tidak)
-  const restoredFromUrlRef = useRef(false);
 
   // Setiap ganti materi/lesson, otomatis scroll balik ke paling atas
   useEffect(() => {
@@ -530,57 +577,41 @@ export default function KelasNotesters() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Ambil materi dari Notion saat web pertama kali dibuka
+  // Ambil materi dari Notion saat web pertama kali dibuka (data segar di
+  // background; kalau ada cache, halaman sudah tampil duluan tanpa nunggu ini)
   useEffect(() => {
     fetch("/api/materi")
       .then((res) => res.json())
       .then((data) => {
-        let grouped = fallbackCourses;
         if (data.lessons && data.lessons.length > 0) {
-          grouped = groupLessonsByCourse(data.lessons);
+          const grouped = groupLessonsByCourse(data.lessons);
           setCourses(grouped);
+          saveCoursesCache(grouped);
+
+          // Kalau tadinya belum ada cache (jadi belum sempat ke-restore ke
+          // course/lesson yang dituju URL), coba restore lagi sekarang
+          // setelah data asli tersedia.
+          setActiveCourse((prevCourse) => {
+            if (prevCourse) return prevCourse;
+            const restored = readUrlState(grouped);
+            if (restored.page === "course" && restored.course) {
+              setActiveLesson(restored.lesson);
+              setPage("course");
+              return restored.course;
+            }
+            return prevCourse;
+          });
         }
         setLoadingMateri(false);
-
-        // Restore halaman/course/lesson dari URL (untuk link yang dibagikan atau reload)
-        const params = initialUrlParamsRef.current;
-        const urlPage = params.get("page");
-        const urlCourseId = params.get("course");
-        const urlLessonId = params.get("lesson");
-
-        if (urlPage === "course" && urlCourseId) {
-          const course = grouped.find((c) => c.id === urlCourseId);
-          if (course) {
-            const lesson = urlLessonId
-              ? course.lessons.find((l) => l.id === urlLessonId)
-              : null;
-            setActiveCourse(course);
-            setActiveLesson(lesson || course.lessons[0]);
-            setPage("course");
-          } else {
-            // Course di URL sudah tidak ada, arahkan ke Explore saja
-            setPage("explore");
-          }
-        } else if (urlPage === "explore") {
-          setPage("explore");
-        } else if (urlPage === "contact") {
-          setPage("contact");
-        }
-
-        restoredFromUrlRef.current = true;
       })
       .catch(() => {
-        // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh
+        // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh/cache yang ada
         setLoadingMateri(false);
-        restoredFromUrlRef.current = true;
       });
   }, []);
 
   // Setiap page/course/lesson berubah, update URL supaya bisa di-share & tahan reload.
-  // Ditunda sampai proses restore awal dari URL selesai, supaya tidak menimpa URL
-  // yang dibuka dari link bagikan sebelum data sempat di-restore.
   useEffect(() => {
-    if (!restoredFromUrlRef.current) return;
     const params = new URLSearchParams();
     params.set("page", page);
     if (page === "course" && activeCourse) {
@@ -632,6 +663,18 @@ export default function KelasNotesters() {
   const goExplore = () => {
     setPage("explore");
     setSidebarOpen(false);
+  };
+
+  const goContact = () => {
+    setPage("contact");
+    setSidebarOpen(false);
+  };
+
+  // Handler untuk anchor tag: cegah reload penuh browser, biar tetap SPA,
+  // tapi href-nya tetap ada jadi bisa di-copy/klik-kanan/buka tab baru.
+  const navLinkClick = (fn) => (e) => {
+    e.preventDefault();
+    fn();
   };
 
   const submitContact = () => {
@@ -886,16 +929,16 @@ export default function KelasNotesters() {
 
   const renderNavbar = () => (
     <div style={s.navbar}>
-      <div style={{ cursor: "pointer" }} onClick={goHome}>
+      <a href="?page=home" onClick={navLinkClick(goHome)} style={{ cursor: "pointer", textDecoration: "none" }}>
       <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
         <div style={s.navLogo}>LearningSpace</div>
         <div style={s.navLogoSub}>by Kyo</div>
       </div>
-    </div>  
+    </a>  
     <div style={{ position: "relative", overflow: "hidden", flex: isMobile ? 1 : "none", minWidth: 0 }}>
       <div style={s.navLinks} className="nav-links-scroll">
-        <button style={page === "home" ? s.navLinkActive : s.navLink} onClick={goHome}>Home</button>
-        <button style={page === "explore" || page === "course" ? s.navLinkActive : s.navLink} onClick={goExplore}>Explore</button>
+        <a href="?page=home" onClick={navLinkClick(goHome)} style={{ ...(page === "home" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Home</a>
+        <a href="?page=explore" onClick={navLinkClick(goExplore)} style={{ ...(page === "explore" || page === "course" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Explore</a>
         <button
           className="nav-donate"
           style={{ ...s.navLink, display: "inline-flex", alignItems: "center", visibility: "visible", opacity: 1 }}
@@ -903,7 +946,7 @@ export default function KelasNotesters() {
         >
           Donate
         </button>
-        <button style={page === "contact" ? s.navLinkActive : s.navLink} onClick={() => setPage("contact")}>Contact Us</button>
+        <a href="?page=contact" onClick={navLinkClick(goContact)} style={{ ...(page === "contact" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Contact Us</a>
       </div>
       {isMobile && (
         <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 24, pointerEvents: "none", background: `linear-gradient(to right, transparent, ${GREEN})` }} />
@@ -936,10 +979,10 @@ export default function KelasNotesters() {
         </div>
       </div>
       <div style={s.footerRight}>
-        <button style={s.footerLink} onClick={goHome}>Home</button>
-        <button style={s.footerLink} onClick={goExplore}>Explore</button>
+        <a href="?page=home" onClick={navLinkClick(goHome)} style={{ ...s.footerLink, textDecoration: "none" }}>Home</a>
+        <a href="?page=explore" onClick={navLinkClick(goExplore)} style={{ ...s.footerLink, textDecoration: "none" }}>Explore</a>
         <button style={s.footerLink} onClick={() => setShowDonate(true)}>Donate</button>
-        <button style={s.footerLink} onClick={() => setPage("contact")}>Contact Us</button>
+        <a href="?page=contact" onClick={navLinkClick(goContact)} style={{ ...s.footerLink, textDecoration: "none" }}>Contact Us</a>
       </div>
     </div>
   );
