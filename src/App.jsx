@@ -505,6 +505,12 @@ export default function KelasNotesters() {
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
   const mainContentRef = useRef(null);
+  // Simpan parameter URL saat pertama kali halaman dibuka (untuk shared link / reload)
+  const initialUrlParamsRef = useRef(
+    typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams()
+  );
+  // Flag: true setelah proses restore dari URL selesai (baik berhasil maupun tidak)
+  const restoredFromUrlRef = useRef(false);
 
   // Setiap ganti materi/lesson, otomatis scroll balik ke paling atas
   useEffect(() => {
@@ -529,16 +535,87 @@ export default function KelasNotesters() {
     fetch("/api/materi")
       .then((res) => res.json())
       .then((data) => {
+        let grouped = fallbackCourses;
         if (data.lessons && data.lessons.length > 0) {
-          setCourses(groupLessonsByCourse(data.lessons));
+          grouped = groupLessonsByCourse(data.lessons);
+          setCourses(grouped);
         }
         setLoadingMateri(false);
+
+        // Restore halaman/course/lesson dari URL (untuk link yang dibagikan atau reload)
+        const params = initialUrlParamsRef.current;
+        const urlPage = params.get("page");
+        const urlCourseId = params.get("course");
+        const urlLessonId = params.get("lesson");
+
+        if (urlPage === "course" && urlCourseId) {
+          const course = grouped.find((c) => c.id === urlCourseId);
+          if (course) {
+            const lesson = urlLessonId
+              ? course.lessons.find((l) => l.id === urlLessonId)
+              : null;
+            setActiveCourse(course);
+            setActiveLesson(lesson || course.lessons[0]);
+            setPage("course");
+          } else {
+            // Course di URL sudah tidak ada, arahkan ke Explore saja
+            setPage("explore");
+          }
+        } else if (urlPage === "explore") {
+          setPage("explore");
+        } else if (urlPage === "contact") {
+          setPage("contact");
+        }
+
+        restoredFromUrlRef.current = true;
       })
       .catch(() => {
         // Kalau gagal fetch (misal: offline atau belum setup), pakai data contoh
         setLoadingMateri(false);
+        restoredFromUrlRef.current = true;
       });
   }, []);
+
+  // Setiap page/course/lesson berubah, update URL supaya bisa di-share & tahan reload.
+  // Ditunda sampai proses restore awal dari URL selesai, supaya tidak menimpa URL
+  // yang dibuka dari link bagikan sebelum data sempat di-restore.
+  useEffect(() => {
+    if (!restoredFromUrlRef.current) return;
+    const params = new URLSearchParams();
+    params.set("page", page);
+    if (page === "course" && activeCourse) {
+      params.set("course", activeCourse.id);
+      if (activeLesson) params.set("lesson", activeLesson.id);
+    }
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.history.pushState({}, "", newUrl);
+  }, [page, activeCourse, activeLesson]);
+
+  // Dukung tombol Back/Forward browser
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const urlPage = params.get("page") || "home";
+      const urlCourseId = params.get("course");
+      const urlLessonId = params.get("lesson");
+
+      if (urlPage === "course" && urlCourseId) {
+        const course = courses.find((c) => c.id === urlCourseId);
+        if (course) {
+          const lesson = urlLessonId
+            ? course.lessons.find((l) => l.id === urlLessonId)
+            : course.lessons[0];
+          setActiveCourse(course);
+          setActiveLesson(lesson || course.lessons[0]);
+          setPage("course");
+          return;
+        }
+      }
+      setPage(urlPage);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, [courses]);
 
   const openCourse = (course) => {
     setActiveCourse(course);
