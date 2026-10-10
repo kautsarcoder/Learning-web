@@ -1,0 +1,4533 @@
+{
+  "unchanged": 198,
+  "safeToMove": [],
+  "needsDecision": [
+    {
+      "vocabId": "04517c7f-bb9a-45f9-86fb-3f4b48148e3f",
+      "kataArab": "سيد",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "2e997969-4fc6-4793-aa57-87a5b8e21ea5",
+      "kataArab": "هي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "f25985f4-444a-4dd0-b111-e44b136b3d42",
+      "kataArab": "ونشوفكم",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 41
+    },
+    {
+      "vocabId": "10f41eec-c523-4b88-bc39-f86afca45219",
+      "kataArab": "خير",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "b4a6d9e4-f081-46b5-bfd8-70c91e219aaf",
+      "kataArab": "عمري",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "d1bb72c7-7b6f-4f04-9528-ace3f048c7ff",
+      "kataArab": "وشكرا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "f661face-30b3-4192-8c12-e53329c94509",
+      "kataArab": "السلامة",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "a2eb0a08-b890-4a3a-ac87-ae92e0755df5",
+      "kataArab": "اسمهم",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 40
+    },
+    {
+      "vocabId": "a1e2f1bb-9390-4821-a33e-023fa2fc16eb",
+      "kataArab": "عربي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "358b8a27-86d3-4c38-b665-ac7489c6b15b",
+      "kataArab": "شكرا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "a2872277-3469-4701-b4c4-ad00c5a862ad",
+      "kataArab": "ويعطيكم",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "aa202d0d-2000-41ea-b270-1e03030662bd",
+      "kataArab": "إحنا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 37
+    },
+    {
+      "vocabId": "f3817211-556c-43e4-9055-627fa1bf9a90",
+      "kataArab": "يخليك",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 37
+    },
+    {
+      "vocabId": "e95f816c-d18b-4416-b50e-aeb60192eb29",
+      "kataArab": "سلام",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "14874850-0f93-4297-8eeb-114e45d2371c",
+      "kataArab": "وصحابنا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 2
+    },
+    {
+      "vocabId": "1fad7fd3-1d8d-4ad1-a0fd-9e2c80cb6517",
+      "kataArab": "أهلا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 38
+    },
+    {
+      "vocabId": "0f7c02ce-df72-41dd-b595-a95efb627160",
+      "kataArab": "ميرسي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 38
+    },
+    {
+      "vocabId": "fef45a91-f70f-4324-8270-e6322dbddfee",
+      "kataArab": "حبيباتي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "510649f0-7fa9-48b7-bbf9-8a70734ac005",
+      "kataArab": "هو",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a5a7c410-80e0-448f-b6a0-ee38fa75b34e",
+      "kataArab": "صاحبي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "0b89d574-21a2-4af3-81e1-57201700dff8",
+      "kataArab": "أردنية",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1436f16c-e84f-494c-ae16-4046d738d516",
+      "kataArab": "إنت",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 4
+    },
+    {
+      "vocabId": "4ad2ec06-da29-4b07-9ed9-090e4465e199",
+      "kataArab": "يعطيكم",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 4
+    },
+    {
+      "vocabId": "647d7976-d1b0-48f5-ad16-dc040ac17e78",
+      "kataArab": "نشوفك",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "974cf1d1-778b-4b41-ba3c-595e5a1ec7a8",
+      "kataArab": "عايشة",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a48d716d-3bf7-4dba-88c1-312c7bf3d3b2",
+      "kataArab": "بسلم",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5e163db4-cc9e-4b78-8399-ff1281c787a5",
+      "kataArab": "الأردني",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c6932e89-4ea7-4a2b-93bc-e8c0e182117a",
+      "kataArab": "خلقت",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "50026d06-0684-4c8b-9d47-748b9a699565",
+      "kataArab": "نودع",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 22
+    },
+    {
+      "vocabId": "0442a86f-bee1-4851-a996-d7612f1ef829",
+      "kataArab": "وحبايبنا",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "78616e38-8645-4f91-9527-5044ed99b2e9",
+      "kataArab": "ووصلي",
+      "topicName": "Perkenalan & Sapaan",
+      "unitNumber": 1,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "44672ea5-fa8e-470e-b9fe-a95e9e3629c2",
+      "kataArab": "ألف",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c47a6b9f-a3f9-433a-970a-c221d0a17910",
+      "kataArab": "الجاي",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b11741dc-4111-4e1f-a872-00e2182734d3",
+      "kataArab": "ايام",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "43a4e1c7-9524-4be8-b475-b78177d48ab2",
+      "kataArab": "عطلة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "fed08b7a-9946-4cba-8196-d69a080c67de",
+      "kataArab": "اربعة عشر",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "65850279-ec33-47fa-b60c-ba89c2e6716b",
+      "kataArab": "اليوم",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9163f246-6249-4629-9105-89fcf00dee5e",
+      "kataArab": "مرات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f8e2a18a-f564-4dca-83b2-7b5b760d4057",
+      "kataArab": "دائما",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "eab97d63-59c0-4f3b-a523-e76e2fdc955f",
+      "kataArab": "الأول",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f8a1bf6a-497e-45fc-9d84-f37987b28a10",
+      "kataArab": "ساعه",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2e1c7e18-5ca3-431a-b810-9907028627ab",
+      "kataArab": "شهرين",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "0d2db9ce-bab3-4466-a9dd-59156742cd97",
+      "kataArab": "خمسة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2b36497a-0d71-4fae-ae22-765e30653a7f",
+      "kataArab": "سبع",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9f3ebe33-2f45-453d-a462-f8372cf067c0",
+      "kataArab": "يوم",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 5
+    },
+    {
+      "vocabId": "411848ed-5b1f-4a2a-a4d9-844d6506bb79",
+      "kataArab": "أول",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1c9d7b43-25b0-458b-bfc8-83ba519736d3",
+      "kataArab": "السبت",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ab7d419e-ee48-4331-8284-679fc59c6e36",
+      "kataArab": "الفترة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3fc87cb9-8873-413f-acee-b570c714237c",
+      "kataArab": "الصبح",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "53732f17-bf53-4b21-aabb-a3f7d2f3bbdf",
+      "kataArab": "قبل",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b0900f1e-aa50-43f6-91f3-a698fd863ca1",
+      "kataArab": "نهاركم",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "eece02fa-f307-4c01-ba5c-e16df708b95b",
+      "kataArab": "بالليل",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "003085af-dc4c-49f1-8f8c-081249975a30",
+      "kataArab": "واحد",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "0e914a96-2c76-45e6-8d12-31e51aa50dcb",
+      "kataArab": "اول",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "855ce032-6daa-4843-a1f7-88613571522d",
+      "kataArab": "تاني",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "e3b7d633-aa29-446a-a66e-9421fa28487c",
+      "kataArab": "بعدين",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ca3cee7b-82d6-4b1c-91e6-771aea4cc65f",
+      "kataArab": "عالخمسة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8bae74d1-83df-45c2-8128-15af01ccb6b9",
+      "kataArab": "خمسين",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "85093729-1611-4e1a-8606-a6512f7904fa",
+      "kataArab": "هسا",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d8fdd90a-a3b6-4f67-b936-ada92b4d3e99",
+      "kataArab": "أيام",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4f5e7bf5-612b-43cb-a4cc-1572b38e10f1",
+      "kataArab": "المسا",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7c52e6b7-aa95-4208-a8a9-e6e25472decf",
+      "kataArab": "تسعة عشر",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cbd80c81-66b6-49cb-ae27-4c101272fb1d",
+      "kataArab": "النهار",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f6a44b9e-c87c-4a67-8785-4fb8ceb4a6b4",
+      "kataArab": "لهلاء",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b000fa88-2a31-48ad-829f-48a6f7e46d34",
+      "kataArab": "قريب",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8ccb2f40-7b84-45d7-8ba3-6d3a9304425f",
+      "kataArab": "ونصف",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "27802403-3d04-440b-86e0-74e4b9063611",
+      "kataArab": "اوقات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a7fad757-1e3d-4f38-9e48-354c0092c442",
+      "kataArab": "زمان",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "e51be84f-0bef-4b3f-88a1-425b64c89646",
+      "kataArab": "بكرة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "96d5a153-6112-4d48-b90c-5e552e5d2837",
+      "kataArab": "بالنهار",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d6e9730b-b194-403a-b6b9-fd0088bca7c6",
+      "kataArab": "مرة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a01b0c21-da93-46e6-a0a2-19df84a44b65",
+      "kataArab": "دقايق",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d9c88043-98fe-45ec-a641-d94aef00553b",
+      "kataArab": "وقت",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "dd762259-526e-49b8-9a0a-0e3c6caa9e04",
+      "kataArab": "عشرة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "44db7d81-d68f-4b24-8733-7f74fe2d0b1d",
+      "kataArab": "أسبوع",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "daf98700-b622-4779-8d85-5441ba87ca71",
+      "kataArab": "هلأ",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "666dce57-7f7a-463b-9ec8-c0794159d0cf",
+      "kataArab": "الأسبوعي",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cc098e6e-eb5e-450b-aad2-4edd17c2be32",
+      "kataArab": "لمدة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9ab47e94-c648-4de9-a52c-a34b8bf0345a",
+      "kataArab": "التاريخ",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b1630fad-8907-4914-935d-080f076fa7d6",
+      "kataArab": "مرق",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "dcc4c2e1-97b2-47e3-a05c-efd9a42ae293",
+      "kataArab": "وبآخر",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ceeaa8b1-7e61-4cbc-b72b-0269eeb4f56e",
+      "kataArab": "نقضى",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2938d608-18ec-459d-bd78-d2a71dc7f4aa",
+      "kataArab": "بالتسعينات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1a8b4052-1cf5-4444-97d9-a73eed82d573",
+      "kataArab": "بالأعياد",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "23b45760-827c-4421-a88a-ca2900be085a",
+      "kataArab": "يومية",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d6295073-c040-4d97-a160-fee4d8b769c2",
+      "kataArab": "العشرينات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4f0a642f-6232-4021-bb53-416c1b60469d",
+      "kataArab": "لوقت",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8c4b6c9c-5b83-437d-868d-feb17bf91a1e",
+      "kataArab": "بحلول",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 8,
+      "toBagian": 10,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1602b62e-c181-47cb-91f0-95742601f219",
+      "kataArab": "حقبة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 10,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cc9ac50f-8291-4a0f-8cc4-c31c1c87f0e5",
+      "kataArab": "الأم",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "eebdd33c-5af1-4587-a934-c0df2da72919",
+      "kataArab": "وام",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4730975c-c599-4bc5-9a23-ea9995768f98",
+      "kataArab": "عمي",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "20f01fb9-31e9-47a1-a589-b26dc9f8eac2",
+      "kataArab": "ولاد",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6ad11cc9-404f-4944-858b-fb081569646f",
+      "kataArab": "الماما",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "50cfe777-764b-4d46-981c-5f62ebe2558f",
+      "kataArab": "بابا",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "aa693af2-dd33-45fe-8ccf-62ce4d2a0f3a",
+      "kataArab": "العائلة",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7d149460-99c5-430e-a932-b345633139af",
+      "kataArab": "عيلتنا",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b54595ad-90d5-4eed-8402-7f0aa5b9b56e",
+      "kataArab": "الاولاد",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "da53e632-74fd-4e05-a4bd-098076899e5d",
+      "kataArab": "أخوي",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "125f8d6d-debd-492f-91f5-79b954e3a736",
+      "kataArab": "البنات",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6e0636a8-8f72-4d2c-8779-0c027b12b7df",
+      "kataArab": "ام",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "496e1290-16c1-461c-abb7-7624a57b2f26",
+      "kataArab": "تجوزتو",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "eca1fc15-43bb-4987-af58-ed9c296231d5",
+      "kataArab": "الاهل",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "15d98363-ea99-4968-bbae-d8d93556bb2d",
+      "kataArab": "عائله",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7c4b30da-0a8a-42ad-b9e9-9938f598b57c",
+      "kataArab": "وبنتي",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b5c20710-3707-48e2-b8f4-304c7d9598dc",
+      "kataArab": "التيتا",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "09570d8a-7b5a-4d38-82db-021390a42358",
+      "kataArab": "الأسري",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5e5c63c4-eeab-4d9f-9df3-f02b28283518",
+      "kataArab": "العيلات",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9fa86bdc-c427-475d-bdbc-728512735c42",
+      "kataArab": "النهار",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "710299d5-cd58-4cf1-8e5c-09db27c67f86",
+      "kataArab": "تمانية",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2a425d35-4b4c-490f-a23e-5cda74fff9fa",
+      "kataArab": "الزمن",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3b9b1d83-8cea-4c46-a9a4-e87a3b04ba2c",
+      "kataArab": "بعد",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "23fcf448-d03e-4923-968c-80635625805f",
+      "kataArab": "فهلا",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "25411b29-54b2-4820-b505-7a9a2793377c",
+      "kataArab": "تسعة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f66921ff-68e2-498a-bdd3-c987b4269051",
+      "kataArab": "مبارح",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ba81d18e-6e25-496c-8995-08f19280e19d",
+      "kataArab": "الجاية",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2ebc55f2-7f3b-4da7-9a61-dda9af33668b",
+      "kataArab": "سبعة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d511edbd-1f59-408f-9339-9f3944df6df1",
+      "kataArab": "نص",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "54279c6e-c1c6-45c2-9733-b70f7214cf5f",
+      "kataArab": "ايام",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "968c2412-ec26-4dae-8fbd-0b420b94cd5f",
+      "kataArab": "الفترة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e29c69ea-98e3-4302-963f-732f59afb81d",
+      "kataArab": "نقضى",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8852d409-1efa-40f9-8229-18996ccdf028",
+      "kataArab": "بكرة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7b8dd211-916d-4a8a-bb3e-adf4b3af3594",
+      "kataArab": "بكير",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "cf245fa2-2847-45a4-9315-f2721933646f",
+      "kataArab": "وهلا",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ac96f379-b202-4673-9ae9-43a77391b7e9",
+      "kataArab": "هلأ",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d3a625ea-6d5f-4066-91c3-e6c2572423b9",
+      "kataArab": "المستقبل",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "28fc4f1d-6943-47c2-a035-146cb45aa518",
+      "kataArab": "بايامنا",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "46d16d33-5e5b-4355-bdf7-f0b4763a3a11",
+      "kataArab": "ثاني",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "58d92fc5-0d64-4774-a683-138275be0d9b",
+      "kataArab": "تاني",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "41fc50b4-9d47-4d18-b54c-0458ee1f4476",
+      "kataArab": "واوقات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e31c87d5-c784-4d63-9c5a-43fadbdf2401",
+      "kataArab": "مرق",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "72a93449-7807-49a0-a868-0c76a972f5cf",
+      "kataArab": "عشرة",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6cbd7d60-5dd6-4ed3-8df8-955ad979abd4",
+      "kataArab": "ساعتها",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "54e370fb-a796-47fa-a2ba-d704aa6e3165",
+      "kataArab": "مرتين",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4b03de86-6b05-471b-82a9-bdc5ab963eea",
+      "kataArab": "بالليل",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "c5cd81a4-dc82-4356-84b2-987f54ed2755",
+      "kataArab": "أربع",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e829a2d9-58f0-4d24-9c1d-c3f2f31d968f",
+      "kataArab": "بلحظتها",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "baecd2fa-d9e4-44a0-b8f1-0c4188cf22f4",
+      "kataArab": "بالميات",
+      "topicName": "Angka & Waktu",
+      "unitNumber": 2,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1811ab56-f9e4-4f80-8f6c-1ae19a65a609",
+      "kataArab": "قوية",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f7287ce4-e7b9-4a42-92da-aca3fbe9b27f",
+      "kataArab": "القرايب",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3ae898ec-c6af-4071-a9f3-34ad4ad2bc24",
+      "kataArab": "لجوزها",
+      "topicName": "Keluarga",
+      "unitNumber": 3,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a14c9d08-4ed6-4e70-89cc-8b2980e777b9",
+      "kataArab": "الخضرا",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4387f1ca-8257-4206-9708-65a1c117302b",
+      "kataArab": "الكبيرة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cf1526ee-67db-43e8-b1a9-2b72ca227b51",
+      "kataArab": "ضروري",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2f3c5582-90a6-4ad0-becf-6609230c2400",
+      "kataArab": "غريبة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3ca60b54-08f8-45d6-9db2-7d5ce81333a9",
+      "kataArab": "منيح",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1ecb0b95-3fde-4074-be98-cf6442aa80e5",
+      "kataArab": "طويلة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "abbafc2d-b039-4c30-9553-160a1aac63e9",
+      "kataArab": "جديده",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8149b8c8-7008-46c3-a68a-4a422c9a7aee",
+      "kataArab": "مريحة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "debd5333-4be0-4fa7-9512-ab30aee27dcf",
+      "kataArab": "اللون",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 5
+    },
+    {
+      "vocabId": "29d73902-efbc-4627-8984-df4e536f8370",
+      "kataArab": "مخربط",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8e77a46c-a455-41d3-a95b-fa2897865812",
+      "kataArab": "بسيطة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "59c102f2-679f-4568-b3b2-f98fc672537d",
+      "kataArab": "جاهزة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "10d78448-9ea0-4e4e-8cc8-1bebf563cc38",
+      "kataArab": "عالي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "67dd432d-b1bf-4bb8-bb27-67f999d3311f",
+      "kataArab": "منيحه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "44acc8ef-46c9-46f6-96ed-84ea0cd9c2a0",
+      "kataArab": "لزيز",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1eeac7c3-57b1-4a27-a843-8dee63f634a2",
+      "kataArab": "مهمه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "bf4fc54a-5e90-4374-b269-1d43e61afd36",
+      "kataArab": "مشغولة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2771bd24-91d9-4634-b2e4-88946bd6cbe4",
+      "kataArab": "غبي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "53ad9252-93c0-4876-8a5c-08130295ddc8",
+      "kataArab": "لون",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f6d5285b-9129-419e-9cb9-99adcb5539e5",
+      "kataArab": "جديد",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a80eee6d-5e80-468e-a80c-b3482ad2d3ef",
+      "kataArab": "قوي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7daf3ad2-eba2-4a27-9545-c8ece902178c",
+      "kataArab": "مبسوطة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1b1ad8ff-b749-4c94-ac6f-d25cac306d2e",
+      "kataArab": "حقيقيه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 4
+    },
+    {
+      "vocabId": "3e46245a-1437-4691-9ead-d41c1a60f294",
+      "kataArab": "مشهورة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5725422d-60e1-4db4-966b-61cb1554d567",
+      "kataArab": "أسوأ",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e5b27782-8cd5-49fa-a365-aceee0681511",
+      "kataArab": "حامض",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a37ae995-ab5d-4ef4-bcdc-be77e20a58dc",
+      "kataArab": "الحامية",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3fc46700-f114-4220-ae48-8e8a81ab6401",
+      "kataArab": "غامضة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a5d21e22-e9ee-4ed0-ad37-c54a3782644f",
+      "kataArab": "مجتهد",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "712ce51a-dd9b-4ad0-bc8d-e0f7d04da85e",
+      "kataArab": "المالح",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "35b1675c-a66f-49fb-962b-5d947fb6ff3c",
+      "kataArab": "مشهور",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "48153e47-2be1-4ed0-9c16-fccbd8359cc9",
+      "kataArab": "أصيل",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "bcf675f9-af9a-43ce-906c-59e52877eb6a",
+      "kataArab": "حقيقي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ff3d56de-e154-4b3d-b7db-835567b54a09",
+      "kataArab": "الغامضة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9e2f47db-5b8a-492b-a2b5-4b44b257e921",
+      "kataArab": "فخورة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3d1d117d-734a-4fab-84ff-9e08afb47541",
+      "kataArab": "عملي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f4f7dbfb-e7ea-4159-b441-f170702a6e8d",
+      "kataArab": "المرعبة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ac226be1-3782-4dd1-95f2-7efbeeedd00f",
+      "kataArab": "هين",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b41f4973-1f52-44e8-bca5-2eb1ee5bb640",
+      "kataArab": "المميزة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "0b4da839-068c-4b66-988e-25b344a5d7c7",
+      "kataArab": "ساطعة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "378dbbcb-cb5e-43e8-baaf-48532caa7de0",
+      "kataArab": "رهيبة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d7a75e6b-abfd-4061-b05b-6664dc4e81ea",
+      "kataArab": "كامل",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "fcb6b819-4f5e-4fd5-ad87-3a7f39531fb2",
+      "kataArab": "خطير",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "037b81ac-8367-4e5e-917e-fd6f07319883",
+      "kataArab": "الناشف",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ad7c5250-8ff5-48e8-b84d-980df9fbd276",
+      "kataArab": "كامله",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d3e0c788-ca12-4203-9545-8e797b545fe2",
+      "kataArab": "بألوانه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "bc72aa09-0b1c-4a70-a901-ae78637209c5",
+      "kataArab": "شرح",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "46e44e84-8d2a-4da6-8494-549bb766315f",
+      "kataArab": "بائس",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 8,
+      "toBagian": 9,
+      "exerciseCount": 4
+    },
+    {
+      "vocabId": "12691969-1c25-4a38-8338-f980350b5be0",
+      "kataArab": "خيالية",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 9,
+      "toBagian": 10,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "34c75b23-5609-40c4-8ebe-7ecf3eedf046",
+      "kataArab": "البريق",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 10,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3f713389-8e56-404c-ae9e-d9e90c819a2d",
+      "kataArab": "أزكى",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "22bd9b74-c312-4a31-afd4-abfea1a9f390",
+      "kataArab": "وشاي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "237c9fa3-5662-459f-805b-16cc876eed0b",
+      "kataArab": "المناقيش",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f105e6ad-0dc4-43f7-b89e-9d11f0228f01",
+      "kataArab": "المنيو",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ba9d732a-545c-4029-981d-f93eabc08dbe",
+      "kataArab": "بشرب",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e6123200-e2c3-4586-9d44-c64b0ffedf7f",
+      "kataArab": "خبز",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8c5c0b1c-209d-4aaa-bfbe-bf825e5370c3",
+      "kataArab": "تدوقو",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d1b92677-41b3-4e18-a47d-119d6895db10",
+      "kataArab": "فنجان",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4368307a-9614-4b05-994f-fd9a58847657",
+      "kataArab": "كباب",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8591240f-1eb5-497e-a107-b868be7c9eae",
+      "kataArab": "والسكر",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ed8ef967-8a1f-4431-b197-6d371af63478",
+      "kataArab": "القنينة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8f932dbd-ff1f-41f1-a290-8b8a8f7829d2",
+      "kataArab": "الحار",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9eaa7321-90f6-4814-ab03-600e8e85390e",
+      "kataArab": "أرجيلة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "0ea6451a-b782-4156-ba5a-c436330d64f6",
+      "kataArab": "نشربها",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "78493de9-d01f-4eb4-96da-369111558b08",
+      "kataArab": "باكل",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e4844fd1-aab4-40bc-9e82-8ba0f4b8f0d7",
+      "kataArab": "جاج",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a92035e1-9d95-4b1c-90ae-34333405c5ab",
+      "kataArab": "بطلب",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "918bf017-04de-447e-9e8e-4bc667402f54",
+      "kataArab": "رز",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7b16192d-b6ff-4ade-a9d7-89bbae0e4ab2",
+      "kataArab": "حمص",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "0309a82b-7f43-4026-a255-9e4566d77375",
+      "kataArab": "قائمة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b38a33ee-52c7-4a9c-bdef-349bbac2d808",
+      "kataArab": "مي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "228d1a2c-393b-4320-b924-00efb340f800",
+      "kataArab": "مطعم",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "337e3f48-d9b6-4a7e-b088-d18268cd58c4",
+      "kataArab": "واللحمة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c5a5fe1d-3d38-4a13-a8cc-44acbd382eaa",
+      "kataArab": "المي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "0ec482a1-9d58-4018-a1ec-01c4a0719c42",
+      "kataArab": "الحمصوالفلافل",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6e5f64a9-ffbc-4c5d-864d-56e83da3be8b",
+      "kataArab": "أشرب",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d67107a6-5655-4f48-b2b3-3ecf8afe712b",
+      "kataArab": "واكل",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ff2dac60-3764-4a89-a679-369a7c5f6ad6",
+      "kataArab": "المقلي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "52879574-9ef2-42e7-9369-bc048236771c",
+      "kataArab": "حلويات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "c27fe8b1-094d-4ac8-84c3-fcd79c73573a",
+      "kataArab": "تبولة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "509dc8be-0cd0-437c-b223-0bfe2274134c",
+      "kataArab": "زاكي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7cf5f97c-c86b-4e9d-bdb3-aa3f9540b229",
+      "kataArab": "شاي",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9a3e36fd-df4d-461f-8674-6a74fa4b367e",
+      "kataArab": "مزات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3da7924a-9eec-47d1-9abf-050e31397f8b",
+      "kataArab": "قهوة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "74430372-1271-4540-8e47-050dee0f0001",
+      "kataArab": "الطعمة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "76c5f55a-d26a-4f54-a350-5539ae2a804b",
+      "kataArab": "والمطاعم",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "79cac1ff-62a6-4acb-989b-bd66d01fbcf8",
+      "kataArab": "تشرب",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3404174a-448b-4400-861e-556d94b0b36b",
+      "kataArab": "الأطباق",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "edef4d70-8bc8-4b77-9191-8072a06a022a",
+      "kataArab": "بالجميد",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5eba21a8-dcb4-4dc5-9696-f199b38df93f",
+      "kataArab": "نكهات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "449799f9-0b74-48ae-9633-656de7016ddc",
+      "kataArab": "الكاسات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2a5de4c1-3799-4faa-8447-efa5e2c95116",
+      "kataArab": "بقدموه",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b4303fa4-c491-474b-b814-81a8c3057d77",
+      "kataArab": "مقلية",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b45e07d6-5cdc-4d93-b2e6-f8e831027883",
+      "kataArab": "بتتحضر",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "0a92ce7d-b902-49dd-acfb-3f1adba199a1",
+      "kataArab": "سفرة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "eac1bb45-ce69-444e-987d-1bcfc483d7e1",
+      "kataArab": "المحمر",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4b9fbc1c-e907-4ea3-9e6f-c95ef15b5ad8",
+      "kataArab": "حجز",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6fc2af56-fde8-467e-90f7-bf1810554734",
+      "kataArab": "الشراك",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ef56fead-e100-4ff6-b95d-94d81b3868e2",
+      "kataArab": "والفتة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1f41eee0-fecd-4e3e-9d77-a983c8c59aa4",
+      "kataArab": "المقلية",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "16a21e2e-f1dd-4491-9fda-f4b73c7bca63",
+      "kataArab": "شهية",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "aa788da8-c335-46d4-87a0-f05bc2e932b5",
+      "kataArab": "والمزات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5dfb50d6-a669-4d97-85a5-f5fa358d0ed8",
+      "kataArab": "جاط",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1757123c-347f-4d37-8a23-3a7c7df2442a",
+      "kataArab": "محمرة",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "97ec09d7-6fc8-42ca-a19e-81199187221f",
+      "kataArab": "بشبع",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "45980bf5-2285-4491-abc8-f672eae7748c",
+      "kataArab": "شيش",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f1a8083c-62f3-4390-bcae-1beb706879ec",
+      "kataArab": "الغذائية",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 8,
+      "toBagian": 10,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "dc26df9f-0d9a-4b00-b7bd-76c7a9986eab",
+      "kataArab": "والحشوات",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 9,
+      "toBagian": 8,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8a2396a4-6f4b-4345-b468-8ac1091b9afd",
+      "kataArab": "سريع",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "3541ec1d-67ac-4f14-9c5c-870e91deb2b6",
+      "kataArab": "سيء",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "49bb6625-c8bb-4690-9bf7-ecba32a27ff2",
+      "kataArab": "شاطر",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f94b0a34-fae5-4c99-abb0-52ebd9928f1a",
+      "kataArab": "مليان",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f0cc4af9-efce-4643-8502-ba98538aa3fd",
+      "kataArab": "اقل",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8cdcba28-332d-42f3-909f-19101133ebf6",
+      "kataArab": "الحمراء",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "cd2a1de1-83d1-403a-b4c1-06a302aa89e7",
+      "kataArab": "جاهز",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4687f8eb-2bef-4f4d-89b9-8195ed7cad70",
+      "kataArab": "قوية",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 5
+    },
+    {
+      "vocabId": "90c68d4e-87e3-435c-8692-09aa3fd1a602",
+      "kataArab": "طويل",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8f543422-37d2-42b6-8d0a-18ce435e7aa0",
+      "kataArab": "حلوه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8251c8f7-80f3-4c5a-bfce-c0994d68e4fe",
+      "kataArab": "منيح",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4a77fcf0-dbaa-47d0-9111-74069c97f490",
+      "kataArab": "مهمه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2ce7d84e-d66d-4516-96b6-572eb867b60c",
+      "kataArab": "عالي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "613ef821-139d-4c94-a03a-39cc012b43f2",
+      "kataArab": "مبسوط",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "698b8f51-03cb-4b38-9e08-723db748cc23",
+      "kataArab": "أحلى",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5c6e0c1a-8ad5-4214-be92-6401d8580ff8",
+      "kataArab": "الكبيرة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "38aff217-d4ee-4ced-8fad-ee475340441b",
+      "kataArab": "لون",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "af815f13-bd5e-42ac-bc64-f9da09160dd5",
+      "kataArab": "غريبة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b9a628d2-8067-4685-ba0a-7e0e5f0d5c81",
+      "kataArab": "جديد",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "070c3118-4ad1-4bcc-987d-38da8c7d8d93",
+      "kataArab": "قوي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "772b6772-4175-48ee-9930-ac9e41e4a889",
+      "kataArab": "صعب",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f486818b-4836-48cd-8b86-d08049a6e782",
+      "kataArab": "مدمنه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 4
+    },
+    {
+      "vocabId": "55301a75-dff7-49da-aebb-564f4b94ffd5",
+      "kataArab": "حامض",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e931196f-b6e5-46cf-aeac-0dbe91938bb7",
+      "kataArab": "ممتعة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7dd9c800-4b72-46ec-8c83-f16c86866194",
+      "kataArab": "مزعج",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "778f6cd8-01c2-4db7-b32c-7144c662f1ff",
+      "kataArab": "حقيقيه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a7502f38-5c06-4aa0-9134-cd25bbdb618d",
+      "kataArab": "سلبيه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "0b10b251-25ae-4e17-9962-b91573d4a4aa",
+      "kataArab": "حقيقي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ca2dcaec-a630-4e96-878c-8b8794a8142b",
+      "kataArab": "مجتهد",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6c0491df-cd5d-40cf-9634-1319a59e1ca1",
+      "kataArab": "محظوظة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4fbf12ed-2492-4507-b3c3-cd3a825d47e8",
+      "kataArab": "مشهور",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8e935ec3-f9ae-40be-b33b-e551af49b73f",
+      "kataArab": "ساطعة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ffd7ce0d-139f-4627-a205-ae4c087ecb79",
+      "kataArab": "مشهورة",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a7060de5-ae64-4519-ab5f-4fac58ac9573",
+      "kataArab": "أغلى",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b7d5cac8-a626-4f81-a86c-702a3251ee59",
+      "kataArab": "عملي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b4461399-cd9a-43ca-8e7d-7d870ed34595",
+      "kataArab": "سلبي",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b346c898-96e0-4f7a-83a3-ca21837c888f",
+      "kataArab": "هين",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "365566e1-6234-462e-89b8-2939dd2b7768",
+      "kataArab": "شرح",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "632aa804-59d3-4341-b63e-425bfeea3a8f",
+      "kataArab": "ايجابيه",
+      "topicName": "Warna & Sifat",
+      "unitNumber": 4,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "56d1862b-662b-447a-acb8-12d7566af614",
+      "kataArab": "والسفر",
+      "topicName": "Memesan Makanan & Minuman",
+      "unitNumber": 5,
+      "fromBagian": 10,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8fdab56f-2889-446c-8c30-83f7e2b18b12",
+      "kataArab": "الهواء",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7a9f209d-5206-446a-91cd-509046c5ec19",
+      "kataArab": "بالشتا",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4610949d-63a1-46db-a690-544954a20699",
+      "kataArab": "موسم",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "78185d5b-0e9b-4763-8595-8b5768f153fe",
+      "kataArab": "الصيف",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e2017b08-2eae-4e85-8707-efcdab184fab",
+      "kataArab": "بالصيف",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8b9d2dd5-6717-41f7-8e28-e0489de6ed15",
+      "kataArab": "الخريف",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "fb42e709-7403-4f1f-a868-f750e36c5128",
+      "kataArab": "يتدفى",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ae995d11-2fa9-4631-9ec4-7b25b5fc58e4",
+      "kataArab": "الموسمية",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d9438718-10a2-4ff6-ae79-9c9be3d7bfd0",
+      "kataArab": "الجليد",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "cca5db9d-b786-451a-a11c-63c4cf99319f",
+      "kataArab": "تذوب",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b2800ad1-8985-440c-8abf-adae6f4289df",
+      "kataArab": "الصحراء",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5c357c1d-0aec-424b-8d20-b40209eeea4f",
+      "kataArab": "جليد",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d1a64754-25bd-42c2-96b1-8b1df1216459",
+      "kataArab": "بموسمها",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c58f07bc-7b1d-4076-8f90-7d62707b7807",
+      "kataArab": "الموسم",
+      "topicName": "Membicarakan Musim & Cuaca",
+      "unitNumber": 6,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "dd4c99b6-404f-426f-9622-4f56149cda1f",
+      "kataArab": "أروح",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "32a93dbd-6c76-406a-b556-7d585c4fca7f",
+      "kataArab": "وفوق",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "69181871-8ff5-4209-aae4-bd1787a6e79c",
+      "kataArab": "بيوصل",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9ec3936b-fe5e-437e-817e-7dd365cd153b",
+      "kataArab": "عالشارع",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6bade6b2-b9e3-4be5-8138-8ad4eda2dbd7",
+      "kataArab": "عالبيت",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "09154d86-d8a1-4e3b-9089-532c3ffee527",
+      "kataArab": "موقف",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f9767279-bd48-43aa-883d-6658a093de67",
+      "kataArab": "جنب",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cda4e804-6aa7-43e3-8181-3243446b505b",
+      "kataArab": "عالشغل",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2350cd29-9151-4deb-9b0e-0825ed9ec8e0",
+      "kataArab": "المطار",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "22980379-7b07-446d-b7d9-b166a7fb93c0",
+      "kataArab": "وجمب",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6467241b-1d8a-4d75-8c6f-db7687172855",
+      "kataArab": "الجانب",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "54009c87-3534-4413-8476-4651f179dd80",
+      "kataArab": "يوصلهم",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1c0f676a-402f-408c-8d2c-01e621b04cdb",
+      "kataArab": "بنصفي",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2327bcf1-59c0-44eb-bc1b-7a6477de2064",
+      "kataArab": "أوصلك",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "422ad417-e426-4485-a0a6-96777ed462b5",
+      "kataArab": "الخارجي",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9b11d926-ab68-45f9-9e04-50fd052ce0d5",
+      "kataArab": "إشارة",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5c16c03c-5b85-42ed-9cc8-1517aa8f627c",
+      "kataArab": "السيارات",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "c5affb72-b8e9-41da-9816-19525718503b",
+      "kataArab": "القطار",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2bcaad8b-481a-4b43-83d3-0cc61b77329e",
+      "kataArab": "هون",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6dec19ad-29f9-437c-8b67-38d18f622a67",
+      "kataArab": "نمشي",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d297b203-9a09-4f47-800b-a1362ed17f98",
+      "kataArab": "الطريق",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "90112562-a332-4e8c-bfc6-11df2bc65a5e",
+      "kataArab": "وقفت",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "e38cabf0-7258-444b-b8a0-56319700eff0",
+      "kataArab": "الحديقة",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6336a6c3-7c4e-4111-9a60-cdb913a8c485",
+      "kataArab": "وبطريقنا",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6015b011-be25-42ac-94ea-3b51d1ed2803",
+      "kataArab": "تنزل",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1a6907b8-af74-4635-80ce-58e5448eeb9d",
+      "kataArab": "نسافر",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4e55ddec-2711-4231-a001-66bb7e67614b",
+      "kataArab": "إلى",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b0942f45-9a21-4e0a-b323-436e45fffd57",
+      "kataArab": "تحت",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a412df9f-552f-45f6-ae5c-db9cc54c2379",
+      "kataArab": "برا",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "44c83d55-14c9-4844-a635-e1f9e193b3ec",
+      "kataArab": "وقف",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5db2be7d-f0f4-45d3-84f5-f5d0bf33ee69",
+      "kataArab": "السيارة",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "09d2b8dc-b662-4b6b-b8e0-8d1b7403215f",
+      "kataArab": "شارع",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3b44b244-208b-4e2d-b652-6aa086fb5a25",
+      "kataArab": "مكان",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "44b6c420-3170-4671-befb-1ca9067e8920",
+      "kataArab": "فوقها",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f3b3c05a-0045-40ce-aa56-4dc953e10596",
+      "kataArab": "الى",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8ac73e33-ffae-406c-93c7-b81349df9252",
+      "kataArab": "الداخلي",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3f9abf1d-83a4-4e51-a90f-ad8a46091449",
+      "kataArab": "مركب",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "373ae116-93a3-4063-b9ff-1536d65fe5b8",
+      "kataArab": "منطقة",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a7ba1cf5-1dad-42e9-b267-f1eec0cb553e",
+      "kataArab": "بالشوارع",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a5f0f57b-c46f-4766-9e12-e28b8cff0002",
+      "kataArab": "حولين",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d23389e2-3bdc-43c4-81f8-6cb5fb83812a",
+      "kataArab": "الخلفية",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "67aafd97-375f-4b50-ad40-da3834c29d3e",
+      "kataArab": "حوالينا",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1abe3607-e501-429d-ac24-24a6ce8df299",
+      "kataArab": "أصف",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2efaf750-5050-4126-a707-c43812398794",
+      "kataArab": "راكبة",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7b012bf8-ff07-4074-8274-44c2a33767d8",
+      "kataArab": "بمر",
+      "topicName": "Arah & Transportasi",
+      "unitNumber": 7,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "923a99d3-978a-4386-a9ef-08fc6c2f7ffc",
+      "kataArab": "أرخص",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "590d3e5f-bb95-4fca-99e0-1885b5571b05",
+      "kataArab": "الشنطة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d6d619db-4be8-4ee8-8dac-9faff8ebe4b8",
+      "kataArab": "خضار",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ccc8f072-ec82-4800-a961-d693eeeaf713",
+      "kataArab": "دفعنا",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "92bcf445-442b-4e02-a82b-587186d44ab3",
+      "kataArab": "قديش",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "603389e3-a50f-4399-9d37-38cadbe77855",
+      "kataArab": "شتري",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5634d009-9467-44f1-8e76-6531ca1f8869",
+      "kataArab": "بشتري",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "131ce82a-71de-496a-999b-924af3ebb6ee",
+      "kataArab": "لمصاري",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e59266d1-8809-4a53-9f34-4854d8b2debf",
+      "kataArab": "كيلو",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ae00c612-9263-4328-bece-a9b0c264e02e",
+      "kataArab": "اسعاره",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7ed4c571-2783-4b19-8b3c-466c7ba1a192",
+      "kataArab": "مسكر",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9e989be3-0046-436e-9a84-df5d9877454c",
+      "kataArab": "السوبرماركت",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4dd55a23-a8f1-4e14-b9b1-27b7050b9013",
+      "kataArab": "ببلاش",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "b57f0b80-03d1-4458-afd2-180ce085fb26",
+      "kataArab": "سعره",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b63803a5-f1e6-473c-8f28-5c1c3c17bc27",
+      "kataArab": "دينار",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9f4754cc-2566-4486-a16b-4bb80c1c8358",
+      "kataArab": "محلات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b87850c9-1cd4-4b40-af41-e149b881ad32",
+      "kataArab": "كم",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1e64b196-c531-43cb-8881-6fbd00122d1e",
+      "kataArab": "وخيار",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7ee33835-ccb3-417f-9a66-09319acbfc44",
+      "kataArab": "رخيص",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2e832586-8ca5-4d36-8a71-abd09062b669",
+      "kataArab": "طماطم",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "777527e8-9433-4a59-9b43-08b31dc74d8e",
+      "kataArab": "مشترياتي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5923de27-b92c-49d9-a31e-c3c4f7900dde",
+      "kataArab": "طازة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f5954bed-d7b0-472f-8bfb-2da26cc0f29f",
+      "kataArab": "نشتري",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4f5017dc-5d12-48e4-b0e3-e86dfa5e941b",
+      "kataArab": "محله",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "220932e6-b23a-497c-8ede-373b4968ece6",
+      "kataArab": "اشتريت",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "ff15185c-9786-462a-9ae7-c554a060fdd5",
+      "kataArab": "كيس",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "129d6ed1-46c9-48cd-98f8-bbc701484b56",
+      "kataArab": "اشتريته",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ecc9108a-f747-4cbc-a50e-d459885cf441",
+      "kataArab": "محل",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "53f65344-0fcf-47c5-a54b-2b8d1e5c9e3d",
+      "kataArab": "وخضرواتي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "bedf96cc-904d-4275-8382-a3803a012a7b",
+      "kataArab": "التموينية",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "7a5ce7a0-f6d8-4687-a9c1-a7b8ac695f1b",
+      "kataArab": "كميات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b2223cd9-b79b-4a05-b14d-21a629eb3d27",
+      "kataArab": "والمعلبات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b3e9aed1-5ad5-456a-a503-bbcec8fbf6a2",
+      "kataArab": "اللحام",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "26f4c4fc-a5a2-4ce2-a00b-ee7cc6ff6552",
+      "kataArab": "وعلبة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7587bccc-bfb1-43a3-b525-96c1b032c2c3",
+      "kataArab": "أنقي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "33125dd6-0363-4516-9a0f-d00bc3f24518",
+      "kataArab": "جيبتي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f2bb9ac7-fbb4-4b82-9fc5-acb58c1146a0",
+      "kataArab": "لبيع",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7835533e-e367-484d-a983-6acea814a542",
+      "kataArab": "وتنكة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "29b5f8ac-562f-4605-b3bd-dbd983d039ef",
+      "kataArab": "ومرطبان",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2d3b6f07-825a-4175-8b66-aa55d0a77d4f",
+      "kataArab": "اغلى",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "e3e449f8-54d4-4bb8-97ac-9d0117d7c539",
+      "kataArab": "المواد",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c9f13e57-6440-4582-8135-ef5573fc77da",
+      "kataArab": "للمنتجات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "546a90a4-4c15-4e62-bc2f-edea4f10e018",
+      "kataArab": "اربح",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "96937ed8-b509-4de3-8ad6-71adb06be4ab",
+      "kataArab": "أحسب",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b9a0ab9f-ec0a-471d-8478-055ffb1a1f8b",
+      "kataArab": "كرتونة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e48bad4b-4e7b-4591-966a-3235b1e61a35",
+      "kataArab": "أواعي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1f50c2f3-eea8-41dc-ba9e-6b48f7e0b9f4",
+      "kataArab": "زباينها",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cbcf2ded-6122-4d6b-8fd4-b4076b2b79bb",
+      "kataArab": "نوعية",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "be67aa29-68f7-41be-9f6f-d6e132c3fa0b",
+      "kataArab": "احتياجاتي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "82a3fa45-cc67-49e6-815f-0472c26c1234",
+      "kataArab": "عضوي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "df1dcbbf-1dd3-4a38-81e8-ad8a98bd4af5",
+      "kataArab": "أغراضي",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a1486a13-0c9a-406a-b422-e0237ac64b82",
+      "kataArab": "مقبولة",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "caae5e90-4a2a-4802-806b-58e6aa64dc77",
+      "kataArab": "بالتنكات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 8,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f419f104-af23-431b-9a15-9a5001741d06",
+      "kataArab": "شوالات",
+      "topicName": "Belanja di Pasar",
+      "unitNumber": 8,
+      "fromBagian": 9,
+      "toBagian": 10,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "77dbadb1-ea39-488d-9dad-88cccd771add",
+      "kataArab": "الإيدين",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f981f2d1-2900-4bc4-afec-5ccfb4489814",
+      "kataArab": "قلبي",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6f18b838-1472-4986-b580-1124259d0030",
+      "kataArab": "وجه",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "214468a5-0135-40a6-aacb-210493e363a5",
+      "kataArab": "صحتك",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9ee6405b-01a8-42fe-b181-be5dcb1ec26a",
+      "kataArab": "الصحية",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "13b53be7-97d7-4db7-b71b-23911e28fc25",
+      "kataArab": "الكوفيد",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "814ca257-412a-4357-b895-d6d6dbb6a297",
+      "kataArab": "وجهه",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "e33dbb00-3831-40a7-a13a-a17d9700dd8c",
+      "kataArab": "اسهال",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "c2cbc1d2-5131-46a2-bdab-f7900b1fa296",
+      "kataArab": "النفسية",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b4450e18-a7ef-4073-b848-16fe128b05a0",
+      "kataArab": "عالمعدة",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "142f87b4-bd08-485d-b34c-41d66d836e05",
+      "kataArab": "غذائي",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "66a71a96-5109-4029-9b79-ab238bb99b7a",
+      "kataArab": "فيتامينات",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "956e6cbc-c4b5-4aef-8d2e-ee928d753b43",
+      "kataArab": "تغذية",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "cbbd5417-a8dd-43de-8e21-5b1ee526d2c6",
+      "kataArab": "للتباعد",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f749b63b-b18f-4a7f-a04e-e21eff43f504",
+      "kataArab": "اجسامنا",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1945799d-b0be-47b3-bd68-e8e113f7bea9",
+      "kataArab": "معدتنا",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "575d4176-d58e-4e60-8d9f-aab416346cde",
+      "kataArab": "الصحي",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f3f12b76-0edf-4f9c-ad9e-ecc24396e09a",
+      "kataArab": "العافية",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "cbef7b06-5adb-4ec5-91f9-2b5d4bb410bb",
+      "kataArab": "ظهر",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "63c72134-539d-4606-aef1-5f219a9a97f8",
+      "kataArab": "صحي",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ae498e37-cdb8-4457-bafd-760adb500427",
+      "kataArab": "صحتنا",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8c501636-9d92-4ff8-b82f-7f4fffdd621e",
+      "kataArab": "بتعاني",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "25660106-6672-4a7e-9ba9-c1fca30ad083",
+      "kataArab": "بالتعب",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "592257d8-c6e2-470d-be5b-e385e5cce92c",
+      "kataArab": "عضلات",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a6d5d663-1473-419b-a117-5b45d5f5bf7d",
+      "kataArab": "وتعبكم",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "458f57cc-3b17-4fae-8524-246876020702",
+      "kataArab": "الفيتامينات",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4b428fdd-2b97-4929-8111-e007becbaf53",
+      "kataArab": "بيؤذي",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "a32054ba-9ffc-4b5c-88e5-e0854e09a24e",
+      "kataArab": "ادمان",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "ebdde63e-51c5-4dc5-b75e-05e72cb3873f",
+      "kataArab": "سكوات",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1c3d1a0a-95ee-420f-91ec-a231da4f67f8",
+      "kataArab": "جائحة",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 8,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "08ce824f-ed22-409d-8dfd-ed10d240d1ed",
+      "kataArab": "أحكي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3585c28f-a1c1-409b-9cc7-218e42d447d8",
+      "kataArab": "انتبه",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "774fc2c5-8fe2-42a1-977a-3bd3812309ce",
+      "kataArab": "وباء",
+      "topicName": "Kesehatan Sederhana",
+      "unitNumber": 9,
+      "fromBagian": 9,
+      "toBagian": 8,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "768cfbd6-61e3-4c34-95ee-4c421666e049",
+      "kataArab": "الشغل",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "3680690f-18c6-4290-aaab-adcea41354e2",
+      "kataArab": "تمام",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d840daa2-5fc7-4b74-8387-145d268b64dd",
+      "kataArab": "شكله",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "99b76b41-91cc-4ca6-b155-65a45161c57a",
+      "kataArab": "لسا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "dc4438da-4882-4a73-bf89-66e16b4bead1",
+      "kataArab": "نحكي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "815ea7cb-2b22-4cbd-b50e-72e346c1b0cd",
+      "kataArab": "نسيت",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "4d7f824c-fbed-4fb7-a3a5-e6eb352f1141",
+      "kataArab": "بالضبط",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "2ed6b4ae-b638-4791-a28a-788ea7227143",
+      "kataArab": "خبروني",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "723dd93f-9528-4374-b9e7-a43b113accbf",
+      "kataArab": "كتير",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4e09ac6b-7c1d-4ca0-a0e7-4bc81648119c",
+      "kataArab": "هيك",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5c206b09-24cc-46f3-9c4a-0e1c7d4a3c83",
+      "kataArab": "ممكن",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "bf60a32f-d493-4eef-8adb-7cebbd2b71d7",
+      "kataArab": "يعني",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "8675045c-9aae-4402-86ed-e5729d38cc7a",
+      "kataArab": "كيف",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "84a44b45-adce-46be-8979-75a640704081",
+      "kataArab": "أظن",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 1,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "45226630-66e4-4c0d-b049-4f27de49f07d",
+      "kataArab": "اهدى",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a1b33b7a-885a-45c5-ba7e-b7f8248ca0c0",
+      "kataArab": "طيب",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7928ebd4-3044-45f0-b53b-1f8945a87e1e",
+      "kataArab": "ليش",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9b4b6460-8e8f-4d0c-b73f-580d38994bc7",
+      "kataArab": "طبعا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "58a8dd5d-d3d3-4c02-8e3e-028cd736af5f",
+      "kataArab": "لسه",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2195041d-4d50-480b-9292-f78b4f9c4e8f",
+      "kataArab": "بحاجة",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 3,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b165fcd2-436e-4281-98dc-57f86c3d5a0d",
+      "kataArab": "المفروض",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 2,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f919c2b5-7f98-4dff-a520-6ba5ef8f39a8",
+      "kataArab": "بتعرف",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "a8b5d0c9-c7fe-4ff7-ad66-7a33c61e25ba",
+      "kataArab": "بدنا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "9f252578-0836-4911-ac5b-d77d0fb6221b",
+      "kataArab": "مش",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7ad625fe-4f55-478e-85da-b702ad285b85",
+      "kataArab": "زلمة",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "14c67459-38f8-4bac-81f6-bae603f623be",
+      "kataArab": "قصدي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "72fc3eb2-efa7-4ba0-8722-8380b9b0b044",
+      "kataArab": "استنى",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f26fc4b4-4359-4dc0-aa21-31dcc97f868d",
+      "kataArab": "معلش",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "67c3f91e-fad7-4134-a336-18bec02d8583",
+      "kataArab": "عنجد",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "85efdd23-36b3-458d-9e9f-cc066a84d978",
+      "kataArab": "يلا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 1,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6bd9c612-b28b-4c75-bc94-993676492391",
+      "kataArab": "وعفكرة",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "6367f46b-958d-47ea-8c8d-fc25d3ba1f6d",
+      "kataArab": "اسال",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "26ae703d-7483-40a0-baaf-4ed549a6289f",
+      "kataArab": "بلكي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 3,
+      "toBagian": 2,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "41f1d2f2-8df8-4877-950e-288cad7f2d91",
+      "kataArab": "استوعبت",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "c2e63e58-7894-4653-809e-811c5e146e3d",
+      "kataArab": "لهالدرجة",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f6d0309a-0668-4660-986d-f3294b415253",
+      "kataArab": "أخبرك",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1f2ac288-8c4d-4ad3-9886-68d54eedd49a",
+      "kataArab": "نضل",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "27c4a62d-cfac-45c4-9dd4-cc896e03b1b3",
+      "kataArab": "غالبا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7efd4d87-6ced-4339-8586-f804e6112291",
+      "kataArab": "وبطلنا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1d1e5e3d-329f-4255-9b18-a4e14f4e6a58",
+      "kataArab": "تعصب",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f906d1c7-70bd-4ba5-abe7-b1ba9e32eca6",
+      "kataArab": "زيح",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8bfa9950-ce4c-4ff7-909b-5f8e24597b8c",
+      "kataArab": "لقيته",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 4,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6f4db1e1-a0fb-44af-b352-3be4df641ec0",
+      "kataArab": "نيالها",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "534797ba-f5d9-40a0-9bee-58705b6b0e4f",
+      "kataArab": "بتعتقد",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "aa9306c7-5623-41c8-b2fc-4ebfc51a631d",
+      "kataArab": "اتواصل",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "16611440-c84a-414e-8131-e9a073ddc2c9",
+      "kataArab": "قررت",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "83ac62ee-3c56-4e5a-9193-39459a0eef03",
+      "kataArab": "أدايئك",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "d3a1a7da-1530-442d-8026-d02ed0df685c",
+      "kataArab": "تقلقي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "7d6e2acb-e1dd-46fe-9207-8d8d20664b5a",
+      "kataArab": "ضايل",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "5e6680fc-1941-4fbc-b251-c2a22cda417a",
+      "kataArab": "مضايقك",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 5,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "dd192f0b-7c53-43ae-a83b-cc3793796e52",
+      "kataArab": "بتزعجني",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "fff4781e-7a5d-495f-84a1-442ecdabe496",
+      "kataArab": "بنتواصل",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "80c16515-35bf-484e-8321-4bdf50fc4154",
+      "kataArab": "شعور",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "2b07b78e-c2c8-4b0f-a0c4-a3cc43e412bc",
+      "kataArab": "اتأخرت",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 7,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "5a614b2e-08b3-48ac-94e9-410627569143",
+      "kataArab": "خبرته",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "f9fc4c49-3b2f-447b-8b9f-8a69c2e3ee8f",
+      "kataArab": "فرجينا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 6,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "4d494354-2347-4975-990e-50f7598ab57e",
+      "kataArab": "حوارنا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "b27910d4-61e9-4ccf-93bb-5350863a1219",
+      "kataArab": "رد",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "056be000-3f4a-41d1-a7fd-7fe57b769252",
+      "kataArab": "وبتحسسني",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 5,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "8d160908-d5dd-41a7-ba7c-706f8738bbdc",
+      "kataArab": "رأيي",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "d62950d0-3ea2-438b-b7e1-3b03729ac653",
+      "kataArab": "كأنه",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 4,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "05b67e96-0bde-4554-8302-3d3a657a6705",
+      "kataArab": "والصراحة",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 7,
+      "toBagian": 6,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "1b1b8faa-062b-4714-a410-28966b7cdbbf",
+      "kataArab": "أجبرتنا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 8,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "11954c95-740c-4504-add0-fed4c087bcfc",
+      "kataArab": "يلتزموا",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 8,
+      "toBagian": 9,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "6768bdca-68de-430e-9153-4a1225e7fe37",
+      "kataArab": "بالتقدير",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 9,
+      "toBagian": 10,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "1b17a65d-f849-4496-90d7-1ee008485054",
+      "kataArab": "أقاطعك",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 9,
+      "toBagian": 8,
+      "exerciseCount": 1
+    },
+    {
+      "vocabId": "9a7da229-4589-47d9-9533-cadde67978a0",
+      "kataArab": "بتعكس",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 9,
+      "toBagian": 8,
+      "exerciseCount": 3
+    },
+    {
+      "vocabId": "f363e5ee-42aa-47eb-9117-b206146bbe55",
+      "kataArab": "ثقافات",
+      "topicName": "Percakapan Sehari-hari",
+      "unitNumber": 10,
+      "fromBagian": 10,
+      "toBagian": 8,
+      "exerciseCount": 3
+    }
+  ]
+}

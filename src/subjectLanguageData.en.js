@@ -1,0 +1,50 @@
+// Terjemahan Inggris untuk data contoh (seed). Kunci = id exercise.
+// Aturan: urutan `options` HARUS sama dengan versi Indonesia (indeks jawaban dipakai bersama).
+// `pairs` = hanya kolom KANAN (arti), urutannya sama dengan versi Indonesia.
+// Konten dari generator AI memakai bentuk yang sama di field `en` pada tiap exercise.
+export const EXERCISE_EN = {
+  "u1-s1-l1-e1": { prompt: "Match each word with its meaning", subj: "Basics of Islamic banking", pairs: ["Islamic bank", "riba (usury / interest)", "capital", "profit"] },
+  "u1-s1-l1-e2": { prompt: "Choose the correct meaning", subj: "Profit-and-loss sharing", options: ["loss", "profit", "capital", "contract"], explain: "الخسارة = loss (the opposite of الربح = profit)." },
+  "u1-s1-l2-e1": { prompt: "Complete the sentence with the right word", subj: "Prohibition of riba", explain: "Islamic banks prohibit الربا (riba / interest) and rely on profit-and-loss sharing instead." },
+  "u1-s1-l2-e2": { prompt: "What does this sentence mean?", subj: "Profit-and-loss sharing", options: ["Islamic banks are based on sharing profit and loss.", "Islamic banks only take profit.", "Islamic banks have no contracts.", "Islamic banks give interest-bearing loans."] },
+  "u1-s1-l3-e1": { prompt: "Exam question", subj: "Definition of riba", explain: "ما المقصود بـ = what is meant by. Riba = a stipulated increase on the principal without a legitimate counter-value." },
+  "u1-s2-l1-e1": { prompt: "Choose the correct meaning", subj: "Contract (aqd)", options: ["contract / agreement", "price", "goods", "seller"] },
+  "u1-s2-l1-e2": { prompt: "Choose the correct meaning", subj: "Object of the contract", options: ["goods", "buyer", "deferred term", "profit"] },
+  "u1-s2-l1-e3": { prompt: "Write the translation in English", subj: "Parties to the contract", answers: ["buyer", "the buyer", "purchaser"] },
+  "u2-s1-l1-e1": { prompt: "Exam question", subj: "Definition of Murabahah", explain: "المرابحة = selling goods at the original purchase price plus a disclosed profit margin." },
+  "u2-s1-l1-e2": { prompt: "True or false?", subj: "Definition of Murabahah", options: ["True", "False"], explain: "Transparency about the cost price and the margin is the core of murabahah." },
+  "u2-s2-l1-e1": { prompt: "Match each word with its meaning", subj: "Murabahah sale terms", pairs: ["price", "cost price", "seller", "buyer", "term / deferral period"] },
+  "u2-s2-l1-e2": { prompt: "Choose the correct meaning", subj: "Profit margin", options: ["margin", "capital", "loss", "delivery"] },
+  "u2-s2-l1-e3": { prompt: "Complete the sentence", subj: "Cost price", explain: "ثمن التكلفة = cost price (acquisition cost)." },
+  "u2-s2-l2-e1": { prompt: "Write the translation", subj: "Profit margin", answers: ["profit is known", "the profit is known", "the profit is disclosed", "profit is disclosed", "the margin is known"] },
+  "u2-s3-l1-e1": { prompt: "Choose the correct meaning", subj: "Conditions of murabahah", options: ["condition", "price", "contract", "term"] },
+  "u2-s3-l1-e2": { prompt: "Choose the correct meaning", subj: "Conditions of murabahah", options: ["owned by the seller", "sold by the buyer", "deposited with the bank", "bought in cash"], explain: "The goods must already be owned by the seller before they are sold (مملوكة للبائع)." },
+  "u2-s3-l2-e1": { prompt: "What does this expression mean?", subj: "Academic language", options: ["based on what has been mentioned before", "for example", "except the following", "in the end, no"], explain: "بناءً على ما سبق is used to draw a conclusion from the preceding discussion." },
+  "u2-s3-l2-e2": { prompt: "What does this expression mean?", subj: "Academic language", options: ["according to the text", "contradicting the text", "without a text", "before the text"] },
+  "u2-s3-l3-e1": { prompt: "Exam question", subj: "Conditions of murabahah", explain: "لا يُعدّ من = is not among. The profit must be known (معلوم), so an unknown profit is not a condition — it violates one." },
+  "u2-s3-l3-e2": { prompt: "Exam question", subj: "Conditions of murabahah", explain: "ما عدا = except. Selling something the seller does not own is not permitted." },
+  "u2-s3-l4-e1": { prompt: "True or false?", subj: "Conditions of murabahah", options: ["True", "False"], explain: "False. The bank must own the goods first." },
+  "u2-s4-l1-e1": { prompt: "Read the passage, then answer", subj: "Murabahah procedure", passageTranslation: "The customer asks the bank to buy a car. The bank buys the car from the showroom for thirty thousand, then sells it to the customer for thirty-three thousand, and the customer pays the price in installments.", explain: "33,000 − 30,000 = 3,000 (ثلاثة آلاف)." },
+  "u2-s4-l1-e2": { prompt: "Choose the correct meaning", subj: "Murabahah procedure", options: ["installments", "cash", "capital", "penalty"] },
+  "u2-s5-l1-e1": { prompt: "What does this exam pattern mean?", subj: "Exam question patterns", options: ["choose the correct answer", "write in your own words", "explain with an example", "compare the two"] },
+  "u2-s5-l1-e2": { prompt: "What does this exam pattern mean?", subj: "Exam question patterns", options: ["what is meant by", "who wrote", "when did it happen", "how many"] },
+  "u2-s5-l1-e3": { prompt: "What does this exam pattern mean?", subj: "Exam question patterns", options: ["all of the following are correct except", "all of the following are wrong", "one of the following is correct", "none is correct"] },
+  "u2-s5-l1-e4": { prompt: "Match each exam pattern with its meaning", subj: "Exam question patterns", pairs: ["which of the following", "is not among", "according to the text", "except"] },
+  "u2-s6-l1-e1": { prompt: "Exam simulation", subj: "Definition of Murabahah" },
+  "u2-s6-l1-e2": { prompt: "Exam simulation — true or false?", subj: "Conditions of murabahah", options: ["True", "False"], explain: "False. The margin must be known to the buyer." },
+  "u2-s6-l1-e3": { prompt: "Exam simulation", subj: "Conditions of murabahah" },
+  "u3-s1-l1-e1": { prompt: "Match each word with its meaning", subj: "Mudarabah terms", pairs: ["mudharabah", "capital owner", "fund manager (mudarib)", "profit-sharing ratio"] },
+  "u3-s1-l2-e1": { prompt: "Exam question", subj: "Parties in mudarabah" },
+  "u3-s1-l2-e2": { prompt: "Exam question", subj: "Losses in mudarabah", explain: "Financial losses are borne by the capital owner as long as the mudarib was not negligent (يقصّر = is negligent)." },
+  "u3-s2-l1-e1": { prompt: "Choose the correct meaning", subj: "Mudarabah terms", options: ["work / managing the business", "capital", "price", "interest"] },
+  "u3-s2-l1-e2": { prompt: "Choose the correct meaning", subj: "Mudarabah terms", options: ["agreement", "loss", "delivery", "profit"] },
+};
+
+export const SECTION_TITLE_EN = {
+  Pengertian: "Definition",
+  Kosakata: "Vocabulary",
+  Syarat: "Conditions",
+  Prosedur: "Procedure",
+  "Bahasa Ujian": "Exam Language",
+  "Latihan Ujian": "Exam Practice",
+};

@@ -1,0 +1,1790 @@
+[
+  {
+    "levelId": "f57d187a-6785-4204-bbb0-398cd61e2a0a",
+    "count": 27,
+    "samples": [
+      "translate_choice: saya",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "ef155f44-9df6-48ae-ba7f-3b8c4ccf9992",
+    "count": 16,
+    "samples": [
+      "translate_choice: namanya",
+      "translate_choice: sayangku (perempuan)",
+      "translate_choice: اسمو (ismo)"
+    ]
+  },
+  {
+    "levelId": "b83c1704-4291-4fd7-8041-e50190b9d894",
+    "count": 28,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "2141a6f5-8aa3-476f-9b84-874d33948f57",
+    "count": 22,
+    "samples": [
+      "translate_choice: dan kami melihat kalian",
+      "listen_choose: (?)",
+      "translate_choice: aku melihatmu"
+    ]
+  },
+  {
+    "levelId": "e07aedfd-f111-47ca-9135-053bbfea3206",
+    "count": 18,
+    "samples": [
+      "matching_pairs: مرحبا, انتي",
+      "translate_choice: halo",
+      "translate_choice: kamu (pr)"
+    ]
+  },
+  {
+    "levelId": "033abc6b-ca40-48e7-b4b4-b757266ef272",
+    "count": 1,
+    "samples": [
+      "dialogue_complete: shukriin kteer 3al-ahwe, kaan tayyib kteer!"
+    ]
+  },
+  {
+    "levelId": "17318d4f-6217-40e8-b40a-eb93cd051444",
+    "count": 37,
+    "samples": [
+      "translate_write: halo",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "259b07e2-d08f-4df7-a079-250345af8439",
+    "count": 25,
+    "samples": [
+      "translate_choice: halo",
+      "listen_choose: (?)",
+      "word_order: اسمهم"
+    ]
+  },
+  {
+    "levelId": "1ab89a58-a4ef-4ef2-81ad-b94c225e7d78",
+    "count": 9,
+    "samples": [
+      "translate_choice: bahasa arab",
+      "translate_choice: bahasa arab",
+      "translate_choice: العربي"
+    ]
+  },
+  {
+    "levelId": "b18e22eb-e714-4d71-9f5e-52c63fc4bfc6",
+    "count": 28,
+    "samples": [
+      "translate_choice: kalian",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "79111e4c-301c-4088-94cb-71f2f19a1dc5",
+    "count": 21,
+    "samples": [
+      "matching_pairs: الأردن, حبيبي",
+      "translate_choice: الأردن",
+      "translate_choice: yordania"
+    ]
+  },
+  {
+    "levelId": "f0be8711-bce5-4dd8-b1e3-e7d45dfbc358",
+    "count": 2,
+    "samples": [
+      "dialogue_complete: marhaba ya miss, keef el-haal?",
+      "dialogue_complete: marhaba ya miss, keef el-haal?"
+    ]
+  },
+  {
+    "levelId": "7091b0ec-66da-4934-9d42-ac675466febb",
+    "count": 29,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "cb8bd797-6b26-4ef6-88a0-230ad5cda034",
+    "count": 24,
+    "samples": [
+      "translate_choice: kami",
+      "translate_choice: kami",
+      "translate_choice: semoga tuhan menjagamu"
+    ]
+  },
+  {
+    "levelId": "65ce757c-332f-426b-8bb8-c901e665521d",
+    "count": 16,
+    "samples": [
+      "translate_choice: بخير",
+      "translate_choice: الاسم",
+      "translate_choice: nama"
+    ]
+  },
+  {
+    "levelId": "72820221-0b2a-4bec-9988-2e6f87e5a677",
+    "count": 1,
+    "samples": [
+      "dialogue_complete: مرحبا! كيفك؟ رجعت من لبنان؟"
+    ]
+  },
+  {
+    "levelId": "50589e37-0fa6-4953-b725-bd6515de7d17",
+    "count": 37,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "51713251-6950-4a41-a203-b8b6c244b9b4",
+    "count": 28,
+    "samples": [
+      "word_order: أهلا",
+      "translate_write: terima kasih",
+      "translate_choice: halo / selamat datang"
+    ]
+  },
+  {
+    "levelId": "c5916ad6-45d7-4d9c-93ec-ff598b1fe91a",
+    "count": 10,
+    "samples": [
+      "matching_pairs: تفضلي, طيب, اسألي, صار",
+      "matching_pairs: تفضلي, طيب, اسألي, صار",
+      "translate_choice: تفضلي"
+    ]
+  },
+  {
+    "levelId": "fe3d0afa-8a0e-4294-954e-d8db6743c725",
+    "count": 24,
+    "samples": [
+      "translate_choice: sayang-sayangku",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "ba408e43-64dc-44ad-97fb-1803577d6c04",
+    "count": 8,
+    "samples": [
+      "translate_choice: ست",
+      "translate_choice: خيو",
+      "fill_blank: hunak el-jaww"
+    ]
+  },
+  {
+    "levelId": "91977c07-96c3-44fd-b36e-e4a4532059e3",
+    "count": 1,
+    "samples": [
+      "dialogue_complete: ana urduniyyeh, wa-inta?"
+    ]
+  },
+  {
+    "levelId": "456b5577-002a-46ad-bcd5-199d0d30e08d",
+    "count": 29,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "692a89bb-e570-4210-9f9a-4792fc260591",
+    "count": 24,
+    "samples": [
+      "fill_blank: yi'tiikum",
+      "word_order: يعطيكم العافية",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "039fd328-437b-499f-80dc-75838cad0162",
+    "count": 13,
+    "samples": [
+      "translate_choice: حالك",
+      "translate_choice: اتعرف",
+      "translate_choice: keadaanmu"
+    ]
+  },
+  {
+    "levelId": "17f0b233-a723-48bf-9f7e-659481050c15",
+    "count": 33,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "d6d6db62-b6a0-4189-8954-69c5dce59901",
+    "count": 18,
+    "samples": [
+      "translate_choice: namanya",
+      "word_order: هذا اسمه سند",
+      "fill_blank: hada"
+    ]
+  },
+  {
+    "levelId": "bdcc052b-b7e4-43cc-859d-3a78ba9d6917",
+    "count": 18,
+    "samples": [
+      "matching_pairs: جماعة, يلا, جهزوا, حالكم",
+      "translate_choice: يلا يا جماعة جهزوا حالكم",
+      "fill_blank: yalla ya..."
+    ]
+  },
+  {
+    "levelId": "ff1126bb-3f3f-4143-92da-914ec6cbd2c9",
+    "count": 18,
+    "samples": [
+      "word_order: الشعب الأردني",
+      "fill_blank: ash-sha'b",
+      "word_order: الشعب الأردني"
+    ]
+  },
+  {
+    "levelId": "501788c7-9071-4f64-94ed-0710c1491396",
+    "count": 11,
+    "samples": [
+      "matching_pairs: الأحوال, إحنا, بكل, كسبانين",
+      "translate_choice: الأحوال",
+      "fill_blank: ihna"
+    ]
+  },
+  {
+    "levelId": "e4f3cdc1-9393-4129-93f2-386bba5b15bd",
+    "count": 32,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "472bf600-cc92-4972-9df4-e47928e1b616",
+    "count": 33,
+    "samples": [
+      "translate_write: saya lahir",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "62ef1e05-ad35-4265-9b98-72acc4a6028e",
+    "count": 18,
+    "samples": [
+      "translate_choice: kami mengucapkan selamat tinggal",
+      "word_order: بس رح نودع سلمى",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "c769156d-1eed-4f55-be10-745129c59e16",
+    "count": 17,
+    "samples": [
+      "matching_pairs: حيهم, حيوا, النشامة, الأبطال",
+      "translate_choice: حيوا النشامة",
+      "translate_choice: حيهم"
+    ]
+  },
+  {
+    "levelId": "ebe271e5-3665-4be3-a5c9-eb7dede4acca",
+    "count": 29,
+    "samples": [
+      "translate_write: kami mengucapkan selamat tinggal",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "dcfe9653-238a-4ae2-b3c4-134f842c0acb",
+    "count": 29,
+    "samples": [
+      "translate_write: kami mengucapkan selamat tinggal",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "656f5a86-505d-45d2-8620-12b54da25746",
+    "count": 18,
+    "samples": [
+      "translate_choice: dan orang-orang tersayang kami",
+      "word_order: عيلتنا وصحابنا وحبايبنا",
+      "translate_choice: dan orang-orang tersayang kami"
+    ]
+  },
+  {
+    "levelId": "8e1c41b2-66b1-440c-b3f3-a71f92fc8fbe",
+    "count": 13,
+    "samples": [
+      "matching_pairs: حيوا, حيهم, النشامة, بحلم",
+      "translate_choice: حيوا",
+      "translate_choice: حيهم"
+    ]
+  },
+  {
+    "levelId": "70268c9b-f11e-46c9-9985-7ff7b2bcd31b",
+    "count": 30,
+    "samples": [
+      "translate_write: dan orang-orang tersayang kami",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "f567655c-1a87-4c7c-9c93-bd4a0b589f91",
+    "count": 30,
+    "samples": [
+      "translate_write: dan orang-orang tersayang kami",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "ddd6362d-0975-46ff-834a-531abf4d40a2",
+    "count": 16,
+    "samples": [
+      "translate_choice: dan sampaikan (salam)",
+      "translate_choice: dan sampaikan (salam)",
+      "word_order: وصلي لأهلك حبي"
+    ]
+  },
+  {
+    "levelId": "636d9be8-58b1-449b-87a2-4824e53bff30",
+    "count": 14,
+    "samples": [
+      "matching_pairs: لحبيبنا, أحسن, كتكوت, هذا",
+      "matching_pairs: لحبيبنا, أحسن, كتكوت, هذا",
+      "translate_choice: لحبيبنا"
+    ]
+  },
+  {
+    "levelId": "0aff9bb3-b024-48b9-a890-78622b6d5568",
+    "count": 30,
+    "samples": [
+      "translate_write: dan sampaikan (salam)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "643e1fcd-5d64-4f72-bf3e-850c79251adb",
+    "count": 29,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "830e5498-3c6b-4fed-a527-ba9a3d8ea2d5",
+    "count": 26,
+    "samples": [
+      "translate_choice: seribu",
+      "translate_choice: yang akan datang",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "c5a3a3e4-cd44-4d6e-aa98-b7df07b5c662",
+    "count": 16,
+    "samples": [
+      "matching_pairs: الأسبوع, الوقت, مية بالمية",
+      "translate_choice: seratus persen",
+      "translate_choice: seratus persen"
+    ]
+  },
+  {
+    "levelId": "e079b154-827f-4190-ace8-caf132edfdfa",
+    "count": 39,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "7ae5ec39-a89d-4bd1-b50b-f52fadbd566d",
+    "count": 25,
+    "samples": [
+      "listen_choose: (?)",
+      "translate_choice: yang pertama",
+      "translate_write: jam"
+    ]
+  },
+  {
+    "levelId": "aa57da86-ca84-40f9-8157-706b6176eef6",
+    "count": 14,
+    "samples": [
+      "matching_pairs: ساعة, ثاني, ساعة, ثاني",
+      "matching_pairs: ساعة, ثاني, ساعة, ثاني",
+      "translate_choice: ساعة"
+    ]
+  },
+  {
+    "levelId": "c4760333-8b7f-43db-8d6d-217f616c24d3",
+    "count": 38,
+    "samples": [
+      "translate_write: hari kamis",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "44fe6765-b3e0-4016-90e0-480530404107",
+    "count": 26,
+    "samples": [
+      "translate_choice: hari",
+      "translate_choice: kemarin",
+      "fill_blank: kull"
+    ]
+  },
+  {
+    "levelId": "2544fd0e-d89b-408c-a789-f48977d25ae5",
+    "count": 16,
+    "samples": [
+      "translate_choice: dua minggu",
+      "translate_choice: satu (fem.)",
+      "translate_choice: أسبوعين"
+    ]
+  },
+  {
+    "levelId": "f09628fb-2f1a-4ffd-8f01-683740ee21a9",
+    "count": 26,
+    "samples": [
+      "translate_choice: hari sabtu",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "30c2297d-9bd2-4f45-a1ca-65b6fd3db820",
+    "count": 16,
+    "samples": [
+      "matching_pairs: الثلاثة, ثلاث, لحظة",
+      "translate_choice: tiga",
+      "translate_choice: tiga"
+    ]
+  },
+  {
+    "levelId": "a4a05c59-4620-42d7-80e4-a8a5c691eca2",
+    "count": 38,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "translate_write: pada malam hari"
+    ]
+  },
+  {
+    "levelId": "1d8d70e8-d8f8-47fe-8612-1067afca9019",
+    "count": 23,
+    "samples": [
+      "translate_choice: lagi / kedua",
+      "translate_choice: kemudian",
+      "fill_blank: al-marrah"
+    ]
+  },
+  {
+    "levelId": "0f268ac7-52f9-4d85-a1a9-523dac3c0d3b",
+    "count": 11,
+    "samples": [
+      "translate_choice: tahun",
+      "translate_choice: tahun",
+      "translate_choice: detik / kedua (fem.)"
+    ]
+  },
+  {
+    "levelId": "8dbe99ef-490d-4b46-b4d0-6c61d6fe8a6a",
+    "count": 34,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "54dab209-39de-4279-9f5f-a6917821ee4c",
+    "count": 24,
+    "samples": [
+      "translate_choice: sekarang",
+      "translate_choice: empat",
+      "fill_blank: talaat aw"
+    ]
+  },
+  {
+    "levelId": "6581d378-f114-46a6-9f4b-042f0ee5b9bf",
+    "count": 17,
+    "samples": [
+      "translate_choice: waktunya",
+      "matching_pairs: الأوقات, وقتها, معظم الأوقات, يخلص وقتها",
+      "translate_choice: الأوقات"
+    ]
+  },
+  {
+    "levelId": "90ed3ccb-4197-4ede-b902-0bce1ba93427",
+    "count": 22,
+    "samples": [
+      "listen_choose: (?)",
+      "translate_choice: sembilan belas",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "8adbb8fe-c7f7-4071-8783-52ef1647cd95",
+    "count": 20,
+    "samples": [
+      "matching_pairs: الجمعة, خمس, سبعة عشر",
+      "translate_choice: tujuh belas",
+      "translate_choice: الجمعة"
+    ]
+  },
+  {
+    "levelId": "88f9f7cf-ba5d-4ff4-876b-159e3bde67c0",
+    "count": 36,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "584fa00b-f174-4be3-aded-6f63c3ef8f54",
+    "count": 28,
+    "samples": [
+      "translate_choice: dahulu / dulu",
+      "fill_blank: ana",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "313f07c1-1910-42e3-848c-265db5d10d96",
+    "count": 16,
+    "samples": [
+      "translate_choice: ثنتين",
+      "translate_choice: bulan",
+      "translate_choice: ثنتين"
+    ]
+  },
+  {
+    "levelId": "eed36403-7c5d-40fc-8752-5f9a1a0fe8aa",
+    "count": 36,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "94e48ad8-d6f7-4768-803e-effb7d9989db",
+    "count": 24,
+    "samples": [
+      "translate_choice: sekarang",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "e91b069a-6eb3-4631-a3b7-de6d1f06c25e",
+    "count": 13,
+    "samples": [
+      "translate_choice: setiap hari",
+      "translate_choice: التانية",
+      "translate_choice: setiap hari"
+    ]
+  },
+  {
+    "levelId": "e6d8e24b-785a-4eaf-aa41-13a5fa38315c",
+    "count": 18,
+    "samples": [
+      "translate_choice: waktu-waktu",
+      "translate_choice: waktu-waktu",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "72b9ac31-160e-4ca9-9547-d98475ca753c",
+    "count": 7,
+    "samples": [
+      "matching_pairs: بحوالي, بعد, شهرين, عشر أيام",
+      "translate_choice: sekitar dua bulan",
+      "translate_choice: sekitar"
+    ]
+  },
+  {
+    "levelId": "c9048c45-4222-435d-bde1-815246ee7788",
+    "count": 37,
+    "samples": [
+      "translate_write: sekitar",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "d9bf073b-4864-44e1-a0a5-acc4c8c192c1",
+    "count": 19,
+    "samples": [
+      "translate_choice: periode itu",
+      "word_order: بين الفترة والتانية",
+      "translate_choice: periode itu"
+    ]
+  },
+  {
+    "levelId": "e37ff4f7-2208-4161-95b9-d219d4ad9604",
+    "count": 15,
+    "samples": [
+      "translate_choice: masa depan",
+      "fill_blank: ab'ato la-majallat",
+      "translate_choice: masa depan"
+    ]
+  },
+  {
+    "levelId": "7a9b9d71-5ce0-40cd-9277-b37045cf93b4",
+    "count": 36,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "6d95c5b8-88e0-4d99-bdcc-592ee3be8fcb",
+    "count": 16,
+    "samples": [
+      "translate_choice: mingguan",
+      "word_order: الحظر الأسبوعي",
+      "translate_choice: mingguan"
+    ]
+  },
+  {
+    "levelId": "d396c866-5565-4067-b15b-9ab50230ab5e",
+    "count": 2,
+    "samples": [
+      "matching_pairs: بيقضوا, وقت, نص, طويل",
+      "translate_choice: قت طويل"
+    ]
+  },
+  {
+    "levelId": "76379f81-aa6c-49fa-9442-04d244dc8e9c",
+    "count": 41,
+    "samples": [
+      "translate_write: mingguan",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "cbd66fc1-4ff7-4fac-b31a-847a10e5281a",
+    "count": 15,
+    "samples": [
+      "translate_choice: berlalu (waktu)",
+      "word_order: مرق وقت طويل",
+      "translate_choice: berlalu (waktu)"
+    ]
+  },
+  {
+    "levelId": "ffae6c0c-2c7b-44f3-b48d-94750e0c8b2e",
+    "count": 20,
+    "samples": [
+      "matching_pairs: بلحظتها, شو, أحكي, هاي",
+      "fill_blank: shu ahki",
+      "translate_choice: pada saat itu"
+    ]
+  },
+  {
+    "levelId": "9dab8cc5-6439-4efd-ab7a-60e221560ce2",
+    "count": 34,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "23f2b502-fe56-491a-a753-fce0d397d3ba",
+    "count": 16,
+    "samples": [
+      "translate_choice: harian",
+      "listen_choose: (?)",
+      "translate_choice: harian"
+    ]
+  },
+  {
+    "levelId": "f15d50ab-01dd-45b0-ad32-7a161ab1a16f",
+    "count": 12,
+    "samples": [
+      "matching_pairs: ساعات, يوم, شهر, النهار",
+      "translate_choice: ساعات",
+      "matching_pairs: ساعات, يوم, شهر, النهار"
+    ]
+  },
+  {
+    "levelId": "28ce3eec-c016-4e85-98fa-56d0c76053b4",
+    "count": 42,
+    "samples": [
+      "translate_write: dan pada akhir",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "700d1fb0-a960-44a6-a9a5-5f13924169f4",
+    "count": 11,
+    "samples": [
+      "translate_choice: kami habiskan (waktu)",
+      "fill_blank: kayf rah",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "748efcca-b938-47c8-bd7f-8ee30f5884e1",
+    "count": 17,
+    "samples": [
+      "translate_choice: بايامنا هيدي",
+      "translate_choice: di zaman kita",
+      "translate_choice: بايامنا"
+    ]
+  },
+  {
+    "levelId": "e51ea429-5c7c-45d5-b9d0-6ba15067f370",
+    "count": 35,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "translate_write: di tahun 90-an"
+    ]
+  },
+  {
+    "levelId": "540f7fe3-c65b-47b4-9507-6178c84b7348",
+    "count": 17,
+    "samples": [
+      "translate_choice: pada hari-hari raya",
+      "translate_choice: pada hari-hari raya",
+      "word_order: بيحتفل المسلمين بالأعياد"
+    ]
+  },
+  {
+    "levelId": "62c5931b-b6c2-4fec-a808-08a269634200",
+    "count": 12,
+    "samples": [
+      "matching_pairs: ترات, شهر, ساعة, يوم",
+      "translate_choice: periode-periode",
+      "translate_choice: ترات"
+    ]
+  },
+  {
+    "levelId": "7e889cc8-8999-45ef-93f9-9bed790277b9",
+    "count": 40,
+    "samples": [
+      "translate_write: pada hari-hari raya",
+      "fill_blank: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "6d2a7674-cf69-4d08-ac26-59cc51b49ee2",
+    "count": 13,
+    "samples": [
+      "translate_choice: momen-momen",
+      "translate_choice: momen-momen",
+      "word_order: كيف بتخربي اللحظات المؤثرة"
+    ]
+  },
+  {
+    "levelId": "3d3f6d52-01c6-4726-82e9-dfc085f06274",
+    "count": 21,
+    "samples": [
+      "translate_choice: على ايامهن",
+      "fill_blank: ala ...",
+      "translate_choice: ايامهن"
+    ]
+  },
+  {
+    "levelId": "3206e6a7-2bc1-4ed5-9e95-0ef229ebc9d9",
+    "count": 35,
+    "samples": [
+      "translate_write: pada hari-hari raya",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "60613e82-c9e2-4d5a-9e28-8f34552cd91e",
+    "count": 17,
+    "samples": [
+      "translate_choice: dengan datangnya (waktu)",
+      "translate_choice: dengan datangnya (waktu)",
+      "word_order: بس بحلول عيد الأضحى"
+    ]
+  },
+  {
+    "levelId": "4dcb1414-6aa7-42c6-a35d-6436a1e328d7",
+    "count": 9,
+    "samples": [
+      "fill_blank: el-katkoot arba' ...",
+      "matching_pairs: أضعاف, الكتكوت, أربع, أخوي",
+      "translate_choice: lipat ganda"
+    ]
+  },
+  {
+    "levelId": "c55791d4-8c42-452d-bb24-3c995de27bc4",
+    "count": 28,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "c4a2ac34-c867-4b74-bd05-446035bd56ae",
+    "count": 27,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "b2737331-b1af-4492-8736-9f1c4c792883",
+    "count": 12,
+    "samples": [
+      "translate_choice: bertepatan",
+      "translate_choice: bertepatan",
+      "word_order: هادا العيد بيصادف"
+    ]
+  },
+  {
+    "levelId": "1e6f20cf-592d-480e-86f2-46c1f5fd2a49",
+    "count": 26,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "52d5ad7a-f58c-44f9-bca4-f47888504d71",
+    "count": 28,
+    "samples": [
+      "translate_write: bertepatan",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "cbbdb8cf-6b04-4766-89ab-b1e4cde7f875",
+    "count": 13,
+    "samples": [
+      "translate_choice: era / periode",
+      "fill_blank: fi",
+      "translate_choice: era / periode"
+    ]
+  },
+  {
+    "levelId": "5db59e8d-b64d-4df2-910c-ba2cff2e8c93",
+    "count": 25,
+    "samples": [
+      "translate_write: era / periode",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "ae2b34f3-704e-43b8-bd30-b2f0665a1284",
+    "count": 26,
+    "samples": [
+      "translate_write: era / periode",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "b08922a8-9dfd-4d4d-9dea-92cf38db55e1",
+    "count": 26,
+    "samples": [
+      "translate_choice: sang ibu",
+      "translate_choice: dan ibu",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "7bc5555c-113d-4b78-a6cf-5155d6401862",
+    "count": 19,
+    "samples": [
+      "translate_choice: dan anak-anaknya",
+      "fill_blank: ma'",
+      "translate_choice: ولادها"
+    ]
+  },
+  {
+    "levelId": "eb08725e-c2bf-4560-a9bb-decd24cddce7",
+    "count": 34,
+    "samples": [
+      "translate_write: anakku (lk)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "5d55ec5c-b36f-469d-b850-5fbd99bd2bfe",
+    "count": 19,
+    "samples": [
+      "translate_choice: anak-anak",
+      "listen_choose: (?)",
+      "translate_choice: anak-anak"
+    ]
+  },
+  {
+    "levelId": "a7c96dc3-d49a-4a1b-9f60-b38f3915c058",
+    "count": 10,
+    "samples": [
+      "translate_choice: ibuku",
+      "translate_choice: ibuku",
+      "translate_choice: tidak suka"
+    ]
+  },
+  {
+    "levelId": "9b1142e7-0b54-4fd2-b71b-caf79a1eda41",
+    "count": 35,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "23418c5c-7c2e-4e14-8d10-05bf2217007e",
+    "count": 20,
+    "samples": [
+      "translate_choice: ayah",
+      "word_order: مبين إنه بابا",
+      "translate_choice: ayah"
+    ]
+  },
+  {
+    "levelId": "e9e06161-a84c-4f01-a415-b026ff0f5cec",
+    "count": 13,
+    "samples": [
+      "translate_choice: عمه",
+      "matching_pairs: عمه, المدرسة, من, عطا",
+      "translate_choice: عمه"
+    ]
+  },
+  {
+    "levelId": "e7d6ad7b-a932-438d-b47f-50952a0c8470",
+    "count": 24,
+    "samples": [
+      "translate_choice: keluarga",
+      "listen_choose: (?)",
+      "translate_write: keluarga"
+    ]
+  },
+  {
+    "levelId": "dd2bd362-3ecc-47d0-b920-ff1f58f8291b",
+    "count": 19,
+    "samples": [
+      "fill_blank: ma'",
+      "translate_choice: عائلتي",
+      "translate_choice: anak-anak perempuan kalian"
+    ]
+  },
+  {
+    "levelId": "59b1de0a-2caa-47a4-9dec-82a6762cdc68",
+    "count": 32,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "translate_write: keluargaku"
+    ]
+  },
+  {
+    "levelId": "4d87eade-1aa6-437f-a119-2a9bf72e56f1",
+    "count": 23,
+    "samples": [
+      "translate_choice: saudaraku",
+      "word_order: هذا أخوي",
+      "translate_choice: saudaraku"
+    ]
+  },
+  {
+    "levelId": "95ea8766-97ce-4bf1-a563-bc87be5ab6bc",
+    "count": 20,
+    "samples": [
+      "fill_blank: ana mit'akkid ... ma rah",
+      "matching_pairs: أهلي, أنا, متأكد, ما راح",
+      "translate_choice: أنا متأكد أهلي ما راح"
+    ]
+  },
+  {
+    "levelId": "898d0235-c70a-4199-9b18-f24058679cb9",
+    "count": 34,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "translate_write: keluarga kami"
+    ]
+  },
+  {
+    "levelId": "569c7fe3-1a2f-4496-baa5-a3ffd1f40ae4",
+    "count": 21,
+    "samples": [
+      "translate_choice: kalian menikah",
+      "fill_blank: awwal ma",
+      "word_order: تجوزتو"
+    ]
+  },
+  {
+    "levelId": "db36b57c-ae25-4d62-98de-2b8e2c997786",
+    "count": 14,
+    "samples": [
+      "translate_choice: paman",
+      "translate_choice: عمو",
+      "matching_pairs: عمو, يلا, بسرعة, اذا"
+    ]
+  },
+  {
+    "levelId": "64c935db-a5a1-4d88-90a1-0e46108233e3",
+    "count": 23,
+    "samples": [
+      "translate_choice: keluarga itu",
+      "translate_choice: keluarga / orang tua",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "136c1d5b-a580-447c-b5cc-e3434de0a768",
+    "count": 18,
+    "samples": [
+      "translate_choice: anak perempuannya",
+      "translate_choice: anak perempuannya",
+      "translate_choice: anak perempuan"
+    ]
+  },
+  {
+    "levelId": "6fd5afb4-749b-48ff-83c1-141430f97b1f",
+    "count": 34,
+    "samples": [
+      "translate_write: keluarga kita",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "0f104d19-1ae6-412a-8ae6-bca59c1cb35a",
+    "count": 23,
+    "samples": [
+      "translate_choice: ibu",
+      "fill_blank: ma'i 'ind",
+      "word_order: معي عند أم إنصاف أنا"
+    ]
+  },
+  {
+    "levelId": "edbebc18-7040-4a62-9445-e45c6213e48b",
+    "count": 22,
+    "samples": [
+      "fill_blank: yalla ya",
+      "matching_pairs: أولاد, يلا, رح, نتأخر",
+      "translate_choice: anak-anak"
+    ]
+  },
+  {
+    "levelId": "78aca277-c7a9-4dad-b746-306e4da0a87f",
+    "count": 34,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "49a65016-07a7-44b7-807a-976f81fbbbfb",
+    "count": 20,
+    "samples": [
+      "translate_choice: suamimu",
+      "translate_choice: suamimu",
+      "fill_blank: iza"
+    ]
+  },
+  {
+    "levelId": "61db22e5-63f9-469a-b2e7-66fcce1de8f8",
+    "count": 12,
+    "samples": [
+      "translate_choice: ماما",
+      "translate_choice: ماما",
+      "translate_choice: ibu"
+    ]
+  },
+  {
+    "levelId": "594b0209-45c3-410c-8478-fbc6c0854cbe",
+    "count": 19,
+    "samples": [
+      "translate_choice: kekeluargaan",
+      "word_order: الترابط الأسري",
+      "word_order: الترابط الأسري"
+    ]
+  },
+  {
+    "levelId": "2acc099f-9cf7-4305-9b32-6e7ffc727fa8",
+    "count": 15,
+    "samples": [
+      "matching_pairs: علاقتنا, روعة, الحلوة, فيهم",
+      "translate_choice: علاقتنا",
+      "translate_choice: hubungan kami"
+    ]
+  },
+  {
+    "levelId": "ee32066e-fa12-45d4-b1c7-2c08208bc88a",
+    "count": 29,
+    "samples": [
+      "translate_write: hubungan kami",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "5c16bde9-6e5e-4a7b-873e-95adebf0e686",
+    "count": 29,
+    "samples": [
+      "translate_write: hubungan kami",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "4e877cbf-e108-48cc-8571-fc4868d450f1",
+    "count": 17,
+    "samples": [
+      "translate_choice: keluarga-keluarga",
+      "fill_blank: btitjamma'",
+      "translate_choice: keluarga-keluarga"
+    ]
+  },
+  {
+    "levelId": "6fc2e32d-c7b7-45c7-87df-c86a67690325",
+    "count": 13,
+    "samples": [
+      "matching_pairs: لأم, ماما, حكيت, عن",
+      "matching_pairs: لأم, ماما, حكيت, عن",
+      "translate_choice: kepada ibu"
+    ]
+  },
+  {
+    "levelId": "c439afc8-4779-40fc-a317-f2410413a53d",
+    "count": 31,
+    "samples": [
+      "translate_write: keluarga-keluarga",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "e907276f-955c-47a7-a6a1-ec861b9b40a6",
+    "count": 31,
+    "samples": [
+      "translate_write: keluarga-keluarga",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "3183a87e-bdf7-44c2-9be6-efe8059b91e2",
+    "count": 15,
+    "samples": [
+      "translate_choice: kerabat-kerabat",
+      "word_order: بتتجمع العيلات مع القرايب",
+      "translate_choice: kerabat-kerabat"
+    ]
+  },
+  {
+    "levelId": "f11d633c-3ca3-4ae1-9b95-6835e318dcb6",
+    "count": 15,
+    "samples": [
+      "translate_choice: remaja-remaja",
+      "translate_choice: remaja-remaja",
+      "fill_blank: il-awlad w..."
+    ]
+  },
+  {
+    "levelId": "d0db0811-abe7-4775-9be9-75e4761d3aaa",
+    "count": 31,
+    "samples": [
+      "translate_write: kerabat-kerabat",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "bdf924df-d8a7-4e8c-85a6-cd13c026511c",
+    "count": 27,
+    "samples": [
+      "translate_write: kerabat-kerabat",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "f2fde46a-68e8-4dfd-be60-7e6b2a05a71e",
+    "count": 21,
+    "samples": [
+      "translate_choice: untuk suaminya",
+      "word_order: تحضر الفطور لجوزها",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "91c838bc-7901-4a72-89ba-0005c587262f",
+    "count": 9,
+    "samples": [
+      "matching_pairs: ربي, جيل, بدون, وسائل",
+      "translate_choice: dibesarkan",
+      "matching_pairs: ربي, جيل, بدون, وسائل"
+    ]
+  },
+  {
+    "levelId": "f72f757d-15a4-4981-8a6f-4108b2117302",
+    "count": 31,
+    "samples": [
+      "translate_write: untuk suaminya",
+      "fill_blank: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "6ef36e8b-c467-4124-b50f-4b7c0c483c2f",
+    "count": 31,
+    "samples": [
+      "translate_write: untuk suaminya",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "cf2200bb-9b69-4d47-9480-bbe8ef1159d1",
+    "count": 26,
+    "samples": [
+      "translate_choice: yang hijau",
+      "translate_choice: yang besar",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "b976a074-f897-4583-bf44-108c53477236",
+    "count": 17,
+    "samples": [
+      "translate_choice: siap",
+      "translate_choice: بيضا",
+      "translate_choice: siap"
+    ]
+  },
+  {
+    "levelId": "eace2d19-f207-4424-ac3c-cf4c8026f724",
+    "count": 38,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "cf002a99-8668-4b3d-a020-795c4a4f0063",
+    "count": 9,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "8e5d6997-13c5-43c7-8eee-9383e71aea9b",
+    "count": 4,
+    "samples": [
+      "fill_blank: inno ... heek",
+      "fill_blank: il-beet",
+      "fill_blank: haad il-mawduu3"
+    ]
+  },
+  {
+    "levelId": "d99602a6-594e-4e39-9e64-2b7cccf87b29",
+    "count": 32,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "a40f4427-f0a3-42a4-b9dc-54e40dd619bf",
+    "count": 15,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: maama"
+    ]
+  },
+  {
+    "levelId": "c1f101ef-b3af-407d-88d7-a153b48d5e67",
+    "count": 9,
+    "samples": [
+      "translate_choice: yang kecil",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "2ffcb464-d105-4046-b2c6-3b96fc09ee2f",
+    "count": 40,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "a44a987f-f95f-4e39-ba01-d9cc4339568d",
+    "count": 13,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "word_order: بتواصل بإحساس عالي مع الوجود."
+    ]
+  },
+  {
+    "levelId": "2cdcdec7-256d-410d-9210-713a2be6aef6",
+    "count": 2,
+    "samples": [
+      "matching_pairs: لزيز, الوحيده, كتير, الطريقه",
+      "translate_choice: الطريقه الوحيده"
+    ]
+  },
+  {
+    "levelId": "e5f84e52-81fe-4ef6-8cfa-f904716b3327",
+    "count": 35,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "32f8b54e-bf28-43bf-899c-54f6a3882f75",
+    "count": 16,
+    "samples": [
+      "listen_choose: (?)",
+      "word_order: لا، الموضوع مش سهل",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "e8dd79fc-e11b-4f3c-a53d-d5654c90c50c",
+    "count": 6,
+    "samples": [
+      "translate_choice: عادي",
+      "matching_pairs: عادي, بس, معلمات, لا",
+      "translate_choice: لا لا عادي بس معلمات"
+    ]
+  },
+  {
+    "levelId": "56edbba7-29dd-4c0b-a60c-ac391ff27411",
+    "count": 10,
+    "samples": [
+      "translate_choice: sederhana",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "78f36214-b327-40ed-807a-8d9b786f6be2",
+    "count": 1,
+    "samples": [
+      "translate_choice: سناكات خفيفة"
+    ]
+  },
+  {
+    "levelId": "ea44e679-2874-455b-96d2-c5ff9010fcb7",
+    "count": 33,
+    "samples": [
+      "translate_write: sederhana",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "0102db91-6277-4c18-8fbe-c09a86f7eccc",
+    "count": 18,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: w-bat'ab"
+    ]
+  },
+  {
+    "levelId": "d260a843-e9c3-4330-82a9-e00039ee19a6",
+    "count": 8,
+    "samples": [
+      "fill_blank: lil-mat'am",
+      "translate_choice: مش مضبوطه",
+      "translate_choice: مريحة"
+    ]
+  },
+  {
+    "levelId": "c7415a09-46a7-4bfa-80ae-96ed4a0b7f82",
+    "count": 36,
+    "samples": [
+      "translate_write: dingin",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "d1151c5f-bc6e-42bc-885e-7ff683693d68",
+    "count": 5,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "fill_blank: as-sur'a wat-tasāru'"
+    ]
+  },
+  {
+    "levelId": "c932ecf5-dec0-44b0-839d-50eb87a02321",
+    "count": 8,
+    "samples": [
+      "translate_choice: غبي",
+      "translate_choice: شو بتفكرني غبي؟",
+      "fill_blank: shu"
+    ]
+  },
+  {
+    "levelId": "33546930-a861-46bc-a3ef-2ef003955a84",
+    "count": 8,
+    "samples": [
+      "translate_choice: yang asli",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "08ebe773-69a6-4b95-a927-46d00fb7768d",
+    "count": 1,
+    "samples": [
+      "fill_blank: wa-ṭabʿan il-mansaf ktīr"
+    ]
+  },
+  {
+    "levelId": "63a103c5-545b-4870-9d23-976f43cc0cf7",
+    "count": 30,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "13360dde-7c9f-41e9-9e5c-5b487e861ce6",
+    "count": 6,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "8b8890ce-f30f-49f6-a002-267f6ac9113f",
+    "count": 4,
+    "samples": [
+      "translate_choice: طلعت هالخلطة رهيبة وعنجد بتغير",
+      "translate_choice: رهيبة",
+      "translate_choice: عنجد بتغير"
+    ]
+  },
+  {
+    "levelId": "922e595f-1aa1-4ef3-b142-2915a54fb97d",
+    "count": 31,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "4f07ce23-a626-4f51-85a8-3163ac908e93",
+    "count": 7,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: mish",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "97b81907-5c86-4c25-b012-70c9f6b1e62e",
+    "count": 8,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "aaa4f665-d6ad-465c-b0ba-5e4fb3907690",
+    "count": 1,
+    "samples": [
+      "translate_choice: tipis"
+    ]
+  },
+  {
+    "levelId": "15415680-49c8-4dd9-944c-7b618a2c8556",
+    "count": 36,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "6364ea86-7546-440c-9616-bc4c2fdcc51b",
+    "count": 8,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "4cea36c7-11fc-4200-9373-1e6c3ece636b",
+    "count": 2,
+    "samples": [
+      "fill_blank: il-fikra",
+      "translate_choice: يزن انت عبقري عشان الوطن"
+    ]
+  },
+  {
+    "levelId": "5a4e4cb6-32bc-4655-98bf-444c26b9c334",
+    "count": 29,
+    "samples": [
+      "fill_blank: (?)",
+      "listen_choose: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "d9b6cb13-3c82-4d64-9ef0-1b4e2265068c",
+    "count": 8,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "4ad82b9c-68ba-4aaa-9950-5c4c06a2469e",
+    "count": 9,
+    "samples": [
+      "fill_blank: w-b-ḥayātna",
+      "translate_choice: بحياتنا المهنيه",
+      "translate_choice: il-mihaniyye"
+    ]
+  },
+  {
+    "levelId": "38ce6428-e401-43f5-9838-8b0031586a80",
+    "count": 6,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "9d1346d5-15c4-404e-b2d7-80ae0d86fe60",
+    "count": 2,
+    "samples": [
+      "matching_pairs: متنوعة, غني, مختلف, كتير",
+      "matching_pairs: نكهات متنوعة, طعم غني, مكونات مختلفة, أكلات كتير"
+    ]
+  },
+  {
+    "levelId": "8ca3a826-097f-4741-aac7-b277b4aa683f",
+    "count": 44,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "a404b54c-8849-4484-b449-7cbfa8b12246",
+    "count": 6,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "8592d66e-2f09-49d1-ae0c-7fe835d28b4d",
+    "count": 4,
+    "samples": [
+      "fill_blank: fiiha quwwah ghaamidhah",
+      "translate_choice: يها قوة غامضة وسحرية اه",
+      "fill_blank: fiiha"
+    ]
+  },
+  {
+    "levelId": "c72470c3-150d-416c-b5a0-9905830f85d6",
+    "count": 29,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "5a5bba4b-0f67-4991-8b14-23b5a12e1de0",
+    "count": 8,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "a687df04-95eb-49b4-89c3-7a64b3e69e06",
+    "count": 4,
+    "samples": [
+      "fill_blank: ana",
+      "translate_choice: أنا متوفرة طول الوقت",
+      "fill_blank: ana"
+    ]
+  },
+  {
+    "levelId": "c2d25a17-2dfd-4351-b5ff-5714d591cb29",
+    "count": 9,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "6b0c8da9-a30b-4520-ae45-66b02e29dd74",
+    "count": 1,
+    "samples": [
+      "matching_pairs: أسوأ, معكر, أحسن, هيك"
+    ]
+  },
+  {
+    "levelId": "5ad1a9eb-e500-4aa0-bcab-1f54ee0edb16",
+    "count": 30,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "fill_blank: (?)"
+    ]
+  },
+  {
+    "levelId": "e8882a53-2c86-4153-9511-01e9faa289c0",
+    "count": 11,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: 3ala as-sahra'",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "aa79698a-7219-4654-801e-d8088b904c73",
+    "count": 4,
+    "samples": [
+      "fill_blank: hiyye",
+      "translate_choice: خورة",
+      "translate_choice: أنا كتير فخورة فيكي يلا"
+    ]
+  },
+  {
+    "levelId": "f5696d3a-e8d8-4a88-beaa-83c21e58f941",
+    "count": 30,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "2d1e49cb-05bf-4cab-88db-9f22b7ee65b7",
+    "count": 6,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "bb90f5c1-463d-4dcc-80d0-a763336bb8fd",
+    "count": 1,
+    "samples": [
+      "translate_choice: شخصيه"
+    ]
+  },
+  {
+    "levelId": "21a4b866-7525-4007-8671-b116f17be3a8",
+    "count": 5,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "253b8694-a27a-447e-82ed-14d843e37dc5",
+    "count": 27,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "6011635f-a222-450c-80a6-34588ae10c19",
+    "count": 26,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "ced7389c-4cf8-4216-8be2-8d740a27dfd2",
+    "count": 10,
+    "samples": [
+      "listen_choose: (?)",
+      "listen_choose: (?)",
+      "listen_choose: (?)"
+    ]
+  },
+  {
+    "levelId": "d679b057-01e6-4454-acdc-c536ddc94699",
+    "count": 3,
+    "samples": [
+      "translate_choice: قادرة تتحمل خصائص الغامضة لمية",
+      "fill_blank: hiye",
+      "fill_blank: qaadrah tithammal khasaa'is"
+    ]
+  },
+  {
+    "levelId": "d4f22861-0a85-4d71-8468-788b652a795d",
+    "count": 17,
+    "samples": [
+      "listen_choose: (?)",
+      "fill_blank: (?)",
+      "listen_choose: (?)"
+    ]
+  }
+]

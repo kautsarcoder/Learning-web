@@ -248,6 +248,11 @@ module.exports = async (req, res) => {
 
         Thumbnail: props.Thumbnail?.url || "",
 
+        // Nama Arab (kolom Notion "Judul Arab" bertipe Text) dan, opsional,
+        // nama Arab untuk course ("Course Arab").
+        judulArab: notionText(props["Judul Arab"]),
+        courseAr: notionText(props["Course Arab"]),
+
         order: props.Order?.number || 0,
 
         content,
@@ -262,6 +267,12 @@ module.exports = async (req, res) => {
     });
   }
 };
+
+// Baca teks dari properti Notion bertipe Text (rich_text) atau Title.
+function notionText(prop) {
+  const arr = prop?.rich_text || prop?.title || [];
+  return arr.map((t) => t.plain_text).join("").trim();
+}
 
 function blockToMarkdown(block) {
   const type = block.type;

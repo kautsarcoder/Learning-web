@@ -1,0 +1,3421 @@
+Membaca 4350 kata dari kosakata-ammiyah.csv...
+Ditemukan checkpoint: 3519 kata sudah diklasifikasi sebelumnya, dilanjutkan.
+Topik "Percakapan Sehari-hari" tidak ada kata baru — pakai 114 kata dari sebelumnya.
+Topik "Warna & Sifat" tidak ada kata baru — pakai 98 kata dari sebelumnya.
+Topik "Belanja di Pasar" tidak ada kata baru — pakai 95 kata dari sebelumnya.
+Topik "Arah & Transportasi" tidak ada kata baru — pakai 104 kata dari sebelumnya.
+Topik "Memesan Makanan & Minuman" tidak ada kata baru — pakai 108 kata dari sebelumnya.
+Topik "Angka & Waktu" tidak ada kata baru — pakai 104 kata dari sebelumnya.
+Topik "Perkenalan & Sapaan" tidak ada kata baru — pakai 69 kata dari sebelumnya.
+Topik "Keluarga" tidak ada kata baru — pakai 54 kata dari sebelumnya.
+Topik "Kesehatan Sederhana" tidak ada kata baru — pakai 61 kata dari sebelumnya.
+Topik "Membicarakan Musim & Cuaca" tidak ada kata baru — pakai 29 kata dari sebelumnya.
+
+Setelah kurasi: 836 dari 3519 kata dipakai.
+
+
+Preview klasifikasi disimpan ke preview-klasifikasi.json — CEK DULU sebelum lanjut (ini bagian yang paling mungkin meleset, karena AI yang menaksir topik & kesulitan tiap kata).
+
+
+Memproses Bagian 1, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 12 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Marhaba, ana es-sayyid Sami w haabeb at'arraf 'aleikom w arahheb feekom. Batmanna lil-jamee' et-tawfeeq wan-najah w salaamet el-kull bi-hal-zroof.",
+      "passageText": "مرحبا، أنا السيد سامي وحابب أتعرف عليكم وأرحب فيكم. بتمنى للجميع التوفيق والنجاح وسلامة الكل بهالظروف.",
+      "question": "Apa yang diharapkan oleh Tuan Sami untuk semua orang dalam perkenalannya?",
+      "options": [
+        { "text": "Kesuksesan dan keselamatan" },
+        { "text": "Penundaan jadwal pertemuan" },
+        { "text": "Kepindahan lokasi kerja" },
+        { "text": "Pembatalan agenda perkenalan" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) سلامة
+    (lewati, sudah ada) سيد
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Marḥaba, es-salāmu 'alaykum! Mīn hiyye?",
+          "text": "مرحبا، السلام عليكم! مين هي؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Wa 'alaykum es-salām! Hiyye ṣāḥebti.",
+          "text": "وعليكم السلام! هي صاحبتي."
+        },
+        {
+          "latin": "Ma'a es-salāmeh, bshūfak bukra.",
+          "text": "مع السلامة، بشوفك بكرة."
+        },
+        {
+          "latin": "Lā, ana mish ju'ān.",
+          "text": "لا، أنا مش جوعان."
+        },
+        {
+          "latin": "Shukran ktīr 'al-qahweh.",
+          "text": "شكراً كتير ع القهوة."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) هي
+    (lewati, sudah ada) عليكم
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Sabāḥ el-khayr! Ana Rāmi w 'omri khamse w 'ishrīn sane. Kull yōm baḥebb a'mel khayr w asā'ed en-nās.",
+      "passageText": "صباح الخير! أنا رامي وعمري خمسة وعشرين سنة. كل يوم بحب أعمل خير وأساعد الناس.",
+      "question": "Berapa usia Rami berdasarkan teks perkenalan di atas?",
+      "options": [
+        { "text": "25 tahun" },
+        { "text": "20 tahun" },
+        { "text": "30 tahun" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) خير
+    (lewati, sudah ada) عمري
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Forsa sa'eedeh wa-shukran kteer!",
+          "text": "فرصة سعيدة وشكرا كتير!"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ma' is-salame",
+          "text": "مع السلامة"
+        },
+        {
+          "latin": "Sabah il-kheer",
+          "text": "صباح الخير"
+        },
+        {
+          "latin": "Masa il-kheer",
+          "text": "مساء الخير"
+        },
+        {
+          "latin": "Kifak?",
+          "text": "كيفك؟"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وشكرا
+    (lewati, sudah ada) السلامة
+  (lewati, sudah lengkap: 15 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 2, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 12 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Marhaba, ana bat'allam 'arabi. Shukran kteer la-musa'adtak.",
+      "passageText": "مرحبا، أنا بتعلم عربي. شكرا كتير لمساعدتك.",
+      "question": "Berdasarkan teks di atas, bahasa apa yang sedang dipelajari dan ungkapan apa yang disampaikan di akhir?",
+      "options": [
+        { "text": "Bahasa Arab dan ucapan terima kasih (شكرا)" },
+        { "text": "Bahasa Inggris dan ucapan salam (مرحبا)" },
+        { "text": "Bahasa Arab dan ucapan selamat datang (أهلا)" },
+        { "text": "Bahasa Prancis dan permintaan maaf (عفوا)" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) عربي
+    (lewati, sudah ada) شكرا
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Marhaba ya miss, keef es-sahha?",
+          "text": "مرحبا يا ميس، كيف الصحة؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ahlan, el-hamdulillah, wa-yi'tiikum el-'afyeh!",
+          "text": "أهلاً، الحمد لله، ويعطيكم العافية!"
+        },
+        {
+          "latin": "Tisbah 'ala kheir ya ustaz.",
+          "text": "تصبح على خير يا أستاذ."
+        },
+        {
+          "latin": "Ma'a el-salameh, bashoofak bukra.",
+          "text": "مع السلامة، بشوفك بكرة."
+        },
+        {
+          "latin": "La, ana mish ta'ban.",
+          "text": "لا، أنا مش تعبان."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) ويعطيكم
+    (lewati, sudah ada) ميس
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Mar7aba! Hay rfi2ti Noor. Ya salaam, kteer mabsuuT inni shuftha el-yoom.",
+      "passageText": "مرحبا! هاي رفيقتي نور. يا سلام، كتير مبسوط إني شفتها اليوم.",
+      "question": "Siapakah yang dimaksud dan ditemui oleh pembicara dalam bacaan tersebut?",
+      "options": [
+        {
+          "text": "Teman perempuannya"
+        },
+        {
+          "text": "Guru laki-lakinya"
+        },
+        {
+          "text": "Saudara laki-lakinya"
+        },
+        {
+          "text": "Tetangga barunya"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) سلام
+    (lewati, sudah ada) رفيقتي
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Marhaba! Ento w 'eletkum min Lebnen?",
+          "text": "مرحبا! إنتو وعيلتكم من لبنان؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ahlein! Ihna wa-shaabna min Lebnen.",
+          "text": "أهلين! إحنا وصحابنا من لبنان."
+        },
+        {
+          "latin": "Ma'a as-salameh, bashoofak bukra.",
+          "text": "مع السلامة، بشوفك بكرا."
+        },
+        {
+          "latin": "Tfaddal eshrab shay ma'na.",
+          "text": "تفضل اشرب شاي معنا."
+        },
+        {
+          "latin": "Ana mish fahem shu hakeit.",
+          "text": "أنا مش فاهم شو حكيت."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وصحابنا
+    (lewati, sudah ada) لبنان
+  (lewati, sudah lengkap: 15 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 3, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Marhaba! Haada saahbi Ahmad. Huwwe min el-Urdun.",
+      "passageText": "مرحبا! هادا صاحبي أحمد. هو من الأردن.",
+      "question": "Siapakah sosok Ahmad yang diperkenalkan dalam teks di atas?",
+      "options": [
+        { "text": "Teman pembicara" },
+        { "text": "Guru pembicara" },
+        { "text": "Saudara pembicara" },
+        { "text": "Tetangga pembicara" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) هو
+    (lewati, sudah ada) صاحبي
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Marḥaba! Ana bashteġel bi-širkeh urduniyyeh, wa-inta?",
+          "text": "مرحبا! أنا بشتغل بشركة أردنية، وإنت؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ana ṭālib bil-jām'ah, tšarrafna!",
+          "text": "أنا طالب بالجامعة، تشرفنا!"
+        },
+        {
+          "latin": "Baddi finjān qahweh, law samaḥt.",
+          "text": "بدي فنجان قهوة، لو سمحت."
+        },
+        {
+          "latin": "El-maḥall msakkar el-yōm.",
+          "text": "المحل مسكّر اليوم."
+        },
+        {
+          "latin": "Es-sā'ah khamseh el-masa.",
+          "text": "الساعة خمسة المساء."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) أردنية
+    (lewati, sudah ada) وإنت
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Marhaban! Ranya 'ayshe hoon bi-'Amman. Ahlan wa sahlan, binhabb nshuufik dayman.",
+      "passageText": "مرحباً! رانيا عايشة هون بعمّان. أهلاً وسهلاً، بنحب نشوفك دايماً.",
+      "question": "Di mana Rania tinggal saat ini?",
+      "options": [
+        { "text": "Di Amman" },
+        { "text": "Di Kairo" },
+        { "text": "Di Beirut" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) نشوفك
+    (lewati, sudah ada) عايشة
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "haad ustaaz ir-riyaaḍa?",
+          "text": "هاد أستاذ الرياضة؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "ah, bsallem 'aleeh",
+          "text": "أه، بسلم عليه"
+        },
+        {
+          "latin": "laa, mish hoon",
+          "text": "لا، مش هون"
+        },
+        {
+          "latin": "shukran ktiir",
+          "text": "شكراً كتير"
+        },
+        {
+          "latin": "ma'a s-salaameh",
+          "text": "مع السلامة"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) أستاذ
+    (lewati, sudah ada) بسلم
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 4, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 6/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Mar7aba! Ana ismi Tareq. Ana khle2et b-3amman w 3ayesh hon.",
+      "passageText": "مرحبا! انا اسمي طارق. انا خلقت بعمّان وعايش هون.",
+      "question": "Di mana Tareq dilahirkan?",
+      "options": [
+        { "text": "Amman" },
+        { "text": "Beirut" },
+        { "text": "Kairo" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) خلقت
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 9 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 9 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 5, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 6, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 7, Unit 1 (Perkenalan & Sapaan)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 1, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Basha kull yom es-saa'ah tmenye wa-nuss es-suboh. W-baqdi kull an-nahaar bish-shughol ma' sahabi.",
+      "passageText": "بصحى كل يوم الساعة تمانية ونصف الصبح. وبقضي كل النهار بالشغل مع صحابي.",
+      "question": "Kapan dia bangun tidur di pagi hari?",
+      "options": [
+        { "text": "Pukul 08.30 pagi" },
+        { "text": "Pukul 07.30 pagi" },
+        { "text": "Pukul 08.00 pagi" },
+        { "text": "Pukul 09.30 pagi" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) النهار
+    (lewati, sudah ada) ونصف
+    (lewati, sudah ada) تمانية
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Bi-haada iz-zaman il-kull mashghool, emta mnilteqi?",
+          "text": "بهذا الزمن الكل مشغول، متى بنلتقي؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Bukra ba'd ed-duhur munasib?",
+          "text": "بكرة بعد الظهر مناسب؟"
+        },
+        {
+          "latin": "Ana bil-bayt halla'.",
+          "text": "أنا بالبيت هلأ."
+        },
+        {
+          "latin": "Ma bahebb el-qahweh.",
+          "text": "ما بحب القهوة."
+        },
+        {
+          "latin": "Shukran kteer 'ala el-akl.",
+          "text": "شكراً كتير على الأكل."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بعد
+    (lewati, sudah ada) بكرة
+    (lewati, sudah ada) الزمن
+  (lewati, sudah lengkap: 14 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Rann et-telefōn 'asharah marrāt w-mā raddēt wala marrah. Fa-halla lāzem arinn 'alēh w-a'tezer.",
+      "passageText": "رن التلفون عشرة مرات وما رديت ولا مرة. فهلا لازم أرن عليه وأعتذر.",
+      "question": "Apa yang harus dilakukan narator sekarang setelah tidak mengangkat telepon?",
+      "options": [
+        {
+          "text": "Meneleponnya kembali dan meminta maaf"
+        },
+        {
+          "text": "Menghubunginya sepuluh kali lagi"
+        },
+        {
+          "text": "Pergi langsung ke rumahnya"
+        },
+        {
+          "text": "Mematikan teleponnya agar tidak terganggu"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) مرة
+    (lewati, sudah ada) عشرة
+    (lewati, sudah ada) فهلا
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Ma'na waqt nu'od bi-hal-kafeh shway?",
+          "text": "معنا وقت نقعد بهالكافيه شوي؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "La, rah yikhlas waqtha w lazem nimshi.",
+          "text": "لا، رح يخلص وقتها ولازم نمشي."
+        },
+        {
+          "latin": "El-matbakh kbeer kteer hon.",
+          "text": "المطبخ كبير كتير هون."
+        },
+        {
+          "latin": "Ana baheb el-qahweh es-sadeh.",
+          "text": "أنا بحب القهوة السادة."
+        },
+        {
+          "latin": "Es-sa'ah lisseh badri kteer.",
+          "text": "الساعة لسه بدري كتير."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وقت
+    (lewati, sudah ada) وقتها
+  (lewati, sudah lengkap: 15 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 2, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "al-yawm 'indi maw'id bis-sā'a tis'a eṣ-ṣubuħ. hāda huwwe el-maw'id el-awwal eli.",
+      "passageText": "اليوم عندي موعد بالساعة تسعة الصبح. هادا هو الموعد الأول إلي.",
+      "question": "Kapan janji temu pertama tersebut dijadwalkan pada hari ini?",
+      "options": [
+        { "text": "Jam sembilan pagi" },
+        { "text": "Jam sembilan malam" },
+        { "text": "Jam satu siang" },
+        { "text": "Jam delapan pagi" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) اليوم
+    (lewati, sudah ada) الأول
+    (lewati, sudah ada) تسعة
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Badna nishha bakkiir es-subeh, bas shu na'mel law raah 'aleina el-baas el-awwal?",
+          "text": "بدنا نصحى بكير الصبح، بس شو نعمل لو راح علينا الباص الأول؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Bnaakhod waahad thaani, w sa'tha bnoosal 'al-waqet.",
+          "text": "بناخذ واحد ثاني، وساعتها بنوصل على الوقت."
+        },
+        {
+          "latin": "Bnirja' bnenam w ma bnruuh 'ash-shoghol.",
+          "text": "بنرجع بنام وما بنروح ع الشغل."
+        },
+        {
+          "latin": "Bnishtri akel min el-mat'am el-kbiir.",
+          "text": "بنشتري أكل من المطعم الكبير."
+        },
+        {
+          "latin": "Bnuq'od bish-shaare' bdoon ma na'mel ishi.",
+          "text": "بنقعد بالشارع بدون ما نعمل إشي."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بكير
+    (lewati, sudah ada) ثاني
+    (lewati, sudah ada) ساعتها
+  (lewati, sudah lengkap: 14 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Shribet ahweh marratayn mbaarih ma' sahbi. W-halla biddi ashrab kaaset shaay.",
+      "passageText": "شربت قهوة مرتين مبارح مع صاحبي. وهلا بدي أشرب كاسة شاي.",
+      "question": "Berapa kali tokoh dalam cerita minum kopi kemarin?",
+      "options": [
+        { "text": "Dua kali" },
+        { "text": "Satu kali" },
+        { "text": "Tiga kali" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) مرتين
+    (lewati, sudah ada) مبارح
+    (lewati, sudah ada) وهلا
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Btīji 'ala hādha l-qahweh kull yawm?",
+          "text": "بتيجي على هاد القهوة كل يوم؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Āh, bāji hon yawmiyyan.",
+          "text": "آه، باجي هون يوميا."
+        },
+        {
+          "latin": "La', mā biddi.",
+          "text": "لا، ما بدي."
+        },
+        {
+          "latin": "Shukran ktīr.",
+          "text": "شكراً كتير."
+        },
+        {
+          "latin": "Ma' es-salāmeh.",
+          "text": "مع السلامة."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) يوم
+    (lewati, sudah ada) يوميا
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 3, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 12 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 10 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "MbaareH bil-layl kunte bastanna SaaHbi, w la-halla maa wiSil 'indi. Haka ma'i w qaal raH yeeji bis-saa'ah sab'ah el-marrah el-jaayeh.",
+      "passageText": "مبارح بالليل كنت بستنى صاحبي، ولهلا ما وصل عندي. حكى معي وقال رح يجي بالساعة سبعة المرة الجاية.",
+      "question": "Kapan temannya berjanji akan datang pada waktu berikutnya?",
+      "options": [
+        { "text": "Jam tujuh" },
+        { "text": "Jam sembilan malam" },
+        { "text": "Jam sebelas malam" },
+        { "text": "Tadi malam" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بالليل
+    (lewati, sudah ada) الجاية
+    (lewati, sudah ada) لهلا
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "as-saa'a sab'a, biddak finjaan gahwah taani?",
+          "text": "الساعة سبعة، بدك فنجان قهوة تاني؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "aah ya reet, istanna bas thaaniyah wahdeh.",
+          "text": "آه يا ريت، استنى بس ثانية وحدة."
+        },
+        {
+          "latin": "la', ana mish ju'aan bil-marrah.",
+          "text": "لا، أنا مش جعان بالمرة."
+        },
+        {
+          "latin": "il-mahall msakkar min mbaareh.",
+          "text": "المحل مسكر من مبارح."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) تاني
+    (lewati, sudah ada) ثانية
+    (lewati, sudah ada) سبعة
+  (lewati, sudah lengkap: 14 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 12 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Halla' lazem atla' min el-beit 'ashan et-tariiq bidha nuss saa'ah. W-aw2at btakhood waqt aktar iza fii zahmeh.",
+      "passageText": "هلأ لازم أطلع من البيت عشان الطريق بدها نص ساعة. واوقات بتاخد وقت أكتر إذا في زحمة.",
+      "question": "Berapa lama waktu perjalanan normal yang dibutuhkan dari rumah?",
+      "options": [
+        { "text": "Setengah jam" },
+        { "text": "Satu jam" },
+        { "text": "Dua jam" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) نص
+    (lewati, sudah ada) هلأ
+    (lewati, sudah ada) واوقات
+  Top-up segmen 1: baru 5/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Kam yom raḥ tuq'ud hon?",
+          "text": "كم يوم رح تقعد هون؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "أربع ايام",
+          "text": "Arba' ayyem"
+        },
+        {
+          "latin": "شهر كامل",
+          "text": "Shahr kamel"
+        },
+        {
+          "latin": "ثلاث ساعات",
+          "text": "Talat sa'at"
+        },
+        {
+          "latin": "سنتين هون",
+          "text": "Sanaten hon"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) أربع
+    (lewati, sudah ada) ايام
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 12 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 15 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 4, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 12 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Lāzem trayyeḥ ḥālak bein al-fatrah w-at-tānyeh. Raḥ tḥess b-farəq kbiir bil-waqt.",
+      "passageText": "لازم تريّح حالك بين الفترة والتانية. رح تحس بفرق كبير بالوقت.",
+      "question": "Apa yang disarankan untuk dilakukan dari waktu ke waktu menurut teks tersebut?",
+      "options": [
+        { "text": "Mengistirahatkan diri" },
+        { "text": "Bekerja terus-menerus tanpa jeda" },
+        { "text": "Menambah jam kerja" },
+        { "text": "Mengabaikan perhitungan waktu" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الفترة
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Shū baddak ti'mal bil-maqāl taba'ak?",
+          "text": "شو بدك تعمل بالمقال تبعك؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ab'ato la-majallet al-mustaqbal 'ashān yunshurūh",
+          "text": "أبعته لمجلة المستقبل عشان ينشروه"
+        },
+        {
+          "latin": "Baddī anām hassa",
+          "text": "بدي أنام هسا"
+        },
+        {
+          "latin": "Es-sā'ah khamse el-masa",
+          "text": "الساعة خمسة المسى"
+        },
+        {
+          "latin": "Imbāreh ruhet 'as-sūq",
+          "text": "إمبارح رحت ع السوق"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) المستقبل
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 5, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 12 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Marhaba ya Ahmad! Keef halak? Marag wagt taweel u-ma shufnak hon.",
+      "passageText": "مرحبا يا أحمد! كيف حالك؟ مرق وقت طويل وما شفناك هون.",
+      "question": "Berdasarkan percakapan di atas, apa arti dari kalimat \"مرق وقت طويل\" (marag wagt taweel)?",
+      "options": [
+        { "text": "Sudah lama waktu berlalu" },
+        { "text": "Waktu berjalan sangat lambat" },
+        { "text": "Sekarang masih terlalu pagi" },
+        { "text": "Tidak ada waktu lagi" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) مرق
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Shu sar ma'ak lamma t'akhkhart 'al-maw'ed?",
+          "text": "شو صار معك لما تأخرت على الموعد؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Shu ahki bilahzatha, insadamt w rakadt b-sur'ah.",
+          "text": "شو أحكي بلحظتها، انصدمت وركضت بسرعة."
+        },
+        {
+          "latin": "Sabah el-kheir, keef sahtak el-yom?",
+          "text": "صباح الخير، كيف صحتك اليوم؟"
+        },
+        {
+          "latin": "Baddi finjan ahweh sadeh, law samaht.",
+          "text": "بدي فنجان قهوة سادة، لو سمحت."
+        },
+        {
+          "latin": "El-hisab addeysh tele' ma'ak?",
+          "text": "الحساب قديش طلع معك؟"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بلحظتها
+  (lewati, sudah lengkap: 14 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 14 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 6, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Ilyom 'utleh w bidna nqarrir keef rah naqdi el-waqt. Rah naqdi talat sa'at bil-hadiqa min es-sa'ah arba'a las-sa'ah sab'a. Ba'dein binirja' 'alal-beit bis-sa'ah tamanyeh.",
+      "passageText": "اليوم عطلة وبدنا نقرر كيف رح نقضى الوقت. رح نقضى تلات ساعات بالحديقة من الساعة أربعة للساعة سبعة. بعدين بنرجع على البيت بالساعة تمانية.",
+      "question": "Berapa lama waktu yang akan mereka habiskan di taman?",
+      "options": [
+        {
+          "text": "3 jam"
+        },
+        {
+          "text": "4 jam"
+        },
+        {
+          "text": "7 jam"
+        },
+        {
+          "text": "8 jam"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) نقضى
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "El-ḥayāh ikhtalafat ktīr ‘an qabl, ṣaḥ?",
+          "text": "الحياة اختلفت كتير عن قبل، صح؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ṣaḥ, b-ayyāmna kān kull shī ghēr.",
+          "text": "صح، بايامنا كان كل شي غير."
+        },
+        {
+          "latin": "Bukra eṣ-ṣubuḥ binshūf el-waqt.",
+          "text": "بكرا الصبح بنشوف الوقت."
+        },
+        {
+          "latin": "Lā, es-sā‘ah khamse el-masā.",
+          "text": "لا، الساعة خمسة المساء."
+        },
+        {
+          "latin": "Ma‘a es-salāmeh, bashūfak ba‘dēn.",
+          "text": "مع السلامة، بشوفك بعدين."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بايامنا
+  (lewati, sudah lengkap: 15 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 7, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Kaan el-wa'et 'am ymerr bi-sur'ah bi-haad el-yoom. Keef bitkharbi el-lahazhaat el-mu'ath-thirah bi-heik wa'et? Laazem nistamte' bi-kull daqeeqah sawa.",
+      "passageText": "كان الوقت عم يمر بسرعة بهاد اليوم. كيف بتخربي اللحظات المؤثرة بهيك وقت؟ لازم نستمتع بكل دقيقة سوا.",
+      "question": "Berdasarkan bacaan di atas, apa arti dari kata \"اللحظات\" (al-lahazhaat)?",
+      "options": [
+        {
+          "text": "Momen-momen"
+        },
+        {
+          "text": "Jam-jam"
+        },
+        {
+          "text": "Hari-hari"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) اللحظات
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "qaddesh 'endo kutub?",
+          "text": "قديش عنده كتب؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "'endo bil-miyyet",
+          "text": "عنده بالميات"
+        },
+        {
+          "latin": "es-sa'ah khamseh",
+          "text": "الساعة خمسة"
+        },
+        {
+          "latin": "ma fi hada",
+          "text": "ما في حدا"
+        },
+        {
+          "latin": "shukran ktir",
+          "text": "شكراً كتير"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بالميات
+  (lewati, sudah lengkap: 15 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 14 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 9 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 8, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 9, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  ⚠ Level 2 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 10, Unit 2 (Angka & Waktu)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  ⚠ Level 2 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 2 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 1, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 12 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "El-yom el-masa bashoof 'ammi w binto fi betna. El-bint shatrah w btrudd 'ala biyya.",
+      "passageText": "اليوم المسا بشوف عمي وبنته في بيتنا. البنت شاطرة وبترد على بيها.",
+      "question": "Kepada siapa anak perempuan tersebut patuh dan menuruti perkataan?",
+      "options": [
+        { "text": "Ayahnya" },
+        { "text": "Ibunya" },
+        { "text": "Pamannya" },
+        { "text": "Temannya" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) عمي
+    (lewati, sudah ada) بيها
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Meen jaay 'indak el-masa?",
+          "text": "مين جاي عندك المسا؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Wlaad wa-banaat 'amti.",
+          "text": "ولاد وبنات عمتي."
+        },
+        {
+          "latin": "Shaay wa-qahweh.",
+          "text": "شاي وقهوة."
+        },
+        {
+          "latin": "Ktaab wa-daftar.",
+          "text": "كتاب ودفتر."
+        },
+        {
+          "latin": "Kursi wa-tawleh.",
+          "text": "كرسي وطاولة."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وبنات
+    (lewati, sudah ada) عمتي
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Ya Allah, abu Insaf kharrabatli el-tartib el-yom. Bas huwwe abu tayyeb w bihebb ysaa'edna dayman.",
+      "passageText": "يا الله، ابو انصاف خربتلي الترتيب اليوم. بس هو ابو طيب وبحب يساعدنا دايماً.",
+      "question": "Berdasarkan cerita di atas, bagaimana sifat dari sosok 'abu' (bapak) tersebut?",
+      "options": [
+        { "text": "Sosok bapak yang baik dan selalu suka membantu" },
+        { "text": "Sosok bapak yang pemarah dan tidak peduli" },
+        { "text": "Sosok bapak yang selalu sibuk di luar kota" },
+        { "text": "Sosok bapak yang pendiam dan jarang bicara" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) ابو
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Meen ba'at el-maqal?",
+          "text": "مين بعت المقال؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "La akeed el-mama ba'atat el-maqal",
+          "text": "لا أكيد الماما بعتت المقال"
+        },
+        {
+          "latin": "Ana roht 'ala es-soog",
+          "text": "أنا رحت على السوق"
+        },
+        {
+          "latin": "El-gahweh kteer sokhneh",
+          "text": "القهوة كتير سخنة"
+        },
+        {
+          "latin": "Bashoofak bukra bil-jam'ah",
+          "text": "بشوفك بكرا بالجامعة"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الماما
+  (lewati, sudah lengkap: 14 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 2, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 4/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "'iiltna bithibb tuq'ud ma' ba'ad kull yom. il-wlad bi-yil'abu w-bi-yidhaku bil-bayt, wil-kull mabsoot.",
+      "passageText": "عيلتنا بتحب تقعد مع بعض كل يوم. الاولاد بلعبوا وبضحكوا بالبيت، والكل مبسوط.",
+      "question": "Apa yang dilakukan anak-anak (الاولاد) di rumah menurut cerita di atas?",
+      "options": [
+        { "text": "Bermain dan tertawa" },
+        { "text": "Belajar dan membaca" },
+        { "text": "Membantu memasak di dapur" },
+        { "text": "Tidur siang di kamar" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) عيلتنا
+    (lewati, sudah ada) الاولاد
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Helu nshuufik inti wa-bintik el-yom! Keef el-3eileh?",
+          "text": "حلو نشوفك انت وبنتك اليوم! كيف العيلة؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "El-hamdelleh el-kull tamam, w-khayye bisallim 3alayki.",
+          "text": "الحمد لله الكل تمام، وخيي بسلّم عليكي."
+        },
+        {
+          "latin": "Ana raye7 3al-souq hassa la-hali.",
+          "text": "أنا رايح ع السوق هسا لحالي."
+        },
+        {
+          "latin": "El-saa3a khamse el-masa bil-bayt.",
+          "text": "الساعة خمسة المساء بالبيت."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وبنتك
+    (lewati, sudah ada) وخيي
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Esh-shabaab biyil‘abu barra bil-hadiiqah, w-ihna el-banaat qaa‘deen ma‘ immi binishrab shaay. El-banaat daayman mhazzabaat w-bisaa‘du bil-beet.",
+      "passageText": "الشباب بيلعبوا برة بالحديقة، وإحنا البنات قاعدين مع إمي بنشرب شاي. البنات دايماً مهذبات وبساعدوا بالبيت.",
+      "question": "Berdasarkan bacaan di atas, apa yang sedang dilakukan oleh anak-anak perempuan (البنات)?",
+      "options": [
+        {
+          "text": "Duduk bersama ibu sambil minum teh dan membantu di rumah"
+        },
+        {
+          "text": "Bermain di luar taman bersama anak-anak laki-laki"
+        },
+        {
+          "text": "Pergi ke pasar bersama ayah untuk berbelanja"
+        },
+        {
+          "text": "Tidur di kamar sepanjang hari"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) البنات
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Shu hal-akl et-tayyeb?",
+          "text": "شو هالأكل الطيب؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Dzuuq jaaretna umm Insaaf yalla",
+          "text": "ذوق جارتنا ام انصاف يلا"
+        },
+        {
+          "latin": "El-hsaab law samaht hon",
+          "text": "الحساب لو سمحت هون"
+        },
+        {
+          "latin": "Baddi gahweh biduun sukkar",
+          "text": "بدي قهوة بدون سكر"
+        },
+        {
+          "latin": "Es-saa'ah hassa khamse",
+          "text": "الساعة هسة خمسة"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) ام
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 12 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 3, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Fii 'indi 'a2ile hilweh w-kteer bahebhom. Wassli salaami li-ahlik kamaan.",
+      "passageText": "في عندي عائله حلوة وكتير بحبهم. وصّلي سلامي لأهلك كمان.",
+      "question": "Apa yang diminta pembicara dalam pesan tersebut?",
+      "options": [
+        {
+          "text": "Menyampaikan salam kepada keluarga lawan bicara"
+        },
+        {
+          "text": "Mengajak pergi mengunjungi keluarganya"
+        },
+        {
+          "text": "Meminta bantuan untuk keluarganya"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) لأهلك
+    (lewati, sudah ada) عائله
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Meen rah yeeji ma'na 'al-qahweh min ahalna?",
+          "text": "مين رح ييجي معنا ع القهوة من أهلنا؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ana wa-binti rah neeji ma'ak.",
+          "text": "أنا وبنتي رح نيجي معك."
+        },
+        {
+          "latin": "El-qahweh hon kteer taybeh.",
+          "text": "القهوة هون كتير طيبة."
+        },
+        {
+          "latin": "El-mahal msakkar el-yom.",
+          "text": "المحل مسكر اليوم."
+        },
+        {
+          "latin": "Ishtareit fawakeh min es-soo'.",
+          "text": "اشتريت فواكه من السوق."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) وبنتي
+    (lewati, sudah ada) اهلنا
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 10 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Al-yom rah nruuh 'al-beit 'ashan ziyaret at-teeta. At-teeta bidha tshufkum.",
+      "passageText": "اليوم رح نروح عالبيت عشان زيارة التيتا. التيتا بدها تشوفكم.",
+      "question": "Siapa yang ingin bertemu dan dikunjungi berdasarkan bacaan di atas?",
+      "options": [
+        { "text": "Nenek" },
+        { "text": "Kakek" },
+        { "text": "Ibu" },
+        { "text": "Bibi" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) التيتا
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Ma' meen rah tetghadda el-yom?",
+          "text": "مع مين رح تتغدى اليوم؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Ma' ahli bil-beit.",
+          "text": "مع اهلي بالبيت."
+        },
+        {
+          "latin": "Fi 'endi shoghol kteer.",
+          "text": "في عندي شغل كثير."
+        },
+        {
+          "latin": "El-jaww kteer shob.",
+          "text": "الجو كثير شوب."
+        },
+        {
+          "latin": "Es-sa'ah khamseh.",
+          "text": "الساعة خمسة."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) اهلي
+  (lewati, sudah lengkap: 14 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 10 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 4, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 5, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 6, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 7, Unit 3 (Keluarga)...
+  (lewati, sudah lengkap: 12 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  ⚠ Level 3 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 4 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 8 soal) Level 5 segmen 4 (review)
+  ⚠ Level 6 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 6 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 7 segmen 4 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 8 segmen 1 (story): tidak ada kosakata — dilewati.
+  ⚠ Level 9 segmen 1 (conversation): tidak ada kosakata — dilewati.
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 8 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 9 soal) Level 10 segmen 4 (review)
+  ⚠ Level 11 segmen 1 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 2 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 3 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 11 segmen 4 (lesson): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 1 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 2 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 3 (practice): tidak ada kosakata — dilewati.
+  ⚠ Level 12 segmen 4 (practice): tidak ada kosakata — dilewati.
+
+Memproses Bagian 1, Unit 4 (Warna & Sifat)...
+  (lewati, sudah lengkap: 11 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Esh-shoofeer kaan kteer sarii' bes-swaaqah, w haad eshi sayye2. Meshaan heik el-kull khaaf bes-sayyaarah.",
+      "passageText": "الشوفير كان كتير سريع بالسواقة، وهاد إشي سيء. مشان هيك الكل خاف بالسيارة.",
+      "question": "Mengapa tindakan sopir dianggap sebagai hal yang buruk (سيء)?",
+      "options": [
+        {
+          "text": "Karena dia menyetir dengan sangat cepat"
+        },
+        {
+          "text": "Karena mobilnya tiba-tiba mogok"
+        },
+        {
+          "text": "Karena dia menolak membawa penumpang"
+        },
+        {
+          "text": "Karena kondisi jalanan sedang macet parah"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) سريع
+    (lewati, sudah ada) سيء
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Lēsh el-maḥall mkharbaṭ hēk? Kull el-alwān dākhleh bi-ba‘eḍ!",
+          "text": "ليش المحل مخربط هيك؟ كل الألوان داخلة ببعض!"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Saḥ, bas el-biḍā‘a el-mawjūdeh hōn mnīḥa.",
+          "text": "صح، بس البضاعة الموجودة هون منيحه."
+        },
+        {
+          "latin": "Lā, kull ishi hōn mish ḥelū w ghālī.",
+          "text": "لا، كل إشي هون مش حلو وغالي."
+        },
+        {
+          "latin": "Anā rāyeḥ ‘al-bēt hassa.",
+          "text": "أنا رايح ع البيت هسا."
+        },
+        {
+          "latin": "El-jaww bāred el-yōm ktīr.",
+          "text": "الجو بارد اليوم كتير."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) مخربط
+    (lewati, sudah ada) منيحه
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 14 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 16 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 15 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 13 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Es-sūg el-yōm kān malyān nās w-ʻajqah. Bas eṣ-ṣubḥ bikūn fīh nās a2all w-btoḵoḏ waqt a2all la-tištari kull iši.",
+      "passageText": "السوق اليوم كان مليان ناس وعجقة. بس الصبح بكون فيه ناس اقل وبتاخذ وقت اقل لتشتري كل اشي.",
+      "question": "Kapan suasana pasar memiliki lebih sedikit orang menurut teks?",
+      "options": [
+        {
+          "text": "Pagi hari"
+        },
+        {
+          "text": "Malam hari"
+        },
+        {
+          "text": "Sore hari"
+        },
+        {
+          "text": "Siang hari"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) مليان
+    (lewati, sudah ada) اقل
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Wein el-aghraad? Kaanu bil-box al-hamraa'?",
+          "text": "وين الأغراض؟ كانوا بالبوكس الحمراء؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "Aah, kaanu bil-box al-hamraa'.",
+          "text": "آه، كانوا بالبوكس الحمراء."
+        },
+        {
+          "latin": "Laa, maa fii qahweh hon.",
+          "text": "لا، ما في قهوة هون."
+        },
+        {
+          "latin": "Shukran, ma'a as-salaameh.",
+          "text": "شكراً، مع السلامة."
+        },
+        {
+          "latin": "Baddi aruuh 'al-jaam'ah.",
+          "text": "بدي أروح عالجامعة."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الحمراء
+  (lewati, sudah lengkap: 16 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 16 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 16 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 2, Unit 4 (Warna & Sifat)...
+  (lewati, sudah lengkap: 16 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 14 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 10 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 13 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "el-film kaan kteer tawiil. bas el-qissa taba3to kaanat 7elwe w mumte3a kteer.",
+      "passageText": "الفيلم كان كتير طويل. بس القصة تبعته كانت حلوه وممتعة كتير.",
+      "question": "Bagaimana kesan terhadap film tersebut berdasarkan bacaan di atas?",
+      "options": [
+        { "text": "Durasinya panjang tetapi ceritanya bagus" },
+        { "text": "Durasinya sangat pendek dan membosankan" },
+        { "text": "Filmnya singkat dan ceritanya buruk" },
+        { "text": "Alur ceritanya tidak jelas dan melelahkan" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) طويل
+    (lewati, sudah ada) حلوه
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Shu ra'yak bil-jaket el-aswad? Lono mniih?",
+          "text": "شو رأيك بالجاكيت الأسود؟ لونو منيح؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "اه منيح كتير، والمقابلة اليوم مهمه.",
+          "text": "اه منيح كتير، والمقابلة اليوم مهمه."
+        },
+        {
+          "latin": "لا، أنا مش رايح عالمطعم.",
+          "text": "لا، أنا مش رايح عالمطعم."
+        },
+        {
+          "latin": "الساعة خمسة المساء.",
+          "text": "الساعة خمسة المساء."
+        },
+        {
+          "latin": "شكراً، الحساب بعدين.",
+          "text": "شكراً، الحساب بعدين."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) منيح
+    (lewati, sudah ada) مهمه
+  (lewati, sudah lengkap: 16 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 16 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 16 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "El-sayyara el-hamra mish sayye2a, bas el-sayyara el-beida ahla kteer.",
+      "passageText": "السيارة الحمرا مش سيئه، بس السيارة البيضا أحلى كتير.",
+      "question": "Bagaimana penilaian terhadap kedua mobil tersebut?",
+      "options": [
+        { "text": "Mobil merah tidak buruk, tetapi mobil putih jauh lebih indah" },
+        { "text": "Mobil putih memiliki kualitas yang sangat buruk" },
+        { "text": "Mobil merah jauh lebih indah daripada mobil putih" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) أحلى
+    (lewati, sudah ada) سيئه
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "Ayyi waḥdeh baddak?",
+          "text": "أي وحدة بدك؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "al-kabiirah",
+          "text": "الكبيرة"
+        },
+        {
+          "latin": "aṣ-ṣaghiirah",
+          "text": "الصغيرة"
+        },
+        {
+          "latin": "aj-jadiideh",
+          "text": "الجديدة"
+        },
+        {
+          "latin": "al-qadiimeh",
+          "text": "القديمة"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الكبيرة
+  (lewati, sudah lengkap: 16 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 16 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 12 segmen 3 (practice)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 4 (practice)
+
+Memproses Bagian 3, Unit 4 (Warna & Sifat)...
+  (lewati, sudah lengkap: 16 soal) Level 1 segmen 1 (lesson)
+  (lewati, sudah lengkap: 10 soal) Level 1 segmen 2 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 3 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 1 segmen 4 (lesson)
+  (lewati, sudah lengkap: 13 soal) Level 2 segmen 1 (practice)
+  (lewati, sudah lengkap: 11 soal) Level 2 segmen 2 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 2 segmen 4 (practice)
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Sme'et qissa jdide el-yom, w kaanat el-qissa ghariibah kteer. Haay awwal marrah basma' fikra jdide w ghariibah mitel hek.",
+      "passageText": "سمعت قصة جديده اليوم، وكانت القصة غريبة كتير. هاي أول مرة بسمع فكرة جديده وغريبة متل هيك.",
+      "question": "Bagaimana sifat cerita atau ide yang didengar menurut teks?",
+      "options": [
+        { "text": "Baru dan aneh" },
+        { "text": "Lama dan membosankan" },
+        { "text": "Biasa saja dan umum" },
+        { "text": "Kuno dan menakutkan" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) غريبة
+    (lewati, sudah ada) جديده
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "haad kafeh jadiid hoon, SaH? wala ana ghaltane?",
+          "text": "هاد كافيه جديد هون، صح؟ ولا انا غلطانه؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "laa mish ghaltane, haad jadiid.",
+          "text": "لا مش غلطانه، هاد جديد."
+        },
+        {
+          "latin": "shukran, ma'a el-salameh.",
+          "text": "شكراً، مع السلامة."
+        },
+        {
+          "latin": "ana min el-urdun.",
+          "text": "أنا من الأردن."
+        },
+        {
+          "latin": "SabaaH el-kheer ya aHmad.",
+          "text": "صباح الخير يا أحمد."
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) جديد
+    (lewati, sudah ada) غلطانه
+  (lewati, sudah lengkap: 13 soal) Level 5 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 5 segmen 2 (review)
+  (lewati, sudah lengkap: 9 soal) Level 5 segmen 3 (review)
+  (lewati, sudah lengkap: 12 soal) Level 5 segmen 4 (review)
+  (lewati, sudah lengkap: 13 soal) Level 6 segmen 1 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 6 segmen 2 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 6 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 7 segmen 1 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 7 segmen 2 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 7 segmen 3 (practice)
+  (lewati, sudah lengkap: 8 soal) Level 7 segmen 4 (practice)
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: story ===
+[
+  {
+    "type": "reading_comprehension",
+    "prompt": "Pahami bacaannya, lalu jawab",
+    "content": {
+      "passageLatin": "Shuft il-ward al-asfar bil-hadiqa. Had il-ward il-hilu w il-ktir 'ajabni.",
+      "passageText": "شفت الورد الأصفر بالحديقة. هاد الورد الحلو و الكثير عجبني.",
+      "question": "Warna apa bunga yang dilihat di taman dalam cerita tersebut?",
+      "options": [
+        { "text": "Kuning" },
+        { "text": "Merah" },
+        { "text": "Biru" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الأصفر
+    (lewati, sudah ada) الكثير
+  Top-up segmen 1: baru 2/8 soal, generating tambahan...
+=== GEMINI EXERCISES: conversation ===
+[
+  {
+    "type": "dialogue_complete",
+    "prompt": "Lengkapi percakapannya",
+    "content": {
+      "dialogueLines": [
+        {
+          "speaker": "A",
+          "latin": "khayo, el-jaww baarid?",
+          "text": "خيو، الجو بارد؟"
+        },
+        {
+          "speaker": "B",
+          "latin": "___",
+          "text": "___",
+          "blank": true
+        }
+      ],
+      "options": [
+        {
+          "latin": "eeh, baarid ktiir",
+          "text": "اه، بارد كثير"
+        },
+        {
+          "latin": "sabah el-kheer",
+          "text": "صباح الخير"
+        },
+        {
+          "latin": "laa, shukran",
+          "text": "لا، شكراً"
+        },
+        {
+          "latin": "marhaba",
+          "text": "مرحبا"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) بارد
+  (lewati, sudah lengkap: 13 soal) Level 10 segmen 1 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 2 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 3 (review)
+  (lewati, sudah lengkap: 11 soal) Level 10 segmen 4 (review)
+  (lewati, sudah lengkap: 11 soal) Level 11 segmen 1 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 2 (lesson)
+  (lewati, sudah lengkap: 9 soal) Level 11 segmen 3 (lesson)
+  (lewati, sudah lengkap: 8 soal) Level 11 segmen 4 (lesson)
+  (lewati, sudah lengkap: 11 soal) Level 12 segmen 1 (practice)
+  (lewati, sudah lengkap: 9 soal) Level 12 segmen 2 (practice)
+  Generating soal level 12 segmen 3 (practice)...
+=== GEMINI EXERCISES: practice ===
+[
+  {
+    "type": "matching_pairs",
+    "prompt": "Cocokkan kata yang sering ketuker",
+    "content": {
+      "pairs": [
+        { "id": "p1", "left": "غبي", "leftLatin": "ghabi", "right": "Bodoh" },
+        { "id": "p2", "left": "شو", "leftLatin": "shu", "right": "Apa" },
+        { "id": "p3", "left": "بتفكرني", "leftLatin": "btfakkirni", "right": "Kamu pikir aku" },
+        { "id": "p4", "left": "هناك", "leftLatin": "hunak", "right": "Di sana" }
+      ],
+      "rightOrder": ["p3", "p1", "p4", "p2"]
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "غبي",
+      "options": [
+        { "latin": "ghabi", "text": "Bodoh" },
+        { "latin": "el-jaww", "text": "Cuaca" },
+        { "latin": "hunak", "text": "Di sana" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "shu btfakkirni", "text": "شو بتفكرني", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "ghabi?", "text": "غبي؟" },
+        { "latin": "el-jaww?", "text": "الجو؟" },
+        { "latin": "hunak?", "text": "هناك؟" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "شو بتفكرني غبي؟",
+      "options": [
+        { "latin": "shu btfakkirni ghabi?", "text": "Kamu pikir aku bodoh?" },
+        { "latin": "el-jaww hunak ghabi?", "text": "Cuaca di sana bodoh?" },
+        { "latin": "shu el-jaww hunak?", "text": "Apa cuaca di sana?" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "shu", "text": "شو", "blankAfter": true },
+        { "latin": "ghabi?", "text": "غبي؟", "blankAfter": false }
+      ],
+      "options": [
+        { "latin": "btfakkirni", "text": "بتفكرني" },
+        { "latin": "hunak", "text": "هناك" },
+        { "latin": "el-jaww", "text": "الجو" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "هناك الجو",
+      "options": [
+        { "latin": "hunak el-jaww", "text": "Di sana cuacanya" },
+        { "latin": "btfakkirni ghabi", "text": "Kamu pikir aku bodoh" },
+        { "latin": "shu hunak", "text": "Apa yang di sana" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "matching_pairs",
+    "prompt": "Cocokkan kata yang sering ketuker",
+    "content": {
+      "pairs": [
+        { "id": "p1", "left": "الجو", "leftLatin": "el-jaww", "right": "Cuaca / Suasana" },
+        { "id": "p2", "left": "غبي", "leftLatin": "ghabi", "right": "Bodoh" },
+        { "id": "p3", "left": "هناك", "leftLatin": "hunak", "right": "Di sana" },
+        { "id": "p4", "left": "شو", "leftLatin": "shu", "right": "Apa" }
+      ],
+      "rightOrder": ["p2", "p4", "p1", "p3"]
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "hunak", "text": "هناك", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "el-jaww", "text": "الجو" },
+        { "latin": "shu", "text": "شو" },
+        { "latin": "btfakkirni", "text": "بتفكرني" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) غبي
+  Generating soal level 12 segmen 4 (practice)...
+=== GEMINI EXERCISES: practice ===
+[
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "kamu kira aku",
+      "options": [
+        { "latin": "btfakkirni", "text": "بتفكرني" },
+        { "latin": "hunak", "text": "هناك" },
+        { "latin": "il-jaww", "text": "الجو" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "shu btfakkirni", "text": "شو بتفكرني", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "ghabi", "text": "غبي" },
+        { "latin": "il-jaww", "text": "الجو" },
+        { "latin": "hunak", "text": "هناك" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "di sana",
+      "options": [
+        { "latin": "hunak", "text": "هناك" },
+        { "latin": "ghabi", "text": "غبي" },
+        { "latin": "shu", "text": "شو" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "matching_pairs",
+    "prompt": "Cocokkan kata yang sering ketuker",
+    "content": {
+      "pairs": [
+        { "id": "p1", "left": "بتفكرني", "leftLatin": "btfakkirni", "right": "kamu kira aku" },
+        { "id": "p2", "left": "غبي", "leftLatin": "ghabi", "right": "bodoh" },
+        { "id": "p3", "left": "الجو", "leftLatin": "il-jaww", "right": "cuaca / suasana" },
+        { "id": "p4", "left": "هناك", "leftLatin": "hunak", "right": "di sana" }
+      ],
+      "rightOrder": ["p3", "p1", "p4", "p2"]
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "cuaca / suasana",
+      "options": [
+        { "latin": "il-jaww", "text": "الجو" },
+        { "latin": "btfakkirni", "text": "بتفكرني" },
+        { "latin": "ghabi", "text": "غبي" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "shu", "text": "شو", "blankAfter": true },
+        { "latin": "ghabi?", "text": "غبي؟", "blankAfter": false }
+      ],
+      "options": [
+        { "latin": "btfakkirni", "text": "بتفكرني" },
+        { "latin": "il-jaww", "text": "الجو" },
+        { "latin": "hunak", "text": "هناك" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "apa",
+      "options": [
+        { "latin": "shu", "text": "شو" },
+        { "latin": "ghabi", "text": "غبي" },
+        { "latin": "btfakkirni", "text": "بتفكرني" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "hunak", "text": "هناك", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "il-jaww", "text": "الجو" },
+        { "latin": "ghabi", "text": "غبي" },
+        { "latin": "shu", "text": "شو" }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) غبي
+
+Memproses Bagian 4, Unit 4 (Warna & Sifat)...
+  Top-up segmen 1: baru 3/8 soal, generating tambahan...
+=== GEMINI EXERCISES: lesson ===
+[
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "Yang asli",
+      "options": [
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "mesh", "text": "مش" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "Kecanduan (f)",
+      "options": [
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "al-nou'", "text": "النوع" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "al-nou' al-taqlidi...", "text": "النوع التقليدي", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "aw", "text": "او" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        { "latin": "mesh mahwuseh aw...", "text": "مش مهووسه او", "blankAfter": true }
+      ],
+      "options": [
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "al-ka'ek", "text": "الكعك" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "listen_choose",
+    "prompt": "Dengarkan lalu pilih jawaban yang benar",
+    "content": {
+      "hasAudio": true,
+      "options": [
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "mahwooseh", "text": "مهووسه" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "listen_choose",
+    "prompt": "Dengarkan lalu pilih jawaban yang benar",
+    "content": {
+      "hasAudio": true,
+      "options": [
+        { "latin": "midmene", "text": "مدمنه" },
+        { "latin": "al-asli", "text": "الأصلي" },
+        { "latin": "al-taqlidi", "text": "التقليدي" }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "word_order",
+    "prompt": "Susun terjemahannya",
+    "content": {
+      "latin": "mesh mahwooseh aw midmene",
+      "text": "مش مهووسه او مدمنه",
+      "hasAudio": true,
+      "correctWords": ["Tidak", "obsesi", "atau", "kecanduan"],
+      "wordBank": ["Tidak", "obsesi", "atau", "kecanduan", "asli", "tradisional"]
+    }
+  },
+  {
+    "type": "translate_write",
+    "prompt": "Tulis terjemahannya",
+    "content": {
+      "text": "Yang asli",
+      "correctAnswer": "الأصلي"
+    }
+  },
+  {
+    "type": "translate_write",
+    "prompt": "Tulis terjemahannya",
+    "content": {
+      "text": "Kecanduan (perempuan)",
+      "correctAnswer": "مدمنه"
+    }
+  }
+]
+    (lewati, sudah ada) الأصلي
+  Generating soal level 1 segmen 2 (lesson)...
+=== GEMINI EXERCISES: lesson ===
+[
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "النوع التقليدي الأصلي",
+      "options": [
+        {
+          "latin": "Jenis tradisional yang asli",
+          "text": "Jenis tradisional yang asli"
+        },
+        {
+          "latin": "Jenis modern yang baru",
+          "text": "Jenis modern yang baru"
+        },
+        {
+          "latin": "Kue tradisional buatan rumah",
+          "text": "Kue tradisional buatan rumah"
+        }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "translate_choice",
+    "prompt": "Pilih terjemahan yang benar",
+    "content": {
+      "promptText": "مش مهووسه او مدمنه",
+      "options": [
+        {
+          "latin": "Tidak terobsesi atau kecanduan",
+          "text": "Tidak terobsesi atau kecanduan"
+        },
+        {
+          "latin": "Sangat kecanduan dan terobsesi",
+          "text": "Sangat kecanduan dan terobsesi"
+        },
+        {
+          "latin": "Bukan resep yang asli",
+          "text": "Bukan resep yang asli"
+        }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "word_order",
+    "prompt": "Susun terjemahannya",
+    "content": {
+      "latin": "al-nou' al-taqlidi al-asli",
+      "text": "النوع التقليدي الأصلي",
+      "hasAudio": true,
+      "correctWords": [
+        "Jenis",
+        "tradisional",
+        "yang",
+        "asli"
+      ],
+      "wordBank": [
+        "Jenis",
+        "tradisional",
+        "yang",
+        "asli",
+        "palsu",
+        "modern"
+      ]
+    }
+  },
+  {
+    "type": "word_order",
+    "prompt": "Susun terjemahannya",
+    "content": {
+      "latin": "Tidak terobsesi atau kecanduan",
+      "text": "Tidak terobsesi atau kecanduan",
+      "hasAudio": true,
+      "correctWords": [
+        "مش",
+        "مهووسه",
+        "او",
+        "مدمنه"
+      ],
+      "wordBank": [
+        "مش",
+        "مهووسه",
+        "او",
+        "مدمنه",
+        "الأصلي",
+        "النوع"
+      ]
+    }
+  },
+  {
+    "type": "translate_write",
+    "prompt": "Tulis terjemahannya",
+    "content": {
+      "text": "Jenis tradisional yang asli",
+      "correctAnswer": "النوع التقليدي الأصلي"
+    }
+  },
+  {
+    "type": "translate_write",
+    "prompt": "Tulis terjemahannya",
+    "content": {
+      "text": "Tidak terobsesi atau kecanduan",
+      "correctAnswer": "مش مهووسه او مدمنه"
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        {
+          "latin": "al-nou'",
+          "text": "النوع",
+          "blankAfter": true
+        },
+        {
+          "latin": "al-asli",
+          "text": "الأصلي",
+          "blankAfter": false
+        }
+      ],
+      "options": [
+        {
+          "latin": "al-taqlidi",
+          "text": "التقليدي"
+        },
+        {
+          "latin": "midmene",
+          "text": "مدمنه"
+        },
+        {
+          "latin": "mahwooseh",
+          "text": "مهووسه"
+        }
+      ],
+      "correctIndex": 0
+    }
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "Isi bagian yang kosong",
+    "content": {
+      "bubbleLines": [
+        {
+          "latin": "mesh",
+          "text": "مش",
+          "blankAfter": true
+        },
+        {
+          "latin": "aw midmene",
+          "text": "او مدمنه",
+          "blankAfter": false
+        }
+      ],
+      "options": [
+        {
+          "latin": "mahwooseh",
+          "text": "مهووسه"
+        },
+        {
+          "latin": "al-asli",
+          "text": "الأصلي"
+        },
+        {
+          "latin": "al-taqlidi",
+          "text": "التقليدي"
+        }
+      ],
+      "correctIndex": 0
+    }
+  }
+]
+    (lewati, sudah ada) الأصلي
+    (lewati, sudah ada) مدمنه
+  Generating soal level 1 segmen 3 (lesson)...
+Gagal: Error: Respons LadizAI tidak terduga: {"error":{"message":"Kuota kredit Anda telah habis. Silakan membeli paket baru.","type":"insufficient_quota","code":402},"success":false,"message":"Kuota kredit Anda telah habis. Silakan membeli paket baru.","type":"quota_exhausted"}
+    at callLadiz (file:///C:/Users/USER/Desktop/kelas-notesters/scripts-generate-vocab/generate-vocab-v2.mjs:598:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async generateExercisesForLevel (file:///C:/Users/USER/Desktop/kelas-notesters/scripts-generate-vocab/generate-vocab-v2.mjs:517:15)
+    at async main (file:///C:/Users/USER/Desktop/kelas-notesters/scripts-generate-vocab/generate-vocab-v2.mjs:896:32)
