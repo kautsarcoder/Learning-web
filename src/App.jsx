@@ -1330,6 +1330,11 @@ export default function KelasNotesters() {
   const [contactSuccess, setContactSuccess] = useState(false);
   const [search, setSearch] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  useEffect(() => {
+    if (!sidebarOpen) return;
+    const t = setTimeout(() => { const el = document.getElementById("sb-active"); if (el && el.scrollIntoView) el.scrollIntoView({ block: "center" }); }, 120);
+    return () => clearTimeout(t);
+  }, [sidebarOpen]);
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMsg, setContactMsg] = useState("");
@@ -1950,59 +1955,72 @@ export default function KelasNotesters() {
 
     // COURSE
     courseLayout: { display: "flex", minHeight: `calc(100vh - ${NAV_H}px)`, position: "relative" },
-    overlay: { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.35)", zIndex: 250 },
+    overlay: { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(20,32,27,0.42)", backdropFilter: "blur(2px)", WebkitBackdropFilter: "blur(2px)", zIndex: 250 },
     sidebar: {
-      width: 240,
+      width: "min(310px, 86vw)",
       background: "white",
-      borderRight: "1px solid #e0e0e0",
+      borderRight: "1px solid #e3e9e6",
+      boxShadow: sidebarOpen ? "8px 0 30px rgba(20,40,30,0.16)" : "none",
       position: "fixed",
       top: NAV_H,
       left: 0,
       height: `calc(100vh - ${NAV_H}px)`,
       zIndex: 300,
-      transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
-      transition: "transform 0.3s ease",
+      transform: sidebarOpen ? "translateX(0)" : "translateX(-102%)",
+      transition: "transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s ease",
       display: "flex",
       flexDirection: "column",
+      boxSizing: "border-box",
     },
     sidebarList: {
       flex: 1,
       minHeight: 0,
       overflowY: "auto",
-      padding: "16px 0",
+      WebkitOverflowScrolling: "touch",
+      overscrollBehavior: "contain",
+      padding: "6px 0 12px",
     },
     sidebarFooter: {
       flexShrink: 0,
-      borderTop: "1px solid #eee",
+      borderTop: "1px solid #eef2f0",
       background: "white",
-      padding: 12,
+      padding: "12px 14px calc(12px + env(safe-area-inset-bottom, 0px))",
     },
-    sidebarTitle: { padding: "0 16px 12px", borderBottom: "1px solid #eee", fontSize: 14, fontWeight: "bold", color: "#1a1a1a", lineHeight: 1.4 },
+    sidebarTitle: { fontSize: 15.5, fontWeight: 800, color: "#1a2421", lineHeight: 1.35 },
     lessonItem: {
-      padding: "10px 16px",
+      padding: "9px 12px",
+      margin: "2px 10px",
+      borderRadius: 12,
       cursor: "pointer",
       display: "flex",
       alignItems: "center",
-      gap: 10,
-      fontSize: 13,
-      color: "#444",
-      borderLeft: "3px solid transparent",
+      gap: 12,
+      fontSize: 14,
+      lineHeight: 1.35,
+      color: "#3b4743",
+      minHeight: 48,
+      boxSizing: "border-box",
     },
-    lessonItemActive: { background: GREEN_BG, borderLeft: `3px solid ${GREEN}`, color: GREEN_DARK, fontWeight: "bold" },
+    lessonItemActive: { background: GREEN_BG, color: GREEN_DARK, fontWeight: 700, boxShadow: `inset 3px 0 0 ${GREEN}` },
     lessonDivider: { height: 1, background: "#f0f0f0", margin: "4px 16px" },
     toggleBtn: {
       position: "fixed",
-      top: 66,
-      left: 10,
+      top: NAV_H + 10,
+      left: 12,
       zIndex: 200,
       background: "white",
-      color: "#1a1a1a",
-      border: "1px solid #ddd",
-      borderRadius: 8,
-      padding: "7px 12px",
+      color: "#26332e",
+      border: "1px solid #e3e9e6",
+      borderRadius: 999,
+      padding: "8px 14px 8px 12px",
       cursor: "pointer",
-      fontSize: 18,
-      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+      fontSize: 13.5,
+      fontWeight: 700,
+      fontFamily: "inherit",
+      display: "inline-flex",
+      alignItems: "center",
+      gap: 8,
+      boxShadow: "0 4px 14px rgba(20,40,30,0.14)",
     },
     
     articleWrap: {
@@ -5432,34 +5450,53 @@ function renderNodeIcon(type, status) {
       <div style={s.courseLayout}>
         {sidebarOpen && <div style={s.overlay} onClick={() => setSidebarOpen(false)} />}
 
-        <div style={s.sidebar}>
-          <div style={s.sidebarList}>
-            <div style={s.sidebarTitle}>≡ &nbsp;{activeCourse.title}</div>
-            {activeCourse.lessons.map((lesson, idx) => (
-              <div key={lesson.id}>
-                <div
-                  style={{ ...s.lessonItem, ...(activeLesson?.id === lesson.id ? s.lessonItemActive : {}) }}
-                  onClick={() => { setActiveLesson(lesson); setSidebarOpen(false); }}
-                >
-                  <span style={{ display: "flex", flexShrink: 0 }}><Icon name={lesson.type === "video" ? "play" : "book"} size={16} /></span>
-                  <span>{lesson.title}</span>
-                </div>
-                {lesson.type === "video" && idx < activeCourse.lessons.length - 1 && (
-                  <div style={s.lessonDivider} />
-                )}
+        <div style={s.sidebar} aria-hidden={!sidebarOpen}>
+          <div style={{ flexShrink: 0, display: "flex", alignItems: "flex-start", gap: 10, padding: "16px 12px 12px 16px", borderBottom: "1px solid #eef2f0" }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 0.8, textTransform: "uppercase", color: "#8a9692", marginBottom: 4 }}>
+                {lx("Daftar materi", "Lessons")} · {activeCourse.lessons.length}
               </div>
-            ))}
+              <div style={s.sidebarTitle}>{activeCourse.title}</div>
+            </div>
+            <button type="button" onClick={() => setSidebarOpen(false)} aria-label={lx("Tutup", "Close")}
+              style={{ width: 36, height: 36, flexShrink: 0, borderRadius: 12, border: "none", background: "#f1f5f3", color: "#52605b", fontSize: 16, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>✕</button>
+          </div>
+          <div style={s.sidebarList} className="sb-scroll">
+            {activeCourse.lessons.map((lesson, idx) => {
+              const isActive = activeLesson?.id === lesson.id;
+              return (
+                <div
+                  key={lesson.id}
+                  id={isActive ? "sb-active" : undefined}
+                  role="button" tabIndex={0}
+                  className="sb-item"
+                  style={{ ...s.lessonItem, ...(isActive ? s.lessonItemActive : {}) }}
+                  onClick={() => { setActiveLesson(lesson); setSidebarOpen(false); }}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setActiveLesson(lesson); setSidebarOpen(false); } }}
+                >
+                  <span style={{ width: 30, height: 30, flexShrink: 0, borderRadius: 10, display: "inline-flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 12.5, fontWeight: 800, background: isActive ? GREEN_DARK : "#eef3f0", color: isActive ? "white" : "#6b7a75" }}>
+                    {lesson.type === "video" ? <Icon name="play" size={14} /> : idx + 1}
+                  </span>
+                  <span style={{ flex: 1, minWidth: 0 }}>{lesson.title}</span>
+                </div>
+              );
+            })}
           </div>
           <div style={s.sidebarFooter}>
-            <button style={s.backBtn} onClick={() => { setPage("explore"); setSidebarOpen(false); }}>Back</button>
+            <button className="ls-press" style={{ width: "100%", boxSizing: "border-box", background: "#f1f5f3", color: "#3b4743", border: "none", borderRadius: 12, padding: "12px 16px", fontSize: 14, fontWeight: 700, fontFamily: "inherit", cursor: "pointer" }}
+              onClick={() => { setPage("explore"); setSidebarOpen(false); }}>
+              ← {lx("Kembali ke Explore", "Back to Explore")}
+            </button>
           </div>
         </div>
 
-        <button style={s.toggleBtn} onClick={() => setSidebarOpen(!sidebarOpen)}>
-          {sidebarOpen ? "✕" : "≡"}
+        <button style={s.toggleBtn} onClick={() => setSidebarOpen(!sidebarOpen)} aria-label={lx("Daftar materi", "Lessons")}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+          {lx("Materi", "Lessons")}
         </button>
 
-        <div className="mainContent" ref={mainContentRef}>
+        <div className="mainContent" ref={mainContentRef} style={isMobile ? { padding: "64px 18px 48px", boxSizing: "border-box" } : undefined}>
           {activeLesson && (
             <>
               <div className="contentTitle">{activeCourse.title.split(" ")[0]} {activeCourse.title.split(" ").slice(1).join(" ")}</div>
@@ -5580,6 +5617,11 @@ function renderNodeIcon(type, status) {
       @media (prefers-reduced-motion: reduce) { .path-halo, .path-mascot { animation: none; } .path-node:not(:disabled):hover { transform: none; } }
       .auth-input:focus { border-color: #7BAE9B !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(123,174,155,0.22); }
       .nav-links-scroll { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.5) transparent; }
+      .sb-item:hover { background: #f3f7f5; }
+      .sb-item:focus-visible { outline: 2px solid #7BAE9B; outline-offset: -2px; }
+      .sb-scroll { scrollbar-width: thin; scrollbar-color: #d5dedb transparent; }
+      .sb-scroll::-webkit-scrollbar { width: 6px; }
+      .sb-scroll::-webkit-scrollbar-thumb { background: #d5dedb; border-radius: 6px; }
       html { -webkit-text-size-adjust: 100%; }
       button, a, [role="button"] { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
       @media (max-width: 640px) {
