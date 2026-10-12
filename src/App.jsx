@@ -999,6 +999,9 @@ const UI_STRINGS = {
   "Tulis terjemahannya (tanpa bantuan)": { en: "Write the translation (without help)" },
   "Dengarkan lalu pilih jawaban yang benar": { en: "Listen, then choose the correct answer" },
   "Cocokkan kata yang sering ketuker": { en: "Match the words that are easily confused" },
+  "Cocokkan kata dengan artinya": { en: "Match each word with its meaning" },
+  "Kenali kata-kata baru": { en: "Meet the new words" },
+  "Dengarkan, lalu pilih kata yang kamu dengar": { en: "Listen, then choose the word you hear" },
   "Pahami bacaannya, lalu jawab": { en: "Read and understand, then answer" },
   "Pahami percakapannya, lalu jawab": { en: "Understand the conversation, then answer" },
   "Pilih arti yang benar": { en: "Choose the correct meaning" },
@@ -1796,7 +1799,6 @@ export default function KelasNotesters() {
       padding: "6px 14px",
       borderRadius: 6,
       cursor: "pointer",
-      fontSize: 13,
       fontFamily: "inherit",
       fontWeight: 700,
       fontSize: 13.5,
@@ -2112,6 +2114,7 @@ export default function KelasNotesters() {
     </a>  
     <div style={{ position: "relative", overflow: "hidden", flex: isMobile ? 1 : "none", minWidth: 0 }}>
       <div style={s.navLinks} className="nav-links-scroll">
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a
           href={currentUser ? "#" : "?page=login"}
           onClick={navLinkClick(() => {
@@ -2442,6 +2445,7 @@ function renderNodeIcon(type, status) {
   // ============================================================
   // Helper fetch API — dipakai AmmiyahDataSource di bawah.
   // ============================================================
+  const unitsInflightRef = useRef(new Map());
   const ammiyahSubjectIdRef = useRef(null); // cache id subject "ammiyah", supaya tidak fetch berulang
 
   // ---- Progress Levantine saat BELUM LOGIN (tamu / localhost) ----
@@ -2497,9 +2501,16 @@ function renderNodeIcon(type, status) {
 
   async function fetchAmmiyahSubjectId() {
     if (ammiyahSubjectIdRef.current) return ammiyahSubjectIdRef.current;
+    try {
+      const saved = window.localStorage.getItem("ls_ammiyah_subject_id");
+      if (saved) { ammiyahSubjectIdRef.current = saved; return saved; }
+    } catch (e) { /* abaikan */ }
     const subjects = await apiGet("/api/content?type=subjects");
     const found = (subjects || []).find((s) => s.slug === "ammiyah");
-    if (found) ammiyahSubjectIdRef.current = found.id;
+    if (found) {
+      ammiyahSubjectIdRef.current = found.id;
+      try { window.localStorage.setItem("ls_ammiyah_subject_id", String(found.id)); } catch (e) { /* abaikan */ }
+    }
     return found ? found.id : null;
   }
 
@@ -2575,6 +2586,7 @@ function renderNodeIcon(type, status) {
 
       if (typeof window !== "undefined") {
         try { window.sessionStorage.setItem(cacheKey, JSON.stringify(result)); } catch (e) { /* storage penuh, gak masalah */ }
+        try { window.localStorage.setItem("ls_bagian_list_swr_v1", JSON.stringify(result)); } catch (e) { /* abaikan */ }
       }
       return result;
     },
@@ -2590,7 +2602,17 @@ function renderNodeIcon(type, status) {
     // Pakai sessionStorage (bukan localStorage) supaya cache otomatis
     // "segar" lagi tiap sesi baru — penting karena generator AI kamu masih
     // terus nambah konten, jangan sampai user lihat data basi berhari-hari.
-    async getUnitsForBagian(bagian) {
+    getUnitsForBagian(bagian) {
+      // Gabungkan permintaan yang sama yang sedang berjalan (mis. kartu "Lanjutkan" + halaman path
+      // sama-sama minta Bagian yang sama) supaya tidak menembak API dua kali.
+      const key = `${bagian.id}_${currentUser?.id || "guest"}`;
+      const inflight = unitsInflightRef.current;
+      if (inflight.has(key)) return inflight.get(key);
+      const p = AmmiyahDataSource._loadUnits(bagian).finally(() => inflight.delete(key));
+      inflight.set(key, p);
+      return p;
+    },
+    async _loadUnits(bagian) {
       // "_v2" -- sama alasannya kayak ls_bagian_list_cache_v2 di atas:
       // struktur topik per-Bagian berubah total, cache lama harus dianggap
       // basi, bukan cuma "lupa refresh".
@@ -2694,6 +2716,7 @@ function renderNodeIcon(type, status) {
 
       if (typeof window !== "undefined") {
         try { window.sessionStorage.setItem(cacheKey, JSON.stringify(result)); } catch (e) { /* storage penuh, gak masalah */ }
+        try { window.localStorage.setItem(`ls_units_swr_v1_${cacheKey}`, JSON.stringify(result)); } catch (e) { /* abaikan */ }
       }
       return result;
     },
@@ -2717,7 +2740,7 @@ function renderNodeIcon(type, status) {
           const reqs = sibs.flatMap((l) => (l.type === "lesson" ? [2, 3, 4] : [1]).map((seg) => `/api/exercises?level_id=${l.id}&segment_number=${seg}`));
           const pools = await Promise.all(reqs.map((u) => apiGet(u).catch(() => [])));
           const seen = new Set();
-          const pool = pools.flat().filter((r) => r && !seen.has(r.id) && seen.add(r.id));
+          const pool = pools.flat().filter((r) => r && r.type !== "vocab_intro" && !seen.has(r.id) && seen.add(r.id));
           for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
           return pool.slice(0, 10).map((r) => ({
             id: r.id, type: r.type, prompt: r.prompt, content: r.content,
@@ -3014,8 +3037,14 @@ function renderNodeIcon(type, status) {
   useEffect(() => {
     if (page !== "ammiyahPath" || !activeBagian) return;
     let cancelled = false;
-    setPathUnitsLoading(true);
     setPathUnitsError(null);
+    // Tampilkan salinan terakhir (kalau ada) LANGSUNG, lalu perbarui diam-diam begitu data segar tiba.
+    let shownStale = false;
+    try {
+      const stale = window.localStorage.getItem(`ls_units_swr_v1_ls_units_cache_v2_${activeBagian.id}_${currentUser?.id || "guest"}`);
+      if (stale) { setPathUnits(JSON.parse(stale)); shownStale = true; }
+    } catch (e) { /* abaikan */ }
+    setPathUnitsLoading(!shownStale);
     AmmiyahDataSource.getUnitsForBagian(activeBagian)
       .then((units) => {
         if (!cancelled) {
@@ -3030,6 +3059,7 @@ function renderNodeIcon(type, status) {
         }
       });
     return () => { cancelled = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, activeBagian]);
 
   // Begitu masuk halaman path, langsung scroll ke bulatan yang sedang
@@ -3153,8 +3183,13 @@ function renderNodeIcon(type, status) {
   useEffect(() => {
     if (page !== "ammiyahBagian") return;
     let cancelled = false;
-    setBagianListLoading(true);
     setBagianListError(null);
+    let shownStaleList = false;
+    try {
+      const stale = window.localStorage.getItem("ls_bagian_list_swr_v1");
+      if (stale) { setBagianList(JSON.parse(stale)); shownStaleList = true; }
+    } catch (e) { /* abaikan */ }
+    setBagianListLoading(!shownStaleList);
     AmmiyahDataSource.getBagianList()
       .then((list) => {
         if (!cancelled) {
@@ -3169,6 +3204,7 @@ function renderNodeIcon(type, status) {
         }
       });
     return () => { cancelled = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const renderAmmiyahBagian = () => (
@@ -3216,7 +3252,9 @@ function renderNodeIcon(type, status) {
                 <span style={{ flex: 1, height: 1, background: "#e3e9e6" }} />
               </div>
             )}
-            <div style={{ ...s.bagianCard, padding: "16px 18px" }} onClick={() => goAmmiyahPath(bagian)}>
+            <div style={{ ...s.bagianCard, padding: "16px 18px" }} onClick={() => goAmmiyahPath(bagian)}
+              onMouseEnter={() => AmmiyahDataSource.getUnitsForBagian(bagian).catch(() => {})}
+              onTouchStart={() => AmmiyahDataSource.getUnitsForBagian(bagian).catch(() => {})}>
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
                 <div style={{ width: 46, height: 46, borderRadius: 15, background: "#e8f1ed", color: GREEN_DARK, fontWeight: 800, fontSize: 18, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                   {bagian.orderIndex}
@@ -3996,6 +4034,7 @@ function renderNodeIcon(type, status) {
   // matahari "Review Semua Kosakata" 1 Bagian — mewakili gabungan kata dari
   // SEMUA unit di Bagian itu, bukan cuma 1 unit. Nanti diganti gabungan
   // vocab_items dari semua topic_id di bawah unit_id (= Bagian) tersebut.
+  // eslint-disable-next-line no-unused-vars
   const VOCAB_REVIEW_POOL = [
     { type: "translate_choice", prompt: "Pilih arti yang benar", content: { promptText: "مرحبا (marhaba)", options: [{ text: "Halo" }, { text: "Terima kasih" }, { text: "Rumah" }], correctIndex: 0 } },
     { type: "translate_choice", prompt: "Pilih arti yang benar", content: { promptText: "شكرا (shukran)", options: [{ text: "Terima kasih" }, { text: "Di mana" }, { text: "Sekarang" }], correctIndex: 0 } },
@@ -4028,6 +4067,7 @@ function renderNodeIcon(type, status) {
     return a;
   }
 
+  // eslint-disable-next-line no-unused-vars
   const EXERCISES_BY_NODE_TYPE = {
     lesson: LESSON_EXERCISES,
     practice: PRACTICE_EXERCISES,
@@ -4124,13 +4164,14 @@ function renderNodeIcon(type, status) {
   // manual (via tombol), biar user gak kaget denger audio setiap soal.
   useEffect(() => {
     const ex = lessonExercises[lessonIndex];
-    // Percakapan (dialog) & soal lain: TIDAK diputar otomatis — user menekan ikon 🔊 sendiri.
-    // Otomatis hanya untuk cerita bacaan dan soal "dengarkan lalu susun" (audioOnly).
-    const isStoryPassage = !!ex?.content?.passageText && !ex?.content?.dialogueLines && lessonCtx?.level?.type !== "conversation";
-    if (ex?.content?.hasAudio && ex?.audioUrl && (isStoryPassage || ex?.content?.audioOnly)) {
-      const audio = new Audio(ex.audioUrl);
+    // Cerita, percakapan & soal lain: TIDAK diputar otomatis -- user menekan ikon 🔊 sendiri
+    // (audio memutar seluruh teks sekaligus). Otomatis hanya untuk soal "dengarkan lalu susun" (audioOnly).
+    if (ex?.content?.hasAudio && ex?.audioUrl && ex?.content?.audioOnly) {
+      const audio = getCachedAudio(ex.audioUrl);
+      try { audio.currentTime = 0; } catch (e) { /* belum siap, abaikan */ }
       audio.play().catch((err) => console.warn("Autoplay audio gagal (browser mungkin block autoplay):", err.message));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lessonIndex, lessonExercises]);
 
   const SEGMENTS_PER_LEVEL = 4; // samain sama SEGMENTS_PER_LEVEL di generate-vocab-v2.mjs
@@ -4598,22 +4639,76 @@ function renderNodeIcon(type, status) {
   // SAMA dalam 1 sesi gak nembak /api/word-audio lagi -- backend sendiri
   // juga udah cache permanen lintas sesi/user (lihat api/word-audio.js).
   const wordAudioCacheRef = useRef(new Map());
+  // Cache objek Audio per URL (preload="auto"): file sudah terunduh SEBELUM tombol ditekan,
+  // jadi suara keluar langsung, bukan menunggu unduh dulu tiap kali diputar.
+  const audioObjCacheRef = useRef(new Map());
+  const getCachedAudio = (url) => {
+    let a = audioObjCacheRef.current.get(url);
+    if (!a) {
+      a = new Audio();
+      a.preload = "auto";
+      a.src = url;
+      audioObjCacheRef.current.set(url, a);
+      if (audioObjCacheRef.current.size > 120) {
+        const firstKey = audioObjCacheRef.current.keys().next().value;
+        audioObjCacheRef.current.delete(firstKey);
+      }
+    }
+    return a;
+  };
+  // Cari URL audio 1 kata. Permintaan yang sedang berjalan DIGABUNG (inflightWordAudioRef) dan hasilnya
+  // disimpan di memori + localStorage, jadi kata yang sama tidak pernah menembak /api/word-audio dua kali.
+  const inflightWordAudioRef = useRef(new Map());
+  const resolveWordAudioUrl = async (word) => {
+    let url = wordAudioCacheRef.current.get(word);
+    if (url) return url;
+    try {
+      const stored = JSON.parse(window.localStorage.getItem("ls_word_audio_v1") || "{}");
+      if (stored[word]) { wordAudioCacheRef.current.set(word, stored[word]); return stored[word]; }
+    } catch (e) { /* abaikan */ }
+    let p = inflightWordAudioRef.current.get(word);
+    if (!p) {
+      p = apiGet(`/api/word-audio?word=${encodeURIComponent(word)}`)
+        .then((r) => r?.audio_url || null)
+        .catch(() => null)
+        .finally(() => inflightWordAudioRef.current.delete(word));
+      inflightWordAudioRef.current.set(word, p);
+    }
+    url = await p;
+    if (url) {
+      wordAudioCacheRef.current.set(word, url);
+      try {
+        const stored = JSON.parse(window.localStorage.getItem("ls_word_audio_v1") || "{}");
+        stored[word] = url;
+        const keys = Object.keys(stored);
+        if (keys.length > 800) delete stored[keys[0]];
+        window.localStorage.setItem("ls_word_audio_v1", JSON.stringify(stored));
+      } catch (e) { /* storage penuh/diblokir */ }
+    }
+    return url;
+  };
+  // Unduh di muka: cari URL + muat file mp3-nya, supaya saat kata diketuk suara langsung keluar.
+  const prefetchWordAudio = (words) => {
+    for (const w of words || []) {
+      if (!isArabicText(w)) continue;
+      resolveWordAudioUrl(w).then((u) => { if (u) getCachedAudio(u); });
+    }
+  };
   const playWordAudio = async (word) => {
     if (!isArabicText(word)) return; // cuma kata Arab yang ada suaranya di sini
     try {
-      let url = wordAudioCacheRef.current.get(word);
-      if (!url) {
-        const result = await apiGet(`/api/word-audio?word=${encodeURIComponent(word)}`);
-        url = result?.audio_url;
-        if (url) wordAudioCacheRef.current.set(word, url);
+      const url = await resolveWordAudioUrl(word);
+      if (url) {
+        const a = getCachedAudio(url);
+        try { a.currentTime = 0; } catch (e) { /* belum siap, abaikan */ }
+        a.play().catch(() => {});
       }
-      if (url) new Audio(url).play().catch(() => {});
     } catch (err) {
-      // Audio per-kata itu bonus, bukan inti soal -- gagal diam-diam aja,
-      // jangan sampai ganggu interaksi nyusun kata yang sedang berjalan.
+      // Audio per-kata itu bonus, bukan inti soal -- gagal diam-diam aja.
     }
   };
 
+  // eslint-disable-next-line no-unused-vars
   const addWordToAnswer = (word, poolIdx) => {
     if (lessonChecked) return;
     playWordAudio(word);
@@ -4629,6 +4724,7 @@ function renderNodeIcon(type, status) {
   //   - Tap kotak LAIN sementara ada yang terpilih -> TUKAR posisi dua kotak itu
   // Jadi urutan kata bisa dibetulkan tanpa hapus-taruh ulang dari nol, mis.
   // [kabarmu][apa] -> tap "kabarmu" (terpilih) -> tap "apa" -> jadi [apa][kabarmu].
+  // eslint-disable-next-line no-unused-vars
   const handlePlacedTileClick = (idx) => {
     if (lessonChecked) return;
     playWordAudio(lessonBuiltWords[idx]?.word);
@@ -4678,7 +4774,7 @@ function renderNodeIcon(type, status) {
     const normAr = (t) => String(t || "")
       .replace(/[\u064B-\u0652\u0670\u0640]/g, "")
       .replace(/[\u0622\u0623\u0625]/g, "\u0627")
-      .replace(/[.,!?;:\u061F\u060C\u061B"'()\-]/g, " ")
+      .replace(/[.,!?;:\u061F\u060C\u061B"'()-]/g, " ")
       .replace(/\s+/g, " ")
       .trim();
     const accepted = [correctAnswer, ...(Array.isArray(ex.content.acceptedAnswers) ? ex.content.acceptedAnswers : [])];
@@ -4723,6 +4819,7 @@ function renderNodeIcon(type, status) {
   const isMainButtonEnabled = () => {
     const ex = currentExercise();
     if (!ex) return false;
+    if (ex.type === "vocab_intro") return true;
     if (ex.type === "matching_pairs") return lessonMatched.length === ex.content.pairs.length;
     if (lessonChecked) return true;
     if (CHOICE_TYPES.includes(ex.type)) return lessonSelected !== null;
@@ -4733,6 +4830,12 @@ function renderNodeIcon(type, status) {
 
   const handleMainButton = () => {
     const ex = currentExercise();
+    if (ex.type === "vocab_intro") {
+      // Kartu perkenalan kata: tidak dinilai & tidak dicatat sebagai jawaban -- langsung lanjut.
+      sfx.play("tap");
+      goNextExerciseOrFinish();
+      return;
+    }
     if (ex.type === "matching_pairs") {
       if (lessonMatched.length === ex.content.pairs.length) {
         // Matching pairs gak nge-track salah per-kata di tengah jalan (tap
@@ -4759,11 +4862,14 @@ function renderNodeIcon(type, status) {
   const [audioPlaying, setAudioPlaying] = useState(false); // animasi ikon speaker saat audio berbunyi
   const playExerciseAudio = (url) => {
     if (!url) return;
-    const audio = new Audio(url);
-    audio.addEventListener("playing", () => setAudioPlaying(true));
-    audio.addEventListener("ended", () => setAudioPlaying(false));
-    audio.addEventListener("pause", () => setAudioPlaying(false));
-    audio.addEventListener("error", () => setAudioPlaying(false));
+    const audio = getCachedAudio(url);
+    // Hentikan audio lain yang masih berbunyi supaya tidak bertumpuk.
+    audioObjCacheRef.current.forEach((a) => { if (a !== audio && !a.paused) a.pause(); });
+    audio.onplaying = () => setAudioPlaying(true);
+    audio.onended = () => setAudioPlaying(false);
+    audio.onpause = () => setAudioPlaying(false);
+    audio.onerror = () => setAudioPlaying(false);
+    try { audio.currentTime = 0; } catch (e) { /* belum siap, abaikan */ }
     audio.play().catch((err) => {
       setAudioPlaying(false);
       // Browser kadang nolak play() kalau ada masalah lain (format gak
@@ -4771,6 +4877,18 @@ function renderNodeIcon(type, status) {
       console.warn("Gagal memutar audio:", err.message);
     });
   };
+
+  // Unduh di muka audio soal yang sedang tampil + 3 soal berikutnya.
+  useEffect(() => {
+    for (let i = lessonIndex; i < Math.min((lessonExercises || []).length, lessonIndex + 4); i++) {
+      const u = lessonExercises[i]?.audioUrl;
+      if (u) getCachedAudio(u);
+      for (const w of lessonExercises[i]?.content?.words || []) if (w?.audio_url) getCachedAudio(w.audio_url);
+      // Susun kata: siapkan audio tiap kata di bank (soal ini + 2 berikutnya).
+      if (i < lessonIndex + 3 && lessonExercises[i]?.type === "word_order") prefetchWordAudio(lessonExercises[i].content?.wordBank);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lessonIndex, lessonExercises]);
 
   const renderAmmiyahLesson = () => {
     const ex = currentExercise();
@@ -4826,7 +4944,7 @@ function renderNodeIcon(type, status) {
                   <span style={s.lessonBlank} />
                   {ex.content.afterBlank?.text && renderClickableArabic(ex.content.afterBlank.text, "after")}
                 </div>
-                {ex.content.hasAudio && ex.audioUrl && !ex.content.passageText && (
+                {ex.content.hasAudio && ex.audioUrl && lessonChecked && (
                   <div style={{ marginTop: 8 }}>
                     <button className={audioPlaying ? "ls-speaker-on" : undefined} style={s.lessonAudioBtn} onClick={() => playExerciseAudio(ex.audioUrl)} aria-label="Play">🔊</button>
                   </div>
@@ -4865,7 +4983,7 @@ function renderNodeIcon(type, status) {
                   </div>
                 ) : (
                 <div style={s.lessonBubbleMain}>
-                  {ex.content.hasAudio && <button className={audioPlaying ? "ls-speaker-on" : undefined} style={s.lessonAudioBtn} onClick={() => playExerciseAudio(ex.audioUrl)}>🔊</button>}
+                  {ex.content.hasAudio && <button className={audioPlaying ? "ls-speaker-on" : undefined} style={s.lessonAudioBtn} onClick={() => (ex.audioUrl ? playExerciseAudio(ex.audioUrl) : playWordAudio(ex.content.audioText || ex.content.text))}>🔊</button>}
                   <div>
                     {ex.content.latin && <div style={s.lessonBubbleLatin}>{ex.content.latin}</div>}
                     {/* Referensi bisa Arab (arah "susun terjemahan Indonesia")
@@ -4917,7 +5035,8 @@ function renderNodeIcon(type, status) {
 
           {ex.type === "dialogue_complete" && (
             <div>
-              {ex.content.hasAudio && ex.audioUrl && (
+              {/* Audio berisi percakapan LENGKAP (jawaban benar ikut terdengar), jadi baru muncul setelah user menjawab. */}
+              {ex.content.hasAudio && ex.audioUrl && lessonChecked && (
                 <div style={{ textAlign: "center", marginBottom: 10 }}>
                   <button className={audioPlaying ? "ls-speaker-on" : undefined} style={s.lessonAudioBtn} onClick={() => playExerciseAudio(ex.audioUrl)}>🔊</button>
                 </div>
@@ -4968,6 +5087,28 @@ function renderNodeIcon(type, status) {
               <div style={s.lessonBubbleLatin}>{ex.content.passageLatin}</div>
               <div style={s.readingPassageText} dir="rtl">{renderClickableArabic(ex.content.passageText, "passage")}</div>
               <div style={s.readingQuestion}>{ex.content.question}</div>
+            </div>
+          )}
+
+          {ex.type === "vocab_intro" && (
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+              {(ex.content.words || []).map((w, wi) => (
+                <div key={`${w.kata_arab}-${wi}`} className="ls-card" style={{ display: "flex", alignItems: "center", gap: 14, background: "white", border: "1.5px solid #e3e9e6", borderRadius: 16, padding: "14px 16px" }}>
+                  <button
+                    className={audioPlaying ? "ls-speaker-on" : undefined}
+                    style={s.lessonAudioBtn}
+                    aria-label="Play"
+                    onClick={() => (w.audio_url ? playExerciseAudio(w.audio_url) : playWordAudio(w.kata_arab))}
+                  >🔊</button>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div dir="rtl" style={{ fontSize: 26, color: "#1a1a1a", lineHeight: 1.3, textAlign: "left" }}>{w.kata_arab}</div>
+                    {w.latin && <div style={{ fontSize: 13, color: "#9aa5a0", marginTop: 2 }}>{w.latin}</div>}
+                  </div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: GREEN_DARK, textAlign: "right", maxWidth: "42%" }}>
+                    {uiLang === "en" && w.arti_en ? w.arti_en : w.arti}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
@@ -5138,7 +5279,7 @@ function renderNodeIcon(type, status) {
   };
 
   const renderAmmiyahLessonComplete = () => {
-    const totalQ = lessonExercises.length || 0;
+    const totalQ = lessonExercises.filter((e) => e.type !== "vocab_intro").length || 0; // kartu perkenalan tidak dinilai
     const acc = totalQ ? Math.min(100, Math.round((lessonScore / totalQ) * 100)) : 0;
     const msg = acc >= 90 ? lx("Hasil yang luar biasa. Pertahankan!", "Excellent work. Keep it up!")
       : acc >= 70 ? lx("Bagus! Sedikit lagi sempurna.", "Nice! Almost perfect.")

@@ -1,38 +1,34 @@
 // scripts/backfill-vocab-audio.mjs
 //
-// Isi audio_url buat vocab_items yang BELUM punya audio (audio_url IS NULL)
-// -- vocab-nya sendiri TIDAK dibuat ulang, cuma ditambahin suaranya.
-//
-// KENAPA INI DIPISAH DARI generate-vocab-v2.mjs --audio:
-// TTS pakai ElevenLabs (generateAudio/uploadAudio) -- KUOTA-nya BEDA SAMA
-// SEKALI dari LadizAI (dipakai callLadiz buat klasifikasi/kurasi/generate
-// soal). Kalau LadizAI abis kuota tapi ElevenLabs masih ada, run
-// `generate-vocab-v2.mjs --audio` tetap gak bisa dipakai buat ngisi audio
-// vocab lama, karena dia bakal gagal duluan pas nyoba panggil LadizAI buat
-// bagian klasifikasi/exercise -- padahal bagian AUDIO-nya sendiri gak
-// butuh LadizAI sama sekali. Script ini motong ketergantungan itu: cuma
-// baca vocab_items yang SUDAH ADA di database, gak nyentuh CSV/klasifikasi/
-// kurasi/exercise apa pun -- jadi tetap jalan walau kuota LadizAI abis.
-//
-// Idempotent & aman diulang: cuma proses baris yang audio_url-nya masih
-// NULL, jadi kalau macet di tengah (mis. kuota ElevenLabs abis juga),
-// tinggal jalanin lagi -- otomatis lanjut dari yang belum kebagian.
+// Isi audio_url yang masih KOSONG (NULL) -- tanpa membuat ulang vocab/soalnya, dan tanpa LadizAI
+// (cuma butuh ElevenLabs + Supabase), jadi tetap jalan walau kuota LadizAI habis.
 //
 // Jalankan:
-//   node scripts/backfill-vocab-audio.mjs              (isi vocab_items)
-//   node scripts/backfill-vocab-audio.mjs --exercises   (JUGA isi exercises
-//     yang audio_url-nya masih NULL: listen_choose, DAN soal berbasis
-//     cerita/dialog -- reading_comprehension/fill_blank dari story,
-//     dialogue_complete dari conversation)
-//   node scripts/backfill-vocab-audio.mjs --limit 50    (batasi 50 baris
-//     dulu buat nyoba -- berguna kalau mau tes kuota ElevenLabs sisa berapa)
+//   node scripts/backfill-vocab-audio.mjs                (hanya kosakata / vocab_items)
+//   node scripts/backfill-vocab-audio.mjs --exercises    (kosakata + SOAL: listen_choose, susun kata
+//                                                         dengan suara, isian kalimat utuh, cerita, dialog)
+//   node scripts/backfill-vocab-audio.mjs --exercises --skip-vocab   (hanya soal)
+//   node scripts/backfill-vocab-audio.mjs --limit 50     (batasi per bagian, buat mencoba)
+//   node scripts/backfill-vocab-audio.mjs --fix-listen-choose   (perbaiki audio listen_choose lama yang salah kata)
 //
+// Aman diulang: hanya baris dengan audio_url NULL yang diproses; teks yang sama (di database maupun
+// dalam 1 kali jalan) memakai audio yang sudah ada, bukan membuat baru.
+//
+// [DIPERBAIKI dibanding versi lama]
+//  - Dulu loop "ambil 50 baris audio_url NULL" bisa berputar TANPA HENTI: baris yang dilewati (mis. fill_blank
+//    biasa tanpa audio) tetap NULL, jadi 50 baris yang sama terambil lagi terus. Sekarang pakai paginasi per id.
+//  - Audio dialog dibuat dengan baris kosong DIISI jawaban benar (dulu "___" ikut dibacakan).
+//  - Tipe yang dulu tidak tercakup: word_order bersuara dan fill_blank kalimat utuh (audioText).
+//  - Teks sama di database tidak dibuat ulang lintas run (cache diisi dari audio yang sudah ada).
+//  - Berhenti kalau 5 kegagalan BERUNTUN (kuota/API key), bukan hanya kalau belum ada yang berhasil.
 import "dotenv/config";
-import { supabase, generateAudio, uploadAudio } from "./generate-vocab-v2.mjs";
+import { supabase, audioUrlFor, seedAudioCache, dialogueSpokenText } from "./generate-vocab-v2.mjs";
 
-// Jeda antar-panggilan ElevenLabs -- jaga-jaga rate limit di tier gratis/
-// murah. Naikkan kalau masih kena 429, turunkan kalau tier-nya lega.
-const DELAY_MS = 350;
+const DELAY_MS = 350; // jeda antar-panggilan ElevenLabs; naikkan kalau kena 429
+const PAGE = 50;
+const MAX_CONSECUTIVE_FAILS = 5;
+const ARABIC = /[؀-ۿ]/;
+const EXERCISE_TYPES = ["listen_choose", "word_order", "fill_blank", "reading_comprehension", "dialogue_complete"];
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 function parseLimit() {
@@ -42,192 +38,143 @@ function parseLimit() {
   return Number.isFinite(n) && n > 0 ? n : Infinity;
 }
 
-async function backfillVocab(limit) {
-  console.log("=== Isi audio_url buat vocab_items yang masih kosong ===");
-  let done = 0;
-  let failed = 0;
-
-  while (done + failed < limit) {
-    const { data: rows, error } = await supabase
-      .from("vocab_items")
-      .select("id, kata_arab")
-      .is("audio_url", null)
-      .limit(Math.min(50, limit - done - failed));
-    if (error) throw error;
-    if (!rows || rows.length === 0) break; // udah abis semua yang kosong
-
-    for (const v of rows) {
-      try {
-        const buf = await generateAudio(v.kata_arab);
-        const url = await uploadAudio(v.kata_arab, buf);
-        const { error: updateErr } = await supabase.from("vocab_items").update({ audio_url: url }).eq("id", v.id);
-        if (updateErr) throw updateErr;
-        done++;
-        console.log(`  ✓ [${done}] "${v.kata_arab}"`);
-      } catch (err) {
-        failed++;
-        console.warn(`  ⚠ Gagal "${v.kata_arab}": ${err.message}`);
-        // Kuota ElevenLabs abis biasanya muncul sebagai 401/429 terus-terusan --
-        // kalau udah 5x gagal beruntun, kemungkinan besar itu masalahnya,
-        // mending berhenti daripada gagal ratusan kali sia-sia.
-        if (failed >= 5 && done === 0) {
-          console.error("\n5 kegagalan beruntun tanpa 1 pun berhasil -- kemungkinan kuota/API key ElevenLabs bermasalah. Berhenti.");
-          return { done, failed };
-        }
-      }
-      await sleep(DELAY_MS);
-      if (done + failed >= limit) break;
-    }
-  }
-
-  return { done, failed };
-}
-
-async function backfillExercises(limit) {
-  console.log("\n=== Isi audio_url buat exercises tipe listen_choose yang masih kosong ===");
-  let done = 0;
-  let failed = 0;
-
-  while (done + failed < limit) {
-    const { data: rows, error } = await supabase
-      .from("exercises")
-      .select("id, content")
-      .eq("type", "listen_choose")
-      .is("audio_url", null)
-      .limit(Math.min(50, limit - done - failed));
-    if (error) throw error;
-    if (!rows || rows.length === 0) break;
-
-    for (const ex of rows) {
-      const sample = ex.content?.options?.[0]?.text;
-      if (!sample) {
-        console.warn(`  ⚠ Exercise ${ex.id}: gak ketemu teks buat di-TTS-kan (content.options[0].text kosong) -- dilewati.`);
-        continue;
-      }
-      try {
-        const buf = await generateAudio(sample);
-        const url = await uploadAudio(sample, buf);
-        const { error: updateErr } = await supabase.from("exercises").update({ audio_url: url }).eq("id", ex.id);
-        if (updateErr) throw updateErr;
-        done++;
-        console.log(`  ✓ [${done}] exercise ${ex.id} ("${sample}")`);
-      } catch (err) {
-        failed++;
-        console.warn(`  ⚠ Gagal exercise ${ex.id}: ${err.message}`);
-        if (failed >= 5 && done === 0) {
-          console.error("\n5 kegagalan beruntun tanpa 1 pun berhasil -- kemungkinan kuota/API key ElevenLabs bermasalah. Berhenti.");
-          return { done, failed };
-        }
-      }
-      await sleep(DELAY_MS);
-      if (done + failed >= limit) break;
-    }
-  }
-
-  return { done, failed };
-}
-
-// [BARU] Isi audio_url buat soal berbasis CERITA (reading_comprehension /
-// fill_blank dari node_type "story", ditandai field content.hasAudio +
-// content.passageText) DAN soal berbasis DIALOG (dialogue_complete dari
-// node_type "conversation", ditandai content.hasAudio +
-// content.dialogueLines) -- 2 tipe ini SEBELUMNYA gak ke-cover sama sekali
-// oleh backfillExercises() di atas (yang cuma urus listen_choose).
-//
-// Optimisasi tambahan (TIDAK ada di generate-vocab-v2.mjs asli): kalau
-// beberapa baris soal (misal 3-4 soal reading_comprehension dari CERITA
-// YANG SAMA) punya teks identik, TTS cuma dipanggil SEKALI per teks unik
-// dalam 1 kali jalan script ini -- baris-baris lain yang teksnya sama
-// tinggal pakai audio_url yang sama, hemat kuota ElevenLabs. (Catatan:
-// dedup ini cuma berlaku DALAM 1 kali eksekusi script -- kalau macet di
-// tengah terus dijalankan ulang nanti, teks yang KEBETULAN sudah kebagian
-// audio_url di baris lain sebelumnya TIDAK dicek ulang, jadi ada kemungkinan
-// kecil TTS dipanggil lagi buat teks yang sebenarnya sudah punya audio di
-// baris lain -- bukan bug fatal, cuma bukan penghematan maksimal.)
-function getAudioTextForExercise(ex) {
+// Teks yang harus dibacakan untuk 1 soal; null = soal ini memang tidak punya audio.
+function spokenTextFor(ex) {
   const c = ex.content || {};
-  if (!c.hasAudio) return null;
-  if (typeof c.passageText === "string" && c.passageText) return c.passageText;
-  if (Array.isArray(c.dialogueLines)) {
-    const text = c.dialogueLines.map((l) => l.text).filter(Boolean).join(" ");
-    return text || null;
+  if (ex.type === "listen_choose") return c.options?.[Number.isInteger(c.correctIndex) ? c.correctIndex : 0]?.text || null; // opsi BENAR (opsi sudah diacak)
+  if (ex.type === "word_order") {
+    if (c.audioText) return c.audioText;
+    return c.hasAudio && ARABIC.test(c.text || "") ? c.text : null;
   }
+  if (ex.type === "fill_blank" && !c.passageText) return c.hasAudio && c.audioText ? c.audioText : null;
+  if (!c.hasAudio) return null;
+  if (typeof c.passageText === "string" && c.passageText.trim()) return c.passageText;
+  if (Array.isArray(c.dialogueLines)) return dialogueSpokenText(c) || null;
   return null;
 }
 
-async function backfillStoryAndDialogueAudio(limit) {
-  console.log("\n=== Isi audio_url buat soal cerita/dialog (reading_comprehension, fill_blank, dialogue_complete) yang masih kosong ===");
-  let done = 0;
-  let failed = 0;
-  let reused = 0;
-  const audioUrlByText = new Map();
-
-  while (done + failed < limit) {
-    const { data: rows, error } = await supabase
-      .from("exercises")
-      .select("id, type, content")
-      .in("type", ["reading_comprehension", "fill_blank", "dialogue_complete"])
-      .is("audio_url", null)
-      .limit(Math.min(50, limit - done - failed));
+// Baca tabel per halaman berdasarkan id (keyset) -- tiap baris dilihat tepat sekali.
+async function* pagedRows(table, select, applyFilters) {
+  let lastId = null;
+  for (;;) {
+    let q = supabase.from(table).select(select).order("id").limit(PAGE);
+    q = applyFilters(q);
+    if (lastId) q = q.gt("id", lastId);
+    const { data, error } = await q;
     if (error) throw error;
-    if (!rows || rows.length === 0) break;
+    if (!data || data.length === 0) return;
+    for (const row of data) yield row;
+    lastId = data[data.length - 1].id;
+    if (data.length < PAGE) return;
+  }
+}
 
-    for (const ex of rows) {
-      const text = getAudioTextForExercise(ex);
-      if (!text) continue; // fill_blank BIASA (bukan dari story, gak ada hasAudio) -- memang gak butuh audio, dilewati diam-diam
-
-      try {
-        let url = audioUrlByText.get(text);
-        const isReuse = Boolean(url);
-        if (!url) {
-          const buf = await generateAudio(text);
-          url = await uploadAudio(text, buf);
-          audioUrlByText.set(text, url);
-        }
-        const { error: updateErr } = await supabase.from("exercises").update({ audio_url: url }).eq("id", ex.id);
-        if (updateErr) throw updateErr;
-        done++;
-        if (isReuse) reused++;
-        console.log(`  ✓ [${done}] exercise ${ex.id} (${ex.type})${isReuse ? " [pakai audio yang sudah dibuat barusan, teks sama]" : ""}`);
-      } catch (err) {
-        failed++;
-        console.warn(`  ⚠ Gagal exercise ${ex.id}: ${err.message}`);
-        if (failed >= 5 && done === 0) {
-          console.error("\n5 kegagalan beruntun tanpa 1 pun berhasil -- kemungkinan kuota/API key ElevenLabs bermasalah. Berhenti.");
-          return { done, failed, reused };
-        }
-      }
-      await sleep(DELAY_MS);
-      if (done + failed >= limit) break;
+// Isi cache dengan audio yang sudah ada supaya teks yang sama tidak dibuat ulang.
+async function seedFromDatabase(includeExercises) {
+  let n = 0;
+  for await (const v of pagedRows("vocab_items", "id, kata_arab, audio_url", (q) => q.not("audio_url", "is", null))) {
+    seedAudioCache(v.kata_arab, v.audio_url); n++;
+  }
+  if (includeExercises) {
+    for await (const ex of pagedRows("exercises", "id, type, content, audio_url", (q) => q.in("type", EXERCISE_TYPES).not("audio_url", "is", null))) {
+      const t = spokenTextFor(ex);
+      if (t) { seedAudioCache(t, ex.audio_url); n++; }
     }
   }
+  console.log(`(cache audio terisi dari ${n} baris yang sudah punya audio)`);
+}
 
-  return { done, failed, reused };
+async function runBackfill(title, rowsIterator, textOf, saveFn, limit) {
+  console.log(`\n=== ${title} ===`);
+  let done = 0, failed = 0, skipped = 0, consecutiveFails = 0;
+  for await (const row of rowsIterator) {
+    if (done + failed >= limit) break;
+    const text = textOf(row);
+    if (!text) { skipped++; continue; }
+    try {
+      const url = await audioUrlFor(text);
+      await saveFn(row, url);
+      done++; consecutiveFails = 0;
+      console.log(`  ✓ [${done}] ${row.id.slice(0, 8)} "${text.slice(0, 40)}"`);
+    } catch (err) {
+      failed++; consecutiveFails++;
+      console.warn(`  ⚠ Gagal ${row.id.slice(0, 8)}: ${err.message}`);
+      if (consecutiveFails >= MAX_CONSECUTIVE_FAILS) {
+        console.error(`\n${MAX_CONSECUTIVE_FAILS} kegagalan beruntun -- kemungkinan kuota/API key ElevenLabs bermasalah. Berhenti; jalankan lagi nanti (lanjut otomatis).`);
+        return { done, failed, skipped, stopped: true };
+      }
+    }
+    await sleep(DELAY_MS);
+  }
+  return { done, failed, skipped, stopped: false };
+}
+
+// --fix-listen-choose: soal "dengarkan lalu pilih" lama diberi audio dari options[0] SETELAH opsi diacak, jadi
+// suaranya sering BUKAN jawaban yang benar. Ganti audio_url semua soal itu dengan suara opsi yang benar.
+// Teks yang sama dengan kosakata memakai audio kosakata (cache), jadi hampir tanpa kredit baru.
+async function fixListenChoose(limit) {
+  console.log("\n=== Perbaiki audio listen_choose (pakai opsi yang benar) ===");
+  let done = 0, failed = 0, same = 0, consecutiveFails = 0;
+  for await (const ex of pagedRows("exercises", "id, type, content, audio_url", (q) => q.eq("type", "listen_choose"))) {
+    if (done + failed >= limit) break;
+    const text = spokenTextFor(ex);
+    if (!text) continue;
+    try {
+      const url = await audioUrlFor(text);
+      if (url === ex.audio_url) { same++; continue; }
+      const { error } = await supabase.from("exercises").update({ audio_url: url }).eq("id", ex.id);
+      if (error) throw error;
+      done++; consecutiveFails = 0;
+      console.log(`  ✓ [${done}] ${ex.id.slice(0, 8)} "${text}"`);
+    } catch (err) {
+      failed++; consecutiveFails++;
+      console.warn(`  ⚠ Gagal ${ex.id.slice(0, 8)}: ${err.message}`);
+      if (consecutiveFails >= MAX_CONSECUTIVE_FAILS) { console.error("5 kegagalan beruntun -- berhenti."); break; }
+    }
+    await sleep(DELAY_MS);
+  }
+  console.log(`listen_choose: ${done} diperbaiki, ${same} sudah benar, ${failed} gagal.`);
 }
 
 async function main() {
   const limit = parseLimit();
+  if (process.argv.includes("--fix-listen-choose")) {
+    await seedFromDatabase(false);
+    await fixListenChoose(limit);
+    return;
+  }
   const includeExercises = process.argv.includes("--exercises");
+  const skipVocab = process.argv.includes("--skip-vocab");
 
-  const vocabResult = await backfillVocab(limit);
-  console.log(`\nVocab: ${vocabResult.done} berhasil, ${vocabResult.failed} gagal.`);
+  await seedFromDatabase(includeExercises);
+
+  if (!skipVocab) {
+    const r = await runBackfill(
+      "Isi audio_url kosakata (vocab_items)",
+      pagedRows("vocab_items", "id, kata_arab", (q) => q.is("audio_url", null)),
+      (v) => v.kata_arab,
+      async (v, url) => { const { error } = await supabase.from("vocab_items").update({ audio_url: url }).eq("id", v.id); if (error) throw error; },
+      limit
+    );
+    console.log(`Vocab: ${r.done} berhasil, ${r.failed} gagal.`);
+    if (r.stopped) return;
+  }
 
   if (includeExercises) {
-    const exResult = await backfillExercises(limit);
-    console.log(`Exercises (listen_choose): ${exResult.done} berhasil, ${exResult.failed} gagal.`);
-
-    const storyResult = await backfillStoryAndDialogueAudio(limit);
-    console.log(
-      `Exercises (cerita/dialog): ${storyResult.done} berhasil (${storyResult.reused} di antaranya pakai ulang ` +
-      `audio yang teksnya sama), ${storyResult.failed} gagal.`
+    const r = await runBackfill(
+      "Isi audio_url soal (listen_choose, susun kata, isian kalimat utuh, cerita, dialog)",
+      pagedRows("exercises", "id, type, content", (q) => q.in("type", EXERCISE_TYPES).is("audio_url", null)),
+      spokenTextFor,
+      async (ex, url) => { const { error } = await supabase.from("exercises").update({ audio_url: url }).eq("id", ex.id); if (error) throw error; },
+      limit
     );
+    console.log(`Soal: ${r.done} berhasil, ${r.failed} gagal, ${r.skipped} dilewati (memang tanpa audio).`);
   } else {
-    console.log(`(Exercises listen_choose/cerita/dialog belum diisi -- tambahkan --exercises kalau mau sekalian.)`);
+    console.log("(Soal belum diisi -- tambahkan --exercises kalau mau sekalian.)");
   }
 }
 
 main().catch((err) => {
   console.error("Gagal:", err);
-  // [FIX WINDOWS] exitCode, bukan process.exit(1) -- lihat penjelasan di generate-vocab-v2.mjs
   process.exitCode = 1;
 });

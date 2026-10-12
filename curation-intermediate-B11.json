@@ -1,0 +1,3574 @@
+{
+  "Alasan & Sebab Akibat": {
+    "seen": [
+      "آثار",
+      "بسبب",
+      "عشان",
+      "ف",
+      "لأنو",
+      "لإنها",
+      "لإنو",
+      "ليستعملوه",
+      "معناها",
+      "وحتى",
+      "وعشان",
+      "ولأنو",
+      "ولإنو",
+      "إزا",
+      "إن",
+      "بتخلي",
+      "بتخلينا",
+      "خلاني",
+      "فمعظم",
+      "لإني",
+      "لهادا",
+      "لهاي",
+      "ولهادا",
+      "ولهذا",
+      "يتسببلك",
+      "بخلينا",
+      "يصير",
+      "لو",
+      "يخلي",
+      "يعتمد",
+      "حتى",
+      "لأنك",
+      "لأني",
+      "لتحققوا",
+      "ليه",
+      "ليقدروا",
+      "لاطور",
+      "لاحسن",
+      "بسببهم",
+      "طالما",
+      "لانه",
+      "لاتعلم",
+      "ولانه",
+      "لنحن",
+      "لاشوف",
+      "لدرجه",
+      "لتاخذوا",
+      "ل",
+      "ليرجعوا",
+      "ليتواصلوا",
+      "فانه",
+      "لتشوفوا",
+      "لتفهموا",
+      "فعشان",
+      "ليشوفوا",
+      "وحسب",
+      "لتشوفو"
+    ],
+    "kept": [
+      {
+        "kata_arab": "آثار",
+        "latin": "atsar",
+        "arti": "dampak-dampak/pengaruh-pengaruh",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "بسبب",
+        "latin": "bisabab",
+        "arti": "karena/sebab",
+        "contoh_kalimat": "بقدر أحكي إنو عنا وعي تام هاي الأيام وصار عنا إدراك أكبر لأفكارنا، ولتصرفاتنا وللي عم بيصير حوالينا بسبب حظر آخر الأسبوع.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "عشان",
+        "latin": "'ashaan",
+        "arti": "supaya/karena",
+        "contoh_kalimat": "أما بالبرد، بيقضوا الستات وقتهم بعصر الليمون وتفريزه لرمضان عشان يعملو منو عصير ليمون لسفرة رمضان.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ف",
+        "latin": "fa",
+        "arti": "maka",
+        "contoh_kalimat": "ّف معنى الوعي التام حسب شو بيعني لسلسلة دروسنا هاي قررنا إنو نعر لإلنا وخاصة في أوقات الحظر الأسبوعي عنا في عمان، الأردن، وكمان ّف على معنى الوعي المخاوف والهموم إلى جابها وباء الكوفيد19- لحياتنا.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لأنو",
+        "latin": "li'annu",
+        "arti": "karena",
+        "contoh_kalimat": "المطبخ جزء مهم بحياة أي بيت عربي، معظم ستات البيوت بيقضوا نص يومهم بالمطبخ لأنو طبخاتنا بدها وقت طويل لتجهز ولأنو نوعية الطعام كمان كتير مهمة عند العرب وعشان هيك بنخزن كميات كبيرة من المواد الأساسية في كل بيت.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لإنها",
+        "latin": "li'annha",
+        "arti": "karena dia (pr)",
+        "contoh_kalimat": "قلبي بوجعني لما أشوف المحلات عم بتسكر لإنها مش قادرة تغطي تكاليفها وتضل بالسوق.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لإنو",
+        "latin": "li'annu",
+        "arti": "karena",
+        "contoh_kalimat": "والشغل من البيت صرنا نعتبره يزة، لإنو بيشغل وقتنا، ولإنو ألهمنا إنو نفكر ونكتب عن الوعي التام.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليستعملوه",
+        "latin": "liyasta'miluuh",
+        "arti": "agar mereka menggunakannya",
+        "contoh_kalimat": "وبيعصر العرب الزيتون بأول الخريف بعد ما تشتي عليه مرة وحدة وبحتفظوا فيه بالتنكات ليستعملوه طول السنه.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "معناها",
+        "latin": "ma'naaha",
+        "arti": "artinya",
+        "contoh_kalimat": "الوعي التام الوعي التام كلمة كتير بنسمعها هاي الأيام، بس شو معناها بالضبط؟",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "وحتى",
+        "latin": "wa-hatta",
+        "arti": "dan bahkan/hingga",
+        "contoh_kalimat": "سواء العاملين على خط الجبهة اللي بحاولو يحافظو على سلامتنا والقطاعات الصناعية اللي بتشتغل بالابتكار أو الضيافة أو السفر اللي كلها تدمرت من الأزمة، وحتى الناساللي بعانوا من حظر تاني.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "وعشان",
+        "latin": "wa-'ashaan",
+        "arti": "dan supaya",
+        "contoh_kalimat": "المطبخ جزء مهم بحياة أي بيت عربي، معظم ستات البيوت بيقضوا نص يومهم بالمطبخ لأنو طبخاتنا بدها وقت طويل لتجهز ولأنو نوعية الطعام كمان كتير مهمة عند العرب وعشان هيك بنخزن كميات كبيرة من المواد الأساسية في كل بيت.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ولأنو",
+        "latin": "wa-li'annu",
+        "arti": "dan karena",
+        "contoh_kalimat": "المطبخ جزء مهم بحياة أي بيت عربي، معظم ستات البيوت بيقضوا نص يومهم بالمطبخ لأنو طبخاتنا بدها وقت طويل لتجهز ولأنو نوعية الطعام كمان كتير مهمة عند العرب وعشان هيك بنخزن كميات كبيرة من المواد الأساسية في كل بيت.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ولإنو",
+        "latin": "wa-li'annu",
+        "arti": "dan karena",
+        "contoh_kalimat": "والشغل من البيت صرنا نعتبره يزة، لإنو بيشغل وقتنا، ولإنو ألهمنا إنو نفكر ونكتب عن الوعي التام.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "إزا",
+        "latin": "iza",
+        "arti": "jika",
+        "contoh_kalimat": "خليني أعرف إزا رح تطلعو",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "إن",
+        "latin": "in",
+        "arti": "jika",
+        "contoh_kalimat": "يكونوا بالحفلة إن شاء الله!",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "بتخلي",
+        "latin": "bitkhalli",
+        "arti": "membuat/menjadikan",
+        "contoh_kalimat": "كتير ثقافات بتخلي أحسن وأزكى",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "بتخلينا",
+        "latin": "bitkhalliina",
+        "arti": "membuat kami",
+        "contoh_kalimat": "قوي لدرجة بتخلينا نحس إنو",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "خلاني",
+        "latin": "khallaani",
+        "arti": "membuatku",
+        "contoh_kalimat": "السبب اللي خلاني أكتبلك هاي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "فمعظم",
+        "latin": "fa-mu'zham",
+        "arti": "maka kebanyakan",
+        "contoh_kalimat": "الخرفان والعجول، فمعظم الأطباق اللي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لإني",
+        "latin": "li'anni",
+        "arti": "karena aku",
+        "contoh_kalimat": "عندي مايكرويف، لإني ما بحب",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لهادا",
+        "latin": "lihaada",
+        "arti": "untuk ini",
+        "contoh_kalimat": "قائمة مشترياتي لهادا الأسبوع. هل",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لهاي",
+        "latin": "lihaay",
+        "arti": "untuk ini",
+        "contoh_kalimat": "التصاميم الداخلية لهاي الفيلا. وفي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ولهادا",
+        "latin": "wa-lihaada",
+        "arti": "dan untuk ini",
+        "contoh_kalimat": "من هيك. ولهادا السبب بحاول",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ولهذا",
+        "latin": "wa-lihaadha",
+        "arti": "dan untuk ini",
+        "contoh_kalimat": "ونقلها عالسيارة. ولهذا الأسبوع اشتريت",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "يتسببلك",
+        "latin": "yitsabbiblak",
+        "arti": "menyebabkan bagimu",
+        "contoh_kalimat": "إنو ممكن يتسببلك بمزاج كتير",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "بخلينا",
+        "latin": "bikhalliina",
+        "arti": "membuat kami",
+        "contoh_kalimat": "يعني بالعربي، عنا الأكل كتير أهم من مجرد اشي بخلينا عايشين!",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "يصير",
+        "latin": "yisiir",
+        "arti": "terjadi/menjadi",
+        "contoh_kalimat": "وعنا هون بعمان عم يصير حظر مصغر، حكومتنا أعلنت عن حظر كلي أيام الجمع عشان تحاول تخلي الوضع تحت السيطرة.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لو",
+        "latin": "law",
+        "arti": "jika/seandainya",
+        "contoh_kalimat": "ويا سلام لو تدوقو المهلبية",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "يخلي",
+        "latin": "yikhalli",
+        "arti": "membuat/menjadikan",
+        "contoh_kalimat": "ضوئية عشان يخلي السيارات تمر.",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "يعتمد",
+        "latin": "yi'timid",
+        "arti": "bergantung",
+        "contoh_kalimat": "عربي ريفي يعتمد على المناقيش",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "حتى",
+        "latin": "hatta",
+        "arti": "bahkan/hingga",
+        "contoh_kalimat": "وتحترم رأيي حتى لو ما",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لأنك",
+        "latin": "li'annak",
+        "arti": "karena kamu",
+        "contoh_kalimat": "إشي شكرا لأنك فرجتينا معنى",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لأني",
+        "latin": "li'anni",
+        "arti": "karena aku",
+        "contoh_kalimat": "ضليت ساكتة لأني ما عرفت",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لتحققوا",
+        "latin": "lituhaqqiqu",
+        "arti": "agar kalian wujudkan",
+        "contoh_kalimat": "تحلموا وتجتهدوا لتحققوا أحلامكم لا",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليه",
+        "latin": "leeh",
+        "arti": "kenapa",
+        "contoh_kalimat": "يلا يلا ليه؟ شو صار",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليقدروا",
+        "latin": "la-ye2dro",
+        "arti": "agar mereka bisa",
+        "contoh_kalimat": "اكيد ليقدروا يتواصلوا",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لاطور",
+        "latin": "la-attawwer",
+        "arti": "untuk mengembangkan",
+        "contoh_kalimat": "لاطور شغلي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لاحسن",
+        "latin": "la-7assen",
+        "arti": "untuk memperbaiki",
+        "contoh_kalimat": "لاحسن شغلي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "بسببهم",
+        "latin": "b-sababon",
+        "arti": "karena mereka",
+        "contoh_kalimat": "صارت بسببهم",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "طالما",
+        "latin": "talama",
+        "arti": "selama",
+        "contoh_kalimat": "طالما التليفون بايدي",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لانه",
+        "latin": "la2anno",
+        "arti": "karena",
+        "contoh_kalimat": "لانه انا",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لاتعلم",
+        "latin": "la-at'allam",
+        "arti": "untuk saya belajar",
+        "contoh_kalimat": "بستعمله لاتعلم الطبخ",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ولانه",
+        "latin": "w-la2anno",
+        "arti": "dan karena",
+        "contoh_kalimat": "ولانه ما لازم",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لنحن",
+        "latin": "la-ne7na",
+        "arti": "supaya kita",
+        "contoh_kalimat": "لنحن نقدر نحسن",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لاشوف",
+        "latin": "la-shouf",
+        "arti": "agar saya lihat",
+        "contoh_kalimat": "وناطره لاشوف",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لدرجه",
+        "latin": "la-daraje",
+        "arti": "sampai taraf",
+        "contoh_kalimat": "مش لدرجه",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لتاخذوا",
+        "latin": "la-te2khodo",
+        "arti": "agar kalian mengambil",
+        "contoh_kalimat": "فيكم تشتركوا لتاخذوا",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ل",
+        "latin": "la",
+        "arti": "untuk/agar",
+        "contoh_kalimat": "لتوصل الرساله ل",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليرجعوا",
+        "latin": "la-yerja'o",
+        "arti": "agar mereka kembali",
+        "contoh_kalimat": "ليرجعوا هم يتلقوا",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليتواصلوا",
+        "latin": "la-yitwasalo",
+        "arti": "agar mereka berkomunikasi",
+        "contoh_kalimat": "عملوهم ليتواصلوا الناس",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "فانه",
+        "latin": "fa-enno",
+        "arti": "maka bahwa",
+        "contoh_kalimat": "فانه ايه",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لتشوفوا",
+        "latin": "la-tshoufo",
+        "arti": "agar kalian melihat",
+        "contoh_kalimat": "مع الترجمة لتشوفوا الكلمات",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لتفهموا",
+        "latin": "la-tefhamo",
+        "arti": "agar kalian memahami",
+        "contoh_kalimat": "ترجمة لتفهموا المحتوى",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "فعشان",
+        "latin": "fa-'ashan",
+        "arti": "maka karena",
+        "contoh_kalimat": "فعشان هيك",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "ليشوفوا",
+        "latin": "la-yshoufo",
+        "arti": "untuk melihat",
+        "contoh_kalimat": "بيجوا ليشوفوا هيدا البلد",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "وحسب",
+        "latin": "w-hasab",
+        "arti": "dan tergantung",
+        "contoh_kalimat": "وحسب هون في ناس",
+        "topic_name": "Alasan & Sebab Akibat"
+      },
+      {
+        "kata_arab": "لتشوفو",
+        "latin": "la-tshoufo",
+        "arti": "agar kalian melihat",
+        "contoh_kalimat": "بدون ترجمات لتشوفو",
+        "topic_name": "Alasan & Sebab Akibat"
+      }
+    ]
+  },
+  "Setuju & Tidak Setuju": {
+    "seen": [
+      "أبدا",
+      "أدعم",
+      "وأكيد",
+      "مو",
+      "أظن",
+      "أيوه",
+      "اكيد",
+      "اي",
+      "رأيي",
+      "صاح",
+      "مصدق",
+      "معاك",
+      "معك",
+      "يوافقوا",
+      "اوك",
+      "فاي"
+    ],
+    "kept": [
+      {
+        "kata_arab": "أبدا",
+        "latin": "abadan",
+        "arti": "sama sekali (tidak)",
+        "contoh_kalimat": "وعلى عكس العائلات الغربية، العشا عنا مش أساسي أبدا،ً ودايما بكون متأخر ما بين الساعة 11-9 بالليل، ويا إنو بناكل مقالي، أو بنعيد سفرة الفطور، أو بنسخن الأكل البايت من الغدا.",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "أدعم",
+        "latin": "ad'am",
+        "arti": "aku mendukung",
+        "contoh_kalimat": "يعني أنا مثلا، بحب أدعم ّ زي زمان، وندعم اقتصادنا ونر المحلات والمطاعم المحلية اللي كنت أروح عليها على طول.",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "وأكيد",
+        "latin": "wa-akiid",
+        "arti": "dan pasti",
+        "contoh_kalimat": "وأكيد بعصروه بالشتا لأنه سعره أرخص بموسمه.",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "مو",
+        "latin": "mu",
+        "arti": "bukan",
+        "contoh_kalimat": "الساونا. دلال مو شاطرة أبدا",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "أظن",
+        "latin": "azhunn",
+        "arti": "aku kira",
+        "contoh_kalimat": "يجي ميس أظن سالي بدها",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "أيوه",
+        "latin": "aywah",
+        "arti": "ya",
+        "contoh_kalimat": "أنا خبرته أيوه أيوه ضربة",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "اكيد",
+        "latin": "akiid",
+        "arti": "pasti",
+        "contoh_kalimat": "تعمل اشي اكيد لا شو",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "اي",
+        "latin": "ay",
+        "arti": "iya/apa saja",
+        "contoh_kalimat": "كمان مره اي مش معقولة",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "رأيي",
+        "latin": "ra'yi",
+        "arti": "pendapatku",
+        "contoh_kalimat": "كلمتي وتحترم رأيي حتى لو",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "صاح",
+        "latin": "saah",
+        "arti": "benar",
+        "contoh_kalimat": "بدون تغذية صاح وتمرين مستمرة",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "مصدق",
+        "latin": "musaddiq",
+        "arti": "percaya",
+        "contoh_kalimat": "انا مش مصدق حالي احنا",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "معاك",
+        "latin": "ma'aak",
+        "arti": "denganmu",
+        "contoh_kalimat": "ندفع لمنتخبنا معاك حق رح",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "معك",
+        "latin": "ma'ak",
+        "arti": "denganmu",
+        "contoh_kalimat": "بكرة تخديه معك عشان تبعتيلي",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "يوافقوا",
+        "latin": "ywaafqu",
+        "arti": "mereka setuju",
+        "contoh_kalimat": "ما راح يوافقوا أبدا على",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "اوك",
+        "latin": "ok",
+        "arti": "oke",
+        "contoh_kalimat": "اكيد اوك",
+        "topic_name": "Setuju & Tidak Setuju"
+      },
+      {
+        "kata_arab": "فاي",
+        "latin": "fa-ayy",
+        "arti": "maka ya",
+        "contoh_kalimat": "فاي هول كانوا",
+        "topic_name": "Setuju & Tidak Setuju"
+      }
+    ]
+  },
+  "Menceritakan Pengalaman": {
+    "seen": [
+      "أجبرتنا",
+      "أعلنت",
+      "أكلت",
+      "ألهمنا",
+      "انتهى",
+      "انسمحلنا",
+      "بطل",
+      "تخيلت",
+      "جابها",
+      "جع",
+      "حضرته",
+      "صار",
+      "صرنا",
+      "ضر",
+      "طار",
+      "عمرك",
+      "عمرها",
+      "قررنا",
+      "قلتله",
+      "كان",
+      "كانت",
+      "كنا",
+      "كنت",
+      "نقلنالكم",
+      "وصار",
+      "وصلتلو",
+      "استلمتها",
+      "بلشت",
+      "بلشنا",
+      "تجربة",
+      "راحت",
+      "رحت",
+      "سمعت",
+      "شفت",
+      "شفتك",
+      "شفتها",
+      "لقت",
+      "وبطلنا",
+      "وبلشنا",
+      "وحجزت",
+      "وصرنا",
+      "وطلع",
+      "وكان",
+      "وكانت",
+      "وكنا",
+      "وكنت",
+      "ونزلنا",
+      "تتصادف",
+      "ولما",
+      "ولهلأ",
+      "ومرة",
+      "اختاروا",
+      "اعطناها",
+      "انسيتوا",
+      "انضحك",
+      "بالآخر",
+      "تعبت",
+      "جابت",
+      "جابه",
+      "حس",
+      "حسستك",
+      "حضرتوا",
+      "حكا",
+      "حكوا",
+      "حكى",
+      "حكيتي",
+      "خبرته",
+      "دخل",
+      "دفعنا",
+      "دورت",
+      "راحوا",
+      "ربحت",
+      "ربيت",
+      "رحتي",
+      "ستر",
+      "شوفت",
+      "ضليت",
+      "ظل",
+      "عرفت",
+      "عرفتوا",
+      "عرفنا",
+      "عملت",
+      "عملتوا",
+      "عملتوها",
+      "عملتي",
+      "عملناه",
+      "فتشت",
+      "فرجتينا",
+      "فكيناها",
+      "قال",
+      "قبلت",
+      "قتلت",
+      "قتلته",
+      "قضى",
+      "قلتلك",
+      "كانوا",
+      "كتبته",
+      "كتبتها",
+      "كتبتي",
+      "لقوا",
+      "لقيت",
+      "لقيتك",
+      "لقيته",
+      "ناديتوني",
+      "نزلت",
+      "نصحته",
+      "نقيتها",
+      "وجبته",
+      "وحطيته",
+      "وطلعت",
+      "وعمل",
+      "بحياتي",
+      "اجوا",
+      "فتح",
+      "اتفاجا",
+      "لاحظتوا",
+      "حولت",
+      "جربته",
+      "نسيت",
+      "بطلت",
+      "رديت",
+      "صرت",
+      "تجربتكم",
+      "شافوني",
+      "وحبوا",
+      "وقرروا",
+      "حبيتها",
+      "وقررت",
+      "خبرتكم",
+      "بلشتها",
+      "عاجبتني",
+      "قلنا",
+      "فتحت",
+      "عملنا",
+      "لاحظت",
+      "وقفته",
+      "وانبسط",
+      "فتت",
+      "ضيع",
+      "صاروا",
+      "عملوهم",
+      "بلش",
+      "جربت",
+      "سمعتوها",
+      "فكنت",
+      "عملوا",
+      "اتزوج"
+    ],
+    "kept": [
+      {
+        "kata_arab": "أجبرتنا",
+        "latin": "ajbaratna",
+        "arti": "memaksa kami",
+        "contoh_kalimat": "وأكيد عم نشتاق لشغلنا ولروتينا اليومي بس أجبرتنا جائحة الكوفيد 19 إنو نتأمل بحياتنا بطرق جديدة.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "أعلنت",
+        "latin": "a'lanat",
+        "arti": "mengumumkan (ia, fem.)",
+        "contoh_kalimat": "وعنا هون بعمان عم يصير حظر مصغر، حكومتنا أعلنت عن حظر كلي أيام الجمع عشان تحاول تخلي الوضع تحت السيطرة.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "أكلت",
+        "latin": "akalt",
+        "arti": "aku makan (lampau)",
+        "contoh_kalimat": "أو عمرك أكلت علبة بسكوت كاملة مع إنك كنت مخطط تاكل بس بسكوتة وحدة؟",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ألهمنا",
+        "latin": "alhamana",
+        "arti": "menginspirasi kami",
+        "contoh_kalimat": "والشغل من البيت صرنا نعتبره يزة، لإنو بيشغل وقتنا، ولإنو ألهمنا إنو نفكر ونكتب عن الوعي التام.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "انتهى",
+        "latin": "intaha",
+        "arti": "telah berakhir",
+        "contoh_kalimat": "يعني نطلع نشتري من المحلات وناكل بره بمطاعمنا المفضلة ونأرجل أيام الخميس مع صحابنا رح حياه يومية عادية\" كإنو انتهى يكون حرية كبيرة مرة جديدة.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "انسمحلنا",
+        "latin": "insamahlana",
+        "arti": "kami diizinkan",
+        "contoh_kalimat": "وهلق لإنو انسمحلنا نطلع أيام الأسبوع، صار لازم ندير بالنا كتير على سلامتنا، وناخد معنا معقم الإيدين وين ما نروح ونكون واعين للتباعد الاجتماعي ونلبس قناع الوجه اللي نقيناه.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بطل",
+        "latin": "battal",
+        "arti": "berhenti",
+        "contoh_kalimat": "ولإنو بطل عنا روتين سريع بلا وعي وما في أمان بشكل عام وين ما نروح، انجبرنا نبطئ ونفكر ونتأمل بالحياه.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "تخيلت",
+        "latin": "takhayyalt",
+        "arti": "aku membayangkan",
+        "contoh_kalimat": "بس هاي هي حقيقتنا المرعبة، اللي جد بنحسها خيالية والي ما عمرها تخيلت إنو مدينتنا على الحال اللي وصلتلو اليوم.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "جابها",
+        "latin": "jaabha",
+        "arti": "membawanya (fem.)",
+        "contoh_kalimat": "ّف معنى الوعي التام حسب شو بيعني لسلسلة دروسنا هاي قررنا إنو نعر لإلنا وخاصة في أوقات الحظر الأسبوعي عنا في عمان، الأردن، وكمان ّف على معنى الوعي المخاوف والهموم إلى جابها وباء الكوفيد19- لحياتنا.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حضرته",
+        "latin": "hadhartu",
+        "arti": "aku menonton/hadiri (film)",
+        "contoh_kalimat": "ولو حدا خبرني زمان إنو رح يجي يوم نحس حالنا فيه محبوسين جوه بيوتنا، كان قلتله شكلك مخربط بين عمان وبين مشهد من فلم بائس حضرته.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "صار",
+        "latin": "saar",
+        "arti": "menjadi/terjadi",
+        "contoh_kalimat": "وهلق لإنو انسمحلنا نطلع أيام الأسبوع، صار لازم ندير بالنا كتير على سلامتنا، وناخد معنا معقم الإيدين وين ما نروح ونكون واعين للتباعد الاجتماعي ونلبس قناع الوجه اللي نقيناه.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "صرنا",
+        "latin": "sirna",
+        "arti": "kami menjadi",
+        "contoh_kalimat": "والشغل من البيت صرنا نعتبره يزة، لإنو بيشغل وقتنا، ولإنو ألهمنا إنو نفكر ونكتب عن الوعي التام.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "طار",
+        "latin": "taar",
+        "arti": "terbang/berlalu",
+        "contoh_kalimat": "وبتروح عشغلك وبعدين بتستوعب إنك صاحي عالخمسة الصبح واليوم طار لحاله ولازم تستعجل بالرجعة عالبيت عشان تتغلب عالأزمة؟",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عمرك",
+        "latin": "'umrak",
+        "arti": "pernahkah kamu",
+        "contoh_kalimat": "سقت لمكان وبعد ما وصلت استوعبت إنك ما بتقدر تتذكر أي إشي عمرك ُ ُ عن الطريق؟",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عمرها",
+        "latin": "'umrha",
+        "arti": "pernahkah dia (pr)",
+        "contoh_kalimat": "بس هاي هي حقيقتنا المرعبة، اللي جد بنحسها خيالية والي ما عمرها تخيلت إنو مدينتنا على الحال اللي وصلتلو اليوم.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قررنا",
+        "latin": "qarrarna",
+        "arti": "kami memutuskan",
+        "contoh_kalimat": "ّف معنى الوعي التام حسب شو بيعني لسلسلة دروسنا هاي قررنا إنو نعر لإلنا وخاصة في أوقات الحظر الأسبوعي عنا في عمان، الأردن، وكمان ّف على معنى الوعي المخاوف والهموم إلى جابها وباء الكوفيد19- لحياتنا.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قلتله",
+        "latin": "qultillu",
+        "arti": "aku berkata padanya",
+        "contoh_kalimat": "ولو حدا خبرني زمان إنو رح يجي يوم نحس حالنا فيه محبوسين جوه بيوتنا، كان قلتله شكلك مخربط بين عمان وبين مشهد من فلم بائس حضرته.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كان",
+        "latin": "kaan",
+        "arti": "adalah (lampau)",
+        "contoh_kalimat": "ولو حدا خبرني زمان إنو رح يجي يوم نحس حالنا فيه محبوسين جوه بيوتنا، كان قلتله شكلك مخربط بين عمان وبين مشهد من فلم بائس حضرته.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كانت",
+        "latin": "kaanat",
+        "arti": "adalah (lampau, fem.)",
+        "contoh_kalimat": "ويعطيكم ألف عافية في حقيقة ما في مهرب منها، وهي إنو سنة 2020 كانت سنة مليانة صعوبات على الكل.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كنا",
+        "latin": "kunna",
+        "arti": "kami adalah (lampau)",
+        "contoh_kalimat": "وهلق لإنو ما بنسوق عالشغل كل يوم صرنا نعرف قديش كنا مستعجلين بشغلنا، وباستراحة غدانا، وبطريقنا للرجعة للبيت.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كنت",
+        "latin": "kunt",
+        "arti": "aku adalah (lampau)",
+        "contoh_kalimat": "أو عمرك أكلت علبة بسكوت كاملة مع إنك كنت مخطط تاكل بس بسكوتة وحدة؟",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وصلتلو",
+        "latin": "wasaltilu",
+        "arti": "sampai padanya",
+        "contoh_kalimat": "بس هاي هي حقيقتنا المرعبة، اللي جد بنحسها خيالية والي ما عمرها تخيلت إنو مدينتنا على الحال اللي وصلتلو اليوم.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "استلمتها",
+        "latin": "istalamtha",
+        "arti": "aku menerimanya",
+        "contoh_kalimat": "الجديدة اللي استلمتها بعمان. بتمنى",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بلشت",
+        "latin": "balashet",
+        "arti": "aku mulai",
+        "contoh_kalimat": "وبعد أسبوع، بلشت أروح على",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بلشنا",
+        "latin": "balashna",
+        "arti": "kami mulai",
+        "contoh_kalimat": "تمر. وبعديها بلشنا ندردش وبطلنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "تجربة",
+        "latin": "tajribah",
+        "arti": "pengalaman",
+        "contoh_kalimat": "وهالأجواء بتخلق تجربة ممتعة ومريحة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "راحت",
+        "latin": "raahat",
+        "arti": "ia (fem.) pergi",
+        "contoh_kalimat": "وحدة فينا راحت من طريق.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "رحت",
+        "latin": "rihit",
+        "arti": "aku pergi",
+        "contoh_kalimat": "ماركت. ولما رحت على أوروبا،",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "سمعت",
+        "latin": "sami't",
+        "arti": "aku mendengar",
+        "contoh_kalimat": "مبسوطة إني سمعت منك وشكرا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "شفت",
+        "latin": "shift",
+        "arti": "aku melihat",
+        "contoh_kalimat": "على أوروبا، شفت محلات الأكل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "شفتك",
+        "latin": "shiftik",
+        "arti": "aku melihatmu",
+        "contoh_kalimat": "آخر مرة شفتك فيها، بس",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "شفتها",
+        "latin": "shiftha",
+        "arti": "aku melihatnya (pr)",
+        "contoh_kalimat": "بالست اللي شفتها بالقطار، وكنت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لقت",
+        "latin": "laqat",
+        "arti": "ia (pr) menemukan/mendapatkan",
+        "contoh_kalimat": "البلد لإنها لقت شغل بلندن.",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وحجزت",
+        "latin": "wa-hajazt",
+        "arti": "dan aku memesan",
+        "contoh_kalimat": "ودلال عالعقبة. وحجزت في واحد",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وطلع",
+        "latin": "wa-tili'",
+        "arti": "dan ternyata",
+        "contoh_kalimat": "شو في. وطلع القطار موقف",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ونزلنا",
+        "latin": "wa-nizilna",
+        "arti": "dan kami turun",
+        "contoh_kalimat": "حاسين بالزهق. ونزلنا من القطار",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "تتصادف",
+        "latin": "titsaadaf",
+        "arti": "kebetulan bertemu",
+        "contoh_kalimat": "مرات ممكن تتصادف روحتك عجفرا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ولما",
+        "latin": "wa-lamma",
+        "arti": "dan ketika",
+        "contoh_kalimat": "أجواء مريحة. ولما رحنا أنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ولهلأ",
+        "latin": "wa-lihalla",
+        "arti": "dan hingga sekarang",
+        "contoh_kalimat": "وصرنا صاحبات ولهلأ بنتواصل عن",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ومرة",
+        "latin": "wa-marrah",
+        "arti": "dan sekali",
+        "contoh_kalimat": "على كندا، ومرة كنت بالقطار",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "اختاروا",
+        "latin": "ikhtaaru",
+        "arti": "mereka memilih",
+        "contoh_kalimat": "معلمات العربي اختاروا المقال اللي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "اعطناها",
+        "latin": "a'tayynaaha",
+        "arti": "kami memberikannya",
+        "contoh_kalimat": "انو اذا اعطناها للمنتخب رح",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "انسيتوا",
+        "latin": "nsiitu",
+        "arti": "kalian lupakan",
+        "contoh_kalimat": "هناك استنوا انسيتوا مية القمر",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بالآخر",
+        "latin": "bil-aakhir",
+        "arti": "pada akhirnya",
+        "contoh_kalimat": "رح أنقي بالآخر شو سالي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "تعبت",
+        "latin": "ti'ibt",
+        "arti": "aku lelah",
+        "contoh_kalimat": "خلاص انا تعبت منكم وازهقت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "جابت",
+        "latin": "jaabat",
+        "arti": "ia (pr) membawa",
+        "contoh_kalimat": "إذا سالي جابت حرباية على",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "جابه",
+        "latin": "jaabu",
+        "arti": "ia membawanya",
+        "contoh_kalimat": "رعب شو جابه هذا عنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حس",
+        "latin": "hiss",
+        "arti": "merasa",
+        "contoh_kalimat": "فراغ اللي حس إنه بده",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حسستك",
+        "latin": "hassastik",
+        "arti": "membuatmu merasa",
+        "contoh_kalimat": "إشي هيك حسستك مش عبعضك",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حضرتوا",
+        "latin": "hadartu",
+        "arti": "kalian menonton",
+        "contoh_kalimat": "لسه ما حضرتوا حلقة الحرباي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حكا",
+        "latin": "haka",
+        "arti": "berbicara",
+        "contoh_kalimat": "اشي عطا حكا لسه ممغوصين",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حكيتي",
+        "latin": "hakayti",
+        "arti": "kamu (pr) berbicara",
+        "contoh_kalimat": "وشكرا لأنه حكيتي لي متأسفة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "خبرته",
+        "latin": "khabbartu",
+        "arti": "aku memberitahunya",
+        "contoh_kalimat": "بالتصوير. أنا خبرته أيوه أيوه",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "دخل",
+        "latin": "dakhal",
+        "arti": "masuk",
+        "contoh_kalimat": "التهريب كيف دخل سند الكتكوت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "دفعنا",
+        "latin": "dafa'na",
+        "arti": "kami membayar",
+        "contoh_kalimat": "وفوق هيك دفعنا له كل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "دورت",
+        "latin": "dawwart",
+        "arti": "aku mencari",
+        "contoh_kalimat": "أم إنصاف دورت عليه بكل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "راحوا",
+        "latin": "raahu",
+        "arti": "mereka pergi",
+        "contoh_kalimat": "سند خلص راحوا مستحيل الى",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ربحت",
+        "latin": "ribhet",
+        "arti": "kamu menang",
+        "contoh_kalimat": "الطلاب إنك ربحت وراح أعطيك",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "رحتي",
+        "latin": "rihti",
+        "arti": "kamu (pr) pergi",
+        "contoh_kalimat": "شو في؟ رحتي عند معلمة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "شوفت",
+        "latin": "shuft",
+        "arti": "aku lihat",
+        "contoh_kalimat": "علينا بس شوفت ضربتك قديش",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ضليت",
+        "latin": "dhalleet",
+        "arti": "aku tetap",
+        "contoh_kalimat": "وعصبتي علي ضليت ساكتة لأني",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ظل",
+        "latin": "zhall",
+        "arti": "tetap",
+        "contoh_kalimat": "البيت شو ظل كل إشي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عرفت",
+        "latin": "'irift",
+        "arti": "aku tahu",
+        "contoh_kalimat": "لأني ما عرفت شو أحكي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عرفنا",
+        "latin": "'irifna",
+        "arti": "kami tahu",
+        "contoh_kalimat": "كالعادة. هلا عرفنا سبب المشاكل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عملت",
+        "latin": "'imilt",
+        "arti": "aku melakukan",
+        "contoh_kalimat": "أكيد ما عملت هيك يا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عملتي",
+        "latin": "'imilti",
+        "arti": "kamu (pr) melakukan",
+        "contoh_kalimat": "هيك شو عملتي ما عملت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فتشت",
+        "latin": "fattasht",
+        "arti": "aku mencari",
+        "contoh_kalimat": "آخر الحصة فتشت عليكي ما",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فرجتينا",
+        "latin": "farjeetiina",
+        "arti": "kamu menunjukkan pada kami",
+        "contoh_kalimat": "شكرا لأنك فرجتينا معنى الشجاعة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فكيناها",
+        "latin": "fakkaynaaha",
+        "arti": "kami menyelesaikannya",
+        "contoh_kalimat": "بلحظتها هاي فكيناها كلها مرة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قال",
+        "latin": "qaal",
+        "arti": "berkata",
+        "contoh_kalimat": "أستاذ الرياضة قال لنا نتمرن",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قبلت",
+        "latin": "qibilt",
+        "arti": "aku menerima",
+        "contoh_kalimat": "بطل الأبطال قبلت التحدي عمو",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قلتلك",
+        "latin": "qiltillak",
+        "arti": "aku bilang padamu",
+        "contoh_kalimat": "ابو كمونة قلتلك ضحك علينا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كانوا",
+        "latin": "kaanu",
+        "arti": "mereka adalah",
+        "contoh_kalimat": "الظروف اللي كانوا بالبوكس الحمراء؟",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كتبته",
+        "latin": "katabtuh",
+        "arti": "aku menulisnya",
+        "contoh_kalimat": "المقال اللي كتبته عن الشجاعة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "كتبتها",
+        "latin": "katabtha",
+        "arti": "aku menulisnya (pr)",
+        "contoh_kalimat": "المقال اللي كتبتها تنزل بالمجلة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لقوا",
+        "latin": "laqu",
+        "arti": "mereka menemukan",
+        "contoh_kalimat": "اه بس لقوا جليد على",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لقيت",
+        "latin": "laqeet",
+        "arti": "aku menemukan",
+        "contoh_kalimat": "بابا أنا لقيت الحل أظن",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لقيته",
+        "latin": "laqeetuh",
+        "arti": "aku menemukannya",
+        "contoh_kalimat": "محل ما لقيته مش عارف",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "ناديتوني",
+        "latin": "naadaytuuni",
+        "arti": "kalian memanggilku",
+        "contoh_kalimat": "الأول كان ناديتوني هسا بدنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "نزلت",
+        "latin": "nazalat",
+        "arti": "turun/terbit",
+        "contoh_kalimat": "إشي ماما؟ نزلت المقالة؟ لا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "نصحته",
+        "latin": "nasahtuh",
+        "arti": "aku menasihatinya",
+        "contoh_kalimat": "وبنمغص شووووو نصحته مية مرة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "نقيتها",
+        "latin": "naqqaytha",
+        "arti": "aku memilihnya",
+        "contoh_kalimat": "اللي أنا نقيتها وهلأ رح",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وجبته",
+        "latin": "wajjabtuh",
+        "arti": "aku membawanya",
+        "contoh_kalimat": "أسبوع عايش وجبته على المدرسة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وحطيته",
+        "latin": "wa-hattaytuh",
+        "arti": "dan aku meletakkannya",
+        "contoh_kalimat": "خلصت المقال وحطيته بالبوكس الأخضر",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وطلعت",
+        "latin": "wa-tili'at",
+        "arti": "dan ternyata",
+        "contoh_kalimat": "نحمي الفريق وطلعت هالخلطة رهيبة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وعمل",
+        "latin": "wa-'imil",
+        "arti": "dan dia melakukan",
+        "contoh_kalimat": "مرات. شو وعمل هيك بوحدة",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بحياتي",
+        "latin": "bi7ayeti",
+        "arti": "dalam hidupku",
+        "contoh_kalimat": "بحياتي كيف بستعمل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "اجوا",
+        "latin": "eja",
+        "arti": "mereka datang",
+        "contoh_kalimat": "اجوا لعندي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فتح",
+        "latin": "fata7",
+        "arti": "membuka",
+        "contoh_kalimat": "فتح لي فرص",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "اتفاجا",
+        "latin": "itfaje2",
+        "arti": "saya kaget",
+        "contoh_kalimat": "وعن جد اتفاجا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لاحظتوا",
+        "latin": "la7azto",
+        "arti": "kalian sadari",
+        "contoh_kalimat": "يمكن لاحظتوا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حولت",
+        "latin": "hawwalt",
+        "arti": "saya beralih",
+        "contoh_kalimat": "حولت على الانستغرام",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "جربته",
+        "latin": "jarrabto",
+        "arti": "saya mencobanya",
+        "contoh_kalimat": "تيك توك جربته",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "نسيت",
+        "latin": "nsit",
+        "arti": "saya lupa",
+        "contoh_kalimat": "نسيت اعملها",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بطلت",
+        "latin": "battalet",
+        "arti": "berhenti (f)",
+        "contoh_kalimat": "انه بطلت الناس",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "رديت",
+        "latin": "radeit",
+        "arti": "saya membalas",
+        "contoh_kalimat": "اذا انا ما رديت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "صرت",
+        "latin": "sirt",
+        "arti": "saya menjadi",
+        "contoh_kalimat": "نحن صرنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "تجربتكم",
+        "latin": "tajrabtkon",
+        "arti": "pengalaman kalian",
+        "contoh_kalimat": "شو تجربتكم انتم",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "شافوني",
+        "latin": "shafouni",
+        "arti": "mereka melihatku",
+        "contoh_kalimat": "شافوني على اليوتيوب",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وحبوا",
+        "latin": "w-habbo",
+        "arti": "dan mereka suka",
+        "contoh_kalimat": "شافوني وحبوا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وقرروا",
+        "latin": "w-2arraro",
+        "arti": "dan mereka memutuskan",
+        "contoh_kalimat": "وقرروا انه",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "حبيتها",
+        "latin": "habbeitha",
+        "arti": "saya menyukainya",
+        "contoh_kalimat": "شفتها حبيتها",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وقررت",
+        "latin": "w-2arrart",
+        "arti": "dan saya memutuskan",
+        "contoh_kalimat": "حبيتها وقررت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "خبرتكم",
+        "latin": "khabbartkon",
+        "arti": "saya beri tahu kalian",
+        "contoh_kalimat": "ما خبرتكم",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بلشتها",
+        "latin": "ballashtha",
+        "arti": "saya memulainya",
+        "contoh_kalimat": "يمكن بلشتها",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عاجبتني",
+        "latin": "'ajbetni",
+        "arti": "saya suka (dulu)",
+        "contoh_kalimat": "بطلت عاجبتني حياتي",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "قلنا",
+        "latin": "2olna",
+        "arti": "kita bilang",
+        "contoh_kalimat": "ومثل ما قلنا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فتحت",
+        "latin": "fata7t",
+        "arti": "saya membuka",
+        "contoh_kalimat": "ليه فتحت الانستغرام",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عملنا",
+        "latin": "'amalna",
+        "arti": "kita melakukan",
+        "contoh_kalimat": "انه نحن عملنا شيء",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "لاحظت",
+        "latin": "la7azt",
+        "arti": "saya menyadari",
+        "contoh_kalimat": "لما لاحظت انه",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وقفته",
+        "latin": "wa22afto",
+        "arti": "saya menghentikannya",
+        "contoh_kalimat": "دغري وقفته",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "وانبسط",
+        "latin": "w-inbaset",
+        "arti": "dan saya senang",
+        "contoh_kalimat": "موجوده بالمكان وانبسط",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فتت",
+        "latin": "fatt",
+        "arti": "saya masuk",
+        "contoh_kalimat": "بفوت انا فتت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "صاروا",
+        "latin": "saro",
+        "arti": "mereka menjadi",
+        "contoh_kalimat": "صاروا عم بيهتموا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عملوهم",
+        "latin": "'amalouhon",
+        "arti": "mereka membuatnya",
+        "contoh_kalimat": "هن عملوهم ليتواصلوا",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "بلش",
+        "latin": "balash",
+        "arti": "mulai",
+        "contoh_kalimat": "هذا الشيء بلش يصير",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "جربت",
+        "latin": "jarrabt",
+        "arti": "saya mencoba",
+        "contoh_kalimat": "جربت هيدا الشغل",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "سمعتوها",
+        "latin": "sme'touha",
+        "arti": "kalian mendengarnya",
+        "contoh_kalimat": "الكلمات اللي ما سمعتوها",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "فكنت",
+        "latin": "fa-kent",
+        "arti": "maka saya dulu",
+        "contoh_kalimat": "فكنت بالوقت",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "عملوا",
+        "latin": "'amalo",
+        "arti": "mereka melakukan",
+        "contoh_kalimat": "هن عملوا cancel",
+        "topic_name": "Menceritakan Pengalaman"
+      },
+      {
+        "kata_arab": "اتزوج",
+        "latin": "etzawwaj",
+        "arti": "saya menikah",
+        "contoh_kalimat": "قبل ما اتزوج",
+        "topic_name": "Menceritakan Pengalaman"
+      }
+    ]
+  },
+  "Membandingkan Hal": {
+    "seen": [
+      "أرخص",
+      "أشهر",
+      "أكبر",
+      "أهم",
+      "زي",
+      "عكس",
+      "غير",
+      "كإنو",
+      "مثل",
+      "وأكتر",
+      "والمختلف",
+      "وزي",
+      "بتتناسب",
+      "بنفس",
+      "قديشخفيفة",
+      "متل",
+      "متلي",
+      "نسبيا",
+      "والمميز",
+      "وكإنو",
+      "وكتير",
+      "خفيفة",
+      "كتيير",
+      "مميزة",
+      "ومعظم",
+      "آخر",
+      "أحلى",
+      "أسهل",
+      "أغلى",
+      "احلى",
+      "الأهبل",
+      "الأول",
+      "اهم",
+      "زيي",
+      "قد",
+      "كأنه",
+      "من",
+      "احسن",
+      "اسهل",
+      "بكثير",
+      "اغلى",
+      "المقارنة",
+      "اكثر",
+      "ومثل",
+      "المقارنه",
+      "اكثريه",
+      "واحسن",
+      "واكثر",
+      "اقل",
+      "واكثريه",
+      "الكثير",
+      "فمثل",
+      "ومتل",
+      "فالاحسن",
+      "الاحسن",
+      "البطيء",
+      "اكتر",
+      "بطيء",
+      "وبطيء"
+    ],
+    "kept": [
+      {
+        "kata_arab": "أرخص",
+        "latin": "arkhas",
+        "arti": "lebih murah",
+        "contoh_kalimat": "وأكيد بعصروه بالشتا لأنه سعره أرخص بموسمه.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أشهر",
+        "latin": "ashhar",
+        "arti": "paling terkenal",
+        "contoh_kalimat": "وكتير بنستخدم الألبان والأجبان في الطبيخ الأردني، سواء بالحلويات أو الأكل المالح، مثلا، أشهر طبق حلويات عنا اسمو الكنافة، وواحد من المكونات الرئيسية فيه هو الجنبة، وبيجي فوقها طبقة شعيرية محمرة وقطر.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أكبر",
+        "latin": "akbar",
+        "arti": "lebih besar",
+        "contoh_kalimat": "بقدر أحكي إنو عنا وعي تام هاي الأيام وصار عنا إدراك أكبر لأفكارنا، ولتصرفاتنا وللي عم بيصير حوالينا بسبب حظر آخر الأسبوع.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أهم",
+        "latin": "aham",
+        "arti": "lebih penting",
+        "contoh_kalimat": "يعني بالعربي، عنا الأكل كتير أهم من مجرد اشي بخلينا عايشين!",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "زي",
+        "latin": "zayy",
+        "arti": "seperti",
+        "contoh_kalimat": "وما بيخلا أي بيت عربي من المواد الأساسية زي شوالات الرز والسكر، وجلن الزيت، وتنكة زيت الزيتون، والمعلبات، والمربى، وتنكة الجبنة، والخبز، والبهارات المتنوعة.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "عكس",
+        "latin": "'aks",
+        "arti": "kebalikan",
+        "contoh_kalimat": "وعلى عكس العائلات الغربية، العشا عنا مش أساسي أبدا،ً ودايما بكون متأخر ما بين الساعة 11-9 بالليل، ويا إنو بناكل مقالي، أو بنعيد سفرة الفطور، أو بنسخن الأكل البايت من الغدا.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "غير",
+        "latin": "ghayr",
+        "arti": "selain/tanpa",
+        "contoh_kalimat": "وعالغدا، الطبخة ما بتزبط من غير جاج أو لحمة أو سمك مع رز وخضار.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "كإنو",
+        "latin": "ka'annu",
+        "arti": "seolah-olah",
+        "contoh_kalimat": "يعني نطلع نشتري من المحلات وناكل بره بمطاعمنا المفضلة ونأرجل أيام الخميس مع صحابنا رح حياه يومية عادية\" كإنو انتهى يكون حرية كبيرة مرة جديدة.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "مثل",
+        "latin": "mitl",
+        "arti": "seperti",
+        "contoh_kalimat": "وبهدول المحلات، في تشكيلة واسعة من المواد التموينية والخضار والفواكة مثل النعناع الأخضر والكوسا والجرجير والفلفل الأخضر الحار.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وأكتر",
+        "latin": "wa-aktar",
+        "arti": "dan lebih banyak",
+        "contoh_kalimat": "وأكتر اللحوم الي منتشر عنا طبخها هي لحمة الخروف المدهنة.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "والمختلف",
+        "latin": "wal-mukhtalif",
+        "arti": "dan yang berbeda",
+        "contoh_kalimat": "والمختلف بطبايخنا انو بنحب الطعم الغني وبنخلط نكهات متنوعة، يعني بنحط الرز مع اللحمة مع الخضار، ووحدة من الأكلات اللي كتير بنحبها واللي بنخلط فيها الرز واللحمة والخضرة اسمها المقلوبة.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وزي",
+        "latin": "wa-zayy",
+        "arti": "dan seperti",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "بتتناسب",
+        "latin": "bititnaasab",
+        "arti": "sesuai/serasi",
+        "contoh_kalimat": "والإضاءة الداخلية بتتناسب مع البريق",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "بنفس",
+        "latin": "binafs",
+        "arti": "dengan sendiri/sama",
+        "contoh_kalimat": "من القطار بنفس المحطة بس",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "قديشخفيفة",
+        "latin": "qaddesh khafiifeh",
+        "arti": "betapa ringannya",
+        "contoh_kalimat": "تدوقو المهلبية قديشخفيفة وطعمها معطر.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "متل",
+        "latin": "mitl",
+        "arti": "seperti",
+        "contoh_kalimat": "مع رز متل طبخة المقلوبة.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "متلي",
+        "latin": "mitli",
+        "arti": "seperti aku",
+        "contoh_kalimat": "هل إنت متلي؟ شخص بتباهى",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "نسبيا",
+        "latin": "nisbiyyan",
+        "arti": "relatif",
+        "contoh_kalimat": "شقتي كبيرة نسبيا، وغرفي المفضلة",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "والمميز",
+        "latin": "wal-mumayyaz",
+        "arti": "dan yang istimewa",
+        "contoh_kalimat": "تحفة فنية. والمميز بجفرا إنه",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وكإنو",
+        "latin": "wa-ka'annu",
+        "arti": "dan seolah-olah",
+        "contoh_kalimat": "بأجوائها المميزة. وكإنو التاريخ عايش",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وكتير",
+        "latin": "wa-ktiir",
+        "arti": "dan banyak",
+        "contoh_kalimat": "وكتير بنستخدم الألبان والأجبان في الطبيخ الأردني، سواء بالحلويات أو الأكل المالح، مثلا، أشهر طبق حلويات عنا اسمو الكنافة، وواحد من المكونات الرئيسية فيه هو الجنبة، وبيجي فوقها طبقة شعيرية محمرة وقطر.",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "خفيفة",
+        "latin": "khafiifah",
+        "arti": "ringan",
+        "contoh_kalimat": "في المكان خفيفة وفي برندة",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "كتيير",
+        "latin": "ktiiir",
+        "arti": "sangat banyak",
+        "contoh_kalimat": "ومريحة كتير كتيير. وبسفرة، بتسمع",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "مميزة",
+        "latin": "mumayyazah",
+        "arti": "istimewa (fem.)",
+        "contoh_kalimat": "طبخة كتير مميزة (بس هادا",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وكتير",
+        "latin": "wa-ktiir",
+        "arti": "dan banyak",
+        "contoh_kalimat": "والمزات والسلطات وكتير بشبع وكمياته",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "ومعظم",
+        "latin": "wa-mu'zham",
+        "arti": "dan kebanyakan",
+        "contoh_kalimat": "مسكر وكنكون، ومعظم الأوقات مليان",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "آخر",
+        "latin": "aakhir",
+        "arti": "akhir/lain",
+        "contoh_kalimat": "أنا عندي آخر حصة فراغ",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أحلى",
+        "latin": "ahla",
+        "arti": "lebih indah",
+        "contoh_kalimat": "عكأس العالم أحلى نشامى ييييييييييييييييي",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أسهل",
+        "latin": "as-hal",
+        "arti": "lebih mudah",
+        "contoh_kalimat": "لا الأسد أسهل حبيبي طيب",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "أغلى",
+        "latin": "aghla",
+        "arti": "paling berharga",
+        "contoh_kalimat": "لرانا أنتي أغلى صديقة عندي",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "احلى",
+        "latin": "ahla",
+        "arti": "lebih indah",
+        "contoh_kalimat": "يا ما احلى هالاحساس فرحتولنا",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "الأهبل",
+        "latin": "al-ahbal",
+        "arti": "yang paling bodoh",
+        "contoh_kalimat": "هاد؟ مين الأهبل، انتا لو",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "الأول",
+        "latin": "al-awwal",
+        "arti": "yang pertama",
+        "contoh_kalimat": "الأخضر بالجرار الأول ماما ما",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اهم",
+        "latin": "aham",
+        "arti": "paling penting",
+        "contoh_kalimat": "الكرت الأصفر اهم اشي ما",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "زيي",
+        "latin": "zayyi",
+        "arti": "sepertiku",
+        "contoh_kalimat": "مين منكم زيي بس أنا",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "قد",
+        "latin": "add",
+        "arti": "sebanyak",
+        "contoh_kalimat": "من هلأ قد ما بدك",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "كأنه",
+        "latin": "ka'annuh",
+        "arti": "seolah-olah",
+        "contoh_kalimat": "أحكي زي كأنه الكلمات تنسرق",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "من",
+        "latin": "min",
+        "arti": "dari",
+        "contoh_kalimat": "بصراحة يعني من أول ما",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "احسن",
+        "latin": "ahsan",
+        "arti": "lebih baik",
+        "contoh_kalimat": "هيدا الشيء احسن",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اسهل",
+        "latin": "as-hal",
+        "arti": "lebih mudah",
+        "contoh_kalimat": "الحياة صارت اسهل",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "بكثير",
+        "latin": "bktir",
+        "arti": "jauh lebih",
+        "contoh_kalimat": "اسهل بكثير",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اغلى",
+        "latin": "aghla",
+        "arti": "paling berharga",
+        "contoh_kalimat": "نحن اغلى شيء",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "المقارنة",
+        "latin": "il-mo2arane",
+        "arti": "perbandingan",
+        "contoh_kalimat": "هي المقارنة",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اكثر",
+        "latin": "aktar",
+        "arti": "lebih",
+        "contoh_kalimat": "اكثر شيء",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "ومثل",
+        "latin": "w-mesel",
+        "arti": "dan seperti",
+        "contoh_kalimat": "ومثل ما قلنا",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "المقارنه",
+        "latin": "il-mo2arane",
+        "arti": "perbandingan itu",
+        "contoh_kalimat": "هي المقارنه",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اكثريه",
+        "latin": "aktariyye",
+        "arti": "kebanyakan",
+        "contoh_kalimat": "اكثريه الاوقات",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "واحسن",
+        "latin": "w-ahsan",
+        "arti": "dan lebih baik",
+        "contoh_kalimat": "احلى مني واحسن مني",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "واكثر",
+        "latin": "w-aktar",
+        "arti": "dan lebih",
+        "contoh_kalimat": "اكثر واكثر",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اقل",
+        "latin": "a2all",
+        "arti": "lebih sedikit",
+        "contoh_kalimat": "اقل من نص ساعه",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "واكثريه",
+        "latin": "w-aktariyye",
+        "arti": "dan kebanyakan",
+        "contoh_kalimat": "واكثريه الاوقات بكون",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "الكثير",
+        "latin": "il-ktir",
+        "arti": "yang banyak",
+        "contoh_kalimat": "بعيد عن هيدي المقارنه عن جد الكثير سيئه",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "فمثل",
+        "latin": "fa-mesel",
+        "arti": "maka seperti",
+        "contoh_kalimat": "فمثل ما قلنا",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "ومتل",
+        "latin": "w-metel",
+        "arti": "dan seperti",
+        "contoh_kalimat": "ومتل ما بيحكوا بالاردن",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "فالاحسن",
+        "latin": "fal-ahsan",
+        "arti": "maka yang terbaik",
+        "contoh_kalimat": "فالاحسن الاحسن",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "الاحسن",
+        "latin": "il-ahsan",
+        "arti": "yang terbaik",
+        "contoh_kalimat": "فالاحسن الاحسن",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "البطيء",
+        "latin": "il-bati2",
+        "arti": "yang lambat",
+        "contoh_kalimat": "على البطيء",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "اكتر",
+        "latin": "aktar",
+        "arti": "lebih",
+        "contoh_kalimat": "ولا كثير اكتر",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "بطيء",
+        "latin": "bati2",
+        "arti": "lambat",
+        "contoh_kalimat": "ركض بطيء",
+        "topic_name": "Membandingkan Hal"
+      },
+      {
+        "kata_arab": "وبطيء",
+        "latin": "w-bati2",
+        "arti": "dan lambat",
+        "contoh_kalimat": "واضح وبطيء",
+        "topic_name": "Membandingkan Hal"
+      }
+    ]
+  },
+  "Keinginan & Kebutuhan": {
+    "seen": [
+      "المحتاجين",
+      "المطلوب",
+      "بدها",
+      "بنتمناه",
+      "بنتمنى",
+      "لازم",
+      "والمحتاجين",
+      "ولازم",
+      "وممكن",
+      "أقدر",
+      "احتجناها",
+      "احتياجاتي",
+      "اضطر",
+      "نفسي",
+      "وبحب",
+      "وبصير",
+      "وعنا",
+      "وعندي",
+      "ببالي",
+      "محتاجة",
+      "مفروض",
+      "وبدهم",
+      "بيحبوا",
+      "فيكم",
+      "بحاجة",
+      "يقدر",
+      "اللزوم",
+      "المفضل",
+      "بدهم",
+      "بحاجه",
+      "منحب",
+      "بيقدر",
+      "وبيحبوا",
+      "وبقدر",
+      "بد",
+      "وبدي",
+      "فبتمنى",
+      "وبتحب",
+      "بتقدروا",
+      "وبتقدروا",
+      "بدكن",
+      "تقدروا",
+      "وبدنا",
+      "وبدو"
+    ],
+    "kept": [
+      {
+        "kata_arab": "المحتاجين",
+        "latin": "al-muhtaajiin",
+        "arti": "orang-orang yang membutuhkan",
+        "contoh_kalimat": "ومع أنو كل الأكلات وال ُسفر بأنواعها خلال فترات الأعياد بتعتمد على الصحبة الحلوة والترابط الأسري، بس بيضل الهدف من الأكل بعيد الفطر هو الأكل بحد ذاته بعد شهر الصيام الطويل إللي بيوصل الصيام عن الأكل فيه لمدة 20 ساعة باليوم في بعض الدول الأوروبية، إلا أنو عيد الأضحى بيكون الهدف منو هو دبح الخرفان وتوزيع اللحمة على المحتاجين الشعب الأردني كتير بحب أكل اللحوم بكل أنواعها، وتقريباً ما في بيت ما بيطبخ لحمه أو جاج أو سمك عالغدا وكل يوم.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "المطلوب",
+        "latin": "al-matluub",
+        "arti": "yang diminta/diperlukan",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بدها",
+        "latin": "badha",
+        "arti": "ia (fem.) butuh/ingin",
+        "contoh_kalimat": "المطبخ جزء مهم بحياة أي بيت عربي، معظم ستات البيوت بيقضوا نص يومهم بالمطبخ لأنو طبخاتنا بدها وقت طويل لتجهز ولأنو نوعية الطعام كمان كتير مهمة عند العرب وعشان هيك بنخزن كميات كبيرة من المواد الأساسية في كل بيت.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بنتمناه",
+        "latin": "binitmannaah",
+        "arti": "kami harapkan",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بنتمنى",
+        "latin": "binitmanna",
+        "arti": "kami berharap",
+        "contoh_kalimat": "بنتمنى منكم تزورو الأردن وتجربو منسفه!",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "لازم",
+        "latin": "laazim",
+        "arti": "harus",
+        "contoh_kalimat": "وبآخر الأسبوع يوم الجمعة تحديدا،ً لازم ننتفخ من أكل الحمصوالفلافل والفول والفتة عالفطور!",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "والمحتاجين",
+        "latin": "wal-muhtaajiin",
+        "arti": "dan orang-orang yang butuh",
+        "contoh_kalimat": "وبتكمل فرحتنا لما نطعمي العيلة والجيران والفقراء والمحتاجين.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "ولازم",
+        "latin": "wa-laazim",
+        "arti": "dan harus",
+        "contoh_kalimat": "وبتروح عشغلك وبعدين بتستوعب إنك صاحي عالخمسة الصبح واليوم طار لحاله ولازم تستعجل بالرجعة عالبيت عشان تتغلب عالأزمة؟",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وممكن",
+        "latin": "wa-mumkin",
+        "arti": "dan mungkin",
+        "contoh_kalimat": "ولأنو هادا العيد بيصادف دبح الخرفان والعجول، فمعظم الأطباق اللي بتتحضر بتعتمد على اللحمة، وممكن الناس يصحوا من بكير عشان ياكلو معلاق الخروف المقلي.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "أقدر",
+        "latin": "aqdar",
+        "arti": "aku bisa",
+        "contoh_kalimat": "ما رح أقدر آجي. عنا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "احتجناها",
+        "latin": "ihtajnaaha",
+        "arti": "kami membutuhkannya",
+        "contoh_kalimat": "وأصلا ما احتجناها لأنو المساحة",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "احتياجاتي",
+        "latin": "ihtiyajaati",
+        "arti": "kebutuhan-kebutuhanku",
+        "contoh_kalimat": "إنى ألبي احتياجاتي وأخصص لحالي",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "اضطر",
+        "latin": "adhtarr",
+        "arti": "aku terpaksa",
+        "contoh_kalimat": "عشان ما اضطر أصف السيارة.",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "نفسي",
+        "latin": "nafsi",
+        "arti": "diriku/inginku",
+        "contoh_kalimat": "أنا كتير نفسي أروح. على",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبحب",
+        "latin": "wa-bahibb",
+        "arti": "dan aku suka",
+        "contoh_kalimat": "في الأسبوع. وبحب آكل صحن",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبصير",
+        "latin": "wa-biysiir",
+        "arti": "dan menjadi",
+        "contoh_kalimat": "بالهدوء والسكينة، وبصير واعية كتير",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وعنا",
+        "latin": "wa-'inda",
+        "arti": "dan kami punya",
+        "contoh_kalimat": "أصف السيارة. وعنا بعمان بقدمولنا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وعندي",
+        "latin": "wa-'indi",
+        "arti": "dan aku punya",
+        "contoh_kalimat": "والتوت والكرز. وعندي قدام بيتي",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "ببالي",
+        "latin": "bibaali",
+        "arti": "dalam pikiranku",
+        "contoh_kalimat": "كل إيشي ببالي ارتحت يا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "محتاجة",
+        "latin": "mihtaajah",
+        "arti": "butuh (pr)",
+        "contoh_kalimat": "أنا مش محتاجة لمساعدة وأنا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "مفروض",
+        "latin": "mafruudh",
+        "arti": "seharusnya",
+        "contoh_kalimat": "في؟ اليوم مفروض المقال اللي",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبدهم",
+        "latin": "wa-badhum",
+        "arti": "dan mereka mau",
+        "contoh_kalimat": "عن الشجاعة وبدهم ياني بكرة",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بيحبوا",
+        "latin": "byhebbo",
+        "arti": "mereka suka",
+        "contoh_kalimat": "بيحبوا يسمعوا شي",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "فيكم",
+        "latin": "fikon",
+        "arti": "kalian bisa",
+        "contoh_kalimat": "فيكم تاخذوا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بحاجة",
+        "latin": "b7aje",
+        "arti": "butuh",
+        "contoh_kalimat": "بحاجة انه يعمل",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "يقدر",
+        "latin": "ye2dar",
+        "arti": "dia bisa",
+        "contoh_kalimat": "بده يقدر يركز",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "اللزوم",
+        "latin": "il-luzoum",
+        "arti": "keperluan",
+        "contoh_kalimat": "زيادة عن اللزوم",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "المفضل",
+        "latin": "il-mfaddal",
+        "arti": "favorit",
+        "contoh_kalimat": "التطبيق المفضل",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بدهم",
+        "latin": "baddon",
+        "arti": "mereka ingin",
+        "contoh_kalimat": "بدهم يدرسوا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بحاجه",
+        "latin": "b7aje",
+        "arti": "butuh",
+        "contoh_kalimat": "بحاجه انه",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "منحب",
+        "latin": "mne7ebb",
+        "arti": "kita suka",
+        "contoh_kalimat": "كلنا منحب ناخذ صور",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بيقدر",
+        "latin": "by2der",
+        "arti": "dia bisa",
+        "contoh_kalimat": "بيقدر هو بالانستغرام",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبيحبوا",
+        "latin": "w-byhebbo",
+        "arti": "dan mereka suka",
+        "contoh_kalimat": "يتعلموا عربي وبيحبوا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبقدر",
+        "latin": "w-ba2der",
+        "arti": "dan saya bisa",
+        "contoh_kalimat": "وبقدر اتعلم يعني",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بد",
+        "latin": "badd",
+        "arti": "ingin (akar kata)",
+        "contoh_kalimat": "بنوع من ال ما بعرف",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبدي",
+        "latin": "w-baddi",
+        "arti": "dan saya ingin",
+        "contoh_kalimat": "انه انا بدي اخذ صور وبدي انشر",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "فبتمنى",
+        "latin": "fa-batmanna",
+        "arti": "maka saya berharap",
+        "contoh_kalimat": "فبتمنى نهاركم يكون حلو",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبتحب",
+        "latin": "w-bit7ebb",
+        "arti": "dan dia suka (f)",
+        "contoh_kalimat": "بتحب الحياة",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بتقدروا",
+        "latin": "bte2dro",
+        "arti": "kalian bisa",
+        "contoh_kalimat": "وانتو بتقدروا تسمعوا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبتقدروا",
+        "latin": "w-bte2dro",
+        "arti": "dan kalian bisa",
+        "contoh_kalimat": "وبتقدروا تشوفوا الترجمة",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "بدكن",
+        "latin": "baddkon",
+        "arti": "kalian ingin",
+        "contoh_kalimat": "اذا بدكن بالعربي",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "تقدروا",
+        "latin": "te2dro",
+        "arti": "kalian bisa",
+        "contoh_kalimat": "كرمال تقدروا تسمعوا",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبدنا",
+        "latin": "w-badna",
+        "arti": "dan kita ingin",
+        "contoh_kalimat": "وبدنا نروح نعمل رياضة",
+        "topic_name": "Keinginan & Kebutuhan"
+      },
+      {
+        "kata_arab": "وبدو",
+        "latin": "w-baddo",
+        "arti": "dan dia ingin",
+        "contoh_kalimat": "وبدو يحسن مهاراته",
+        "topic_name": "Keinginan & Kebutuhan"
+      }
+    ]
+  },
+  "Rencana & Niat": {
+    "seen": [
+      "الهدف",
+      "رح",
+      "مخطط",
+      "أرجع",
+      "أروح",
+      "خططت",
+      "قررت",
+      "وبحاول",
+      "ورح",
+      "ونكون",
+      "يجي",
+      "يعملو",
+      "يكون",
+      "آجي",
+      "تروح",
+      "تروحو",
+      "تكون",
+      "تكوني",
+      "ونطلع",
+      "المستقبل",
+      "ببدأ",
+      "جاي",
+      "جاية",
+      "راح",
+      "مفكر",
+      "منكون",
+      "وخطة",
+      "وراح",
+      "وعدني",
+      "نبلش",
+      "ابلش",
+      "تروحوا",
+      "ناويه",
+      "منروح"
+    ],
+    "kept": [
+      {
+        "kata_arab": "الهدف",
+        "latin": "al-hadaf",
+        "arti": "tujuan itu",
+        "contoh_kalimat": "ومع أنو كل الأكلات وال ُسفر بأنواعها خلال فترات الأعياد بتعتمد على الصحبة الحلوة والترابط الأسري، بس بيضل الهدف من الأكل بعيد الفطر هو الأكل بحد ذاته بعد شهر الصيام الطويل إللي بيوصل الصيام عن الأكل فيه لمدة 20 ساعة باليوم في بعض الدول الأوروبية، إلا أنو عيد الأضحى بيكون الهدف منو هو دبح الخرفان وتوزيع اللحمة على المحتاجين الشعب الأردني كتير بحب أكل اللحوم بكل أنواعها، وتقريباً ما في بيت ما بيطبخ لحمه أو جاج أو سمك عالغدا وكل يوم.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "رح",
+        "latin": "rah",
+        "arti": "akan (partikel masa depan)",
+        "contoh_kalimat": "ولو حدا خبرني زمان إنو رح يجي يوم نحس حالنا فيه محبوسين جوه بيوتنا، كان قلتله شكلك مخربط بين عمان وبين مشهد من فلم بائس حضرته.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "مخطط",
+        "latin": "mkhattat",
+        "arti": "direncanakan",
+        "contoh_kalimat": "أو عمرك أكلت علبة بسكوت كاملة مع إنك كنت مخطط تاكل بس بسكوتة وحدة؟",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "أرجع",
+        "latin": "arja'",
+        "arti": "aku kembali",
+        "contoh_kalimat": "كان نفسي أرجع على بيتي",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "أروح",
+        "latin": "arouh",
+        "arti": "aku pergi",
+        "contoh_kalimat": "الأسبوع، رح أروح أنا ودلال",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "خططت",
+        "latin": "khattatt",
+        "arti": "aku merencanakan",
+        "contoh_kalimat": "نشاط. هل خططت لعطلة آخر",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "قررت",
+        "latin": "qarrart",
+        "arti": "aku memutuskan",
+        "contoh_kalimat": "تروح؟ شو قررت؟ سفرة مطعم",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "وبحاول",
+        "latin": "wa-bhaawil",
+        "arti": "dan aku mencoba",
+        "contoh_kalimat": "زيت زيتون. وبحاول آكل خضار",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ورح",
+        "latin": "wa-rah",
+        "arti": "dan akan",
+        "contoh_kalimat": "مع بعض. ورح أطبخلكم طبخة",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ونكون",
+        "latin": "wa-nkuun",
+        "arti": "dan kami menjadi",
+        "contoh_kalimat": "وهلق لإنو انسمحلنا نطلع أيام الأسبوع، صار لازم ندير بالنا كتير على سلامتنا، وناخد معنا معقم الإيدين وين ما نروح ونكون واعين للتباعد الاجتماعي ونلبس قناع الوجه اللي نقيناه.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "يجي",
+        "latin": "yiji",
+        "arti": "datang",
+        "contoh_kalimat": "ولو حدا خبرني زمان إنو رح يجي يوم نحس حالنا فيه محبوسين جوه بيوتنا، كان قلتله شكلك مخربط بين عمان وبين مشهد من فلم بائس حضرته.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "يعملو",
+        "latin": "ya'mlu",
+        "arti": "mereka melakukan",
+        "contoh_kalimat": "أما بالبرد، بيقضوا الستات وقتهم بعصر الليمون وتفريزه لرمضان عشان يعملو منو عصير ليمون لسفرة رمضان.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "يكون",
+        "latin": "ykuun",
+        "arti": "menjadi/berada",
+        "contoh_kalimat": "يعني نطلع نشتري من المحلات وناكل بره بمطاعمنا المفضلة ونأرجل أيام الخميس مع صحابنا رح حياه يومية عادية\" كإنو انتهى يكون حرية كبيرة مرة جديدة.",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "آجي",
+        "latin": "aaji",
+        "arti": "aku datang",
+        "contoh_kalimat": "رح أقدر آجي. عنا عزيمة",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "تروح",
+        "latin": "truuh",
+        "arti": "kamu pergi",
+        "contoh_kalimat": "وين رح تروح؟ شو قررت؟",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "تروحو",
+        "latin": "truuhu",
+        "arti": "kalian pergi",
+        "contoh_kalimat": "ولا بدكم تروحو على الكافية",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "تكون",
+        "latin": "tkuun",
+        "arti": "kamu/ia menjadi",
+        "contoh_kalimat": "المحلات رح تكون مشهورة وإلها",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "تكوني",
+        "latin": "tkuuni",
+        "arti": "kamu (pr) menjadi",
+        "contoh_kalimat": "بتمنى إنك تكوني بخير ولساتك",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ونطلع",
+        "latin": "wa-nitla'",
+        "arti": "dan kami keluar/pergi",
+        "contoh_kalimat": "الأسواق المحلية، ونطلع رحلة هايكنج",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "آجي",
+        "latin": "aaji",
+        "arti": "aku datang",
+        "contoh_kalimat": "رح أقدر آجي أساعدها أكيد",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "المستقبل",
+        "latin": "al-mustaqbal",
+        "arti": "masa depan",
+        "contoh_kalimat": "أبعته لمجلة المستقبل عشان ينشروه",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ببدأ",
+        "latin": "bibda'",
+        "arti": "mulai",
+        "contoh_kalimat": "بالطنجرة الكتكوت ببدأ يخرب البيت",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "جاي",
+        "latin": "jaay",
+        "arti": "datang",
+        "contoh_kalimat": "وستايل وأنا جاي أخبركم أنه",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "جاية",
+        "latin": "jaayeh",
+        "arti": "akan datang",
+        "contoh_kalimat": "سحابة واحدة جاية من أوروبا",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "راح",
+        "latin": "raah",
+        "arti": "akan/pergi",
+        "contoh_kalimat": "حبيبي، المباراة راح تبلش بعد",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "مفكر",
+        "latin": "mfakkir",
+        "arti": "berpikir/mengira",
+        "contoh_kalimat": "الكبيرة سند مفكر حاله قضى",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "منكون",
+        "latin": "minkuun",
+        "arti": "kami menjadi",
+        "contoh_kalimat": "معي وهيك منكون شرحنا الفرق",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "وخطة",
+        "latin": "wa-khittah",
+        "arti": "dan rencana",
+        "contoh_kalimat": "برنامج التمرين وخطة الاكل مني",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "وراح",
+        "latin": "wa-raah",
+        "arti": "dan akan",
+        "contoh_kalimat": "إنك ربحت وراح أعطيك هدية",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "وعدني",
+        "latin": "wa'adni",
+        "arti": "dia berjanji padaku",
+        "contoh_kalimat": "هو تامر وعدني إذا الكتكوت",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "نبلش",
+        "latin": "niballesh",
+        "arti": "kita mulai",
+        "contoh_kalimat": "خلينا نبلش",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ابلش",
+        "latin": "ballesh",
+        "arti": "saya mulai",
+        "contoh_kalimat": "قبل ما ابلش",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "تروحوا",
+        "latin": "trou7o",
+        "arti": "kalian pergi",
+        "contoh_kalimat": "فيكم تروحوا",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "ناويه",
+        "latin": "nawye",
+        "arti": "berniat (f)",
+        "contoh_kalimat": "وما بكون انا ناويه",
+        "topic_name": "Rencana & Niat"
+      },
+      {
+        "kata_arab": "منروح",
+        "latin": "mnerou7",
+        "arti": "kita pergi",
+        "contoh_kalimat": "وعادةً منروح الساعة ستة",
+        "topic_name": "Rencana & Niat"
+      }
+    ]
+  },
+  "Meminta & Menawarkan Bantuan": {
+    "seen": [
+      "بتقدر",
+      "ألبي",
+      "بتقدري",
+      "خدمة",
+      "ورجتني",
+      "تقدري",
+      "يجهزولي",
+      "أجيب",
+      "أعطيني",
+      "اعطيني",
+      "اعملك",
+      "تساعدني",
+      "تقدر",
+      "دعم",
+      "رجاء",
+      "ساعدني",
+      "تسهل",
+      "بيساعدنا",
+      "بتساعد",
+      "بتساعدنا"
+    ],
+    "kept": [
+      {
+        "kata_arab": "بتقدر",
+        "latin": "bitqdar",
+        "arti": "kamu bisa",
+        "contoh_kalimat": "سقت لمكان وبعد ما وصلت استوعبت إنك ما بتقدر تتذكر أي إشي عمرك ُ ُ عن الطريق؟",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "ألبي",
+        "latin": "albbi",
+        "arti": "aku penuhi",
+        "contoh_kalimat": "بحاول إنى ألبي احتياجاتي وأخصص",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "بتقدري",
+        "latin": "bitqadri",
+        "arti": "kamu (pr) bisa",
+        "contoh_kalimat": "شغل بلندن. بتقدري تيجي؟ بنحب",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "خدمة",
+        "latin": "khidmah",
+        "arti": "layanan",
+        "contoh_kalimat": "كتير محلات خدمة تحضير الطلبية",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "ورجتني",
+        "latin": "wa-rajatni",
+        "arti": "dan ia (pr) memohon padaku",
+        "contoh_kalimat": "لما شفتها. ورجتني وين صفنا،",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "تقدري",
+        "latin": "tqadri",
+        "arti": "kamu (pr) bisa",
+        "contoh_kalimat": "روعة وإنك تقدري تيجي معنا.",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "يجهزولي",
+        "latin": "yjahhizuuli",
+        "arti": "mereka siapkan untukku",
+        "contoh_kalimat": "بالطريق عشان يجهزولي الطلبية قبل",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "أجيب",
+        "latin": "ajiib",
+        "arti": "aku membawa/mengambil",
+        "contoh_kalimat": "المقلوبة؟ رح أجيب لك بس",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "أعطيني",
+        "latin": "a'tiini",
+        "arti": "berikan aku",
+        "contoh_kalimat": "وحدة؟ سامر أعطيني هاي البوكسة",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "اعطيني",
+        "latin": "a'tiini",
+        "arti": "berikan aku",
+        "contoh_kalimat": "عمو عمو اعطيني كتكوت بس",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "اعملك",
+        "latin": "a'mallak",
+        "arti": "aku buatkan untukmu",
+        "contoh_kalimat": "لولو رح اعملك كل يوم",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "تساعدني",
+        "latin": "tsaa'idni",
+        "arti": "kamu membantuku",
+        "contoh_kalimat": "ما بدك تساعدني بتيجي معي",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "تقدر",
+        "latin": "tiqdar",
+        "arti": "kamu bisa",
+        "contoh_kalimat": "سند إنك تقدر تخلي عندك",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "دعم",
+        "latin": "da'm",
+        "arti": "dukungan",
+        "contoh_kalimat": "إنه بده دعم إضافي يجي",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "رجاء",
+        "latin": "rajaa'",
+        "arti": "tolong",
+        "contoh_kalimat": "شي بس رجاء ما تقول",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "ساعدني",
+        "latin": "sa'adni",
+        "arti": "membantu saya",
+        "contoh_kalimat": "اليوتيوب ساعدني",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "تسهل",
+        "latin": "btsahhel",
+        "arti": "memudahkan",
+        "contoh_kalimat": "كثير بتسهل التواصل",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "بيساعدنا",
+        "latin": "bysa'edna",
+        "arti": "membantu kita",
+        "contoh_kalimat": "هيدا الشيء بيساعدنا",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "بتساعد",
+        "latin": "bitse'ed",
+        "arti": "membantu (f)",
+        "contoh_kalimat": "المنصه بتساعد",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      },
+      {
+        "kata_arab": "بتساعدنا",
+        "latin": "bitse'edna",
+        "arti": "membantu kita (f)",
+        "contoh_kalimat": "هي بتساعدنا نحن",
+        "topic_name": "Meminta & Menawarkan Bantuan"
+      }
+    ]
+  },
+  "Memberi Saran & Instruksi": {
+    "seen": [
+      "بنحط",
+      "بنخزن",
+      "بنخلط",
+      "بنستخدم",
+      "وتجربو",
+      "أوصفلكم",
+      "تترك",
+      "تستخدموها",
+      "وعالشمال",
+      "اسألي",
+      "استنوا",
+      "اسمعوا",
+      "اطلعي",
+      "اهدى",
+      "تعال",
+      "تقلقي",
+      "تنسو",
+      "تنسي",
+      "جهزوا",
+      "حط",
+      "حول",
+      "خدي",
+      "خذ",
+      "ردي",
+      "روح",
+      "زيح",
+      "شوفوا",
+      "فرجينا",
+      "منتبه",
+      "نوصيها",
+      "فيلا",
+      "اذكركم",
+      "تاخذوا",
+      "وشوف",
+      "خطوه",
+      "حاول",
+      "فخبروني",
+      "جرب",
+      "أقترح",
+      "وحاولوا",
+      "فلنرجع",
+      "تسمعو",
+      "تشغلو",
+      "أولاً",
+      "وبعدها"
+    ],
+    "kept": [
+      {
+        "kata_arab": "بنحط",
+        "latin": "binhutt",
+        "arti": "kami meletakkan",
+        "contoh_kalimat": "والمختلف بطبايخنا انو بنحب الطعم الغني وبنخلط نكهات متنوعة، يعني بنحط الرز مع اللحمة مع الخضار، ووحدة من الأكلات اللي كتير بنحبها واللي بنخلط فيها الرز واللحمة والخضرة اسمها المقلوبة.",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "بنخزن",
+        "latin": "binkhazzin",
+        "arti": "kami menyimpan",
+        "contoh_kalimat": "المطبخ جزء مهم بحياة أي بيت عربي، معظم ستات البيوت بيقضوا نص يومهم بالمطبخ لأنو طبخاتنا بدها وقت طويل لتجهز ولأنو نوعية الطعام كمان كتير مهمة عند العرب وعشان هيك بنخزن كميات كبيرة من المواد الأساسية في كل بيت.",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "بنخلط",
+        "latin": "binkhullut",
+        "arti": "kami mencampur",
+        "contoh_kalimat": "والمختلف بطبايخنا انو بنحب الطعم الغني وبنخلط نكهات متنوعة، يعني بنحط الرز مع اللحمة مع الخضار، ووحدة من الأكلات اللي كتير بنحبها واللي بنخلط فيها الرز واللحمة والخضرة اسمها المقلوبة.",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "بنستخدم",
+        "latin": "binista'mil",
+        "arti": "kami menggunakan",
+        "contoh_kalimat": "وكتير بنستخدم الألبان والأجبان في الطبيخ الأردني، سواء بالحلويات أو الأكل المالح، مثلا، أشهر طبق حلويات عنا اسمو الكنافة، وواحد من المكونات الرئيسية فيه هو الجنبة، وبيجي فوقها طبقة شعيرية محمرة وقطر.",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "وتجربو",
+        "latin": "wa-tjarrubu",
+        "arti": "dan kalian mencoba",
+        "contoh_kalimat": "بنتمنى منكم تزورو الأردن وتجربو منسفه!",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "أوصفلكم",
+        "latin": "awsiflkum",
+        "arti": "aku jelaskan untuk kalian",
+        "contoh_kalimat": "هيك رح أوصفلكم إياهم اليوم.",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تترك",
+        "latin": "titrak",
+        "arti": "meninggalkan",
+        "contoh_kalimat": "اللي رح تترك البلد لإنها",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تستخدموها",
+        "latin": "tista'miluuha",
+        "arti": "kalian menggunakannya",
+        "contoh_kalimat": "عبارات ممكن تستخدموها لما تزورو",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "وعالشمال",
+        "latin": "wa-'alashshimaal",
+        "arti": "dan di sebelah kiri",
+        "contoh_kalimat": "في الثلاجة، وعالشمال في رفوف،",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "اسألي",
+        "latin": "is'ali",
+        "arti": "bertanyalah (pr)",
+        "contoh_kalimat": "طيب تفضلي اسألي صار لي",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "استنوا",
+        "latin": "istannu",
+        "arti": "tunggulah (kalian)",
+        "contoh_kalimat": "السفر هناك استنوا انسيتوا مية",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "اسمعوا",
+        "latin": "isma'u",
+        "arti": "dengarlah (kalian)",
+        "contoh_kalimat": "شفة منها اسمعوا بالضبط هذي",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "اطلعي",
+        "latin": "itla'i",
+        "arti": "keluarlah (pr)",
+        "contoh_kalimat": "شباب أنت اطلعي منه هيو",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "اهدى",
+        "latin": "ihda",
+        "arti": "tenanglah",
+        "contoh_kalimat": "خلص يزن اهدى شوي. أنا",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تعال",
+        "latin": "ta'aal",
+        "arti": "kemarilah (lk)",
+        "contoh_kalimat": "سند يلا تعال رح تبدأ",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تقلقي",
+        "latin": "tiqlaqi",
+        "arti": "kamu (pr) khawatir",
+        "contoh_kalimat": "وصلوا ما تقلقي لا ليش",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تنسو",
+        "latin": "tinsu",
+        "arti": "kalian lupa",
+        "contoh_kalimat": "القنينة ما تنسو خمسة واربعين",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تنسي",
+        "latin": "tinsi",
+        "arti": "kamu (pr) lupa",
+        "contoh_kalimat": "ماما ما تنسي بكرة تخديه",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "جهزوا",
+        "latin": "jahhizu",
+        "arti": "siapkan (kalian)",
+        "contoh_kalimat": "يا جماعة جهزوا حالكم عشان",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "حط",
+        "latin": "hutt",
+        "arti": "letakkan",
+        "contoh_kalimat": "مين اللي حط كل مرتبان",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "حول",
+        "latin": "hawwil",
+        "arti": "ganti (channel radio)",
+        "contoh_kalimat": "برج المراقبة حول هل تسمعني",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "خدي",
+        "latin": "khudi",
+        "arti": "ambillah (pr)",
+        "contoh_kalimat": "هالشغلات بتعرفي خدي سند معك",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "خذ",
+        "latin": "khud",
+        "arti": "ambillah",
+        "contoh_kalimat": "شو؟ طب خذ سند ليش",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "ردي",
+        "latin": "riddi",
+        "arti": "jawablah (pr)",
+        "contoh_kalimat": "الله ماما ردي آه ماما",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "روح",
+        "latin": "ruuh",
+        "arti": "pergilah",
+        "contoh_kalimat": "السعر كمان. روح يزم شو",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "زيح",
+        "latin": "ziih",
+        "arti": "geser",
+        "contoh_kalimat": "#NAME?",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "شوفوا",
+        "latin": "shuufu",
+        "arti": "lihatlah (kalian)",
+        "contoh_kalimat": "ما بطلع شوفوا هداك اليوم",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "فرجينا",
+        "latin": "farjiina",
+        "arti": "tunjukkan pada kami",
+        "contoh_kalimat": "حبيبي طيب فرجينا يا سيد",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "منتبه",
+        "latin": "mnattbih",
+        "arti": "menyadari/hati-hati",
+        "contoh_kalimat": "أدايئك مش منتبه أني بظل",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "نوصيها",
+        "latin": "nwassiiha",
+        "arti": "kita rekomendasikan itu",
+        "contoh_kalimat": "خلص خلينا نوصيها عشان بكرة",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "فيلا",
+        "latin": "fyalla",
+        "arti": "ayo (kita)",
+        "contoh_kalimat": "فيلا جاهزين",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "اذكركم",
+        "latin": "azakkerkon",
+        "arti": "saya ingatkan kalian",
+        "contoh_kalimat": "بدي اذكركم انه",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تاخذوا",
+        "latin": "te2khodo",
+        "arti": "kalian ambil",
+        "contoh_kalimat": "فيكم تاخذوا النص",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "وشوف",
+        "latin": "w-shouf",
+        "arti": "dan lihat",
+        "contoh_kalimat": "فوت وشوف",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "خطوه",
+        "latin": "khatwe",
+        "arti": "langkah",
+        "contoh_kalimat": "خطوه خطوه",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "حاول",
+        "latin": "7awel",
+        "arti": "mencoba",
+        "contoh_kalimat": "عم حاول اعمل",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "فخبروني",
+        "latin": "fa-khabbrouni",
+        "arti": "maka beri tahu saya",
+        "contoh_kalimat": "اليوم فخبروني انتم شو",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "جرب",
+        "latin": "jarrab",
+        "arti": "coba",
+        "contoh_kalimat": "رح جرب احكي",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "أقترح",
+        "latin": "a2tare7",
+        "arti": "saya menyarankan",
+        "contoh_kalimat": "بدي أقترح إنه",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "وحاولوا",
+        "latin": "w-7awlo",
+        "arti": "dan cobalah",
+        "contoh_kalimat": "وحاولوا تفهموا",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "فلنرجع",
+        "latin": "fal-nerja'",
+        "arti": "maka mari kita kembali",
+        "contoh_kalimat": "فلنرجع لنهاري اليوم",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تسمعو",
+        "latin": "tesma'o",
+        "arti": "kalian mendengar",
+        "contoh_kalimat": "أحسن أنه تسمعو لأول مرة",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "تشغلو",
+        "latin": "teshghlo",
+        "arti": "kalian menyalakan",
+        "contoh_kalimat": "فيكن تشغلو الترجمة",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "أولاً",
+        "latin": "awwalan",
+        "arti": "pertama-tama",
+        "contoh_kalimat": "بالعربي أولاً",
+        "topic_name": "Memberi Saran & Instruksi"
+      },
+      {
+        "kata_arab": "وبعدها",
+        "latin": "w-ba'dha",
+        "arti": "dan setelah itu",
+        "contoh_kalimat": "أولاً بالعربي وبعدها",
+        "topic_name": "Memberi Saran & Instruksi"
+      }
+    ]
+  },
+  "Kesopanan & Basa-basi": {
+    "seen": [
+      "منيح",
+      "وزاكية",
+      "بتجنن",
+      "خير",
+      "روعة",
+      "شاء",
+      "شاطر",
+      "شاطرة",
+      "منيحا",
+      "نشوفك",
+      "ووصلي",
+      "ومبسوطة",
+      "أهلا",
+      "العافية",
+      "اه",
+      "اها",
+      "تؤمر",
+      "تفضلي",
+      "حبايبي",
+      "حبيباتي",
+      "حبيبتي",
+      "خيو",
+      "دخلك",
+      "ذوق",
+      "رهيبة",
+      "شكرا",
+      "معلش",
+      "مهذبات",
+      "اخبارهم",
+      "بسلم",
+      "ميرسي"
+    ],
+    "kept": [
+      {
+        "kata_arab": "منيح",
+        "latin": "mniih",
+        "arti": "baik/lumayan",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "وزاكية",
+        "latin": "wa-zaakiyah",
+        "arti": "dan enak",
+        "contoh_kalimat": "وبالنسبة للاطباق اللي ما بتحتوي على لحوم، بنعتبرها مش أكتر من أطباق جانبية أو مزات خفيفة وزاكية.",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "بتجنن",
+        "latin": "bitjannin",
+        "arti": "sangat seru/gila (bagus)",
+        "contoh_kalimat": "رح تكون بتجنن بس بدي",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "خير",
+        "latin": "khayr",
+        "arti": "kebaikan",
+        "contoh_kalimat": "عم نعمل خير مع الناس",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "روعة",
+        "latin": "raw'ah",
+        "arti": "luar biasa",
+        "contoh_kalimat": "تكون حفلتكم روعة وإنك تقدري",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "شاء",
+        "latin": "shaa'a",
+        "arti": "menghendaki (insya allah)",
+        "contoh_kalimat": "بالحفلة إن شاء الله! ومحمد",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "شاطر",
+        "latin": "shaatir",
+        "arti": "pintar/pandai",
+        "contoh_kalimat": "هل إنت شاطر بالتدوير على",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "شاطرة",
+        "latin": "shaatrah",
+        "arti": "pintar (pr)",
+        "contoh_kalimat": "دلال مو شاطرة أبدا بطلب",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "منيحا",
+        "latin": "mniiha",
+        "arti": "baik (fem.)",
+        "contoh_kalimat": "على مطاعم منيحا؟ وهل بتحب",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "نشوفك",
+        "latin": "nshuufik",
+        "arti": "kami melihatmu",
+        "contoh_kalimat": "تيجي؟ بنحب نشوفك انت وبنتك",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "ووصلي",
+        "latin": "wa-wassili",
+        "arti": "dan sampaikan (salam)",
+        "contoh_kalimat": "27 الشهر. ووصلي لأهلك حبي.",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "ومبسوطة",
+        "latin": "wa-mabsuutah",
+        "arti": "dan senang (pr)",
+        "contoh_kalimat": "كتير متفاجئة ومبسوطة لما شفتها.",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "أهلا",
+        "latin": "ahlan",
+        "arti": "halo/selamat datang",
+        "contoh_kalimat": "هند ألو أهلاً مس لا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "العافية",
+        "latin": "al-'aafiyah",
+        "arti": "kesehatan",
+        "contoh_kalimat": "حالها يعطيكم العافية شو ماشي",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "اه",
+        "latin": "ah",
+        "arti": "aduh/eh",
+        "contoh_kalimat": "شي بسعره اه قصدي بوقته",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "اها",
+        "latin": "aha",
+        "arti": "oh ya",
+        "contoh_kalimat": "الاقي حل اها عرفت انا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "تؤمر",
+        "latin": "tu'mur",
+        "arti": "terserah kamu (sopan)",
+        "contoh_kalimat": "بدك عمو. تؤمر أنت يا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "تفضلي",
+        "latin": "tfaddali",
+        "arti": "silakan (pr)",
+        "contoh_kalimat": "ميس طيب تفضلي اسألي صار",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "حبايبي",
+        "latin": "habaaybi",
+        "arti": "orang-orang tersayangku",
+        "contoh_kalimat": "الله معكم حبايبي أي وحدة؟",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "حبيباتي",
+        "latin": "habiibaati",
+        "arti": "sayang-sayangku",
+        "contoh_kalimat": "خلص بسرعة حبيباتي ومتابعاتي اذا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "حبيبتي",
+        "latin": "habiibti",
+        "arti": "sayangku (pr)",
+        "contoh_kalimat": "توصل معلش حبيبتي هيك هم",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "خيو",
+        "latin": "khayyo",
+        "arti": "kawan (panggilan akrab)",
+        "contoh_kalimat": "هناك الجو خيو بكون بارد",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "دخلك",
+        "latin": "dakhlak",
+        "arti": "urusanmu",
+        "contoh_kalimat": "وإنت شو دخلك. هو بيحكي",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "ذوق",
+        "latin": "dawq",
+        "arti": "selera",
+        "contoh_kalimat": "سلام بتجنن ذوق ذوق جارتنا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "رهيبة",
+        "latin": "rahiibah",
+        "arti": "luar biasa/hebat",
+        "contoh_kalimat": "وطلعت هالخلطة رهيبة وعنجد بتغير",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "شكرا",
+        "latin": "shukran",
+        "arti": "terima kasih",
+        "contoh_kalimat": "أقولك إشي شكرا لأنك فرجتينا",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "معلش",
+        "latin": "ma'lesh",
+        "arti": "tidak apa-apa",
+        "contoh_kalimat": "بكرة توصل معلش حبيبتي هيك",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "مهذبات",
+        "latin": "muhaddabaat",
+        "arti": "sopan (jamak fem.)",
+        "contoh_kalimat": "إحنا البنات مهذبات بنضل ساكتين",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "اخبارهم",
+        "latin": "akhbaron",
+        "arti": "kabar mereka",
+        "contoh_kalimat": "كيف بدنا نعرف اخبارهم",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "بسلم",
+        "latin": "bsallem",
+        "arti": "saya menyapa",
+        "contoh_kalimat": "بسلم عليهم",
+        "topic_name": "Kesopanan & Basa-basi"
+      },
+      {
+        "kata_arab": "ميرسي",
+        "latin": "mersi",
+        "arti": "terima kasih",
+        "contoh_kalimat": "ميرسي كثير لكم",
+        "topic_name": "Kesopanan & Basa-basi"
+      }
+    ]
+  },
+  "Menanyakan Pendapat": {
+    "seen": [
+      "وانت",
+      "تشوف",
+      "الأوبشنز",
+      "بالك",
+      "اتوقع",
+      "وبعتبرها",
+      "بتعتبر"
+    ],
+    "kept": [
+      {
+        "kata_arab": "وانت",
+        "latin": "wa-inta",
+        "arti": "dan kamu",
+        "contoh_kalimat": "بتحس حالك وانت بجفرا جزء",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "تشوف",
+        "latin": "tshuuf",
+        "arti": "kamu melihat",
+        "contoh_kalimat": "الأسبوع. ممكن تشوف قائمة مشترياتي",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "الأوبشنز",
+        "latin": "al-obshinz",
+        "arti": "pilihan-pilihan (options)",
+        "contoh_kalimat": "شوفوا هدول الأوبشنز بس هذا",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "بالك",
+        "latin": "baalak",
+        "arti": "perhatianmu",
+        "contoh_kalimat": "إياك تدير بالك على صحتك",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "اتوقع",
+        "latin": "itwa22a'",
+        "arti": "saya menduga",
+        "contoh_kalimat": "بدي اتوقع",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "وبعتبرها",
+        "latin": "w-ba'taberha",
+        "arti": "dan saya menganggapnya",
+        "contoh_kalimat": "وبعتبرها مثل اهانه",
+        "topic_name": "Menanyakan Pendapat"
+      },
+      {
+        "kata_arab": "بتعتبر",
+        "latin": "bit'tebbar",
+        "arti": "kamu menganggap",
+        "contoh_kalimat": "في ناس بتعتبر انه",
+        "topic_name": "Menanyakan Pendapat"
+      }
+    ]
+  }
+}

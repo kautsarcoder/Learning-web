@@ -57,8 +57,12 @@ async function uploadAudio(audioBuffer) {
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).end();
-  const cleaned = (req.query.word || "").trim();
+  // Rapikan spasi; endpoint ini memanggil ElevenLabs (berbayar), jadi batasi ke teks Arab yang wajar
+  // (kata atau 1 kalimat) supaya tidak bisa dipakai menghabiskan kredit dengan teks sembarang.
+  const cleaned = String(req.query.word || "").replace(/\s+/g, " ").trim();
   if (!cleaned) return res.status(400).json({ error: "word wajib diisi" });
+  if (cleaned.length > 200) return res.status(400).json({ error: "teks terlalu panjang (maks 200 karakter)" });
+  if (!/[\u0600-\u06FF]/.test(cleaned)) return res.status(400).json({ error: "teks harus berisi huruf Arab" });
 
   try {
     // 1. Barangkali kata ini salah satu vocab_items (sudah ada audionya).
@@ -69,7 +73,7 @@ export default async function handler(req, res) {
       .not("audio_url", "is", null)
       .limit(1)
       .maybeSingle();
-    if (vocabRow?.audio_url) return res.status(200).json({ audio_url: vocabRow.audio_url });
+    if (vocabRow?.audio_url) { res.setHeader("Cache-Control", "public, s-maxage=86400"); return res.status(200).json({ audio_url: vocabRow.audio_url }); }
 
     // 2. Cache permanen dari lookup/generate sebelumnya (siapapun user).
     const { data: cached } = await supabase
@@ -77,13 +81,14 @@ export default async function handler(req, res) {
       .select("audio_url")
       .eq("kata_arab", cleaned)
       .maybeSingle();
-    if (cached?.audio_url) return res.status(200).json({ audio_url: cached.audio_url });
+    if (cached?.audio_url) { res.setHeader("Cache-Control", "public, s-maxage=86400"); return res.status(200).json({ audio_url: cached.audio_url }); }
 
     // 3. Belum ada di manapun -- generate SEKALI, simpan permanen.
     const buf = await generateAudio(cleaned);
     const url = await uploadAudio(buf);
     await supabase.from("word_glossary").upsert({ kata_arab: cleaned, audio_url: url });
 
+    res.setHeader("Cache-Control", "public, s-maxage=86400");
     res.status(200).json({ audio_url: url });
   } catch (err) {
     res.status(500).json({ error: err.message });

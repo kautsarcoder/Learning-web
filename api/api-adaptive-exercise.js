@@ -30,7 +30,7 @@
 // itu murni domain api/answer.js (algoritma deterministik, bukan AI).
 
 import { createClient } from "@supabase/supabase-js";
-import { loadExistingSignatures, filterDuplicateExercises } from "../lib/exercise-validator.mjs";
+import { loadExistingSignatures, filterDuplicateExercises, sanitizeGeneratedExercises, shuffleAnswerPositions } from "../lib/exercise-validator.mjs";
 import { rankVocabByPriority } from "../lib/review-engine.mjs";
 
 const supabase = createClient(
@@ -262,6 +262,15 @@ tiap soal WAJIB punya field "vocab_used" (array kata_arab persis dari daftar TAR
 yang diuji soal itu). Balas HANYA JSON array, format:
 [{ "type": "...", "prompt": "...", "content": { ... }, "vocab_used": ["..."] }]
 
+ATURAN KUALITAS (WAJIB):
+- Tiap soal punya field "has_person_name" (true/false). JANGAN memakai nama orang sama sekali.
+- Teks Indonesia yang jadi SUMBER terjemahan ke Arab dan memuat kamu/kalian/dia/mereka/anda WAJIB diberi
+  label gender dalam kurung, mis. "Kamu (perempuan) sudah makan?", "Dia (laki-laki) guru".
+- "translate_choice" (arti 1 kata) 5 opsi; "fill_blank" 3 opsi dengan HANYA 1 opsi yang benar; semua opsi
+  berbeda dan opsi Arab ditulis Arab murni (tanpa huruf Latin).
+- Pakai HANYA kata Arab dari daftar TARGET / PRASYARAT / REVIEW LINTAS-UNIT. KOSAKATA TERKAIT hanya boleh
+  jadi pengecoh pilihan ganda, jangan dipakai di kalimat soal.
+
 Khusus tipe "fill_blank", content-nya WAJIB pakai bentuk ini (rumpang bisa di AWAL, TENGAH, atau AKHIR
 kalimat — sesuaikan posisi beforeBlank/afterBlank, salah satunya boleh string kosong kalau rumpang di
 ujung kalimat):
@@ -277,7 +286,17 @@ Khusus tipe "word_order", VARIASIKAN 2 arah (jangan cuma 1 arah terus):
     "correctWords": ["...arab..."], "wordBank": ["...arab...", "...pengecoh arab..."] }`;
 
     const raw = await callLadiz(prompt, 6000);
-    const generatedExercises = JSON.parse(cleanJson(raw));
+    const parsed = JSON.parse(cleanJson(raw));
+    // response_format json_object kadang membungkus array dalam objek -> ambil array pertamanya.
+    const rawExercises = Array.isArray(parsed) ? parsed : (Object.values(parsed || {}).find(Array.isArray) || []);
+    // Pemeriksaan struktural GRATIS (tanpa panggilan AI tambahan, supaya user tidak menunggu lebih lama):
+    // soal cacat dibuang, nama orang dibuang, kata ganti tanpa label gender dibuang, jumlah soal bernama dibatasi.
+    const { kept } = sanitizeGeneratedExercises(
+      rawExercises.filter((e) => !(e && (e.has_person_name === true || e.has_person_name === "true"))),
+      { nodeType: level.node_type, maxNameExercises: 0, requireGenderLabel: true }
+    );
+    // AI cenderung menaruh jawaban benar di opsi pertama -> acak posisinya lewat program.
+    const generatedExercises = shuffleAnswerPositions(kept);
 
     // ============================================================
     // Simpan ke database, DI-SCOPE ke user ini (is_adaptive=true,

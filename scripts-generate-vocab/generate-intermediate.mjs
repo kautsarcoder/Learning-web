@@ -34,7 +34,7 @@
 //
 // CSV: MEMAKAI FILE KOSAKATA YANG SAMA dengan Beginner (kosakata-ammiyah.csv: kata_arab, latin, arti, contoh_kalimat).
 // Tambahkan kata baru langsung ke file itu; --csv hanya perlu kalau mau file lain. Kata yang tidak
-// cocok dengan 10 topik Bagian ini disimpan ke unmatched-intermediate-B<N>.json (tidak hilang)
+// cocok dengan 10 topik Bagian ini disimpan ke unmatched-intermediate.json (tidak hilang)
 // dan bisa dipakai lagi untuk Bagian lain.
 
 import "dotenv/config";
@@ -195,14 +195,45 @@ Balas HANYA JSON array (jumlah & urutan sama persis dengan daftar), tanpa teks l
   });
 }
 
-async function classifyAll(words, topics, checkpointFile, batchSize = 30) {
+const ALL_TOPICS = Object.values(INTERMEDIATE_CURRICULUM).flatMap((c) => c.topics);
+const CLASSIFY_ALL_FILE = "classify-intermediate-all.json";
+
+// Kata yang sudah dipakai Beginner (kept di curation-checkpoint.json).
+function loadBeginnerUsedWords(file = "curation-checkpoint.json") {
+  const used = new Set();
+  if (!fs.existsSync(file)) return used;
+  try {
+    const data = JSON.parse(fs.readFileSync(file, "utf-8"));
+    for (const t of Object.values(data)) for (const w of t.kept || []) used.add(w.kata_arab);
+  } catch { /* abaikan */ }
+  return used;
+}
+
+async function classifyAll(words, topics, checkpointFile, batchSize = 30, maxNew = Infinity) {
   let results = [];
   if (fs.existsSync(checkpointFile)) {
     try { results = JSON.parse(fs.readFileSync(checkpointFile, "utf-8")); } catch { results = []; }
     console.log(`Checkpoint klasifikasi: ${results.length} kata sudah diklasifikasi, dilanjutkan.`);
+  } else {
+    // Migrasi: pakai hasil lama per-Bagian (classify-intermediate-B11..B15.json).
+    // Hanya yang COCOK yang dipakai ulang; TIDAK_COCOK lama bisa jadi cocok di Bagian lain.
+    const valid = new Set(topics.map(([n]) => n));
+    const seen = new Set();
+    for (const f of fs.readdirSync(".").filter((x) => /^classify-intermediate-B\d+\.json$/.test(x))) {
+      try {
+        for (const r of JSON.parse(fs.readFileSync(f, "utf-8"))) {
+          if (valid.has(r.topic_name) && !seen.has(r.kata_arab)) { seen.add(r.kata_arab); results.push(r); }
+        }
+      } catch { /* abaikan */ }
+    }
+    if (results.length) console.log(`Migrasi: ${results.length} klasifikasi lama dipakai ulang.`);
   }
   const done = new Set(results.map((r) => r.kata_arab));
-  const remaining = words.filter((w) => !done.has(w.kata_arab));
+  let remaining = words.filter((w) => !done.has(w.kata_arab));
+  if (remaining.length > maxNew) {
+    console.log(`Mode --classify-limit: hanya ${maxNew} dari ${remaining.length} kata baru diklasifikasi di run ini (sisanya di run berikutnya).`);
+    remaining = remaining.slice(0, maxNew);
+  }
   let incomplete = false;
   for (let i = 0; i < remaining.length; i += batchSize) {
     const batch = remaining.slice(i, i + batchSize);
@@ -520,6 +551,7 @@ async function main() {
   const useAudio = args.includes("--audio");
   const bagianNo = Number(arg("--bagian"));
   const onlyTopic = arg("--topic");
+  const classifyLimit = arg("--classify-limit") ? Number(arg("--classify-limit")) : Infinity;
   const csvPath = arg("--csv") || "kosakata-ammiyah.csv";
 
   const cur = INTERMEDIATE_CURRICULUM[bagianNo];
@@ -535,17 +567,32 @@ async function main() {
   console.log(`=== INTERMEDIATE — Bagian ${bagianNo}: ${cur.title} (${topics.length} topik) ${commit ? "[COMMIT]" : "[PREVIEW]"} ===\n`);
 
   const tag = `B${bagianNo}`;
-  const classifyFile = `classify-intermediate-${tag}.json`;
   const curationFile = `curation-intermediate-${tag}.json`;
 
-  const words = loadFlatVocabCsv(csvPath);
+  let words = loadFlatVocabCsv(csvPath);
   console.log(`Membaca ${words.length} kata dari ${csvPath}...`);
 
-  const { results: classified, incomplete: ci } = await classifyAll(words, topics, classifyFile);
-  const unmatched = classified.filter((w) => w.topic_name === NO_MATCH);
-  const matched = classified.filter((w) => w.topic_name !== NO_MATCH);
-  fs.writeFileSync(`unmatched-intermediate-${tag}.json`, JSON.stringify(unmatched, null, 2));
-  console.log(`\n${matched.length} kata cocok dengan topik Bagian ${bagianNo}; ${unmatched.length} tidak cocok (disimpan di unmatched-intermediate-${tag}.json).`);
+  // Buang kata yang SUDAH dipakai Beginner (hasil kurasi beginner), supaya
+  // tidak diajarkan dua kali. Sumber: curation-checkpoint.json dari generate-vocab-v2.
+  const usedBeginner = loadBeginnerUsedWords();
+  if (usedBeginner.size) {
+    const before = words.length;
+    words = words.filter((w) => !usedBeginner.has(w.kata_arab));
+    console.log(`${before - words.length} kata sudah dipakai Beginner → dilewati. Sisa kandidat: ${words.length}.`);
+  }
+
+  // SATU klasifikasi bersama untuk semua Bagian 11-15 (50 topik), disimpan di
+  // classify-intermediate-all.json. Kata yang sudah pernah diklasifikasi TIDAK
+  // diulang; tiap run cuma kata BARU yang dikirim ke AI. Satu kata juga hanya
+  // masuk ke satu topik (tidak dobel antar-Bagian).
+  const { results: classifiedAll, incomplete: ci } = await classifyAll(words, ALL_TOPICS, CLASSIFY_ALL_FILE, 30, classifyLimit);
+  const wordSet = new Set(words.map((w) => w.kata_arab));
+  const inCsv = classifiedAll.filter((w) => wordSet.has(w.kata_arab));
+  const topicNames = new Set(topics.map(([n]) => n));
+  const unmatched = inCsv.filter((w) => w.topic_name === NO_MATCH);
+  const matched = inCsv.filter((w) => topicNames.has(w.topic_name));
+  fs.writeFileSync(`unmatched-intermediate.json`, JSON.stringify(unmatched, null, 2));
+  console.log(`\n${matched.length} kata cocok dengan topik Bagian ${bagianNo}; ${unmatched.length} tidak cocok ke Bagian 11-15 mana pun (unmatched-intermediate.json).`);
   if (ci) console.log("Klasifikasi belum selesai (quota/koneksi) — lanjut dengan yang sudah ada.");
 
   const { result: curated } = await curate(matched, curationFile);

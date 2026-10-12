@@ -1245,6 +1245,36 @@ export async function uploadAudio(kataArab, audioBuffer) {
   return data.publicUrl;
 }
 
+// Satu teks = satu file audio selama script berjalan. Dialog/cerita yang sama dipakai oleh banyak
+// soal (3-4 soal per dialog), jadi tanpa cache kredit ElevenLabs terbuang untuk audio kembar.
+const audioUrlCache = new Map();
+export async function audioUrlFor(text) {
+  const key = String(text || "").replace(/\s+/g, " ").trim();
+  if (!key) return null;
+  if (audioUrlCache.has(key)) return audioUrlCache.get(key);
+  const buf = await generateAudio(key);
+  const url = await uploadAudio(key, buf);
+  audioUrlCache.set(key, url);
+  return url;
+}
+
+// Isi cache dari audio yang SUDAH ada di database (dipakai script backfill supaya teks yang sama
+// tidak dibuatkan audio lagi di run berikutnya).
+export function seedAudioCache(text, url) {
+  const key = String(text || "").replace(/\s+/g, " ").trim();
+  if (key && url && !audioUrlCache.has(key)) audioUrlCache.set(key, url);
+}
+
+// Teks dialog untuk audio: baris yang dikosongkan DIISI jawaban benar (bukan "___").
+export function dialogueSpokenText(content) {
+  const lines = Array.isArray(content?.dialogueLines) ? content.dialogueLines : [];
+  const right = content?.options?.[content?.correctIndex]?.text;
+  return lines
+    .map((l) => (l && l.blank === true ? right : l?.text))
+    .filter((t) => typeof t === "string" && t.trim() && t.trim() !== "___")
+    .join(" ");
+}
+
 // ============================================================
 // SKELETON — units → topics → levels. Idempotent.
 // ============================================================
@@ -1365,7 +1395,7 @@ export async function saveLevelContent(levelRow, vocabList, exercises, useAudio,
       continue;
     }
     let audioUrl = null;
-    if (useAudio) { const buf = await generateAudio(v.kata_arab); audioUrl = await uploadAudio(v.kata_arab, buf); }
+    if (useAudio) audioUrl = await audioUrlFor(v.kata_arab);
     const { data: inserted, error } = await supabase.from("vocab_items").insert({
       level_id: levelRow.id, kata_arab: v.kata_arab, latin: v.latin, arti: v.arti,
       contoh_kalimat: v.contoh_kalimat, audio_url: audioUrl,
@@ -1427,30 +1457,24 @@ export async function saveLevelContent(levelRow, vocabList, exercises, useAudio,
   for (const { ex, vocabUsedIds, signature } of toInsert) {
     let audioUrl = null;
     if (useAudio && ex.type === "listen_choose") {
-      const sample = ex.content?.options?.[0]?.text;
-      if (sample) { const buf = await generateAudio(sample); audioUrl = await uploadAudio(sample, buf); }
+      const sample = ex.content?.options?.[ex.content?.correctIndex ?? 0]?.text; // OPSI BENAR (opsi sudah diacak, options[0] bukan jawabannya)
+      if (sample) audioUrl = await audioUrlFor(sample);
     } else if (useAudio && ex.type === "word_order" && (ex.content?.audioText || (ex.content?.hasAudio && /[\u0600-\u06FF]/.test(ex.content?.text || "")))) {
       // Soal susun-kata dengan suara (termasuk mode "audioOnly": teks disembunyikan, user hanya
       // mendengar kalimat Arabnya). Audio dibuat dari audioText, atau dari text kalau itu kalimat Arab.
       const spoken = ex.content.audioText || ex.content.text;
-      const buf = await generateAudio(spoken);
-      audioUrl = await uploadAudio(spoken, buf);
+      audioUrl = await audioUrlFor(spoken);
     } else if (useAudio && ex.type === "fill_blank" && ex.content?.audioText && !ex.content?.passageText) {
       // Isian dengan kalimat Arab utuh (level Intermediate): audio = kalimat lengkap dengan jawaban yang benar
-      const buf = await generateAudio(ex.content.audioText);
-      audioUrl = await uploadAudio(ex.content.audioText, buf);
+      audioUrl = await audioUrlFor(ex.content.audioText);
     } else if (useAudio && ex.content?.hasAudio && ex.content?.passageText) {
       // Soal berbasis cerita (reading_comprehension/fill_blank dari story)
-      const buf = await generateAudio(ex.content.passageText);
-      audioUrl = await uploadAudio(ex.content.passageText, buf);
+      audioUrl = await audioUrlFor(ex.content.passageText);
     } else if (useAudio && ex.content?.hasAudio && Array.isArray(ex.content?.dialogueLines)) {
       // Soal berbasis dialog (dialogue_complete dari conversation) — gabung
       // semua baris JADI SATU audio (diputar berurutan sebagai 1 percakapan)
-      const fullDialogueText = ex.content.dialogueLines.map((l) => l.text).filter(Boolean).join(" ");
-      if (fullDialogueText) {
-        const buf = await generateAudio(fullDialogueText);
-        audioUrl = await uploadAudio(fullDialogueText, buf);
-      }
+      const fullDialogueText = dialogueSpokenText(ex.content);
+      if (fullDialogueText) audioUrl = await audioUrlFor(fullDialogueText);
     }
     const { data: insertedEx, error } = await supabase.from("exercises").insert({
       level_id: levelRow.id, type: ex.type, order_index: orderIndex++, prompt: ex.prompt,

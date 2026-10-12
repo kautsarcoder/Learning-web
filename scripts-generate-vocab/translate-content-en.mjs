@@ -95,13 +95,10 @@ function extractTranslatable(type, content) {
       if (typeof p.right === "string") add(() => content.pairs[i].right, (v) => (content.pairs[i].right = v));
     });
   } else if (type === "word_order") {
-    if (content.direction === "to_indonesian") {
-      (content.correctWords || []).forEach((_, i) => add(() => content.correctWords[i], (v) => (content.correctWords[i] = v)));
-      (content.acceptedOrders || []).forEach((order, oi) =>
-        order.forEach((_, i) => add(() => content.acceptedOrders[oi][i], (v) => (content.acceptedOrders[oi][i] = v)))
-      );
-      (content.wordBank || []).forEach((_, i) => add(() => content.wordBank[i], (v) => (content.wordBank[i] = v)));
-    } else if (content.direction === "to_arabic") {
+    // to_indonesian: SENGAJA tidak diterjemahkan per kata di sini (kata lepas "dia","tua" jadi
+    // "he","old" -- tanpa "is"). Ditangani translateWordOrderBatch(), yang menerjemahkan
+    // KALIMAT utuh lalu memecahnya jadi tile kata.
+    if (content.direction === "to_arabic") {
       if (typeof content.text === "string") add(() => content.text, (v) => (content.text = v));
     }
   }
@@ -113,7 +110,10 @@ function extractTranslatable(type, content) {
 async function translateBatch(items) {
   // items: [{ id, strings: [...] }]
   const prompt = `Terjemahkan tiap string Bahasa Indonesia berikut ke Bahasa Inggris (Inggris umum,
-bukan Inggris formal berlebihan -- ini buat aplikasi belajar bahasa kasual). INI DAFTAR per "id",
+bukan Inggris formal berlebihan -- ini buat aplikasi belajar bahasa kasual). WAJIB bahasa Inggris yang
+GRAMATIKAL dan natural: bahasa Indonesia tidak punya kata kerja bantu, jadi tambahkan "is/am/are",
+artikel (a/an/the), dan bentuk kata kerja yang benar bila perlu ("dia tua" -> "He is old",
+"saya lapar" -> "I am hungry", "dia punya buku" -> "He has a book"). Jangan menerjemahkan kata per kata. INI DAFTAR per "id",
 tiap id punya array string yang URUTAN & JUMLAHNYA HARUS DIPERTAHANKAN PERSIS (jangan digabung,
 dipecah, dihilangkan, atau ditambah):
 
@@ -123,6 +123,138 @@ Balas HANYA JSON array, format PERSIS sama: [{ "id": "...", "strings": ["...(ing
 
   const raw = await callLadiz(prompt, 4000);
   return JSON.parse(cleanJson(raw));
+}
+
+
+const hasArabic = (t) => /[\u0600-\u06FF]/.test(String(t || ""));
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+
+// Soal susun kata arah to_indonesian: terjemahkan KALIMAT UTUH (dengan konteks Arab supaya
+// gender he/she jelas), lalu pecah jadi tile. Pengecoh (kata tunggal) diterjemahkan 1:1.
+async function translateWordOrderBatch(items) {
+  const prompt = `Tiap item adalah soal SUSUN KATA. Ada kalimat Arab (Levantine), terjemahan Indonesianya,
+dan daftar kata pengecoh Indonesia. Buat versi INGGRIS-nya:
+
+- "words": kalimat Inggris yang GRAMATIKAL & natural (tambahkan is/am/are, a/an/the, bentuk kata kerja
+  yang benar -- Indonesia tidak punya kata kerja bantu: "dia tua" -> ["He","is","old"], "saya lapar" ->
+  ["I","am","hungry"]) dipecah jadi array kata. Maknanya harus sama dengan kalimat Arab/Indonesia;
+  pakai kalimat Arab untuk menentukan he/she/you/we/they. Maksimal 12 kata, tanda baca TIDAK jadi
+  tile sendiri (taruh menempel pada kata terakhir bila perlu, atau hilangkan).
+- "alternatives": 0-3 susunan Inggris LAIN yang sama-sama benar dan hanya memakai kata dari "words"
+  (+ pengecoh), mis. kontraksi tidak boleh; kalau tidak ada, array kosong.
+- "distractors": terjemahan Inggris tiap kata pengecoh Indonesia, URUTAN & JUMLAH sama persis,
+  masing-masing SATU kata Inggris yang wajar. Jangan memakai kata yang sudah ada di "words".
+
+Item:
+${JSON.stringify(items.map((it) => ({ id: it.id, arab: it.arabic, indonesia: it.indonesian, pengecohIndonesia: it.distractors })))}
+
+Balas HANYA JSON array: [{ "id": "...", "words": ["..."], "alternatives": [["..."]], "distractors": ["..."] }]`;
+  const raw = await callLadiz(prompt, 4500);
+  return JSON.parse(cleanJson(raw));
+}
+
+// Bangun content_en soal susun kata dari hasil AI; null kalau hasilnya tidak layak.
+export function buildWordOrderEn(content, res) {
+  if (!res || !Array.isArray(res.words)) return null;
+  const words = res.words.map((w) => String(w || "").trim()).filter(Boolean);
+  if (words.length < 1 || words.length > 12 || words.some(hasArabic)) return null;
+  const origDistractors = distractorsOf(content);
+  let dist = Array.isArray(res.distractors) ? res.distractors.map((w) => String(w || "").trim()) : [];
+  if (dist.length !== origDistractors.length) return null; // 1:1 supaya jumlah ubin sama
+  const lowerWords = new Set(words.map((w) => w.toLowerCase().replace(/[.,!?]/g, "")));
+  const seen = new Set();
+  dist = dist.filter((d) => {
+    const k = d.toLowerCase().replace(/[.,!?]/g, "");
+    if (!d || hasArabic(d) || lowerWords.has(k) || seen.has(k)) return false; // buang pengecoh yang bocor/ganda
+    seen.add(k);
+    return true;
+  });
+  const bank = [...words, ...dist];
+  const byLower = new Map();
+  for (const b of bank) if (!byLower.has(b.toLowerCase())) byLower.set(b.toLowerCase(), b);
+  const accepted = [words];
+  for (const alt of Array.isArray(res.alternatives) ? res.alternatives : []) {
+    if (!Array.isArray(alt)) continue;
+    const mapped = alt.map((w) => byLower.get(String(w || "").trim().toLowerCase()));
+    if (mapped.some((w) => !w) || mapped.length === 0) continue;
+    // tiap kata tidak boleh dipakai lebih sering dari jumlahnya di bank
+    const need = new Map(); mapped.forEach((w) => need.set(w, (need.get(w) || 0) + 1));
+    const have = new Map(); bank.forEach((w) => have.set(w, (have.get(w) || 0) + 1));
+    if ([...need].some(([w, n]) => n > (have.get(w) || 0))) continue;
+    if (accepted.some((a) => a.join(" ") === mapped.join(" "))) continue;
+    accepted.push(mapped);
+    if (accepted.length >= 4) break;
+  }
+  let shuffled = shuffle(bank);
+  for (let i = 0; i < 5 && bank.length > 1 && shuffled.join("|") === words.join("|"); i++) shuffled = shuffle(bank);
+  return { ...content, correctWords: words, acceptedOrders: accepted, wordBank: shuffled };
+}
+
+// Pengecoh Indonesia = isi wordBank dikurangi correctWords (hitung per kemunculan).
+function distractorsOf(content) {
+  const left = [...(content.wordBank || [])];
+  for (const w of content.correctWords || []) {
+    const i = left.indexOf(w);
+    if (i >= 0) left.splice(i, 1);
+  }
+  return left;
+}
+
+function wordOrderJob(row) {
+  const c = row.content;
+  return {
+    id: row.id,
+    content: c,
+    arabic: c.text,
+    indonesian: (c.correctWords || []).join(" "),
+    distractors: distractorsOf(c),
+  };
+}
+
+async function translateWordOrderRows(rows) {
+  const jobs = rows.map(wordOrderJob);
+  let ok = 0, bad = 0;
+  try {
+    const results = await translateWordOrderBatch(jobs.map((j) => ({ id: j.id, arabic: j.arabic, indonesian: j.indonesian, distractors: j.distractors })));
+    const byId = new Map((Array.isArray(results) ? results : []).map((r) => [r.id, r]));
+    for (const j of jobs) {
+      const en = buildWordOrderEn(j.content, byId.get(j.id));
+      if (!en) { bad++; console.warn(`  ⚠ Soal susun-kata ${String(j.id).slice(0, 8)}: terjemahan tidak layak -- dilewati.`); continue; }
+      const { error: updErr } = await supabase.from("exercises").update({ content_en: en }).eq("id", j.id);
+      if (updErr) { bad++; continue; }
+      ok++;
+    }
+  } catch (err) {
+    bad += jobs.length;
+    console.warn(`  ⚠ Batch susun-kata gagal total: ${err.message}`);
+  }
+  return { ok, bad };
+}
+
+// --fix-word-order: ulangi terjemahan SEMUA soal susun-kata to_indonesian yang sudah punya content_en
+// (versi lama menerjemahkan per kata, hasilnya mis. "he old").
+async function fixExistingWordOrder(limit) {
+  console.log("\n=== Perbaiki content_en soal susun-kata (to_indonesian) ===");
+  let done = 0, failed = 0;
+  const all = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from("exercises").select("id, type, content").eq("type", "word_order").order("id").range(from, from + 999);
+    if (error) throw error;
+    all.push(...(data || []));
+    if (!data || data.length < 1000) break;
+  }
+  const targets = all.filter((r) => r.content?.direction === "to_indonesian").slice(0, limit === Infinity ? undefined : limit);
+  console.log(`  ${targets.length} soal akan diterjemahkan ulang.`);
+  for (let i = 0; i < targets.length; i += 10) {
+    const r = await translateWordOrderRows(targets.slice(i, i + 10));
+    done += r.ok; failed += r.bad;
+    console.log(`  Progres: ${done} berhasil, ${failed} gagal`);
+  }
+  return { done, failed };
 }
 
 async function translateVocab(limit) {
@@ -161,6 +293,7 @@ async function translateExercises(limit) {
   console.log("\n=== Terjemahin isi soal ke Inggris (content_en) ===");
   let done = 0, failed = 0;
   while (done + failed < limit) {
+    const doneBefore = done;
     const { data: rows, error } = await supabase
       .from("exercises")
       .select("id, type, content")
@@ -168,6 +301,13 @@ async function translateExercises(limit) {
       .limit(Math.min(20, limit - done - failed));
     if (error) throw error;
     if (!rows || rows.length === 0) break;
+
+    const woRows = rows.filter((r) => r.type === "word_order" && r.content?.direction === "to_indonesian");
+    if (woRows.length > 0) {
+      const r = await translateWordOrderRows(woRows);
+      done += r.ok; failed += r.bad;
+    }
+    rows.splice(0, rows.length, ...rows.filter((r) => !woRows.includes(r)));
 
     const jobs = rows.map((r) => {
       const cloned = JSON.parse(JSON.stringify(r.content));
@@ -208,6 +348,8 @@ async function translateExercises(limit) {
       }
     }
     console.log(`  Progres: ${done} berhasil, ${failed} gagal`);
+    // Tidak ada kemajuan sama sekali di putaran ini -> baris yang sama akan terambil lagi terus; berhenti.
+    if (done === doneBefore) { console.warn("  Tidak ada soal yang berhasil di putaran ini, berhenti (jalankan lagi nanti)."); break; }
     if (failed >= 150 && done === 0) { console.error("Terlalu banyak gagal beruntun tanpa 1 pun berhasil, berhenti."); break; }
   }
   return { done, failed };
@@ -217,6 +359,12 @@ async function main() {
   const args = process.argv.slice(2);
   const limitIdx = args.indexOf("--limit");
   const limit = limitIdx >= 0 ? Number(args[limitIdx + 1]) : Infinity;
+
+  if (args.includes("--fix-word-order")) {
+    const fx = await fixExistingWordOrder(limit);
+    console.log(`\nSelesai: ${fx.done} diperbaiki, ${fx.failed} gagal.`);
+    return;
+  }
 
   const vocabResult = await translateVocab(limit);
   const exResult = await translateExercises(limit);
