@@ -1355,7 +1355,7 @@ export default function SubjectLanguage({
     );
     return (
       <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, boxSizing: "border-box" }}>
-        <div style={{ ...card, width: "100%", maxWidth: 400, textAlign: "center", padding: "34px 24px 26px", marginBottom: 0 }}>
+        <div style={{ ...card, width: "100%", maxWidth: 400, boxSizing: "border-box", textAlign: "center", padding: "34px 24px 26px", marginBottom: 0 }}>
           <Ring value={acc} C={C} />
           <div style={{ marginTop: 10 }}><Celebrate acc={acc} /></div>
           <div className="ls-enter" style={{ fontSize: 22, fontWeight: 800, color: "#1a2421", marginTop: 8 }}>{title}</div>

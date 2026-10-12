@@ -1824,6 +1824,8 @@ export default function KelasNotesters() {
     { bg: ORANGE, dark: ORANGE_DARK },
   ];
 
+  // Tinggi navbar: di HP navbar dua baris (logo+akun, lalu menu), jadi offset 'sticky' harus ikut.
+  const NAV_H = isMobile ? 108 : 56;
   const s = {
     root: { fontFamily: "'AmiriAr', 'Segoe UI', Arial, sans-serif", minHeight: "100vh", background: "#f6f8f7", color: "#1a1a1a" },
     // NAVBAR
@@ -1893,7 +1895,7 @@ export default function KelasNotesters() {
     heroTag: { color: "rgba(255,255,255,0.85)", fontSize: 13, fontWeight: "bold", letterSpacing: 2, marginBottom: 12, textTransform: "uppercase" },
     heroTitle: { color: "white", fontSize: "clamp(36px, 8vw, 60px)", fontWeight: "normal", marginBottom: 20, lineHeight: 1.1, fontFamily: "'Julius Sans One', sans-serif", letterSpacing: 4 },
     heroTitleSub: { color: "rgba(255,255,255,0.85)", fontSize: "clamp(13px, 2vw, 16px)", fontWeight: "bold", marginBottom: 16, letterSpacing: 1 },
-    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", width: "100%", maxWidth: "600", lineHeight: 1.7, textAlign: "center", margin: "0 auto 32px", padding: "0 24px" },
+    heroDesc: { color: "rgba(255,255,255,0.9)", fontSize: "clamp(14px, 2.5vw, 16px)", width: "100%", maxWidth: "600", boxSizing: "border-box", lineHeight: 1.7, textAlign: "center", margin: "0 auto 32px", padding: "0 24px" },
     heroBtn: {
       background: "#1a1a1a",
       color: "white",
@@ -1918,7 +1920,7 @@ export default function KelasNotesters() {
     },
     footerLeft: { fontSize: 13 },
     footerRight: { display: "flex", flexDirection: "column", gap: 6 },
-    footerLink: { color: "rgba(255,255,255,0.85)", fontSize: 13, cursor: "pointer", background: "none", border: "none", fontFamily: "inherit", textAlign: "right" },
+    footerLink: { color: "rgba(255,255,255,0.85)", fontSize: 13, cursor: "pointer", background: "none", border: "none", fontFamily: "inherit", textAlign: isMobile ? "center" : "right", padding: isMobile ? "8px 10px" : 0 },
 
     // EXPLORE
     exploreSection: { padding: "40px 24px", maxWidth: 1000, margin: "0 auto" },
@@ -1947,16 +1949,16 @@ export default function KelasNotesters() {
     courseCardDesc: { fontSize: 12.5, color: "#7a8581", lineHeight: 1.55 },
 
     // COURSE
-    courseLayout: { display: "flex", minHeight: "calc(100vh - 56px)", position: "relative" },
+    courseLayout: { display: "flex", minHeight: `calc(100vh - ${NAV_H}px)`, position: "relative" },
     overlay: { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.35)", zIndex: 250 },
     sidebar: {
       width: 240,
       background: "white",
       borderRight: "1px solid #e0e0e0",
       position: "fixed",
-      top: 56,
+      top: NAV_H,
       left: 0,
-      height: "calc(100vh - 56px)",
+      height: `calc(100vh - ${NAV_H}px)`,
       zIndex: 300,
       transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
       transition: "transform 0.3s ease",
@@ -2049,7 +2051,7 @@ export default function KelasNotesters() {
     card: { background: "white", border: "1px solid #e8eeeb", borderRadius: 18, padding: "16px 18px", marginBottom: 14, boxShadow: "0 1px 2px rgba(20,40,30,0.04), 0 8px 24px rgba(20,40,30,0.05)" },
 
     // AUTH (Login/Register)
-    authPage: { minHeight: "calc(100vh - 56px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "36px 18px", background: "radial-gradient(900px 420px at 50% -10%, #e4efe9 0%, rgba(228,239,233,0) 70%), #f6f9f7" },
+    authPage: { minHeight: `calc(100vh - ${NAV_H}px)`, display: "flex", alignItems: isMobile ? "flex-start" : "center", justifyContent: "center", padding: isMobile ? "24px 16px 40px" : "36px 18px", background: "radial-gradient(900px 420px at 50% -10%, #e4efe9 0%, rgba(228,239,233,0) 70%), #f6f9f7" },
     authCard: { width: "100%", maxWidth: 420, background: "white", borderRadius: 24, padding: "34px 30px 28px", border: "1px solid #e8eeeb", boxShadow: "0 1px 2px rgba(20,40,30,0.04), 0 16px 40px rgba(20,40,30,0.07)", boxSizing: "border-box" },
     authTitle: { fontSize: 22, fontWeight: 800, color: "#1a2421", textAlign: "center", marginBottom: 6, letterSpacing: "-0.2px" },
     authSubtitle: { fontSize: 13.5, color: "#7a8782", textAlign: "center", marginBottom: 22, lineHeight: 1.55 },
@@ -2091,7 +2093,7 @@ export default function KelasNotesters() {
     bagianSunBubbleClose: { background: "#f1f5f3", color: "#5b6862", border: "none", borderRadius: 9, padding: "8px 11px", fontSize: 12, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", marginLeft: "auto" },
 
     // AMMIYAH — LEARNING PATH (units + levels)
-    unitBannerWrap: { position: "sticky", top: 56, zIndex: 90, padding: "14px 20px 8px", background: "linear-gradient(#fff 60%, rgba(255,255,255,0))" },
+    unitBannerWrap: { position: "sticky", top: NAV_H, zIndex: 90, padding: "14px 20px 8px", background: "linear-gradient(#fff 60%, rgba(255,255,255,0))" },
     unitBanner: { maxWidth: 460, margin: "0 auto", borderRadius: 16, padding: "16px 18px", display: "flex", alignItems: "center", gap: 14, boxShadow: "0 6px 14px rgba(0,0,0,0.15)" },
     unitBannerClose: { background: "none", border: "none", color: "white", fontSize: 20, cursor: "pointer", lineHeight: 1 },
     unitBannerText: { color: "white", flex: 1 },
@@ -2123,7 +2125,7 @@ export default function KelasNotesters() {
     lessonClose: { background: "none", border: "none", color: "#999", fontSize: 22, cursor: "pointer", lineHeight: 1 },
     lessonProgressTrack: { flex: 1, height: 8, borderRadius: 20, background: "#e9eeec", overflow: "hidden" },
     lessonProgressFill: { height: "100%", borderRadius: 20, background: `linear-gradient(90deg, ${GREEN}, ${GREEN_DARK})`, transition: "width 0.3s ease" },
-    lessonBody: { flex: 1, padding: "20px 20px 140px", maxWidth: 560, margin: "0 auto", width: "100%" },
+    lessonBody: { flex: 1, padding: "20px 20px 140px", maxWidth: 560, margin: "0 auto", width: "100%", boxSizing: "border-box" },
     lessonQuestion: { fontSize: 20, fontWeight: "bold", color: "#1a1a1a", marginBottom: 22 },
     lessonPromptRow: { display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 30 },
     lessonAvatarWrap: { flexShrink: 0 },
@@ -2150,7 +2152,7 @@ export default function KelasNotesters() {
     // Ditandai pas kotak lagi "dipilih" buat ditukar posisinya (lihat handlePlacedTileClick).
     lessonWordTileSelected: { border: "2px solid #F5B700", background: "#FFF6DD", color: "#a97b00", boxShadow: "0 0 0 2px rgba(245,183,0,0.25)" },
     lessonTextInput: { width: "100%", border: "1.5px solid #e3e9e6", borderRadius: 14, fontSize: 18, padding: "12px 14px", outline: "none", marginBottom: 20, boxSizing: "border-box" },
-    lessonBottomBar: { position: "sticky", bottom: 0, left: 0, right: 0, borderTop: "1px solid #e8eeeb", padding: "16px 20px 20px", background: "white" },
+    lessonBottomBar: { position: "sticky", bottom: 0, left: 0, right: 0, borderTop: "1px solid #e8eeeb", padding: "16px 20px calc(20px + env(safe-area-inset-bottom, 0px))", background: "white" },
     lessonBottomInner: { maxWidth: 560, margin: "0 auto" },
     lessonFeedback: { display: "flex", alignItems: "center", gap: 10, marginBottom: 12, fontWeight: "bold", fontSize: 15 },
     lessonBtnDisabled: { background: "#eceff0", color: "#a3adaa", cursor: "default", boxShadow: "none" },
@@ -2174,74 +2176,98 @@ export default function KelasNotesters() {
     matchCardDone: { borderColor: "#6bb58a", background: "#ecf7f0", opacity: 0.85, cursor: "default" },
     // MODAL
     modal: { position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 500, padding: 16 },
-    modalBox: { background: "white", borderRadius: 16, padding: 28, width: "100%", maxWidth: 380 },
+    modalBox: { background: "white", borderRadius: 16, padding: 28, width: "100%", maxWidth: 380, boxSizing: "border-box", maxHeight: "92vh", overflowY: "auto" },
     modalTitle: { fontSize: 18, fontWeight: "bold", color: "#1a1a1a", marginBottom: 14 },
   };
 
-  const renderNavbar = () => (
-    <div style={s.navbar}>
-      <a href="?page=home" onClick={navLinkClick(goHome)} style={{ cursor: "pointer", textDecoration: "none" }}>
-      <div style={{ display: "flex", alignItems: "flex-end", gap: 7 }}><img src="/logo-learningspace-white.png" alt="LearningSpace by Kyo" style={{ height: isMobile ? 28 : 38, width: "auto", display: "block" }} /><span style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", paddingBottom: 3, letterSpacing: 0.3 }}>by Kyo</span></div>
-    </a>  
-    <div style={{ position: "relative", overflow: "hidden", flex: isMobile ? 1 : "none", minWidth: 0 }}>
-      <div style={s.navLinks} className="nav-links-scroll">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        {currentUser ? (
-          <a
-            href="?page=profile"
-            onClick={navLinkClick(() => { setPage("profile"); window.scrollTo({ top: 0, behavior: "auto" }); })}
-            aria-label={lx("Profil", "Profile")}
-            style={{ ...s.navLink, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none", padding: "4px 12px 4px 4px", borderRadius: 999,
-              background: page === "profile" ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.16)" }}
-          >
-            {currentUser.avatarUrl ? (
-              <img src={currentUser.avatarUrl} alt="" referrerPolicy="no-referrer" style={{ width: 26, height: 26, borderRadius: "50%", objectFit: "cover" }} />
-            ) : (
-              <span style={{ width: 26, height: 26, borderRadius: "50%", background: "white", color: GREEN_DARK, fontSize: 13, fontWeight: 800, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-                {(currentUser.name || "?").trim().charAt(0).toUpperCase()}
-              </span>
-            )}
-            <span style={{ maxWidth: isMobile ? 70 : 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{(currentUser.name || "").split(" ")[0]}</span>
-          </a>
+  const renderNavbar = () => {
+    const authItem = currentUser ? (
+      <a
+        href="?page=profile"
+        onClick={navLinkClick(() => { setPage("profile"); window.scrollTo({ top: 0, behavior: "auto" }); })}
+        aria-label={lx("Profil", "Profile")}
+        style={{ ...s.navLink, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none", padding: "4px 12px 4px 4px", borderRadius: 999,
+          background: page === "profile" ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.16)" }}
+      >
+        {currentUser.avatarUrl ? (
+          <img src={currentUser.avatarUrl} alt="" referrerPolicy="no-referrer" style={{ width: 28, height: 28, borderRadius: "50%", objectFit: "cover" }} />
         ) : (
-          <a
-            href="?page=login"
-            onClick={navLinkClick(() => { setAuthRedirectTarget("ammiyahBagian"); setAuthMode("login"); setPage("login"); })}
-            style={{ ...(page === "login" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}
-          >
-            Login
-          </a>
+          <span style={{ width: 28, height: 28, borderRadius: "50%", background: "white", color: GREEN_DARK, fontSize: 13, fontWeight: 800, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+            {(currentUser.name || "?").trim().charAt(0).toUpperCase()}
+          </span>
         )}
-        <a href="?page=home" onClick={navLinkClick(goHome)} style={{ ...(page === "home" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Home</a>
-        <a href="?page=explore" onClick={navLinkClick(goExplore)} style={{ ...(page === "explore" || page === "course" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Explore</a>
-        <a href="?page=subject" onClick={featureLinkClick(goSubject, "subject")} style={{ ...(page === "subject" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z" /><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" /></svg> Subject Language
-        </a>
-        <a href="?page=ammiyah" onClick={featureLinkClick(goAmmiyah, "ammiyah")} style={{ ...(page.startsWith("ammiyah") ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }}>
-          <JordanFlag size={16} /> Levantine
-        </a>
-        <button
-          className="nav-donate"
-          style={{ ...s.navLink, display: "inline-flex", alignItems: "center", visibility: "visible", opacity: 1 }}
-          onClick={() => setShowDonate(true)}
-        >
-          Donate
-        </button>
-        <a href="?page=contact" onClick={navLinkClick(goContact)} style={{ ...(page === "contact" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Contact Us</a>
+        <span style={{ maxWidth: isMobile ? 90 : 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{(currentUser.name || "").split(" ")[0]}</span>
+      </a>
+    ) : (
+      <a
+        href="?page=login"
+        onClick={navLinkClick(() => { setAuthRedirectTarget("ammiyahBagian"); setAuthMode("login"); setPage("login"); })}
+        style={{ ...(page === "login" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block",
+          ...(isMobile && page !== "login" ? { background: "rgba(255,255,255,0.2)", borderRadius: 999, padding: "7px 18px", fontWeight: 700 } : {}) }}
+      >
+        Login
+      </a>
+    );
+
+    const logo = (
+      <a href="?page=home" onClick={navLinkClick(goHome)} style={{ cursor: "pointer", textDecoration: "none", flexShrink: 0 }}>
+        <div style={{ display: "flex", alignItems: "flex-end", gap: 7 }}><img src="/logo-learningspace-white.png" alt="LearningSpace by Kyo" style={{ height: isMobile ? 30 : 38, width: "auto", display: "block" }} /><span style={{ fontSize: 11, color: "rgba(255,255,255,0.8)", paddingBottom: 3, letterSpacing: 0.3 }}>by Kyo</span></div>
+      </a>
+    );
+
+    // Gaya tautan: di HP berbentuk "pil" supaya mudah ditekan jari dan jelas mana yang aktif.
+    const lk = (active) => (isMobile
+      ? { ...(active ? s.navLinkActive : s.navLink), padding: "6px 14px", borderRadius: 999, fontSize: 13.5, minHeight: 34,
+          background: active ? "white" : "rgba(255,255,255,0.14)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }
+      : { ...(active ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 });
+    const links = [
+      <a key="home" href="?page=home" onClick={navLinkClick(goHome)} style={lk(page === "home")}>Home</a>,
+      <a key="explore" href="?page=explore" onClick={navLinkClick(goExplore)} style={lk(page === "explore" || page === "course")}>Explore</a>,
+      <a key="subject" href="?page=subject" onClick={featureLinkClick(goSubject, "subject")} style={lk(page === "subject")}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z" /><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" /></svg> Subject Language
+      </a>,
+      <a key="levantine" href="?page=ammiyah" onClick={featureLinkClick(goAmmiyah, "ammiyah")} style={lk(page.startsWith("ammiyah"))}>
+        <JordanFlag size={16} /> Levantine
+      </a>,
+      <button key="donate" className="nav-donate" style={{ ...lk(false), visibility: "visible", opacity: 1, border: "none" }} onClick={() => setShowDonate(true)}>Donate</button>,
+      <a key="contact" href="?page=contact" onClick={navLinkClick(goContact)} style={lk(page === "contact")}>Contact Us</a>,
+    ];
+
+    if (isMobile) {
+      return (
+        <div style={{ ...s.navbar, height: "auto", flexDirection: "column", alignItems: "stretch", justifyContent: "flex-start", padding: 0, boxShadow: "0 2px 10px rgba(30,60,50,0.12)" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 14px 6px 16px" }}>
+            {logo}
+            {authItem}
+          </div>
+          <div style={{ position: "relative" }}>
+            <div className="nav-links-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", WebkitOverflowScrolling: "touch", padding: "2px 16px 10px", scrollbarWidth: "none" }}>
+              {links}
+            </div>
+            <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 28, pointerEvents: "none", background: `linear-gradient(to right, transparent, ${GREEN})` }} />
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div style={s.navbar}>
+        {logo}
+        <div style={{ position: "relative", overflow: "hidden", flex: "none", minWidth: 0 }}>
+          <div style={s.navLinks} className="nav-links-scroll">
+            {authItem}
+            {links}
+          </div>
+        </div>
       </div>
-      {isMobile && (
-        <div style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 24, pointerEvents: "none", background: `linear-gradient(to right, transparent, ${GREEN})` }} />
-      )}
-      </div>
-    </div>
-  );
+    );
+  };
 
   const renderFooter = () => (
     <div style={{ background: GREEN, color: "white" }}>
-      <div style={{ ...s.footer, background: "transparent", alignItems: "flex-start" }}>
-        <div style={{ ...s.footerLeft, flex: "1 1 200px" }}>
+      <div style={{ ...s.footer, background: "transparent", alignItems: isMobile ? "center" : "flex-start", ...(isMobile ? { flexDirection: "column", padding: "28px 20px 22px", gap: 22, textAlign: "center" } : {}) }}>
+        <div style={{ ...s.footerLeft, flex: isMobile ? "0 0 auto" : "1 1 200px" }}>
           <div style={{ fontSize: 11, color: "rgba(255,255,255,0.7)", marginBottom: 8 }}>Our social Media</div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: isMobile ? "center" : "flex-start" }}>
             <a className="ls-press" href="https://youtube.com/@noteskey?si=8m9rWk59J66TGPAa" target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.2)", padding: "5px 12px", borderRadius: 6, color: "white", textDecoration: "none", fontSize: 13 }}>
               <YouTubeLogo size={15} /> YouTube
@@ -2252,13 +2278,13 @@ export default function KelasNotesters() {
             </a>
           </div>
         </div>
-        <div style={{ flex: "1 1 200px", display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
+        <div style={{ flex: isMobile ? "0 0 auto" : "1 1 200px", display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
           <a href="?page=home" onClick={navLinkClick(goHome)} aria-label="LearningSpace" style={{ display: "flex" }}>
             <img src="/logo-learningspace-white.png" alt="LearningSpace" style={{ height: 40, width: "auto", display: "block" }} />
           </a>
         </div>
-        <div style={{ flex: "1 1 200px", display: "flex", justifyContent: "flex-end" }}>
-      <div style={s.footerRight}>
+        <div style={{ flex: isMobile ? "0 0 auto" : "1 1 200px", display: "flex", justifyContent: isMobile ? "center" : "flex-end" }}>
+      <div style={isMobile ? { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "4px 6px" } : s.footerRight}>
         <a href="?page=home" onClick={navLinkClick(goHome)} style={{ ...s.footerLink, textDecoration: "none" }}>Home</a>
         <a href="?page=explore" onClick={navLinkClick(goExplore)} style={{ ...s.footerLink, textDecoration: "none" }}>Explore</a>
         <a href="?page=subject" onClick={featureLinkClick(goSubject, "subject")} style={{ ...s.footerLink, textDecoration: "none" }}>Subject Language</a>
@@ -2268,7 +2294,7 @@ export default function KelasNotesters() {
       </div>
         </div>
       </div>
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.18)", padding: "14px 40px", textAlign: "center", fontSize: 12.5, color: "rgba(255,255,255,0.8)" }}>
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.18)", padding: isMobile ? "14px 20px" : "14px 40px", textAlign: "center", fontSize: 12.5, color: "rgba(255,255,255,0.8)" }}>
         © 2026 LearningSpace. All rights reserved.
       </div>
     </div>
@@ -5373,7 +5399,7 @@ function renderNodeIcon(type, status) {
     );
     return (
       <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, boxSizing: "border-box" }}>
-        <div style={{ background: "white", border: "1px solid #e8eeeb", borderRadius: 22, width: "100%", maxWidth: 400, textAlign: "center", padding: "30px 24px 26px", boxShadow: "0 1px 2px rgba(20,40,30,0.04), 0 12px 32px rgba(20,40,30,0.06)" }}>
+        <div style={{ background: "white", border: "1px solid #e8eeeb", borderRadius: 22, width: "100%", maxWidth: 400, boxSizing: "border-box", textAlign: "center", padding: "30px 24px 26px", boxShadow: "0 1px 2px rgba(20,40,30,0.04), 0 12px 32px rgba(20,40,30,0.06)" }}>
           <Ring value={acc} C={{ GREEN_DARK }} />
           <div style={{ marginTop: 10 }}><Celebrate acc={acc} /></div>
           <div className="ls-enter" style={{ fontSize: 22, fontWeight: 800, color: "#1a2421", marginTop: 8 }}>{lx("Lesson selesai", "Lesson complete")}</div>
@@ -5554,13 +5580,21 @@ function renderNodeIcon(type, status) {
       @media (prefers-reduced-motion: reduce) { .path-halo, .path-mascot { animation: none; } .path-node:not(:disabled):hover { transform: none; } }
       .auth-input:focus { border-color: #7BAE9B !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(123,174,155,0.22); }
       .nav-links-scroll { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.5) transparent; }
+      html { -webkit-text-size-adjust: 100%; }
+      button, a, [role="button"] { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      @media (max-width: 640px) {
+        /* 16px mencegah iOS memperbesar halaman otomatis saat kolom isian difokus */
+        input, textarea, select { font-size: 16px !important; }
+        .nav-links-scroll::-webkit-scrollbar { display: none; }
+        img, video { max-width: 100%; }
+      }
     `}</style>
     <div
       onClickCapture={(e) => { if (lessonLocked) { e.preventDefault(); e.stopPropagation(); flashLockToast(); } }}
       style={lessonLocked ? { opacity: 0.55, cursor: "not-allowed", filter: "grayscale(0.2)" } : undefined}
       aria-disabled={lessonLocked || undefined}
     >
-      {renderNavbar()}
+      {!(isMobile && lessonLocked) && renderNavbar()}
     </div>
     {lockToast && (
       <div style={{ position: "fixed", bottom: 120, left: 0, right: 0, zIndex: 3000, display: "flex", justifyContent: "center", padding: "0 16px", pointerEvents: "none" }}>
@@ -5570,7 +5604,7 @@ function renderNodeIcon(type, status) {
       </div>
     )}
     {featureLoading && (
-      <div style={{ position: "fixed", top: 56, left: 0, right: 0, bottom: 0, zIndex: 90, background: "#f6f8f7", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, textAlign: "center", padding: 24 }}>
+      <div style={{ position: "fixed", top: NAV_H, left: 0, right: 0, bottom: 0, zIndex: 90, background: "#f6f8f7", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, textAlign: "center", padding: 24 }}>
         <style>{"@keyframes featSpin{to{transform:rotate(360deg)}}"}</style>
         <div style={{ width: 44, height: 44, borderRadius: "50%", border: "3px solid #e1ece7", borderTopColor: GREEN_DARK, animation: "featSpin .8s linear infinite" }} />
         <div>
