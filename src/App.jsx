@@ -687,7 +687,7 @@ function readUrlState(coursesForLookup) {
     // Course belum ketemu (mungkin data belum ke-load) — anggap sementara Explore
     return { page: "explore", course: null, lesson: null };
   }
-  if (p === "explore" || p === "contact" || p === "subject" || p === "ammiyah" || p === "ammiyahBagian" || p === "ammiyahPath") {
+  if (p === "explore" || p === "contact" || p === "subject" || p === "ammiyah" || p === "ammiyahBagian" || p === "ammiyahPath" || p === "profile") {
     return { page: p, course: null, lesson: null };
   }
   return { page: "home", course: null, lesson: null };
@@ -1251,30 +1251,50 @@ export default function KelasNotesters() {
   // Google, browser diarahkan balik ke web ini dan event ini yang
   // nangkep hasil loginnya, BUKAN handleGoogleAuth, karena handleGoogleAuth
   // cuma MEMULAI redirect ke Google, gak nunggu hasilnya).
+  const toAppUser = (u) => {
+    const meta = u.user_metadata || {};
+    const email = u.email || "";
+    return {
+      id: u.id,
+      email,
+      name: meta.name || meta.full_name || (email ? email.split("@")[0] : "User"),
+      avatarUrl: meta.avatar_url || meta.picture || null,
+      provider: u.app_metadata?.provider || "email",
+      createdAt: u.created_at || null,
+    };
+  };
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session?.user) {
-        setCurrentUser({
-          id: session.user.id,
-          email: session.user.email,
-          name: session.user.user_metadata?.name || session.user.email.split("@")[0],
-        });
-      }
+      if (session?.user) setCurrentUser(toAppUser(session.user));
     });
 
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (session?.user) {
-        setCurrentUser({
-          id: session.user.id,
-          email: session.user.email,
-          name: session.user.user_metadata?.name || session.user.email.split("@")[0],
-        });
+        setCurrentUser(toAppUser(session.user));
       } else {
         setCurrentUser(null);
       }
     });
 
     return () => listener.subscription.unsubscribe();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Kalau login Google gagal, Supabase mengembalikan user ke web dengan ?error_description=... (di query atau hash).
+  // Tampilkan pesannya di halaman login supaya penyebabnya kelihatan, terutama di HP.
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search);
+      const h = new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+      const desc = q.get("error_description") || h.get("error_description");
+      if (desc) {
+        setAuthError(`Login Google gagal: ${desc.replace(/\+/g, " ")}`);
+        setAuthMode("login");
+        setPage("login");
+        window.history.replaceState({}, "", window.location.pathname);
+      }
+    } catch (e) { /* abaikan */ }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // --- Subject Language Learning: ringkasan untuk kartu "Lanjutkan Belajar" di Home ---
@@ -1476,8 +1496,10 @@ export default function KelasNotesters() {
   const handleAuthSubmit = async (e) => {
     e.preventDefault();
     setAuthError("");
+    // Keyboard HP sering menambah huruf kapital di awal / spasi di akhir email — bersihkan dulu.
+    const cleanEmail = (authForm.email || "").trim().toLowerCase();
 
-    if (!authForm.email || !authForm.password) {
+    if (!cleanEmail || !authForm.password) {
       setAuthError("Email dan password wajib diisi.");
       return;
     }
@@ -1491,9 +1513,9 @@ export default function KelasNotesters() {
     try {
       if (authMode === "register") {
         const { error } = await supabase.auth.signUp({
-          email: authForm.email,
+          email: cleanEmail,
           password: authForm.password,
-          options: { data: { name: authForm.name } },
+          options: { data: { name: authForm.name.trim() } },
         });
         if (error) throw error;
         // Kalau project Supabase kamu masih mewajibkan verifikasi email
@@ -1504,7 +1526,7 @@ export default function KelasNotesters() {
         // → Providers → Email.
       } else {
         const { error } = await supabase.auth.signInWithPassword({
-          email: authForm.email,
+          email: cleanEmail,
           password: authForm.password,
         });
         if (error) throw error;
@@ -1518,6 +1540,10 @@ export default function KelasNotesters() {
       const msg = err.message || "";
       if (msg.includes("Invalid login credentials")) {
         setAuthError("Email atau password salah.");
+      } else if (msg.includes("Email not confirmed")) {
+        setAuthError(lx("Email belum diverifikasi — klik link verifikasi yang dikirim ke emailmu dulu.", "Email not verified yet — click the verification link we sent you first."));
+      } else if (/failed to fetch|network/i.test(msg)) {
+        setAuthError(lx("Koneksi bermasalah — periksa internet lalu coba lagi.", "Connection problem — check your internet and try again."));
       } else if (msg.includes("User already registered")) {
         setAuthError("Email ini sudah terdaftar — coba masuk saja.");
       } else {
@@ -1570,7 +1596,52 @@ export default function KelasNotesters() {
     </div>
   );
 
+  const renderProfile = () => {
+    const u = currentUser;
+    if (!u) return renderLogin();
+    const initial = (u.name || u.email || "?").trim().charAt(0).toUpperCase();
+    const joined = u.createdAt ? new Date(u.createdAt).toLocaleDateString(uiLang === "en" ? "en-US" : "id-ID", { year: "numeric", month: "long" }) : null;
+    const providerLabel = u.provider === "google" ? "Google" : "Email";
+    const row = (label, value) => (
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, padding: "13px 0", borderBottom: "1px solid #eef2f0", fontSize: 14 }}>
+        <span style={{ color: "#8a9692" }}>{label}</span>
+        <span style={{ color: "#1a2421", fontWeight: 600, textAlign: "right", wordBreak: "break-all" }}>{value}</span>
+      </div>
+    );
+    return (
+      <div style={s.authPage}>
+        <div style={{ ...s.authCard, textAlign: "center" }} className="ls-enter">
+          {u.avatarUrl ? (
+            <img src={u.avatarUrl} alt="" referrerPolicy="no-referrer" style={{ width: 84, height: 84, borderRadius: "50%", objectFit: "cover", margin: "4px auto 14px", display: "block", boxShadow: "0 6px 18px rgba(30,70,50,0.18)" }} />
+          ) : (
+            <div style={{ width: 84, height: 84, borderRadius: "50%", margin: "4px auto 14px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 34, fontWeight: 800, color: "white", background: `linear-gradient(135deg, ${GREEN}, ${GREEN_DARK})`, boxShadow: "0 6px 18px rgba(30,70,50,0.18)" }}>{initial}</div>
+          )}
+          <div style={{ fontSize: 21, fontWeight: 800, color: "#1a2421" }}>{u.name}</div>
+          <div style={{ fontSize: 13.5, color: "#7a8782", marginTop: 3 }}>{u.email}</div>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 12, fontSize: 12, fontWeight: 700, color: "#2e7d5b", background: "#E6F4EC", padding: "5px 12px", borderRadius: 999 }}>
+            <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#2e9e6b" }} />
+            {lx("Sudah masuk", "Signed in")}
+          </div>
+
+          <div style={{ textAlign: "left", margin: "22px 0 20px" }}>
+            {row(lx("Masuk lewat", "Signed in with"), providerLabel)}
+            {joined && row(lx("Bergabung", "Joined"), joined)}
+          </div>
+
+          <button className="ls-press" style={s.authSubmitBtn} onClick={() => { setPage("ammiyahBagian"); window.scrollTo({ top: 0, behavior: "auto" }); }}>
+            {lx("Lanjut belajar Levantine", "Continue learning Levantine")}
+          </button>
+          <button className="ls-press" style={{ ...s.authSubmitBtn, marginTop: 10, background: "white", color: "#c23b3b", border: "1.5px solid #f0d4d4", boxShadow: "none" }}
+            onClick={() => { supabase.auth.signOut(); setPage("home"); window.scrollTo({ top: 0, behavior: "auto" }); }}>
+            {lx("Keluar", "Log out")}
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   const renderLogin = () => {
+    if (currentUser) return renderProfile();
     const isRegister = authMode === "register";
     const isAmmiyahRedirect = authRedirectTarget && authRedirectTarget.startsWith("ammiyah");
     const switchMode = (m) => { setAuthMode(m); setAuthError(""); };
@@ -1631,11 +1702,11 @@ export default function KelasNotesters() {
               </div>
             )}
             <label style={s.authLabel} htmlFor="auth-email">Email</label>
-            <input id="auth-email" className="auth-input" style={s.authInput} type="email" autoComplete="email" placeholder="nama@email.com"
+            <input id="auth-email" className="auth-input" style={s.authInput} type="email" inputMode="email" autoComplete="email" autoCapitalize="none" autoCorrect="off" spellCheck={false} placeholder="nama@email.com"
               value={authForm.email} onChange={(e) => updateAuthForm("email", e.target.value)} />
             <label style={s.authLabel} htmlFor="auth-password">Password</label>
             <div style={{ position: "relative" }}>
-              <input id="auth-password" className="auth-input" style={{ ...s.authInput, paddingRight: 72 }} type={showPw ? "text" : "password"} autoComplete={isRegister ? "new-password" : "current-password"} placeholder="••••••••"
+              <input id="auth-password" className="auth-input" style={{ ...s.authInput, paddingRight: 72 }} type={showPw ? "text" : "password"} autoComplete={isRegister ? "new-password" : "current-password"} autoCapitalize="none" autoCorrect="off" spellCheck={false} placeholder="••••••••"
                 value={authForm.password} onChange={(e) => updateAuthForm("password", e.target.value)} />
               {pwToggle}
             </div>
@@ -2115,22 +2186,32 @@ export default function KelasNotesters() {
     <div style={{ position: "relative", overflow: "hidden", flex: isMobile ? 1 : "none", minWidth: 0 }}>
       <div style={s.navLinks} className="nav-links-scroll">
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a
-          href={currentUser ? "#" : "?page=login"}
-          onClick={navLinkClick(() => {
-            if (currentUser) {
-              supabase.auth.signOut(); // onAuthStateChange otomatis set currentUser jadi null
-              setPage("home");
-            } else {
-              setAuthRedirectTarget("ammiyahBagian");
-              setAuthMode("login");
-              setPage("login");
-            }
-          })}
-          style={{ ...(page === "login" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}
-        >
-          {currentUser ? "Logout" : "Login"}
-        </a>
+        {currentUser ? (
+          <a
+            href="?page=profile"
+            onClick={navLinkClick(() => { setPage("profile"); window.scrollTo({ top: 0, behavior: "auto" }); })}
+            aria-label={lx("Profil", "Profile")}
+            style={{ ...s.navLink, display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none", padding: "4px 12px 4px 4px", borderRadius: 999,
+              background: page === "profile" ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.16)" }}
+          >
+            {currentUser.avatarUrl ? (
+              <img src={currentUser.avatarUrl} alt="" referrerPolicy="no-referrer" style={{ width: 26, height: 26, borderRadius: "50%", objectFit: "cover" }} />
+            ) : (
+              <span style={{ width: 26, height: 26, borderRadius: "50%", background: "white", color: GREEN_DARK, fontSize: 13, fontWeight: 800, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+                {(currentUser.name || "?").trim().charAt(0).toUpperCase()}
+              </span>
+            )}
+            <span style={{ maxWidth: isMobile ? 70 : 120, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{(currentUser.name || "").split(" ")[0]}</span>
+          </a>
+        ) : (
+          <a
+            href="?page=login"
+            onClick={navLinkClick(() => { setAuthRedirectTarget("ammiyahBagian"); setAuthMode("login"); setPage("login"); })}
+            style={{ ...(page === "login" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}
+          >
+            Login
+          </a>
+        )}
         <a href="?page=home" onClick={navLinkClick(goHome)} style={{ ...(page === "home" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Home</a>
         <a href="?page=explore" onClick={navLinkClick(goExplore)} style={{ ...(page === "explore" || page === "course" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-block" }}>Explore</a>
         <a href="?page=subject" onClick={featureLinkClick(goSubject, "subject")} style={{ ...(page === "subject" ? s.navLinkActive : s.navLink), textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6 }}>
@@ -5501,6 +5582,7 @@ function renderNodeIcon(type, status) {
     {page === "home" && renderHome()}
     {page === "explore" && renderExplore()}
     {page === "login" && renderLogin()}
+    {page === "profile" && renderProfile()}
     {page === "subject" && ((currentUser || isLocalDev())
       ? (
         <SubjectLanguage
