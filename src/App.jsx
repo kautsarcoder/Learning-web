@@ -2890,6 +2890,7 @@ function renderNodeIcon(type, status) {
         // beda tiap kali dimainkan (adaptif ke progress TERBARU user).
         return (rows || []).map((r) => ({
           id: r.id, type: r.type, prompt: r.prompt, content: r.content,
+          contentEn: r.content_en || null,
           audioUrl: r.audio_url || null, vocabIds: r.vocab_ids || [],
         }));
       }
@@ -5560,7 +5561,7 @@ function renderNodeIcon(type, status) {
 
   // Halaman hukum: /?page=privacy dan /?page=terms (dipakai untuk Google OAuth consent screen).
   const renderLegal = (kind) => {
-    const CONTACT_EMAIL = "noteskey77@contoh.com"; // <-- ganti sebelum deploy
+    const CONTACT_EMAIL = "GANTI_DENGAN_EMAIL_KONTAK@contoh.com"; // <-- ganti sebelum deploy
     const updated = "13 Oktober 2026";
     const h = { fontSize: 17, fontWeight: 700, color: "#1a2421", margin: "26px 0 8px" };
     const p = { fontSize: 14.5, color: "#46524d", lineHeight: 1.75, margin: "0 0 10px" };
