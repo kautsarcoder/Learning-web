@@ -33,6 +33,10 @@ import { createClient } from "@supabase/supabase-js";
 import { loadExistingSignatures, filterDuplicateExercises, sanitizeGeneratedExercises, shuffleAnswerPositions } from "../lib/exercise-validator.mjs";
 import { rankVocabByPriority } from "../lib/review-engine.mjs";
 
+// Generate soal lewat AI bisa >10 dtk (batas default Vercel) -> tanpa ini fungsi di-timeout
+// dan Vercel membalas teks biasa (bukan JSON) => frontend cuma lihat "Gagal mengirim ke ...".
+export const config = { maxDuration: 60 };
+
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY

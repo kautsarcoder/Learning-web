@@ -687,7 +687,7 @@ function readUrlState(coursesForLookup) {
     // Course belum ketemu (mungkin data belum ke-load) — anggap sementara Explore
     return { page: "explore", course: null, lesson: null };
   }
-  if (p === "explore" || p === "contact" || p === "subject" || p === "ammiyah" || p === "ammiyahBagian" || p === "ammiyahPath" || p === "profile") {
+  if (p === "explore" || p === "contact" || p === "subject" || p === "ammiyah" || p === "ammiyahBagian" || p === "ammiyahPath" || p === "profile" || p === "privacy" || p === "terms") {
     return { page: p, course: null, lesson: null };
   }
   return { page: "home", course: null, lesson: null };
@@ -1475,6 +1475,11 @@ export default function KelasNotesters() {
   const goContact = () => {
     setPage("contact");
     setSidebarOpen(false);
+  };
+  const goLegal = (kind) => () => {
+    setPage(kind);
+    setSidebarOpen(false);
+    window.scrollTo({ top: 0, behavior: "auto" });
   };
 
   const goAmmiyah = () => {
@@ -2313,6 +2318,10 @@ export default function KelasNotesters() {
         </div>
       </div>
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.18)", padding: isMobile ? "14px 20px" : "14px 40px", textAlign: "center", fontSize: 12.5, color: "rgba(255,255,255,0.8)" }}>
+        <div style={{ marginBottom: 6, display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+          <a href="?page=privacy" onClick={navLinkClick(goLegal("privacy"))} style={{ color: "rgba(255,255,255,0.9)", textDecoration: "underline" }}>Privacy Policy</a>
+          <a href="?page=terms" onClick={navLinkClick(goLegal("terms"))} style={{ color: "rgba(255,255,255,0.9)", textDecoration: "underline" }}>Terms of Service</a>
+        </div>
         © 2026 LearningSpace. All rights reserved.
       </div>
     </div>
@@ -2619,7 +2628,10 @@ function renderNodeIcon(type, status) {
     });
     if (!res.ok) {
       const errBody = await res.json().catch(() => ({}));
-      throw new Error(errBody.error || `Gagal mengirim ke ${url}`);
+      const hint = res.status === 504 || res.status === 408
+        ? " (server timeout — coba lagi sebentar)"
+        : res.status >= 500 && !errBody.error ? " (server error, cek Vercel Logs)" : "";
+      throw new Error(errBody.error || `Gagal mengirim ke ${url} [HTTP ${res.status}]${hint}`);
     }
     return res.json();
   }
@@ -5546,6 +5558,67 @@ function renderNodeIcon(type, status) {
     );
   };
 
+  // Halaman hukum: /?page=privacy dan /?page=terms (dipakai untuk Google OAuth consent screen).
+  const renderLegal = (kind) => {
+    const CONTACT_EMAIL = "noteskey77@contoh.com"; // <-- ganti sebelum deploy
+    const updated = "13 Oktober 2026";
+    const h = { fontSize: 17, fontWeight: 700, color: "#1a2421", margin: "26px 0 8px" };
+    const p = { fontSize: 14.5, color: "#46524d", lineHeight: 1.75, margin: "0 0 10px" };
+    const ul = { ...p, paddingLeft: 20 };
+    const privacy = (
+      <>
+        <p style={p}>LearningSpace (learningspace-kyo.my.id) adalah platform belajar bahasa. Halaman ini menjelaskan data apa yang kami kumpulkan dan bagaimana kami menggunakannya.</p>
+        <div style={h}>1. Data yang kami kumpulkan</div>
+        <ul style={ul}>
+          <li>Akun: alamat email, serta nama dan foto profil jika kamu masuk dengan Google.</li>
+          <li>Progres belajar: pelajaran yang diselesaikan, skor, dan penguasaan kosakata.</li>
+          <li>Data teknis dasar yang diperlukan agar situs berjalan (misalnya penyimpanan sesi di browser).</li>
+        </ul>
+        <div style={h}>2. Cara kami menggunakan data</div>
+        <ul style={ul}>
+          <li>Mengautentikasi kamu dan menjaga akunmu tetap masuk.</li>
+          <li>Menyimpan dan menampilkan progres belajar, profil, dan latihan yang disesuaikan.</li>
+          <li>Kami tidak menjual data pribadimu dan tidak membagikannya untuk iklan.</li>
+        </ul>
+        <div style={h}>3. Layanan pihak ketiga</div>
+        <p style={p}>Kami memakai Supabase (database dan autentikasi), Google (login), Vercel (hosting), serta penyedia AI dan suara untuk membuat soal dan audio. Data yang dikirim ke mereka terbatas pada yang diperlukan untuk menjalankan fitur tersebut.</p>
+        <div style={h}>4. Penyimpanan dan keamanan</div>
+        <p style={p}>Data disimpan di server Supabase dengan akses terbatas. Tidak ada sistem yang sepenuhnya bebas risiko, tetapi kami berupaya menjaganya dengan wajar.</p>
+        <div style={h}>5. Hak kamu</div>
+        <p style={p}>Kamu dapat meminta akses, perbaikan, atau penghapusan akun dan data belajarmu kapan saja dengan menghubungi kami di bawah.</p>
+        <div style={h}>6. Perubahan kebijakan</div>
+        <p style={p}>Kebijakan ini dapat diperbarui. Tanggal pembaruan terakhir tertera di atas.</p>
+      </>
+    );
+    const terms = (
+      <>
+        <p style={p}>Dengan memakai LearningSpace, kamu menyetujui ketentuan berikut.</p>
+        <div style={h}>1. Penggunaan layanan</div>
+        <p style={p}>LearningSpace disediakan untuk belajar bahasa secara pribadi. Jangan menyalahgunakan layanan, mencoba mengakses sistem tanpa izin, atau menyalin konten secara massal.</p>
+        <div style={h}>2. Akun</div>
+        <p style={p}>Kamu bertanggung jawab atas akunmu. Beri tahu kami jika ada penggunaan yang tidak sah.</p>
+        <div style={h}>3. Konten pembelajaran</div>
+        <p style={p}>Materi dan soal, termasuk yang dibuat dengan bantuan AI, disediakan untuk tujuan belajar dan bisa mengandung kesalahan. Kami terus memperbaikinya.</p>
+        <div style={h}>4. Ketersediaan</div>
+        <p style={p}>Layanan disediakan apa adanya. Kami dapat mengubah, menghentikan, atau memperbarui fitur sewaktu-waktu.</p>
+        <div style={h}>5. Kontak</div>
+        <p style={p}>Pertanyaan tentang ketentuan ini dapat dikirim ke alamat di bawah.</p>
+      </>
+    );
+    return (
+      <div style={{ background: "#fafbfa" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: isMobile ? "32px 20px 44px" : "48px 24px 60px", boxSizing: "border-box" }}>
+          <div style={{ fontSize: 28, fontWeight: 700, color: "#1a1a1a", letterSpacing: "-0.3px" }}>{kind === "privacy" ? "Privacy Policy" : "Terms of Service"}</div>
+          <div style={{ fontSize: 13, color: "#8a9590", margin: "6px 0 18px" }}>Terakhir diperbarui: {updated}</div>
+          {kind === "privacy" ? privacy : terms}
+          <div style={h}>Kontak</div>
+          <p style={p}><a href={`mailto:${CONTACT_EMAIL}`} style={{ color: GREEN_DARK }}>{CONTACT_EMAIL}</a></p>
+        </div>
+        {renderFooter()}
+      </div>
+    );
+  };
+
   const renderContact = () => {
     const field = { width: "100%", boxSizing: "border-box", padding: "13px 14px 13px 42px", border: "1px solid #e3e9e6", borderRadius: 12, fontSize: 14, fontFamily: "inherit", outline: "none", background: "#fbfcfb", color: "#1a1a1a" };
     return (
@@ -5659,6 +5732,7 @@ function renderNodeIcon(type, status) {
     {page === "explore" && renderExplore()}
     {page === "login" && renderLogin()}
     {page === "profile" && renderProfile()}
+    {(page === "privacy" || page === "terms") && renderLegal(page)}
     {page === "subject" && ((currentUser || isLocalDev())
       ? (
         <SubjectLanguage
