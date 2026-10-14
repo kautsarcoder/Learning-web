@@ -2148,7 +2148,7 @@ export default function KelasNotesters() {
     lessonPromptRow: { display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 30 },
     lessonAvatarWrap: { flexShrink: 0 },
     lessonBubble: { position: "relative", background: "white", border: "1px solid #e5e5e5", borderRadius: 14, padding: "14px 16px", boxShadow: "0 1px 4px rgba(0,0,0,0.05)", maxWidth: 340 },
-    lessonBubbleLatin: { fontSize: 12, color: "#aaa", letterSpacing: 1 },
+    lessonBubbleLatin: { fontFamily: "inherit", fontSize: isMobile ? 15 : 14, color: "#5f6b66", letterSpacing: 0, lineHeight: 1.4, marginBottom: 2 },
     // [FIX] flexWrap:"wrap" WAJIB -- ini container kata-kata Arab yang bisa
     // diklik (renderClickableArabic motong kalimat jadi kata-kata terpisah).
     // Tanpa flexWrap, kalimat PENDEK gak masalah (muat 1 baris), tapi
@@ -2161,7 +2161,7 @@ export default function KelasNotesters() {
     lessonOptionSelected: { borderColor: GREEN, background: "#f1f7f4" },
     lessonOptionCorrect: { borderColor: "#6bb58a", background: "#ecf7f0" },
     lessonOptionWrong: { borderColor: "#e58a8a", background: "#fdf0ef" },
-    lessonOptionLatin: { fontSize: 11, color: "#aaa", marginBottom: 2 },
+    lessonOptionLatin: { fontFamily: "inherit", fontSize: isMobile ? 14.5 : 13, color: "#6b7772", letterSpacing: 0, lineHeight: 1.35, marginBottom: 2 },
     lessonOptionText: { fontSize: 18, color: "#1a1a1a" },
     lessonWordAnswerRow: { display: "flex", flexWrap: "wrap", gap: 10, minHeight: 46, borderBottom: "1px solid #e5e5e5", paddingBottom: 14, marginBottom: 26 },
     lessonWordBankRow: { display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" },
@@ -5275,7 +5275,7 @@ function renderNodeIcon(type, status) {
                   >🔊</button>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div dir="rtl" style={{ fontSize: 26, color: "#1a1a1a", lineHeight: 1.3, textAlign: "left" }}>{w.kata_arab}</div>
-                    {w.latin && <div style={{ fontSize: 13, color: "#9aa5a0", marginTop: 2 }}>{w.latin}</div>}
+                    {w.latin && <div style={{ fontFamily: "inherit", fontSize: isMobile ? 14.5 : 13.5, color: "#6b7772", marginTop: 2 }}>{w.latin}</div>}
                   </div>
                   <div style={{ fontSize: 16, fontWeight: 700, color: GREEN_DARK, textAlign: "right", maxWidth: "42%" }}>
                     {uiLang === "en" && w.arti_en ? w.arti_en : w.arti}
@@ -5433,7 +5433,7 @@ function renderNodeIcon(type, status) {
             }}
           >
             <div style={{ fontWeight: "bold", marginBottom: 2 }}>{wordBubble.word}</div>
-            {wordBubble.latin && <div style={{ fontSize: 11.5, opacity: 0.7, marginBottom: 2 }}>{wordBubble.latin}</div>}
+            {wordBubble.latin && <div style={{ fontFamily: "inherit", fontSize: isMobile ? 13 : 12, opacity: 0.8, marginBottom: 2 }}>{wordBubble.latin}</div>}
             <div style={wordBubble.loading ? { fontStyle: "italic", opacity: 0.7 } : undefined}>
               {wordBubble.arti || t("wordMeaningNotFound", uiLang)}
             </div>
