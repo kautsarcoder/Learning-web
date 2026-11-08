@@ -2154,7 +2154,7 @@ export default function KelasNotesters() {
     // Tanpa flexWrap, kalimat PENDEK gak masalah (muat 1 baris), tapi
     // kalimat PANJANG (dari cerita/dialog) kata-katanya gak pindah baris,
     // malah meluber keluar batas lessonBubble (maxWidth: 340).
-    lessonBubbleMain: { fontSize: 20, color: "#1a1a1a", marginTop: 2, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 },
+    lessonBubbleMain: { fontSize: isMobile ? 16 : 20, lineHeight: isMobile ? 1.45 : undefined, color: "#1a1a1a", marginTop: 2, display: "flex", flexWrap: "wrap", alignItems: "center", gap: isMobile ? "2px 5px" : 8 },
     lessonBlank: { display: "inline-block", minWidth: 46, borderBottom: "2px solid #999", height: 22 },
     lessonAudioBtn: { background: "#4A9FD6", border: "none", color: "white", width: 34, height: 34, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, cursor: "pointer", flexShrink: 0 },
     lessonOption: { border: "1.5px solid #e3e9e6", borderRadius: 16, padding: "15px 18px", marginBottom: 12, cursor: "pointer", textAlign: "center", background: "white", transition: "border-color 0.15s ease, background 0.15s ease" },
@@ -2162,7 +2162,7 @@ export default function KelasNotesters() {
     lessonOptionCorrect: { borderColor: "#6bb58a", background: "#ecf7f0" },
     lessonOptionWrong: { borderColor: "#e58a8a", background: "#fdf0ef" },
     lessonOptionLatin: { fontFamily: "inherit", fontSize: isMobile ? 14.5 : 13, color: "#6b7772", letterSpacing: 0, lineHeight: 1.35, marginBottom: 2 },
-    lessonOptionText: { fontSize: 18, color: "#1a1a1a" },
+    lessonOptionText: { fontSize: isMobile ? 16 : 18, lineHeight: isMobile ? 1.5 : undefined, color: "#1a1a1a" },
     lessonWordAnswerRow: { display: "flex", flexWrap: "wrap", gap: 10, minHeight: 46, borderBottom: "1px solid #e5e5e5", paddingBottom: 14, marginBottom: 26 },
     lessonWordBankRow: { display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" },
     lessonWordTile: { border: "1.5px solid #e3e9e6", borderRadius: 12, padding: "10px 16px", fontSize: 16, background: "white", cursor: "pointer", color: "#1a1a1a" },
@@ -5112,7 +5112,7 @@ function renderNodeIcon(type, status) {
                 {/* dir="rtl" WAJIB — rumpang harus muncul di POSISI yang benar
                     relatif ke teks Arab (bisa di awal/tengah/akhir kalimat),
                     bukan cuma nempel di ujung seperti struktur lama. */}
-                <div style={s.lessonBubbleMain} dir="rtl">
+                <div style={{ ...s.lessonBubbleMain, ...(isMobile ? { fontSize: 19, lineHeight: 1.6 } : null) }} dir="rtl">
                   {ex.content.beforeBlank?.text && renderClickableArabic(ex.content.beforeBlank.text, "before")}
                   <span style={s.lessonBlank} />
                   {ex.content.afterBlank?.text && renderClickableArabic(ex.content.afterBlank.text, "after")}
@@ -5197,7 +5197,7 @@ function renderNodeIcon(type, status) {
                     {ex.content.beforeBlank?.latin} ___ {ex.content.afterBlank?.latin}
                   </div>
                 )}
-                <div style={s.lessonBubbleMain} dir="rtl">
+                <div style={{ ...s.lessonBubbleMain, ...(isMobile ? { fontSize: 19, lineHeight: 1.6 } : null) }} dir="rtl">
                   {ex.content.beforeBlank?.text && renderClickableArabic(ex.content.beforeBlank.text, "lc-before")}
                   <span style={s.lessonBlank} />
                   {ex.content.afterBlank?.text && renderClickableArabic(ex.content.afterBlank.text, "lc-after")}
@@ -5238,7 +5238,7 @@ function renderNodeIcon(type, status) {
                           ) : (
                             <>
                               {line.latin && <div style={s.lessonBubbleLatin}>{line.latin}</div>}
-                              <div style={s.lessonBubbleMain} dir="rtl">{renderClickableArabic(line.text, `ln-${i}`)}</div>
+                              <div style={{ ...s.lessonBubbleMain, ...(isMobile ? { fontSize: 19, lineHeight: 1.6 } : null) }} dir="rtl">{renderClickableArabic(line.text, `ln-${i}`)}</div>
                             </>
                           )}
                         </div>

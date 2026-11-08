@@ -113,7 +113,8 @@ Setiap EX WAJIB punya:
  "category": "vocabulary" | "academic" | "exam" | "question",
  "lang": "vocabulary" | "academic" | "exam" | "reading"   (skill BAHASA yang dilatih),
  "focus": (opsional, untuk soal kosakata/ungkapan) "verb" = kata kerja (sertakan bentuk dasar/perubahannya), "word" = kosakata asing/jarang dikenal, "sentence" = kalimat/ungkapan asing,
- "subj": skill MATERI yang diuji (mis. "Syarat Murabahah"),
+ "subj": skill MATERI yang diuji (mis. "Syarat Murabahah") — WAJIB untuk soal materi; JANGAN diisi untuk soal bahasa pendukung (lihat bawah),
+ "support": true (HANYA untuk soal bahasa pendukung, lihat bawah; soal materi tidak memakai field ini),
  "explain": penjelasan singkat Indonesia (wajib untuk soal ujian),
  "langTags": [frasa pola bahasa dalam soal, opsional].
 Field per type:
@@ -127,7 +128,16 @@ TERJEMAHAN INGGRIS (wajib): tiap EX punya "en": {"prompt": terjemahan prompt, "e
    "pairs": array terjemahan Inggris untuk kolom KANAN pairs saja (urutan sama), "answers": jawaban terjemahan dalam Inggris (hanya type translate),
    "passageTranslation": terjemahan Inggris bacaan (hanya type reading)}.
 Unit dan tiap section juga punya "en": {"title": judul Inggris}.
-Aturan: gunakan HANYA istilah/fakta yang ada di potongan buku; jangan mengarang. Pilihan salah harus masuk akal. Sertakan: kosakata, ungkapan akademik (mis. بناءً على ما سبق), pola bahasa ujian (أي مما يلي، ما عدا، ما المقصود بـ ...), dan soal gaya ujian. Jumlah soal: buat SEBANYAK mungkin yang masih bermutu, targetnya sekitar __PERPART__ soal untuk potongan ini. Tiap konsep/istilah/syarat/hukum penting di teks harus punya minimal 1-2 soal, dengan variasi tipe (mcq, tf, fill, match, translate, reading). Jangan berhenti di 15 soal. Untuk kategori kosakata, JANGAN hanya kata benda/istilah umum: gabungkan juga KATA KERJA (focus "verb"), KOSAKATA YANG TIDAK FAMILIAR/jarang dijumpai (focus "word") dan KALIMAT-KALIMAT ASING/pola kalimat yang sulit (focus "sentence") dari potongan buku, dengan variasi tipe soal.`;
+Aturan: untuk soal MATERI gunakan HANYA istilah/fakta yang ada di potongan buku; jangan mengarang. Pilihan salah harus masuk akal. Sertakan: kosakata, ungkapan akademik (mis. بناءً على ما سبق), pola bahasa ujian (أي مما يلي، ما عدا، ما المقصود بـ ...), dan soal gaya ujian. Jumlah soal: buat SEBANYAK mungkin yang masih bermutu, targetnya sekitar __PERPART__ soal untuk potongan ini. Tiap konsep/istilah/syarat/hukum penting di teks harus punya minimal 1-2 soal, dengan variasi tipe (mcq, tf, fill, match, translate, reading). Jangan berhenti di 15 soal. Untuk kategori kosakata, JANGAN hanya kata benda/istilah umum: gabungkan juga KATA KERJA (focus "verb"), KOSAKATA YANG TIDAK FAMILIAR/jarang dijumpai (focus "word") dan KALIMAT-KALIMAT ASING/pola kalimat yang sulit (focus "sentence") dari potongan buku, dengan variasi tipe soal.
+
+BAHASA PENDUKUNG (WAJIB, sekitar 30-40% dari seluruh soal potongan ini): selain soal tentang isi materi, buat soal yang melatih BAHASA di sekitar materi —
+kata dan kalimat yang JARANG dibaca siswa sehari-hari tetapi sering muncul di buku pelajaran dan soal ujian, dan membuat siswa tersandung saat membaca materi.
+Contoh: kata kerja/kata sifat akademik umum (يُشترط، يُعدّ، يُستثنى، ينبغي، لا يجوز، يترتب على)، kata sambung & penanda logika (بناءً على، تبعًا لـ، في حين، لذا، حيث إن، ومن ثَمَّ)،
+kata tak umum/arkais, bentuk pasif, jamak tak beraturan, kalimat panjang bertingkat, dan kata-kata dari kalimat di sekitar potongan buku yang BUKAN istilah teknis materinya.
+Boleh diambil dari kalimat di potongan buku (ambil kata/pola bahasanya, bukan isi materinya) atau kalimat baru bergaya buku pelajaran yang memakai kata-kata tersebut.
+Soal bahasa pendukung: WAJIB "support": true dan TIDAK punya field "subj" (jangan dikarang; soal ini melatih bahasa, bukan menguji isi materi);
+"lang"/"category" diisi sesuai skill bahasa yang dilatih; "explain" singkat: arti kata/pola dan kapan biasanya muncul di buku/ujian; "en" tanpa "subj".
+Soal MATERI tetap wajib punya "subj".`;
 
 // Satu fungsi untuk semua panggilan AI (generate unit & terjemahan).
 async function chat(system, userText) {
@@ -190,8 +200,11 @@ export function normalizeExercise(ex, id) {
   if (!nonEmpty(ex.prompt)) bad("prompt kosong");
   if (!CATS.includes(ex.category)) bad(`category tidak valid (${ex.category})`);
   if (!LANGS.includes(ex.lang)) bad(`lang tidak valid (${ex.lang})`);
-  if (!nonEmpty(ex.subj)) bad("subj kosong");
-  const out = { id, type: ex.type, prompt: ex.prompt.trim(), category: ex.category, lang: ex.lang, subj: ex.subj.trim() };
+  // Soal bahasa pendukung (support: true) melatih bahasa saja: TANPA subj, tidak dihitung ke "Pemahaman Materi".
+  const support = ex.support === true;
+  if (!support && !nonEmpty(ex.subj)) bad("subj kosong");
+  const out = { id, type: ex.type, prompt: ex.prompt.trim(), category: ex.category, lang: ex.lang };
+  if (support) out.support = true; else out.subj = ex.subj.trim();
   if (FOCUS.includes(ex.focus)) out.focus = ex.focus;
   if (nonEmpty(ex.explain)) out.explain = ex.explain.trim();
   if (Array.isArray(ex.langTags) && ex.langTags.length) out.langTags = ex.langTags.filter(nonEmpty);
@@ -226,7 +239,7 @@ export function normalizeExercise(ex, id) {
       bad(`type tidak dikenal (${ex.type})`);
   }
   const en = cleanEn(ex.en, out);
-  if (en) out.en = en;
+  if (en) { if (support) delete en.subj; if (Object.keys(en).length) out.en = en; }
   return out;
 }
 
@@ -261,7 +274,8 @@ async function translateUnit(unit) {
   for (const sec of unit.sections) {
     input.sections[sec.id] = sec.title;
     for (const l of sec.lessons) for (const e of l.exercises) {
-      const x = { prompt: e.prompt, subj: e.subj };
+      const x = { prompt: e.prompt };
+      if (e.subj) x.subj = e.subj;
       if (e.explain) x.explain = e.explain;
       if (e.options && e.options.some((o) => !/[\u0600-\u06FF]/.test(o)) && e.type !== "tf") x.options = e.options;
       if (e.type === "tf") x.options = e.options;

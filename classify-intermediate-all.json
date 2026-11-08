@@ -15300,5 +15300,425 @@
     "arti": "dengan bahasa kalian",
     "contoh_kalimat": "وبعدها بلغتكن الخاصة",
     "topic_name": "Pendidikan & Masyarakat"
+  },
+  {
+    "kata_arab": "الخاصة",
+    "latin": "il-khasse",
+    "arti": "sendiri/pribadi",
+    "contoh_kalimat": "بلغتكن الخاصة",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "عندكن",
+    "latin": "'endkon",
+    "arti": "kalian punya",
+    "contoh_kalimat": "إذا عندكن أي أسئلة",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "أسئلة",
+    "latin": "as2ile",
+    "arti": "pertanyaan-pertanyaan",
+    "contoh_kalimat": "أي أسئلة أو اقتراحات",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "اقتراحات",
+    "latin": "iqtira7at",
+    "arti": "saran-saran",
+    "contoh_kalimat": "أسئلة أو اقتراحات",
+    "topic_name": "Memberi Saran & Instruksi"
+  },
+  {
+    "kata_arab": "تترددو",
+    "latin": "titraddado",
+    "arti": "kalian ragu-ragu",
+    "contoh_kalimat": "ما تترددو تسألو",
+    "topic_name": "Setuju & Tidak Setuju"
+  },
+  {
+    "kata_arab": "تسألو",
+    "latin": "tes2alo",
+    "arti": "kalian bertanya",
+    "contoh_kalimat": "ما تترددو تسألو",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "جاوب",
+    "latin": "jaweb",
+    "arti": "menjawab",
+    "contoh_kalimat": "رح كون مبسوطة جاوب",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "أسئلتكن",
+    "latin": "as2iletkon",
+    "arti": "pertanyaan-pertanyaan kalian",
+    "contoh_kalimat": "جاوب على كل أسئلتكن",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "جيتوا",
+    "latin": "jitou",
+    "arti": "kalian datang",
+    "contoh_kalimat": "انت جيتوا لهون",
+    "topic_name": "Menceritakan Pengalaman"
+  },
+  {
+    "kata_arab": "لعندنا",
+    "latin": "la-'andna",
+    "arti": "kepada kami",
+    "contoh_kalimat": "جيتوا لهون على لبنان لعندنا",
+    "topic_name": "Kesopanan & Basa-basi"
+  },
+  {
+    "kata_arab": "تعملوا",
+    "latin": "te'malo",
+    "arti": "kalian lakukan",
+    "contoh_kalimat": "شو لازم تعملوا",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "قديه",
+    "latin": "2addeh",
+    "arti": "seberapa",
+    "contoh_kalimat": "بتعرف قديه الاكل طيب",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وقديه",
+    "latin": "w-2addeh",
+    "arti": "dan seberapa",
+    "contoh_kalimat": "وقديه المطبخ اللبناني مميز",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "جربتوها",
+    "latin": "jarrabtouha",
+    "arti": "kalian mencobanya",
+    "contoh_kalimat": "اذا بعد ما جربتوها",
+    "topic_name": "Menceritakan Pengalaman"
+  },
+  {
+    "kata_arab": "تجربوها",
+    "latin": "tjarrbouha",
+    "arti": "kalian mencobanya",
+    "contoh_kalimat": "لازم تجربوها",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "واشياء",
+    "latin": "w-ashya",
+    "arti": "dan hal-hal",
+    "contoh_kalimat": "سندويشات واشياء كثير",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "شخصين",
+    "latin": "shakhsein",
+    "arti": "dua orang",
+    "contoh_kalimat": "لشخص واحد او شخصين",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وسهله",
+    "latin": "w-sahle",
+    "arti": "dan mudah (f)",
+    "contoh_kalimat": "سريعه وسهله",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "فاضيه",
+    "latin": "fadye",
+    "arti": "senggang (f)",
+    "contoh_kalimat": "دائما مش فاضيه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "اسبوعين",
+    "latin": "usbou'ein",
+    "arti": "dua minggu",
+    "contoh_kalimat": "من شي اسبوع او اسبوعين",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وعملنا",
+    "latin": "w-'amalna",
+    "arti": "dan kita membuat",
+    "contoh_kalimat": "اجوا لعندي اصحابي وعملنا مشاوي",
+    "topic_name": "Menceritakan Pengalaman"
+  },
+  {
+    "kata_arab": "كتفه",
+    "latin": "katfe",
+    "arti": "daging bahu (indef.)",
+    "contoh_kalimat": "كان في كتفه",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "طاوووق",
+    "latin": "tawou2",
+    "arti": "ayam panggang",
+    "contoh_kalimat": "كان في طاووق طاوووق",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "دجاج",
+    "latin": "djej",
+    "arti": "ayam",
+    "contoh_kalimat": "الطاووق هو دجاج",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "بهارات",
+    "latin": "baharat",
+    "arti": "bumbu-bumbu",
+    "contoh_kalimat": "دجاج مع بهارات",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "والمشاوي",
+    "latin": "w-il-mashawi",
+    "arti": "dan hidangan panggang",
+    "contoh_kalimat": "والمشاوي بدون تبوله",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "بتاكلهم",
+    "latin": "bteklon",
+    "arti": "mereka memakannya",
+    "contoh_kalimat": "الناس بتاكلهم مع بعض",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "واصحابي",
+    "latin": "w-as-7abi",
+    "arti": "dan teman-temanku",
+    "contoh_kalimat": "فانا واصحابي عملنا تبوله",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "بامريكا",
+    "latin": "b-Amerka",
+    "arti": "di Amerika",
+    "contoh_kalimat": "عندي تلاميذ بامريكا",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "واوروبا",
+    "latin": "w-Orobba",
+    "arti": "dan Eropa",
+    "contoh_kalimat": "بامريكا واوروبا",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "فكيف",
+    "latin": "fa-kif",
+    "arti": "maka bagaimana",
+    "contoh_kalimat": "فكيف انا لبنانيه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وعايشه",
+    "latin": "w-'ayshe",
+    "arti": "dan tinggal (f)",
+    "contoh_kalimat": "لبنانيه وعايشه هون",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "خصوصه",
+    "latin": "khsousan",
+    "arti": "khususnya",
+    "contoh_kalimat": "من ال appetizers خصوصه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "المقليه",
+    "latin": "il-ma2liyye",
+    "arti": "yang digoreng (f)",
+    "contoh_kalimat": "الكبه المقليه",
+    "topic_name": "Kuliner Khas Levant"
+  },
+  {
+    "kata_arab": "عملتها",
+    "latin": "'amaltha",
+    "arti": "saya membuatnya",
+    "contoh_kalimat": "ولا مره عملتها بالبيت",
+    "topic_name": "Menceritakan Pengalaman"
+  },
+  {
+    "kata_arab": "لوحدي",
+    "latin": "la-wa7di",
+    "arti": "sendirian",
+    "contoh_kalimat": "بالبيت لحالي يعني لوحدي",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "الاغراض",
+    "latin": "il-aghrad",
+    "arti": "bahan-bahan/barang-barang",
+    "contoh_kalimat": "اللحمه وكل الاغراض",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وبطلب",
+    "latin": "w-batlob",
+    "arti": "dan saya minta",
+    "contoh_kalimat": "وبطلب من حدا يعملها",
+    "topic_name": "Meminta & Menawarkan Bantuan"
+  },
+  {
+    "kata_arab": "يعملها",
+    "latin": "ye'melha",
+    "arti": "dia membuatnya",
+    "contoh_kalimat": "بطلب من حدا يعملها",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "اجرب",
+    "latin": "ejarreb",
+    "arti": "saya mencoba",
+    "contoh_kalimat": "بدي اجرب اعملها",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "لنشوف",
+    "latin": "la-nshouf",
+    "arti": "mari kita lihat",
+    "contoh_kalimat": "لنشوف الكبه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "واخر",
+    "latin": "w-akher",
+    "arti": "dan terakhir",
+    "contoh_kalimat": "واخر شي الحلو",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "وامتى",
+    "latin": "w-eimta",
+    "arti": "dan kapan",
+    "contoh_kalimat": "وامتى منشتريها",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "مينيموم",
+    "latin": "minimum",
+    "arti": "minimum",
+    "contoh_kalimat": "بدون alcohol مينيموم",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "نظهر",
+    "latin": "nedhar",
+    "arti": "kita keluar/tampil",
+    "contoh_kalimat": "منحب نظهر",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "ونجي",
+    "latin": "w-neji",
+    "arti": "dan kita datang",
+    "contoh_kalimat": "نروح ونجي ونشوف",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "نمبسط",
+    "latin": "nembaset",
+    "arti": "kita bersenang-senang",
+    "contoh_kalimat": "منحب نعيش منحب نمبسط",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "ويلي",
+    "latin": "w-yalli",
+    "arti": "dan yang",
+    "contoh_kalimat": "بكرا احسن ويلي جايه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "المره",
+    "latin": "il-marra",
+    "arti": "kali itu",
+    "contoh_kalimat": "بشوفكم المره الجايه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "اصعب",
+    "latin": "as'ab",
+    "arti": "lebih sulit",
+    "contoh_kalimat": "الفرنسي اصعب من الانجليزي",
+    "topic_name": "Membandingkan Hal"
+  },
+  {
+    "kata_arab": "انسى",
+    "latin": "ensa",
+    "arti": "saya lupa",
+    "contoh_kalimat": "بلشت انسى",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "لهجه",
+    "latin": "lahje",
+    "arti": "dialek (indef.)",
+    "contoh_kalimat": "في لهجه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "واللهجه",
+    "latin": "w-il-lahje",
+    "arti": "dan dialek",
+    "contoh_kalimat": "واللهجه الاردنيه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "الخليجيه",
+    "latin": "il-khalijiyye",
+    "arti": "dialek Teluk",
+    "contoh_kalimat": "اللهجه الخليجيه",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "اقرب",
+    "latin": "a2rab",
+    "arti": "lebih dekat",
+    "contoh_kalimat": "اقرب شوي للفصحى",
+    "topic_name": "Membandingkan Hal"
+  },
+  {
+    "kata_arab": "لهجتنا",
+    "latin": "lahejtna",
+    "arti": "dialek kita",
+    "contoh_kalimat": "احلى لهجه عربيه هي لهجتنا",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "بصيروا",
+    "latin": "bsiro",
+    "arti": "mereka menjadi",
+    "contoh_kalimat": "هن بعدين بصيروا يحكوا",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "بينسوا",
+    "latin": "binso",
+    "arti": "mereka lupa",
+    "contoh_kalimat": "هن بينسوا كل شيء",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "القليله",
+    "latin": "il-2alile",
+    "arti": "yang sedikit",
+    "contoh_kalimat": "على القليله كل اسبوع",
+    "topic_name": "TIDAK_COCOK"
+  },
+  {
+    "kata_arab": "الاصليه",
+    "latin": "il-asliyye",
+    "arti": "asli (f)",
+    "contoh_kalimat": "لغتي الاصليه",
+    "topic_name": "TIDAK_COCOK"
   }
 ]

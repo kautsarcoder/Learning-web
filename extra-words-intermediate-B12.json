@@ -1,0 +1,3847 @@
+[
+  {
+    "kata_arab": "بدي",
+    "latin": "baddi",
+    "arti": "saya ingin"
+  },
+  {
+    "kata_arab": "أبعت",
+    "latin": "ab'at",
+    "arti": "mengirim"
+  },
+  {
+    "kata_arab": "إمتى",
+    "latin": "emta",
+    "arti": "kapan"
+  },
+  {
+    "kata_arab": "المكتوب",
+    "latin": "el-maktoob",
+    "arti": "surat"
+  },
+  {
+    "kata_arab": "الطلبية",
+    "latin": "et-talabiyyeh",
+    "arti": "pesanan"
+  },
+  {
+    "kata_arab": "بكرة",
+    "latin": "bukra",
+    "arti": "besok"
+  },
+  {
+    "kata_arab": "لازم",
+    "latin": "laazim",
+    "arti": "harus"
+  },
+  {
+    "kata_arab": "تدفع",
+    "latin": "tidfa'",
+    "arti": "kamu (laki-laki) membayar"
+  },
+  {
+    "kata_arab": "المكتب",
+    "latin": "el-maktab",
+    "arti": "kantor"
+  },
+  {
+    "kata_arab": "رسالة",
+    "latin": "risaaleh",
+    "arti": "surat"
+  },
+  {
+    "kata_arab": "مكتب",
+    "latin": "maktab",
+    "arti": "kantor"
+  },
+  {
+    "kata_arab": "أسرع",
+    "latin": "asra'",
+    "arti": "lebih cepat"
+  },
+  {
+    "kata_arab": "السواق",
+    "latin": "es-sawwaaq",
+    "arti": "sopir/kurir"
+  },
+  {
+    "kata_arab": "اليوم",
+    "latin": "el-yoom",
+    "arti": "hari ini"
+  },
+  {
+    "kata_arab": "الصناديق",
+    "latin": "es-sanadeeq",
+    "arti": "kotak-kotak"
+  },
+  {
+    "kata_arab": "البيت",
+    "latin": "el-beet",
+    "arti": "rumah"
+  },
+  {
+    "kata_arab": "الخميس",
+    "latin": "el-khamees",
+    "arti": "Kamis"
+  },
+  {
+    "kata_arab": "البضاعة",
+    "latin": "el-bidaa'ah",
+    "arti": "barang dagangan"
+  },
+  {
+    "kata_arab": "جاهزة",
+    "latin": "jaahzeh",
+    "arti": "siap"
+  },
+  {
+    "kata_arab": "جواز",
+    "latin": "jawaaz",
+    "arti": "paspor"
+  },
+  {
+    "kata_arab": "الكرتونة",
+    "latin": "el-kartooneh",
+    "arti": "kardus"
+  },
+  {
+    "kata_arab": "عالمخزن",
+    "latin": "'al-makhzan",
+    "arti": "ke gudang"
+  },
+  {
+    "kata_arab": "الكتاب",
+    "latin": "el-ktaab",
+    "arti": "buku itu"
+  },
+  {
+    "kata_arab": "عالسريع",
+    "latin": "'as-sarii'",
+    "arti": "dengan cepat"
+  },
+  {
+    "kata_arab": "الورق",
+    "latin": "el-waraq",
+    "arti": "dokumen/kertas"
+  },
+  {
+    "kata_arab": "ممكن",
+    "latin": "mumkin",
+    "arti": "mungkin/bisa"
+  },
+  {
+    "kata_arab": "الأغراض",
+    "latin": "el-aghraad",
+    "arti": "barang-barang"
+  },
+  {
+    "kata_arab": "السيارة",
+    "latin": "es-sayyaarah",
+    "arti": "mobil"
+  },
+  {
+    "kata_arab": "هسة",
+    "latin": "hassa",
+    "arti": "sekarang"
+  },
+  {
+    "kata_arab": "المخزن",
+    "latin": "el-makhzan",
+    "arti": "gudang"
+  },
+  {
+    "kata_arab": "الطلب",
+    "latin": "et-talab",
+    "arti": "pesanan itu"
+  },
+  {
+    "kata_arab": "الظهر",
+    "latin": "ez-zuhor",
+    "arti": "siang hari"
+  },
+  {
+    "kata_arab": "الشنطة",
+    "latin": "esh-shantah",
+    "arti": "tas itu"
+  },
+  {
+    "kata_arab": "المفتاح",
+    "latin": "el-muftaah",
+    "arti": "kunci"
+  },
+  {
+    "kata_arab": "الأحد",
+    "latin": "el-ahad",
+    "arti": "hari Minggu"
+  },
+  {
+    "kata_arab": "فحص",
+    "latin": "fahas",
+    "arti": "memeriksa"
+  },
+  {
+    "kata_arab": "رتبنا",
+    "latin": "rattabna",
+    "arti": "kami merapikan"
+  },
+  {
+    "kata_arab": "الشهادة",
+    "latin": "esh-shahaadeh",
+    "arti": "ijazah/sertifikat"
+  },
+  {
+    "kata_arab": "السريع",
+    "latin": "es-saree'",
+    "arti": "kilat/cepat"
+  },
+  {
+    "kata_arab": "ساعة",
+    "latin": "saa'ah",
+    "arti": "jam"
+  },
+  {
+    "kata_arab": "توصيل",
+    "latin": "tawseel",
+    "arti": "pengantaran"
+  },
+  {
+    "kata_arab": "عنوان",
+    "latin": "'unwaan",
+    "arti": "alamat"
+  },
+  {
+    "kata_arab": "الفواتير",
+    "latin": "el-faawateer",
+    "arti": "tagihan-tagihan"
+  },
+  {
+    "kata_arab": "الشهري",
+    "latin": "esh-shahri",
+    "arti": "bulanan"
+  },
+  {
+    "kata_arab": "مستعجل",
+    "latin": "musta'jal",
+    "arti": "terburu-buru/segera"
+  },
+  {
+    "kata_arab": "البريد",
+    "latin": "el-bariid",
+    "arti": "pos"
+  },
+  {
+    "kata_arab": "الدور",
+    "latin": "ed-door",
+    "arti": "giliran/antrean"
+  },
+  {
+    "kata_arab": "رقمك",
+    "latin": "raqmak",
+    "arti": "nomormu"
+  },
+  {
+    "kata_arab": "الهوية",
+    "latin": "al-huwiyyeh",
+    "arti": "kartu identitas"
+  },
+  {
+    "kata_arab": "طلبوا",
+    "latin": "talabu",
+    "arti": "mereka meminta"
+  },
+  {
+    "kata_arab": "بسرعة",
+    "latin": "bi-sur'ah",
+    "arti": "dengan cepat"
+  },
+  {
+    "kata_arab": "جهزنا",
+    "latin": "jahhazna",
+    "arti": "kami menyiapkan"
+  },
+  {
+    "kata_arab": "الجواز",
+    "latin": "al-jawaz",
+    "arti": "paspor"
+  },
+  {
+    "kata_arab": "وصلني",
+    "latin": "wasalni",
+    "arti": "sampai ke saya"
+  },
+  {
+    "kata_arab": "المحل",
+    "latin": "el-mahall",
+    "arti": "toko"
+  },
+  {
+    "kata_arab": "رتبوا",
+    "latin": "rattabu",
+    "arti": "mereka merapikan"
+  },
+  {
+    "kata_arab": "بكير",
+    "latin": "bakeer",
+    "arti": "pagi-pagi"
+  },
+  {
+    "kata_arab": "الأوراق",
+    "latin": "al-awraaq",
+    "arti": "berkas-berkas"
+  },
+  {
+    "kata_arab": "أحسن",
+    "latin": "ahsan",
+    "arti": "lebih baik"
+  },
+  {
+    "kata_arab": "الصندوق",
+    "latin": "es-sandooq",
+    "arti": "kotak/boks"
+  },
+  {
+    "kata_arab": "هون",
+    "latin": "hon",
+    "arti": "di sini"
+  },
+  {
+    "kata_arab": "تبعت",
+    "latin": "tib'at",
+    "arti": "kamu mengirimkan"
+  },
+  {
+    "kata_arab": "العقد",
+    "latin": "el-ʿaqed",
+    "arti": "kontrak"
+  },
+  {
+    "kata_arab": "المحامي",
+    "latin": "el-muhaami",
+    "arti": "pengacara"
+  },
+  {
+    "kata_arab": "العمال",
+    "latin": "el-ʿummaal",
+    "arti": "para pekerja"
+  },
+  {
+    "kata_arab": "الجمعة",
+    "latin": "el-jumʿah",
+    "arti": "hari Jumat"
+  },
+  {
+    "kata_arab": "الشهادات",
+    "latin": "esh-shahaadaat",
+    "arti": "ijazah-ijazah"
+  },
+  {
+    "kata_arab": "الجامعة",
+    "latin": "el-jaam'ah",
+    "arti": "universitas"
+  },
+  {
+    "kata_arab": "المندوب",
+    "latin": "el-mandoob",
+    "arti": "kurir"
+  },
+  {
+    "kata_arab": "المغرب",
+    "latin": "el-maghreb",
+    "arti": "waktu maghrib"
+  },
+  {
+    "kata_arab": "الموظف",
+    "latin": "el-muwazzaf",
+    "arti": "pegawai"
+  },
+  {
+    "kata_arab": "صندوق",
+    "latin": "sundooq",
+    "arti": "kotak"
+  },
+  {
+    "kata_arab": "تأخير",
+    "latin": "ta'kheer",
+    "arti": "keterlambatan"
+  },
+  {
+    "kata_arab": "توقيع",
+    "latin": "tawqee'",
+    "arti": "tanda tangan"
+  },
+  {
+    "kata_arab": "استلام",
+    "latin": "istilaam",
+    "arti": "penerimaan"
+  },
+  {
+    "kata_arab": "الفاتورة",
+    "latin": "el-faatoorah",
+    "arti": "tagihan"
+  },
+  {
+    "kata_arab": "الضهر",
+    "latin": "ed-duhor",
+    "arti": "siang hari"
+  },
+  {
+    "kata_arab": "المعاملة",
+    "latin": "el-mu'aamaleh",
+    "arti": "berkas urusan"
+  },
+  {
+    "kata_arab": "المسجل",
+    "latin": "el-musajjal",
+    "arti": "tercatat"
+  },
+  {
+    "kata_arab": "المركز",
+    "latin": "el-markaz",
+    "arti": "pusat"
+  },
+  {
+    "kata_arab": "الفيزا",
+    "latin": "el-veeza",
+    "arti": "visa"
+  },
+  {
+    "kata_arab": "الفرع",
+    "latin": "el-far'",
+    "arti": "cabang"
+  },
+  {
+    "kata_arab": "التقرير",
+    "latin": "et-taqreer",
+    "arti": "laporan"
+  },
+  {
+    "kata_arab": "المدير",
+    "latin": "el-mudeer",
+    "arti": "direktur"
+  },
+  {
+    "kata_arab": "الشغل",
+    "latin": "esh-shughol",
+    "arti": "pekerjaan"
+  },
+  {
+    "kata_arab": "الكراتين",
+    "latin": "el-karaateen",
+    "arti": "kardus-kardus"
+  },
+  {
+    "kata_arab": "المكتبة",
+    "latin": "el-maktabeh",
+    "arti": "perpustakaan"
+  },
+  {
+    "kata_arab": "الختم",
+    "latin": "el-khatem",
+    "arti": "cap stempel"
+  },
+  {
+    "kata_arab": "العنوان",
+    "latin": "el-'unwaan",
+    "arti": "alamat"
+  },
+  {
+    "kata_arab": "الأصلية",
+    "latin": "el-asliyeh",
+    "arti": "asli"
+  },
+  {
+    "kata_arab": "الدوام",
+    "latin": "ed-dawaam",
+    "arti": "jam kerja"
+  },
+  {
+    "kata_arab": "الفرز",
+    "latin": "el-farz",
+    "arti": "pemilahan"
+  },
+  {
+    "kata_arab": "الرفوف",
+    "latin": "er-rufoof",
+    "arti": "rak-rak"
+  },
+  {
+    "kata_arab": "العصر",
+    "latin": "el-'asr",
+    "arti": "waktu ashar/sore"
+  },
+  {
+    "kata_arab": "العرباية",
+    "latin": "el-'arabaayeh",
+    "arti": "troli"
+  },
+  {
+    "kata_arab": "الجديدة",
+    "latin": "el-jdeedeh",
+    "arti": "yang baru"
+  },
+  {
+    "kata_arab": "فرز",
+    "latin": "faraz",
+    "arti": "memilah"
+  },
+  {
+    "kata_arab": "الشركة",
+    "latin": "esh-shirkeh",
+    "arti": "perusahaan"
+  },
+  {
+    "kata_arab": "ساعتين",
+    "latin": "saa'teen",
+    "arti": "dua jam"
+  },
+  {
+    "kata_arab": "ختم",
+    "latin": "khatem",
+    "arti": "cap / stempel"
+  },
+  {
+    "kata_arab": "المعهد",
+    "latin": "el-ma'had",
+    "arti": "institut"
+  },
+  {
+    "kata_arab": "عقد",
+    "latin": "'aqed",
+    "arti": "kontrak"
+  },
+  {
+    "kata_arab": "الدفتر",
+    "latin": "ed-daftar",
+    "arti": "buku catatan"
+  },
+  {
+    "kata_arab": "وديتلك",
+    "latin": "waddaytlak",
+    "arti": "aku telah mengirimkan kepadamu"
+  },
+  {
+    "kata_arab": "جابوا",
+    "latin": "jaabu",
+    "arti": "mereka membawa"
+  },
+  {
+    "kata_arab": "أبوي",
+    "latin": "abuuy",
+    "arti": "ayahku"
+  },
+  {
+    "kata_arab": "عمان",
+    "latin": "'amman",
+    "arti": "Amman"
+  },
+  {
+    "kata_arab": "وصل",
+    "latin": "wusil",
+    "arti": "telah sampai"
+  },
+  {
+    "kata_arab": "أخوي",
+    "latin": "akhuuy",
+    "arti": "saudaraku"
+  },
+  {
+    "kata_arab": "هسا",
+    "latin": "hassa",
+    "arti": "sekarang"
+  },
+  {
+    "kata_arab": "شالوا",
+    "latin": "shaalu",
+    "arti": "mereka mengangkat"
+  },
+  {
+    "kata_arab": "كرتونة",
+    "latin": "kartooneh",
+    "arti": "kardus"
+  },
+  {
+    "kata_arab": "ورقة",
+    "latin": "waraqah",
+    "arti": "kertas"
+  },
+  {
+    "kata_arab": "سيارة",
+    "latin": "sayyaarah",
+    "arti": "mobil"
+  },
+  {
+    "kata_arab": "أمي",
+    "latin": "ummi",
+    "arti": "ibuku"
+  },
+  {
+    "kata_arab": "بتبعت",
+    "latin": "btib'at",
+    "arti": "mengirim"
+  },
+  {
+    "kata_arab": "الزلمة",
+    "latin": "ez-zalameh",
+    "arti": "pria itu"
+  },
+  {
+    "kata_arab": "كبيرة",
+    "latin": "kbeereh",
+    "arti": "besar"
+  },
+  {
+    "kata_arab": "بالبريد",
+    "latin": "bil-bareed",
+    "arti": "di kantor pos"
+  },
+  {
+    "kata_arab": "طرد",
+    "latin": "tard",
+    "arti": "paket"
+  },
+  {
+    "kata_arab": "هاي",
+    "latin": "haay",
+    "arti": "ini (pr)"
+  },
+  {
+    "kata_arab": "ثقيلة",
+    "latin": "tqeeleh",
+    "arti": "berat"
+  },
+  {
+    "kata_arab": "الرسالة",
+    "latin": "al-risaaleh",
+    "arti": "surat"
+  },
+  {
+    "kata_arab": "حطينا",
+    "latin": "hattayna",
+    "arti": "kami menaruh"
+  },
+  {
+    "kata_arab": "بريد",
+    "latin": "bareed",
+    "arti": "kantor pos"
+  },
+  {
+    "kata_arab": "سكرت",
+    "latin": "sakkart",
+    "arti": "saya menutup"
+  },
+  {
+    "kata_arab": "باللزيق",
+    "latin": "bil-lazzeeq",
+    "arti": "dengan selotip"
+  },
+  {
+    "kata_arab": "متى",
+    "latin": "mata",
+    "arti": "kapan"
+  },
+  {
+    "kata_arab": "للمكتب",
+    "latin": "lil-maktab",
+    "arti": "ke kantor"
+  },
+  {
+    "kata_arab": "الهدية",
+    "latin": "al-hadiyyeh",
+    "arti": "hadiah"
+  },
+  {
+    "kata_arab": "جهزي",
+    "latin": "jahhzi",
+    "arti": "siapkanlah (pr)"
+  },
+  {
+    "kata_arab": "أمانة",
+    "latin": "amaaneh",
+    "arti": "titipan barang"
+  },
+  {
+    "kata_arab": "بدنا",
+    "latin": "bidna",
+    "arti": "kami butuh"
+  },
+  {
+    "kata_arab": "عشان",
+    "latin": "'ashaan",
+    "arti": "untuk"
+  },
+  {
+    "kata_arab": "مقطوعة",
+    "latin": "maqtoo'ah",
+    "arti": "robek"
+  },
+  {
+    "kata_arab": "جنب",
+    "latin": "janb",
+    "arti": "samping"
+  },
+  {
+    "kata_arab": "الشحن",
+    "latin": "ash-shahen",
+    "arti": "pengiriman"
+  },
+  {
+    "kata_arab": "الأسبوع",
+    "latin": "al-usboo'",
+    "arti": "seminggu/pekan"
+  },
+  {
+    "kata_arab": "حطي",
+    "latin": "hutti",
+    "arti": "taruhlah (pr)"
+  },
+  {
+    "kata_arab": "قوية",
+    "latin": "qawiyyeh",
+    "arti": "kuat"
+  },
+  {
+    "kata_arab": "الرئيسي",
+    "latin": "ar-ra'eesi",
+    "arti": "utama"
+  },
+  {
+    "kata_arab": "للفرع",
+    "latin": "lil-far'",
+    "arti": "ke cabang"
+  },
+  {
+    "kata_arab": "رتبت",
+    "latin": "rattabat",
+    "arti": "dia menata"
+  },
+  {
+    "kata_arab": "لزيق",
+    "latin": "lzee'",
+    "arti": "selotip"
+  },
+  {
+    "kata_arab": "مسكرة",
+    "latin": "msakkarah",
+    "arti": "tertutup rapat"
+  },
+  {
+    "kata_arab": "أغراض",
+    "latin": "aghraad",
+    "arti": "barang-barang"
+  },
+  {
+    "kata_arab": "فضيتي",
+    "latin": "faddeyti",
+    "arti": "kamu (pr) mengosongkan"
+  },
+  {
+    "kata_arab": "القديمة",
+    "latin": "al-qadeemeh",
+    "arti": "yang lama"
+  },
+  {
+    "kata_arab": "لزقتي",
+    "latin": "lazzaqti",
+    "arti": "kamu (pr) merekatkan lakban"
+  },
+  {
+    "kata_arab": "الظرف",
+    "latin": "az-zarf",
+    "arti": "amplop"
+  },
+  {
+    "kata_arab": "جبنا",
+    "latin": "jibna",
+    "arti": "kami membawa/membeli"
+  },
+  {
+    "kata_arab": "فاضية",
+    "latin": "faadyeh",
+    "arti": "kosong"
+  },
+  {
+    "kata_arab": "ظرف",
+    "latin": "zarf",
+    "arti": "amplop"
+  },
+  {
+    "kata_arab": "مندوب",
+    "latin": "mandoob",
+    "arti": "kurir"
+  },
+  {
+    "kata_arab": "بتستلمي",
+    "latin": "btestilmi",
+    "arti": "kamu (pr) menerima"
+  },
+  {
+    "kata_arab": "الأمانة",
+    "latin": "al-amaaneh",
+    "arti": "titipan/paket titipan"
+  },
+  {
+    "kata_arab": "تأكدي",
+    "latin": "ta'akkadi",
+    "arti": "pastikanlah (pr)"
+  },
+  {
+    "kata_arab": "مفتوحة",
+    "latin": "maftoohah",
+    "arti": "terbuka"
+  },
+  {
+    "kata_arab": "المستودع",
+    "latin": "al-mustawda'",
+    "arti": "gudang"
+  },
+  {
+    "kata_arab": "البلدية",
+    "latin": "al-baladiyyeh",
+    "arti": "kantor kotamadya"
+  },
+  {
+    "kata_arab": "العصير",
+    "latin": "al-'aseer",
+    "arti": "jus"
+  },
+  {
+    "kata_arab": "تخرب",
+    "latin": "tokhrab",
+    "arti": "rusak"
+  },
+  {
+    "kata_arab": "الصحون",
+    "latin": "as-sohoon",
+    "arti": "piring-piring"
+  },
+  {
+    "kata_arab": "السفارة",
+    "latin": "as-sifaarah",
+    "arti": "kedutaan"
+  },
+  {
+    "kata_arab": "الخزانة",
+    "latin": "al-khazaaneh",
+    "arti": "lemari"
+  },
+  {
+    "kata_arab": "شاي",
+    "latin": "shaay",
+    "arti": "teh"
+  },
+  {
+    "kata_arab": "جريدة",
+    "latin": "jareedeh",
+    "arti": "koran"
+  },
+  {
+    "kata_arab": "أواعي",
+    "latin": "awaa'i",
+    "arti": "baju-baju"
+  },
+  {
+    "kata_arab": "جديدة",
+    "latin": "jdeedeh",
+    "arti": "baru"
+  },
+  {
+    "kata_arab": "المصاري",
+    "latin": "al-masaari",
+    "arti": "uang"
+  },
+  {
+    "kata_arab": "أختي",
+    "latin": "ukhti",
+    "arti": "saudariku"
+  },
+  {
+    "kata_arab": "بتكتبي",
+    "latin": "btiktbi",
+    "arti": "kamu (pr) menulis"
+  },
+  {
+    "kata_arab": "بتشوفي",
+    "latin": "btshoofi",
+    "arti": "kamu (pr) melihat"
+  },
+  {
+    "kata_arab": "أوراق",
+    "latin": "awraaq",
+    "arti": "dokumen-dokumen"
+  },
+  {
+    "kata_arab": "البنك",
+    "latin": "al-bank",
+    "arti": "bank"
+  },
+  {
+    "kata_arab": "دفاتر",
+    "latin": "dafaatir",
+    "arti": "buku-buku tulis"
+  },
+  {
+    "kata_arab": "الرف",
+    "latin": "ar-raff",
+    "arti": "rak"
+  },
+  {
+    "kata_arab": "السفر",
+    "latin": "as-safar",
+    "arti": "perjalanan"
+  },
+  {
+    "kata_arab": "فتحنا",
+    "latin": "fatahina",
+    "arti": "kami membuka"
+  },
+  {
+    "kata_arab": "لقينا",
+    "latin": "laqeena",
+    "arti": "kami menemukan"
+  },
+  {
+    "kata_arab": "البلد",
+    "latin": "al-balad",
+    "arti": "pusat kota"
+  },
+  {
+    "kata_arab": "شرينا",
+    "latin": "shareena",
+    "arti": "kami membeli"
+  },
+  {
+    "kata_arab": "عصير",
+    "latin": "'aseer",
+    "arti": "jus"
+  },
+  {
+    "kata_arab": "تلفيها",
+    "latin": "tliffeeha",
+    "arti": "kamu (pr) membungkusnya"
+  },
+  {
+    "kata_arab": "محامي",
+    "latin": "muhaami",
+    "arti": "pengacara"
+  },
+  {
+    "kata_arab": "مساعدة",
+    "latin": "musaa'adeh",
+    "arti": "bantuan"
+  },
+  {
+    "kata_arab": "شغل",
+    "latin": "shughul",
+    "arti": "pekerjaan"
+  },
+  {
+    "kata_arab": "مطبخ",
+    "latin": "matbakh",
+    "arti": "dapur"
+  },
+  {
+    "kata_arab": "صحون",
+    "latin": "suhoon",
+    "arti": "piring-piring"
+  },
+  {
+    "kata_arab": "سكرتي",
+    "latin": "sakkarti",
+    "arti": "kamu (pr) menutup"
+  },
+  {
+    "kata_arab": "ألعاب",
+    "latin": "al'aab",
+    "arti": "mainan"
+  },
+  {
+    "kata_arab": "تبرع",
+    "latin": "tabarru'",
+    "arti": "donasi"
+  },
+  {
+    "kata_arab": "فاتورة",
+    "latin": "faatoorah",
+    "arti": "tagihan"
+  },
+  {
+    "kata_arab": "محاسب",
+    "latin": "muhaasib",
+    "arti": "akuntan"
+  },
+  {
+    "kata_arab": "تقرير",
+    "latin": "taqreer",
+    "arti": "laporan"
+  },
+  {
+    "kata_arab": "إيميل",
+    "latin": "emeel",
+    "arti": "email"
+  },
+  {
+    "kata_arab": "أجهزة",
+    "latin": "ajhizeh",
+    "arti": "perangkat-perangkat"
+  },
+  {
+    "kata_arab": "شفتي",
+    "latin": "shufti",
+    "arti": "kamu (pr) melihat"
+  },
+  {
+    "kata_arab": "فوق",
+    "latin": "foq",
+    "arti": "di atas"
+  },
+  {
+    "kata_arab": "طاولة",
+    "latin": "tawleh",
+    "arti": "meja"
+  },
+  {
+    "kata_arab": "بدهم",
+    "latin": "bidhom",
+    "arti": "mereka mau"
+  },
+  {
+    "kata_arab": "كل",
+    "latin": "kull",
+    "arti": "semua"
+  },
+  {
+    "kata_arab": "صغيرة",
+    "latin": "sghireh",
+    "arti": "kecil"
+  },
+  {
+    "kata_arab": "وين",
+    "latin": "wein",
+    "arti": "di mana"
+  },
+  {
+    "kata_arab": "حطيت",
+    "latin": "hatteit",
+    "arti": "kamu (laki-laki) menaruh"
+  },
+  {
+    "kata_arab": "ما",
+    "latin": "ma",
+    "arti": "tidak"
+  },
+  {
+    "kata_arab": "بيقدروا",
+    "latin": "byeqdaru",
+    "arti": "mereka bisa"
+  },
+  {
+    "kata_arab": "الموظفين",
+    "latin": "al-muwadh-dhafiin",
+    "arti": "para pegawai"
+  },
+  {
+    "kata_arab": "برا",
+    "latin": "barra",
+    "arti": "ke luar"
+  },
+  {
+    "kata_arab": "اشترت",
+    "latin": "isytarat",
+    "arti": "dia (perempuan) membeli"
+  },
+  {
+    "kata_arab": "خلصوا",
+    "latin": "khilso",
+    "arti": "sudah habis"
+  },
+  {
+    "kata_arab": "بكره",
+    "latin": "bukra",
+    "arti": "besok"
+  },
+  {
+    "kata_arab": "حطيتوا",
+    "latin": "hattheito",
+    "arti": "kalian (laki-laki) menaruh"
+  },
+  {
+    "kata_arab": "مليانة",
+    "latin": "malyaaneh",
+    "arti": "penuh"
+  },
+  {
+    "kata_arab": "الهدايا",
+    "latin": "al-hadaya",
+    "arti": "hadiah-hadiah"
+  },
+  {
+    "kata_arab": "ضاعوا",
+    "latin": "daa'u",
+    "arti": "hilang"
+  },
+  {
+    "kata_arab": "المعلمين",
+    "latin": "al-mu'allimiin",
+    "arti": "para guru (laki-laki)"
+  },
+  {
+    "kata_arab": "الكتب",
+    "latin": "al-kutub",
+    "arti": "buku-buku"
+  },
+  {
+    "kata_arab": "عدينا",
+    "latin": "'addeena",
+    "arti": "kami menghitung"
+  },
+  {
+    "kata_arab": "كلهم",
+    "latin": "kullhum",
+    "arti": "semuanya"
+  },
+  {
+    "kata_arab": "الطلاب",
+    "latin": "al-tullaab",
+    "arti": "para siswa"
+  },
+  {
+    "kata_arab": "الواجب",
+    "latin": "al-waajeb",
+    "arti": "pekerjaan rumah"
+  },
+  {
+    "kata_arab": "طوابع",
+    "latin": "tawaabe'",
+    "arti": "perangko-perangko"
+  },
+  {
+    "kata_arab": "محطوطين",
+    "latin": "mahtooteen",
+    "arti": "diletakkan"
+  },
+  {
+    "kata_arab": "الجيران",
+    "latin": "al-jeeraan",
+    "arti": "para tetangga"
+  },
+  {
+    "kata_arab": "رسائل",
+    "latin": "rasaayel",
+    "arti": "surat-surat"
+  },
+  {
+    "kata_arab": "المعلمات",
+    "latin": "al-mu'allimaat",
+    "arti": "para guru (perempuan)"
+  },
+  {
+    "kata_arab": "رتّبوا",
+    "latin": "rattabu",
+    "arti": "mereka merapikan"
+  },
+  {
+    "kata_arab": "الجوازات",
+    "latin": "al-jawaazaat",
+    "arti": "paspor-paspor"
+  },
+  {
+    "kata_arab": "فتحت",
+    "latin": "fatahat",
+    "arti": "dia (perempuan) membuka"
+  },
+  {
+    "kata_arab": "حابين",
+    "latin": "haabbiin",
+    "arti": "mereka ingin"
+  },
+  {
+    "kata_arab": "الصور",
+    "latin": "as-suwar",
+    "arti": "foto-foto"
+  },
+  {
+    "kata_arab": "الشباب",
+    "latin": "ash-shabaab",
+    "arti": "pemuda-pemuda"
+  },
+  {
+    "kata_arab": "سَكّروا",
+    "latin": "sakkaru",
+    "arti": "mereka menutup"
+  },
+  {
+    "kata_arab": "الدرج",
+    "latin": "ad-duruj",
+    "arti": "laci"
+  },
+  {
+    "kata_arab": "طابع",
+    "latin": "taabi'",
+    "arti": "perangko"
+  },
+  {
+    "kata_arab": "شحن",
+    "latin": "shahan",
+    "arti": "pengiriman kargo"
+  },
+  {
+    "kata_arab": "استلموا",
+    "latin": "istalamu",
+    "arti": "mereka menerima"
+  },
+  {
+    "kata_arab": "لزّقنا",
+    "latin": "lazzaqna",
+    "arti": "kami menempelkan"
+  },
+  {
+    "kata_arab": "الزبائن",
+    "latin": "az-zabaayen",
+    "arti": "para pelanggan"
+  },
+  {
+    "kata_arab": "الطلبات",
+    "latin": "at-talabaat",
+    "arti": "pesanan-pesanan"
+  },
+  {
+    "kata_arab": "تأخروا",
+    "latin": "t-akh-kharu",
+    "arti": "mereka terlambat"
+  },
+  {
+    "kata_arab": "الرد",
+    "latin": "ar-radd",
+    "arti": "balasan"
+  },
+  {
+    "kata_arab": "جهّزوا",
+    "latin": "jahhazu",
+    "arti": "mereka menyiapkan"
+  },
+  {
+    "kata_arab": "رتّبنا",
+    "latin": "rattabna",
+    "arti": "kami merapikan"
+  },
+  {
+    "kata_arab": "قرروا",
+    "latin": "qarraru",
+    "arti": "mereka memutuskan"
+  },
+  {
+    "kata_arab": "ضيعوا",
+    "latin": "dhayya'u",
+    "arti": "mereka menghilangkan"
+  },
+  {
+    "kata_arab": "ليش",
+    "latin": "leish",
+    "arti": "mengapa / kenapa"
+  },
+  {
+    "kata_arab": "طولوا",
+    "latin": "tawwalu",
+    "arti": "mereka terlambat / lama"
+  },
+  {
+    "kata_arab": "حاولوا",
+    "latin": "haawalu",
+    "arti": "mereka mencoba"
+  },
+  {
+    "kata_arab": "سكّرنا",
+    "latin": "sakkarna",
+    "arti": "kami menutup / merekatkan"
+  },
+  {
+    "kata_arab": "تلزيق",
+    "latin": "talziiq",
+    "arti": "selotip / lem"
+  },
+  {
+    "kata_arab": "فواتير",
+    "latin": "fawatiir",
+    "arti": "tagihan-tagihan"
+  },
+  {
+    "kata_arab": "ختموا",
+    "latin": "khatamu",
+    "arti": "mereka mencap"
+  },
+  {
+    "kata_arab": "أوراقهم",
+    "latin": "awraq-hom",
+    "arti": "berkas-berkas mereka"
+  },
+  {
+    "kata_arab": "المهندسين",
+    "latin": "al-muhandisiin",
+    "arti": "para insinyur"
+  },
+  {
+    "kata_arab": "المخططات",
+    "latin": "al-mukhattataat",
+    "arti": "denah-denah"
+  },
+  {
+    "kata_arab": "الإيميل",
+    "latin": "al-iimeil",
+    "arti": "email"
+  },
+  {
+    "kata_arab": "وزعوا",
+    "latin": "wazza'u",
+    "arti": "mereka membagikan"
+  },
+  {
+    "kata_arab": "وزن",
+    "latin": "wazen",
+    "arti": "berat"
+  },
+  {
+    "kata_arab": "بالدرج",
+    "latin": "bid-durj",
+    "arti": "di laci"
+  },
+  {
+    "kata_arab": "المشروع",
+    "latin": "al-mashruu'",
+    "arti": "proyek"
+  },
+  {
+    "kata_arab": "المحامين",
+    "latin": "al-muhaamiin",
+    "arti": "para pengacara"
+  },
+  {
+    "kata_arab": "العقود",
+    "latin": "al-'uquud",
+    "arti": "kontrak-kontrak"
+  },
+  {
+    "kata_arab": "لقيت",
+    "latin": "laqeet",
+    "arti": "saya menemukan"
+  },
+  {
+    "kata_arab": "تحت",
+    "latin": "tahet",
+    "arti": "di bawah"
+  },
+  {
+    "kata_arab": "ضاعت",
+    "latin": "daa'at",
+    "arti": "hilang"
+  },
+  {
+    "kata_arab": "بالطريق",
+    "latin": "bit-tariiq",
+    "arti": "di jalan"
+  },
+  {
+    "kata_arab": "أصحابك",
+    "latin": "ash-haabak",
+    "arti": "teman-temanmu (laki-laki)"
+  },
+  {
+    "kata_arab": "الخبر",
+    "latin": "al-khabar",
+    "arti": "kabar itu"
+  },
+  {
+    "kata_arab": "يقدروا",
+    "latin": "yiqdaroo",
+    "arti": "mereka bisa"
+  },
+  {
+    "kata_arab": "حطوا",
+    "latin": "hattu",
+    "arti": "mereka menaruh"
+  },
+  {
+    "kata_arab": "محطوط",
+    "latin": "mahtoot",
+    "arti": "diletakkan / tertera"
+  },
+  {
+    "kata_arab": "التفاصيل",
+    "latin": "at-tafaaseel",
+    "arti": "rincian-rincian"
+  },
+  {
+    "kata_arab": "الرسمية",
+    "latin": "ar-rasmiyyeh",
+    "arti": "resmi"
+  },
+  {
+    "kata_arab": "الملف",
+    "latin": "al-malaf",
+    "arti": "berkas"
+  },
+  {
+    "kata_arab": "الرقم",
+    "latin": "ar-raqam",
+    "arti": "nomor"
+  },
+  {
+    "kata_arab": "لزقت",
+    "latin": "lazzaqat",
+    "arti": "dia (perempuan) menempelkan"
+  },
+  {
+    "kata_arab": "مستعجلين",
+    "latin": "musta'jileen",
+    "arti": "terburu-buru"
+  },
+  {
+    "kata_arab": "المحاسبين",
+    "latin": "al-muhaasibeen",
+    "arti": "para akuntan"
+  },
+  {
+    "kata_arab": "المندوبين",
+    "latin": "al-mandoobeen",
+    "arti": "para kurir/perwakilan"
+  },
+  {
+    "kata_arab": "الأخضر",
+    "latin": "il-akhdar",
+    "arti": "yang hijau"
+  },
+  {
+    "kata_arab": "اشتريت",
+    "latin": "ishtareyt",
+    "arti": "saya membeli"
+  },
+  {
+    "kata_arab": "قديم",
+    "latin": "qadiim",
+    "arti": "kuno/lama"
+  },
+  {
+    "kata_arab": "حط",
+    "latin": "hutt",
+    "arti": "taruhlah"
+  },
+  {
+    "kata_arab": "هاد",
+    "latin": "haad",
+    "arti": "ini"
+  },
+  {
+    "kata_arab": "أردني",
+    "latin": "urduni",
+    "arti": "khas Yordania"
+  },
+  {
+    "kata_arab": "بيعطيك",
+    "latin": "bi'tiik",
+    "arti": "memberimu"
+  },
+  {
+    "kata_arab": "جديد",
+    "latin": "jdeed",
+    "arti": "baru"
+  },
+  {
+    "kata_arab": "شفت",
+    "latin": "shuft",
+    "arti": "saya melihat"
+  },
+  {
+    "kata_arab": "إمبارح",
+    "latin": "imbaarih",
+    "arti": "kemarin"
+  },
+  {
+    "kata_arab": "معي",
+    "latin": "ma'i",
+    "arti": "saya punya / bersama saya"
+  },
+  {
+    "kata_arab": "شو",
+    "latin": "shu",
+    "arti": "apa"
+  },
+  {
+    "kata_arab": "بدك",
+    "latin": "biddak",
+    "arti": "kamu (laki-laki) butuh / mau"
+  },
+  {
+    "kata_arab": "إجا",
+    "latin": "ija",
+    "arti": "datang / tiba"
+  },
+  {
+    "kata_arab": "إشي",
+    "latin": "ishi",
+    "arti": "sesuatu"
+  },
+  {
+    "kata_arab": "هناك",
+    "latin": "hunaak",
+    "arti": "di sana"
+  },
+  {
+    "kata_arab": "صغير",
+    "latin": "sghiir",
+    "arti": "kecil"
+  },
+  {
+    "kata_arab": "كبير",
+    "latin": "kbiir",
+    "arti": "besar"
+  },
+  {
+    "kata_arab": "إشتريت",
+    "latin": "ishtareyt",
+    "arti": "saya membeli"
+  },
+  {
+    "kata_arab": "جاب",
+    "latin": "jaab",
+    "arti": "dia (laki-laki) membawa"
+  },
+  {
+    "kata_arab": "رسمي",
+    "latin": "rasmi",
+    "arti": "resmi"
+  },
+  {
+    "kata_arab": "الأواعي",
+    "latin": "il-awaa'i",
+    "arti": "pakaian"
+  },
+  {
+    "kata_arab": "مرتبة",
+    "latin": "mrattabeh",
+    "arti": "rapi"
+  },
+  {
+    "kata_arab": "هدايا",
+    "latin": "hadaya",
+    "arti": "hadiah-hadiah"
+  },
+  {
+    "kata_arab": "الزبون",
+    "latin": "iz-zabuun",
+    "arti": "pelanggan"
+  },
+  {
+    "kata_arab": "جرار",
+    "latin": "jarraar",
+    "arti": "laci"
+  },
+  {
+    "kata_arab": "هدية",
+    "latin": "hadiyyeh",
+    "arti": "hadiah"
+  },
+  {
+    "kata_arab": "عطاني",
+    "latin": "'ataani",
+    "arti": "dia memberi saya"
+  },
+  {
+    "kata_arab": "تركت",
+    "latin": "tarakt",
+    "arti": "saya meninggalkan"
+  },
+  {
+    "kata_arab": "استلم",
+    "latin": "istalam",
+    "arti": "dia menerima"
+  },
+  {
+    "kata_arab": "شيك",
+    "latin": "shayyak",
+    "arti": "dia memeriksa"
+  },
+  {
+    "kata_arab": "ناقص",
+    "latin": "naaqis",
+    "arti": "kurang"
+  },
+  {
+    "kata_arab": "تأكد",
+    "latin": "it'akkad",
+    "arti": "periksa kembali"
+  },
+  {
+    "kata_arab": "الإم",
+    "latin": "il-imm",
+    "arti": "sang ibu"
+  },
+  {
+    "kata_arab": "معك",
+    "latin": "ma'ak",
+    "arti": "kamu punya (laki-laki)"
+  },
+  {
+    "kata_arab": "تاني",
+    "latin": "taani",
+    "arti": "lain / satu lagi"
+  },
+  {
+    "kata_arab": "إله",
+    "latin": "ilo",
+    "arti": "memiliki / punya"
+  },
+  {
+    "kata_arab": "حلو",
+    "latin": "hilu",
+    "arti": "bagus / indah"
+  },
+  {
+    "kata_arab": "بالشنطة",
+    "latin": "bish-shanta",
+    "arti": "di dalam tas"
+  },
+  {
+    "kata_arab": "بالجرار",
+    "latin": "bil-jarraar",
+    "arti": "di laci"
+  },
+  {
+    "kata_arab": "هادي",
+    "latin": "hadi",
+    "arti": "tenang"
+  },
+  {
+    "kata_arab": "الصغيرة",
+    "latin": "is-sagheereh",
+    "arti": "yang kecil"
+  },
+  {
+    "kata_arab": "مميز",
+    "latin": "mumayyaz",
+    "arti": "istimewa"
+  },
+  {
+    "kata_arab": "جمّع",
+    "latin": "jamma'",
+    "arti": "mengumpulkan"
+  },
+  {
+    "kata_arab": "ملفات",
+    "latin": "malaffaat",
+    "arti": "berkas"
+  },
+  {
+    "kata_arab": "الرسمة",
+    "latin": "ir-rasmeh",
+    "arti": "lukisan itu"
+  },
+  {
+    "kata_arab": "غريب",
+    "latin": "ghariib",
+    "arti": "aneh"
+  },
+  {
+    "kata_arab": "الأحمر",
+    "latin": "il-ahmar",
+    "arti": "merah"
+  },
+  {
+    "kata_arab": "المطعم",
+    "latin": "il-mat'am",
+    "arti": "restoran"
+  },
+  {
+    "kata_arab": "شعبي",
+    "latin": "sha'bi",
+    "arti": "merakyat / tradisional"
+  },
+  {
+    "kata_arab": "الجريدة",
+    "latin": "il-jariideh",
+    "arti": "koran"
+  },
+  {
+    "kata_arab": "الكبير",
+    "latin": "il-kbiir",
+    "arti": "yang besar"
+  },
+  {
+    "kata_arab": "شرا",
+    "latin": "shara",
+    "arti": "membeli"
+  },
+  {
+    "kata_arab": "دفاتري",
+    "latin": "dafaatiri",
+    "arti": "buku-buku catatanku"
+  },
+  {
+    "kata_arab": "مكتوب",
+    "latin": "maktoob",
+    "arti": "surat"
+  },
+  {
+    "kata_arab": "دفتر",
+    "latin": "daftar",
+    "arti": "buku catatan"
+  },
+  {
+    "kata_arab": "قلم",
+    "latin": "qalam",
+    "arti": "pulpen"
+  },
+  {
+    "kata_arab": "ناقصه",
+    "latin": "naaqsoh",
+    "arti": "kurang"
+  },
+  {
+    "kata_arab": "القديم",
+    "latin": "il-qadeem",
+    "arti": "yang lama"
+  },
+  {
+    "kata_arab": "أوديه",
+    "latin": "awaddiih",
+    "arti": "aku membawanya / mengirimkannya"
+  },
+  {
+    "kata_arab": "الأكل",
+    "latin": "il-akl",
+    "arti": "makanan"
+  },
+  {
+    "kata_arab": "خاص",
+    "latin": "khaas",
+    "arti": "khusus"
+  },
+  {
+    "kata_arab": "بدها",
+    "latin": "bidha",
+    "arti": "butuh"
+  },
+  {
+    "kata_arab": "الساعة",
+    "latin": "is-saa'ah",
+    "arti": "jam tangan"
+  },
+  {
+    "kata_arab": "نسيت",
+    "latin": "nseet",
+    "arti": "saya lupa"
+  },
+  {
+    "kata_arab": "برة",
+    "latin": "barrah",
+    "arti": "di luar"
+  },
+  {
+    "kata_arab": "أخد",
+    "latin": "akhad",
+    "arti": "mengambil"
+  },
+  {
+    "kata_arab": "الغرض",
+    "latin": "il-gharad",
+    "arti": "barang itu"
+  },
+  {
+    "kata_arab": "أوراقك",
+    "latin": "awraaqak",
+    "arti": "berkas-berkasmu"
+  },
+  {
+    "kata_arab": "المهمة",
+    "latin": "il-muhimmeh",
+    "arti": "yang penting"
+  },
+  {
+    "kata_arab": "كلها",
+    "latin": "kullha",
+    "arti": "semuanya"
+  },
+  {
+    "kata_arab": "تسكير",
+    "latin": "taskeer",
+    "arti": "menutup"
+  },
+  {
+    "kata_arab": "سريع",
+    "latin": "saree'",
+    "arti": "cepat"
+  },
+  {
+    "kata_arab": "بدون",
+    "latin": "bidoon",
+    "arti": "tanpa"
+  },
+  {
+    "kata_arab": "أكيد",
+    "latin": "akeed",
+    "arti": "pasti/tentu"
+  },
+  {
+    "kata_arab": "رنوا",
+    "latin": "rannu",
+    "arti": "mereka menelepon"
+  },
+  {
+    "kata_arab": "نحكي",
+    "latin": "nihki",
+    "arti": "kita bicara"
+  },
+  {
+    "kata_arab": "واقفة",
+    "latin": "waaqfeh",
+    "arti": "sedang berhenti"
+  },
+  {
+    "kata_arab": "سألوا",
+    "latin": "sa'alu",
+    "arti": "mereka menanyai"
+  },
+  {
+    "kata_arab": "الكل",
+    "latin": "il-kull",
+    "arti": "semua orang"
+  },
+  {
+    "kata_arab": "إجت",
+    "latin": "ijat",
+    "arti": "telah datang"
+  },
+  {
+    "kata_arab": "وصلت",
+    "latin": "wislat",
+    "arti": "telah tiba"
+  },
+  {
+    "kata_arab": "مكان",
+    "latin": "makaan",
+    "arti": "lokasi"
+  },
+  {
+    "kata_arab": "مخفر",
+    "latin": "makhfar",
+    "arti": "kantor polisi"
+  },
+  {
+    "kata_arab": "ضابط",
+    "latin": "daabit",
+    "arti": "petugas / perwira"
+  },
+  {
+    "kata_arab": "دورية",
+    "latin": "dawriyyah",
+    "arti": "patroli"
+  },
+  {
+    "kata_arab": "بلاغ",
+    "latin": "balaagh",
+    "arti": "laporan resmi"
+  },
+  {
+    "kata_arab": "هوية",
+    "latin": "huwiyyeh",
+    "arti": "kartu identitas"
+  },
+  {
+    "kata_arab": "صار",
+    "latin": "saar",
+    "arti": "terjadi"
+  },
+  {
+    "kata_arab": "سرقة",
+    "latin": "sariqah",
+    "arti": "pencurian"
+  },
+  {
+    "kata_arab": "شافوا",
+    "latin": "shaafu",
+    "arti": "mereka melihat"
+  },
+  {
+    "kata_arab": "واقف",
+    "latin": "waaqif",
+    "arti": "berdiri"
+  },
+  {
+    "kata_arab": "شنطة",
+    "latin": "shantah",
+    "arti": "tas"
+  },
+  {
+    "kata_arab": "صوت",
+    "latin": "soot",
+    "arti": "suara"
+  },
+  {
+    "kata_arab": "بيشتغل",
+    "latin": "byishteghil",
+    "arti": "bekerja"
+  },
+  {
+    "kata_arab": "اخوي",
+    "latin": "akhuy",
+    "arti": "saudara laki-lakiku"
+  },
+  {
+    "kata_arab": "طلبنا",
+    "latin": "talabna",
+    "arti": "kami meminta"
+  },
+  {
+    "kata_arab": "فحصت",
+    "latin": "fahasat",
+    "arti": "memeriksa"
+  },
+  {
+    "kata_arab": "أوراقنا",
+    "latin": "awraaqna",
+    "arti": "dokumen kami"
+  },
+  {
+    "kata_arab": "منادي",
+    "latin": "mnaadi",
+    "arti": "kita memanggil"
+  },
+  {
+    "kata_arab": "قريب",
+    "latin": "qariib",
+    "arti": "dekat"
+  },
+  {
+    "kata_arab": "تحقيق",
+    "latin": "tahqiiq",
+    "arti": "penyelidikan"
+  },
+  {
+    "kata_arab": "مشتكي",
+    "latin": "mushtaki",
+    "arti": "pelapor"
+  },
+  {
+    "kata_arab": "مخالفة",
+    "latin": "mukhaalafah",
+    "arti": "surat tilang"
+  },
+  {
+    "kata_arab": "تفتيش",
+    "latin": "taftiish",
+    "arti": "pemeriksaan"
+  },
+  {
+    "kata_arab": "سمعنا",
+    "latin": "smi'na",
+    "arti": "kami mendengar"
+  },
+  {
+    "kata_arab": "حكى",
+    "latin": "haka",
+    "arti": "berbicara/bercerita"
+  },
+  {
+    "kata_arab": "تلفونه",
+    "latin": "talfoono",
+    "arti": "ponselnya"
+  },
+  {
+    "kata_arab": "حادث",
+    "latin": "haadith",
+    "arti": "kecelakaan"
+  },
+  {
+    "kata_arab": "الشارع",
+    "latin": "ash-shaari'",
+    "arti": "jalan"
+  },
+  {
+    "kata_arab": "سكروا",
+    "latin": "sakkaru",
+    "arti": "mereka menutup"
+  },
+  {
+    "kata_arab": "المدخل",
+    "latin": "al-madkhal",
+    "arti": "pintu masuk"
+  },
+  {
+    "kata_arab": "واقفين",
+    "latin": "waaqfiin",
+    "arti": "berdiri (jamak)"
+  },
+  {
+    "kata_arab": "ساعدوا",
+    "latin": "saa'adu",
+    "arti": "mereka membantu"
+  },
+  {
+    "kata_arab": "الختيار",
+    "latin": "al-khtyaar",
+    "arti": "orang tua (lansia)"
+  },
+  {
+    "kata_arab": "تفاصيل",
+    "latin": "tafaasiil",
+    "arti": "rincian / detail"
+  },
+  {
+    "kata_arab": "رن",
+    "latin": "rann",
+    "arti": "berdering / menelepon"
+  },
+  {
+    "kata_arab": "حكوا",
+    "latin": "haku",
+    "arti": "mereka berkata"
+  },
+  {
+    "kata_arab": "امشوا",
+    "latin": "imshu",
+    "arti": "berjalanlah kalian"
+  },
+  {
+    "kata_arab": "تستنى",
+    "latin": "tistanna",
+    "arti": "menunggu"
+  },
+  {
+    "kata_arab": "محطة",
+    "latin": "mahattah",
+    "arti": "stasiun / halte"
+  },
+  {
+    "kata_arab": "لقوا",
+    "latin": "laqu",
+    "arti": "mereka menemukan"
+  },
+  {
+    "kata_arab": "شفتهم",
+    "latin": "shufthum",
+    "arti": "aku melihat mereka"
+  },
+  {
+    "kata_arab": "سألوك",
+    "latin": "sa'aluuk",
+    "arti": "mereka bertanya kepadamu"
+  },
+  {
+    "kata_arab": "شوفير",
+    "latin": "shoofeer",
+    "arti": "sopir"
+  },
+  {
+    "kata_arab": "دور",
+    "latin": "dawwar",
+    "arti": "mencari"
+  },
+  {
+    "kata_arab": "شنتة",
+    "latin": "shantah",
+    "arti": "tas"
+  },
+  {
+    "kata_arab": "ضايعة",
+    "latin": "daay'ah",
+    "arti": "hilang"
+  },
+  {
+    "kata_arab": "نبه",
+    "latin": "nabbah",
+    "arti": "memperingatkan"
+  },
+  {
+    "kata_arab": "على مهل",
+    "latin": "'ala mahl",
+    "arti": "pelan-pelan"
+  },
+  {
+    "kata_arab": "بسكليت",
+    "latin": "biskleet",
+    "arti": "sepeda"
+  },
+  {
+    "kata_arab": "اشي",
+    "latin": "ishi",
+    "arti": "hal / sesuatu"
+  },
+  {
+    "kata_arab": "زلمة",
+    "latin": "zalameh",
+    "arti": "pria / orang laki-laki"
+  },
+  {
+    "kata_arab": "جوة",
+    "latin": "juwwah",
+    "arti": "di dalam"
+  },
+  {
+    "kata_arab": "مكسور",
+    "latin": "maksuur",
+    "arti": "rusak / patah / rusak terbuka"
+  },
+  {
+    "kata_arab": "يرن على",
+    "latin": "y-rinn 'ala",
+    "arti": "menelepon"
+  },
+  {
+    "kata_arab": "دايماً",
+    "latin": "daayman",
+    "arti": "selalu"
+  },
+  {
+    "kata_arab": "فتش",
+    "latin": "fattash",
+    "arti": "memeriksa / menggeledah"
+  },
+  {
+    "kata_arab": "جسر",
+    "latin": "jisr",
+    "arti": "jembatan"
+  },
+  {
+    "kata_arab": "دكان",
+    "latin": "dukkaan",
+    "arti": "toko kecil / warung"
+  },
+  {
+    "kata_arab": "حارس",
+    "latin": "haaris",
+    "arti": "penjaga / satpam"
+  },
+  {
+    "kata_arab": "بستنى",
+    "latin": "bastanna",
+    "arti": "saya sedang menunggu"
+  },
+  {
+    "kata_arab": "لحالك",
+    "latin": "la-haalak",
+    "arti": "sendirian (kamu laki-laki)"
+  },
+  {
+    "kata_arab": "أخذت",
+    "latin": "akhadat",
+    "arti": "mengambil/mencatat"
+  },
+  {
+    "kata_arab": "لقت",
+    "latin": "laqat",
+    "arti": "menemukan"
+  },
+  {
+    "kata_arab": "المحفظة",
+    "latin": "al-mahfazah",
+    "arti": "dompet"
+  },
+  {
+    "kata_arab": "بالليل",
+    "latin": "bil-layl",
+    "arti": "pada malam hari"
+  },
+  {
+    "kata_arab": "نادت",
+    "latin": "naadat",
+    "arti": "memanggil"
+  },
+  {
+    "kata_arab": "الإسعاف",
+    "latin": "al-is'aaf",
+    "arti": "ambulans"
+  },
+  {
+    "kata_arab": "شكروا",
+    "latin": "shakaru",
+    "arti": "mereka berterima kasih"
+  },
+  {
+    "kata_arab": "اتصلت",
+    "latin": "ittasalat",
+    "arti": "menelepon"
+  },
+  {
+    "kata_arab": "النجدة",
+    "latin": "an-najdah",
+    "arti": "bantuan darurat"
+  },
+  {
+    "kata_arab": "السير",
+    "latin": "as-sayr",
+    "arti": "lalu lintas"
+  },
+  {
+    "kata_arab": "حكت",
+    "latin": "hakat",
+    "arti": "berkata/memberitahu"
+  },
+  {
+    "kata_arab": "شافت",
+    "latin": "shaafat",
+    "arti": "melihat"
+  },
+  {
+    "kata_arab": "سلّمته",
+    "latin": "sallamto",
+    "arti": "menyerahkannya"
+  },
+  {
+    "kata_arab": "بساعدوك",
+    "latin": "bisaa'duuk",
+    "arti": "mereka membantumu"
+  },
+  {
+    "kata_arab": "دغري",
+    "latin": "dughri",
+    "arti": "langsung"
+  },
+  {
+    "kata_arab": "عجقة",
+    "latin": "'ajqah",
+    "arti": "macet"
+  },
+  {
+    "kata_arab": "السوق",
+    "latin": "as-suuq",
+    "arti": "pasar"
+  },
+  {
+    "kata_arab": "فحصوا",
+    "latin": "fahasu",
+    "arti": "memeriksa"
+  },
+  {
+    "kata_arab": "الرخص",
+    "latin": "ar-rukhas",
+    "arti": "surat-surat izin"
+  },
+  {
+    "kata_arab": "محل",
+    "latin": "mahall",
+    "arti": "toko"
+  },
+  {
+    "kata_arab": "الأمان",
+    "latin": "al-amaan",
+    "arti": "keamanan"
+  },
+  {
+    "kata_arab": "سلمها",
+    "latin": "sallamha",
+    "arti": "menyerahkannya"
+  },
+  {
+    "kata_arab": "الحادث",
+    "latin": "al-haadith",
+    "arti": "kecelakaan"
+  },
+  {
+    "kata_arab": "أجا",
+    "latin": "aja",
+    "arti": "datang"
+  },
+  {
+    "kata_arab": "الولد",
+    "latin": "al-walad",
+    "arti": "anak laki-laki"
+  },
+  {
+    "kata_arab": "رجع",
+    "latin": "rajja'",
+    "arti": "mengembalikan"
+  },
+  {
+    "kata_arab": "الغراض",
+    "latin": "al-aghraad",
+    "arti": "barang-barang"
+  },
+  {
+    "kata_arab": "الناس",
+    "latin": "an-naas",
+    "arti": "orang-orang"
+  },
+  {
+    "kata_arab": "شاف",
+    "latin": "shaaf",
+    "arti": "melihat"
+  },
+  {
+    "kata_arab": "الدوار",
+    "latin": "ad-dawwaar",
+    "arti": "bundaran jalan"
+  },
+  {
+    "kata_arab": "سمع",
+    "latin": "simi'",
+    "arti": "mendengar"
+  },
+  {
+    "kata_arab": "خاف",
+    "latin": "khaaf",
+    "arti": "takut"
+  },
+  {
+    "kata_arab": "الباص",
+    "latin": "al-baas",
+    "arti": "bus"
+  },
+  {
+    "kata_arab": "طلب",
+    "latin": "talab",
+    "arti": "meminta"
+  },
+  {
+    "kata_arab": "لقى",
+    "latin": "laqa",
+    "arti": "menemukan"
+  },
+  {
+    "kata_arab": "راح",
+    "latin": "raah",
+    "arti": "pergi"
+  },
+  {
+    "kata_arab": "سأل",
+    "latin": "sa'al",
+    "arti": "bertanya"
+  },
+  {
+    "kata_arab": "سألت",
+    "latin": "sa'alat",
+    "arti": "menanyai/bertanya"
+  },
+  {
+    "kata_arab": "المنطقة",
+    "latin": "al-mantiqah",
+    "arti": "area/wilayah"
+  },
+  {
+    "kata_arab": "رجعت",
+    "latin": "rajja'at",
+    "arti": "mengembalikan"
+  },
+  {
+    "kata_arab": "دورت",
+    "latin": "dawwarat",
+    "arti": "mencari"
+  },
+  {
+    "kata_arab": "الحرامي",
+    "latin": "al-haraami",
+    "arti": "pencuri"
+  },
+  {
+    "kata_arab": "الجار",
+    "latin": "al-jaar",
+    "arti": "tetangga"
+  },
+  {
+    "kata_arab": "بيته",
+    "latin": "beito",
+    "arti": "rumahnya"
+  },
+  {
+    "kata_arab": "تأخرت",
+    "latin": "t'akh-khart",
+    "arti": "kamu terlambat"
+  },
+  {
+    "kata_arab": "اجت",
+    "latin": "ijat",
+    "arti": "datang"
+  },
+  {
+    "kata_arab": "لهون",
+    "latin": "lahon",
+    "arti": "ke sini"
+  },
+  {
+    "kata_arab": "مسكت",
+    "latin": "masakat",
+    "arti": "menangkap"
+  },
+  {
+    "kata_arab": "طلبت",
+    "latin": "talabat",
+    "arti": "meminta"
+  },
+  {
+    "kata_arab": "اخذت",
+    "latin": "akhadat",
+    "arti": "mengambil"
+  },
+  {
+    "kata_arab": "كلبشات",
+    "latin": "kalabshaat",
+    "arti": "borgol"
+  },
+  {
+    "kata_arab": "شكوى",
+    "latin": "shakwa",
+    "arti": "aduan"
+  },
+  {
+    "kata_arab": "سرق",
+    "latin": "saraq",
+    "arti": "mencuri"
+  },
+  {
+    "kata_arab": "خايف",
+    "latin": "khaayif",
+    "arti": "takut"
+  },
+  {
+    "kata_arab": "تشتكي",
+    "latin": "tishtiki",
+    "arti": "kamu melapor"
+  },
+  {
+    "kata_arab": "طمنتنا",
+    "latin": "tammanatna",
+    "arti": "menenangkan kami"
+  },
+  {
+    "kata_arab": "خرب",
+    "latin": "khirib",
+    "arti": "rusak"
+  },
+  {
+    "kata_arab": "محفظة",
+    "latin": "mahfazah",
+    "arti": "dompet"
+  },
+  {
+    "kata_arab": "سياح",
+    "latin": "suyyaah",
+    "arti": "turis-turis"
+  },
+  {
+    "kata_arab": "عن",
+    "latin": "'an",
+    "arti": "tentang"
+  },
+  {
+    "kata_arab": "لصاحبه",
+    "latin": "la-saahbo",
+    "arti": "kepada pemiliknya"
+  },
+  {
+    "kata_arab": "مع",
+    "latin": "ma'",
+    "arti": "dengan/bersama"
+  },
+  {
+    "kata_arab": "وقفت",
+    "latin": "waqqafat",
+    "arti": "dia (perempuan) memberhentikan"
+  },
+  {
+    "kata_arab": "عالباب",
+    "latin": "'al-baab",
+    "arti": "di depan pintu"
+  },
+  {
+    "kata_arab": "عالحادث",
+    "latin": "'al-haadeth",
+    "arti": "ke lokasi kecelakaan"
+  },
+  {
+    "kata_arab": "لحالها",
+    "latin": "lahaalha",
+    "arti": "sendirian"
+  },
+  {
+    "kata_arab": "بتقدر",
+    "latin": "btiqdar",
+    "arti": "bisa/mampu"
+  },
+  {
+    "kata_arab": "ضيع",
+    "latin": "dayya'",
+    "arti": "dia menghilangkan"
+  },
+  {
+    "kata_arab": "لقته",
+    "latin": "laqatto",
+    "arti": "dia (perempuan) menemukannya"
+  },
+  {
+    "kata_arab": "سمعت",
+    "latin": "smi't",
+    "arti": "kamu (laki-laki) mendengar"
+  },
+  {
+    "kata_arab": "عطلة",
+    "latin": "'utleh",
+    "arti": "libur"
+  },
+  {
+    "kata_arab": "بتساعد",
+    "latin": "btsaa'ed",
+    "arti": "membantu"
+  },
+  {
+    "kata_arab": "موقع",
+    "latin": "mawqe'",
+    "arti": "situs web"
+  },
+  {
+    "kata_arab": "قررت",
+    "latin": "qarrarat",
+    "arti": "memutuskan"
+  },
+  {
+    "kata_arab": "قانون",
+    "latin": "qaanuun",
+    "arti": "undang-undang"
+  },
+  {
+    "kata_arab": "بتطور",
+    "latin": "bt-tawwer",
+    "arti": "mengembangkan"
+  },
+  {
+    "kata_arab": "وزارة",
+    "latin": "wazaarah",
+    "arti": "kementerian"
+  },
+  {
+    "kata_arab": "معاملة",
+    "latin": "mu'aamaleh",
+    "arti": "urusan berkas"
+  },
+  {
+    "kata_arab": "قرار",
+    "latin": "qaraar",
+    "arti": "keputusan"
+  },
+  {
+    "kata_arab": "حكومة",
+    "latin": "hukuumeh",
+    "arti": "pemerintah"
+  },
+  {
+    "kata_arab": "خدمة",
+    "latin": "khidmeh",
+    "arti": "layanan"
+  },
+  {
+    "kata_arab": "موظف",
+    "latin": "mwaZZaf",
+    "arti": "pegawai"
+  },
+  {
+    "kata_arab": "القرارات",
+    "latin": "el-qaraaraat",
+    "arti": "keputusan-keputusan"
+  },
+  {
+    "kata_arab": "بتبني",
+    "latin": "btibni",
+    "arti": "membangun"
+  },
+  {
+    "kata_arab": "مدارس",
+    "latin": "madaares",
+    "arti": "sekolah-sekolah"
+  },
+  {
+    "kata_arab": "بتشتغل",
+    "latin": "btishteghel",
+    "arti": "bekerja"
+  },
+  {
+    "kata_arab": "كويس",
+    "latin": "kwayyes",
+    "arti": "dengan baik"
+  },
+  {
+    "kata_arab": "بتسمع",
+    "latin": "btsma'",
+    "arti": "mendengar"
+  },
+  {
+    "kata_arab": "تحل",
+    "latin": "tHell",
+    "arti": "menyelesaikan"
+  },
+  {
+    "kata_arab": "بلدنا",
+    "latin": "baladna",
+    "arti": "negara kami"
+  },
+  {
+    "kata_arab": "شارعنا",
+    "latin": "shaare'na",
+    "arti": "jalan kami"
+  },
+  {
+    "kata_arab": "بيتهم",
+    "latin": "beithom",
+    "arti": "rumah mereka"
+  },
+  {
+    "kata_arab": "شغلنا",
+    "latin": "shugHolna",
+    "arti": "pekerjaan kami"
+  },
+  {
+    "kata_arab": "أهلنا",
+    "latin": "ahlna",
+    "arti": "keluarga kami"
+  },
+  {
+    "kata_arab": "أصحابنا",
+    "latin": "SHaabna",
+    "arti": "teman-teman kami"
+  },
+  {
+    "kata_arab": "بتساعدنا",
+    "latin": "btsaa'edna",
+    "arti": "membantu kami"
+  },
+  {
+    "kata_arab": "بالشتا",
+    "latin": "bish-shita",
+    "arti": "di musim dingin"
+  },
+  {
+    "kata_arab": "طريق",
+    "latin": "TariiQ",
+    "arti": "jalan"
+  },
+  {
+    "kata_arab": "بتدفع",
+    "latin": "btidfa'",
+    "arti": "membayar"
+  },
+  {
+    "kata_arab": "مشان",
+    "latin": "mishaan",
+    "arti": "supaya / untuk"
+  },
+  {
+    "kata_arab": "جابت",
+    "latin": "jaabat",
+    "arti": "mendatangkan/membawa"
+  },
+  {
+    "kata_arab": "باصات",
+    "latin": "baaSaat",
+    "arti": "bus-bus"
+  },
+  {
+    "kata_arab": "بتهتم",
+    "latin": "btehtamm",
+    "arti": "memperhatikan/peduli"
+  },
+  {
+    "kata_arab": "شوارع",
+    "latin": "shawaare'",
+    "arti": "jalan-jalan"
+  },
+  {
+    "kata_arab": "عاملة",
+    "latin": "'aamleh",
+    "arti": "sedang membuat/mengadakan"
+  },
+  {
+    "kata_arab": "امتحان",
+    "latin": "imtiHaan",
+    "arti": "ujian"
+  },
+  {
+    "kata_arab": "أعطت",
+    "latin": "a'Tat",
+    "arti": "memberi"
+  },
+  {
+    "kata_arab": "دفعت",
+    "latin": "daf'at",
+    "arti": "membayar"
+  },
+  {
+    "kata_arab": "حارتنا",
+    "latin": "Haaratna",
+    "arti": "lingkungan kami"
+  },
+  {
+    "kata_arab": "مدرستنا",
+    "latin": "madrastna",
+    "arti": "sekolah kami"
+  },
+  {
+    "kata_arab": "حكومتهم",
+    "latin": "hukuumathum",
+    "arti": "pemerintah mereka"
+  },
+  {
+    "kata_arab": "نظفت",
+    "latin": "naZZafat",
+    "arti": "membersihkan"
+  },
+  {
+    "kata_arab": "صلحت",
+    "latin": "sallahat",
+    "arti": "memperbaiki"
+  },
+  {
+    "kata_arab": "ضريبة",
+    "latin": "dariibeh",
+    "arti": "pajak"
+  },
+  {
+    "kata_arab": "وزعت",
+    "latin": "wazza'at",
+    "arti": "membagikan"
+  },
+  {
+    "kata_arab": "خبز",
+    "latin": "khubez",
+    "arti": "roti"
+  },
+  {
+    "kata_arab": "بنت",
+    "latin": "banat",
+    "arti": "membangun"
+  },
+  {
+    "kata_arab": "مستشفى",
+    "latin": "mustashfa",
+    "arti": "rumah sakit"
+  },
+  {
+    "kata_arab": "سوّت",
+    "latin": "sawwat",
+    "arti": "membuat / memberlakukan"
+  },
+  {
+    "kata_arab": "حظر",
+    "latin": "hazir",
+    "arti": "pembatasan / jam malam"
+  },
+  {
+    "kata_arab": "بتشوف",
+    "latin": "btshuuf",
+    "arti": "melihat"
+  },
+  {
+    "kata_arab": "وضع",
+    "latin": "wadie",
+    "arti": "kondisi"
+  },
+  {
+    "kata_arab": "شغلة",
+    "latin": "shaghleh",
+    "arti": "hal / urusan"
+  },
+  {
+    "kata_arab": "سوت",
+    "latin": "sawwat",
+    "arti": "membuat"
+  },
+  {
+    "kata_arab": "عطت",
+    "latin": "a'tat",
+    "arti": "memberi"
+  },
+  {
+    "kata_arab": "مصاري",
+    "latin": "masaari",
+    "arti": "uang"
+  },
+  {
+    "kata_arab": "حديقة",
+    "latin": "hadiiqah",
+    "arti": "taman"
+  },
+  {
+    "kata_arab": "تسمع",
+    "latin": "tisma'",
+    "arti": "mendengar"
+  },
+  {
+    "kata_arab": "خفيف",
+    "latin": "khafiif",
+    "arti": "ringan"
+  },
+  {
+    "kata_arab": "رفعت",
+    "latin": "raf'at",
+    "arti": "menaikkan"
+  },
+  {
+    "kata_arab": "البنزين",
+    "latin": "el-banziin",
+    "arti": "bensin"
+  },
+  {
+    "kata_arab": "تعمل",
+    "latin": "ti'mal",
+    "arti": "membuat"
+  },
+  {
+    "kata_arab": "نزلت",
+    "latin": "nazzalat",
+    "arti": "menurunkan"
+  },
+  {
+    "kata_arab": "الدوا",
+    "latin": "ed-dawa",
+    "arti": "obat"
+  },
+  {
+    "kata_arab": "بتفتح",
+    "latin": "btiftah",
+    "arti": "membuka"
+  },
+  {
+    "kata_arab": "بدري",
+    "latin": "badri",
+    "arti": "lebih awal"
+  },
+  {
+    "kata_arab": "بتطلب",
+    "latin": "btotlob",
+    "arti": "meminta"
+  },
+  {
+    "kata_arab": "اوراق",
+    "latin": "awraaq",
+    "arti": "berkas"
+  },
+  {
+    "kata_arab": "تخفف",
+    "latin": "tkhaffef",
+    "arti": "mengurangi"
+  },
+  {
+    "kata_arab": "الأزمة",
+    "latin": "el-azmeh",
+    "arti": "kemacetan"
+  },
+  {
+    "kata_arab": "الزبالة",
+    "latin": "ez-zbaaleh",
+    "arti": "sampah"
+  },
+  {
+    "kata_arab": "تسوي",
+    "latin": "tsawwi",
+    "arti": "melakukan"
+  },
+  {
+    "kata_arab": "الحفر",
+    "latin": "el-hufar",
+    "arti": "lubang-lubang jalan"
+  },
+  {
+    "kata_arab": "الحارات",
+    "latin": "el-haaraat",
+    "arti": "gang-gang"
+  },
+  {
+    "kata_arab": "رسمية",
+    "latin": "rasmiyyeh",
+    "arti": "resmi"
+  },
+  {
+    "kata_arab": "تأجيل",
+    "latin": "ta'jiil",
+    "arti": "penundaan"
+  },
+  {
+    "kata_arab": "حملة",
+    "latin": "hamleh",
+    "arti": "kampanye"
+  },
+  {
+    "kata_arab": "أسعار",
+    "latin": "as'aar",
+    "arti": "harga-harga"
+  },
+  {
+    "kata_arab": "تطبيق",
+    "latin": "tatbiiq",
+    "arti": "aplikasi"
+  },
+  {
+    "kata_arab": "بتحاول",
+    "latin": "bithawil",
+    "arti": "berusaha"
+  },
+  {
+    "kata_arab": "الكهربا",
+    "latin": "el-kahraba",
+    "arti": "listrik"
+  },
+  {
+    "kata_arab": "المعاملات",
+    "latin": "el-mu'aamalaat",
+    "arti": "pengurusan berkas"
+  },
+  {
+    "kata_arab": "سهلت",
+    "latin": "sahhalat",
+    "arti": "mempermudah"
+  },
+  {
+    "arti": "menyiapkan",
+    "kata_arab": "جهزت",
+    "latin": "jahhazat"
+  },
+  {
+    "arti": "pusat",
+    "kata_arab": "مركز",
+    "latin": "markaz"
+  },
+  {
+    "arti": "perpanjangan",
+    "kata_arab": "تجديد",
+    "latin": "tajdiid"
+  },
+  {
+    "arti": "buku-buku",
+    "kata_arab": "كتب",
+    "latin": "kutub"
+  },
+  {
+    "arti": "pipa-pipa",
+    "kata_arab": "مواسير",
+    "latin": "mawaasiir"
+  },
+  {
+    "arti": "menambah",
+    "kata_arab": "زادت",
+    "latin": "zaadat"
+  },
+  {
+    "arti": "jam kerja",
+    "kata_arab": "ساعات الدوام",
+    "latin": "saa'aat el-dawaam"
+  },
+  {
+    "arti": "kamera",
+    "kata_arab": "كاميرات",
+    "latin": "kaameeraat"
+  },
+  {
+    "arti": "kebersihan",
+    "kata_arab": "نظافة",
+    "latin": "nadhaafeh"
+  },
+  {
+    "arti": "sistem",
+    "kata_arab": "نظام",
+    "latin": "nidhaam"
+  },
+  {
+    "kata_arab": "شجعت",
+    "latin": "shajja'at",
+    "arti": "mendukung"
+  },
+  {
+    "kata_arab": "المشاريع",
+    "latin": "el-mashaaree'",
+    "arti": "proyek-proyek"
+  },
+  {
+    "kata_arab": "غيرت",
+    "latin": "ghayyarat",
+    "arti": "mengubah"
+  },
+  {
+    "kata_arab": "أوقات",
+    "latin": "awqaat",
+    "arti": "waktu-waktu"
+  },
+  {
+    "kata_arab": "مساعدات",
+    "latin": "musaa'adaat",
+    "arti": "bantuan"
+  },
+  {
+    "kata_arab": "شغلت",
+    "latin": "shaghghalat",
+    "arti": "menyalakan/mengaktifkan"
+  },
+  {
+    "kata_arab": "الإنترنت",
+    "latin": "el-internet",
+    "arti": "internet"
+  },
+  {
+    "kata_arab": "زرعت",
+    "latin": "zar'at",
+    "arti": "menanam"
+  },
+  {
+    "kata_arab": "ورد",
+    "latin": "ward",
+    "arti": "bunga-bunga"
+  },
+  {
+    "kata_arab": "صوبات",
+    "latin": "soobaat",
+    "arti": "pemanas ruangan"
+  },
+  {
+    "kata_arab": "حنفيات",
+    "latin": "hanafiyyaat",
+    "arti": "keran-keran"
+  },
+  {
+    "kata_arab": "دكاترة",
+    "latin": "dakaatreh",
+    "arti": "dokter-dokter"
+  },
+  {
+    "kata_arab": "نبهت",
+    "latin": "nabbahat",
+    "arti": "memperingatkan"
+  },
+  {
+    "kata_arab": "السواقين",
+    "latin": "es-sawwaaqeen",
+    "arti": "para pengemudi"
+  },
+  {
+    "kata_arab": "عيلتنا",
+    "latin": "'eletna",
+    "arti": "keluarga kami"
+  },
+  {
+    "kata_arab": "جيرانا",
+    "latin": "jeeraanna",
+    "arti": "tetangga kami"
+  },
+  {
+    "kata_arab": "مكتبنا",
+    "latin": "maktabna",
+    "arti": "kantor kami"
+  },
+  {
+    "kata_arab": "مطعمنا",
+    "latin": "mat'amna",
+    "arti": "restoran kami"
+  },
+  {
+    "kata_arab": "طفت",
+    "latin": "taffat",
+    "arti": "memadamkan"
+  },
+  {
+    "kata_arab": "بالتصليح",
+    "latin": "bi-t-tasleeh",
+    "arti": "dalam perbaikan"
+  },
+  {
+    "kata_arab": "دهنت",
+    "latin": "dahanat",
+    "arti": "mengecat"
+  },
+  {
+    "kata_arab": "الخبز",
+    "latin": "el-khubez",
+    "arti": "roti"
+  },
+  {
+    "kata_arab": "ركبت",
+    "latin": "rakkabat",
+    "arti": "memasang"
+  },
+  {
+    "kata_arab": "الدفع",
+    "latin": "ed-dafe'",
+    "arti": "pembayaran"
+  },
+  {
+    "kata_arab": "قوت",
+    "latin": "qawwat",
+    "arti": "memperkuat"
+  },
+  {
+    "kata_arab": "الشبكة",
+    "latin": "esh-shabakeh",
+    "arti": "jaringan"
+  },
+  {
+    "kata_arab": "نضفت",
+    "latin": "naddafat",
+    "arti": "membersihkan"
+  },
+  {
+    "kata_arab": "سيل",
+    "latin": "seel",
+    "arti": "aliran air/lembah air"
+  },
+  {
+    "kata_arab": "القلعة",
+    "latin": "el-qal'ah",
+    "arti": "benteng"
+  },
+  {
+    "kata_arab": "ساحة",
+    "latin": "saha",
+    "arti": "halaman"
+  },
+  {
+    "kata_arab": "قعدة",
+    "latin": "qa'deh",
+    "arti": "tempat duduk/area santai"
+  },
+  {
+    "kata_arab": "قاعة",
+    "latin": "qa'ah",
+    "arti": "ruangan/aula"
+  },
+  {
+    "kata_arab": "بوابة",
+    "latin": "bawwabeh",
+    "arti": "gerbang"
+  },
+  {
+    "kata_arab": "شاشة",
+    "latin": "shasheh",
+    "arti": "layar"
+  },
+  {
+    "kata_arab": "شغالة",
+    "latin": "shaghghaleh",
+    "arti": "berfungsi/menyala"
+  },
+  {
+    "kata_arab": "شمس",
+    "latin": "shams",
+    "arti": "matahari/terik"
+  },
+  {
+    "kata_arab": "غرفة",
+    "latin": "ghurfet",
+    "arti": "ruang"
+  },
+  {
+    "kata_arab": "الكاميرا",
+    "latin": "il-kaamira",
+    "arti": "kamera"
+  },
+  {
+    "kata_arab": "خربانة",
+    "latin": "kharbaaneh",
+    "arti": "rusak (fem.)"
+  },
+  {
+    "kata_arab": "تفوت",
+    "latin": "tfoot",
+    "arti": "kamu (laki-laki) masuk"
+  },
+  {
+    "kata_arab": "ضعيفة",
+    "latin": "da'eefeh",
+    "arti": "redup / lemah"
+  },
+  {
+    "kata_arab": "مراجعة",
+    "latin": "muraaja'ah",
+    "arti": "peninjauan / pemeriksaan"
+  },
+  {
+    "kata_arab": "الخزنة",
+    "latin": "il-khazneh",
+    "arti": "lemari besi / brankas"
+  },
+  {
+    "kata_arab": "تشغل",
+    "latin": "tsheghel",
+    "arti": "kamu (laki-laki) menyalakan"
+  },
+  {
+    "kata_arab": "أجدد",
+    "latin": "ajadded",
+    "arti": "saya memperbarui"
+  },
+  {
+    "kata_arab": "التأمين",
+    "latin": "it-ta'meen",
+    "arti": "asuransi"
+  },
+  {
+    "kata_arab": "أسلّم",
+    "latin": "asallim",
+    "arti": "saya menyerahkan"
+  },
+  {
+    "kata_arab": "أهدى",
+    "latin": "ahda",
+    "arti": "lebih tenang"
+  },
+  {
+    "kata_arab": "مكتبة",
+    "latin": "maktabeh",
+    "arti": "perpustakaan"
+  },
+  {
+    "kata_arab": "واسعة",
+    "latin": "waas'ah",
+    "arti": "luas"
+  },
+  {
+    "kata_arab": "مروحة",
+    "latin": "marwahah",
+    "arti": "kipas angin"
+  },
+  {
+    "kata_arab": "مغسلة",
+    "latin": "magsaleh",
+    "arti": "wastafel"
+  },
+  {
+    "kata_arab": "نظيفة",
+    "latin": "nadheefeh",
+    "arti": "bersih"
+  },
+  {
+    "kata_arab": "حلوة",
+    "latin": "hilweh",
+    "arti": "indah/bagus"
+  },
+  {
+    "kata_arab": "واضحة",
+    "latin": "waadh-hah",
+    "arti": "jelas"
+  },
+  {
+    "kata_arab": "شباك",
+    "latin": "shubbaak",
+    "arti": "jendela"
+  },
+  {
+    "kata_arab": "شوب",
+    "latin": "shob",
+    "arti": "panas terik"
+  },
+  {
+    "kata_arab": "محجوزة",
+    "latin": "mahjuuzeh",
+    "arti": "dipesan/terpakai"
+  },
+  {
+    "kata_arab": "درج",
+    "latin": "daraj",
+    "arti": "tangga"
+  },
+  {
+    "kata_arab": "صيانة",
+    "latin": "siyaaneh",
+    "arti": "pemeliharaan/perbaikan"
+  },
+  {
+    "kata_arab": "عتمة",
+    "latin": "'atmeh",
+    "arti": "gelap"
+  },
+  {
+    "kata_arab": "مضوية",
+    "latin": "mdawwyeh",
+    "arti": "terang/menyala"
+  },
+  {
+    "kata_arab": "ممنوع",
+    "latin": "mamnuu'",
+    "arti": "dilarang"
+  },
+  {
+    "kata_arab": "صالة",
+    "latin": "saalah",
+    "arti": "aula/ruang besar"
+  },
+  {
+    "kata_arab": "كافتيريا",
+    "latin": "kafiiteerya",
+    "arti": "kafetaria"
+  },
+  {
+    "kata_arab": "موظفين",
+    "latin": "muwazzafiin",
+    "arti": "para staf/pegawai"
+  },
+  {
+    "kata_arab": "منطقة",
+    "latin": "mantaqah",
+    "arti": "wilayah/zona"
+  },
+  {
+    "kata_arab": "هادية",
+    "latin": "haadyeh",
+    "arti": "tenang"
+  },
+  {
+    "kata_arab": "طوارئ",
+    "latin": "tawaare'",
+    "arti": "darurat"
+  },
+  {
+    "kata_arab": "دافية",
+    "latin": "daafyeh",
+    "arti": "hangat (fem.)"
+  },
+  {
+    "kata_arab": "برد",
+    "latin": "bard",
+    "arti": "dingin"
+  },
+  {
+    "kata_arab": "حدا",
+    "latin": "hada",
+    "arti": "siapa pun / seseorang"
+  },
+  {
+    "kata_arab": "عيادة",
+    "latin": "'iyaadeh",
+    "arti": "klinik"
+  },
+  {
+    "kata_arab": "قسم",
+    "latin": "qism",
+    "arti": "bagian / seksi"
+  },
+  {
+    "kata_arab": "صيدلية",
+    "latin": "saydaliyyeh",
+    "arti": "apotek"
+  },
+  {
+    "kata_arab": "بلدية",
+    "latin": "baladiyyeh",
+    "arti": "kantor kotamadya"
+  },
+  {
+    "kata_arab": "رخصة",
+    "latin": "rukhsah",
+    "arti": "surat izin"
+  },
+  {
+    "kata_arab": "حكومية",
+    "latin": "hukuumiyyeh",
+    "arti": "pemerintah (fem.)"
+  },
+  {
+    "kata_arab": "مكيف",
+    "latin": "mukayyif",
+    "arti": "AC"
+  },
+  {
+    "kata_arab": "هوا",
+    "latin": "hawa",
+    "arti": "angin / udara"
+  },
+  {
+    "kata_arab": "تذكرت",
+    "latin": "tzakkart",
+    "arti": "aku ingat"
+  },
+  {
+    "kata_arab": "تلفوني",
+    "latin": "tilfoni",
+    "arti": "ponselku"
+  },
+  {
+    "kata_arab": "الصبح",
+    "latin": "eS-SubuH",
+    "arti": "pagi"
+  },
+  {
+    "kata_arab": "محفظتي",
+    "latin": "maHfaZti",
+    "arti": "dompetku"
+  },
+  {
+    "kata_arab": "ازمة",
+    "latin": "azmeh",
+    "arti": "kemacetan"
+  },
+  {
+    "kata_arab": "اجا",
+    "latin": "ija",
+    "arti": "datang"
+  },
+  {
+    "kata_arab": "رسم",
+    "latin": "rasam",
+    "arti": "menggambar"
+  },
+  {
+    "kata_arab": "حبسوه",
+    "latin": "Habasoh",
+    "arti": "mereka menahannya"
+  },
+  {
+    "kata_arab": "لحد",
+    "latin": "la-Hadd",
+    "arti": "sampai"
+  },
+  {
+    "kata_arab": "جزداني",
+    "latin": "jizdani",
+    "arti": "dompet perempuanku"
+  },
+  {
+    "kata_arab": "لقيته",
+    "latin": "la'eto",
+    "arti": "aku menemukannya"
+  },
+  {
+    "kata_arab": "المحكمة",
+    "latin": "el-maHkameh",
+    "arti": "pengadilan"
+  },
+  {
+    "kata_arab": "طبي",
+    "latin": "Tibbi",
+    "arti": "medis"
+  },
+  {
+    "kata_arab": "سيدي",
+    "latin": "sidi",
+    "arti": "pak / petugas"
+  },
+  {
+    "kata_arab": "جارنا",
+    "latin": "jaar-na",
+    "arti": "tetangga kami"
+  },
+  {
+    "kata_arab": "الشرطة",
+    "latin": "esh-shurTah",
+    "arti": "polisi"
+  },
+  {
+    "kata_arab": "جوازي",
+    "latin": "jawaazi",
+    "arti": "paspor saya"
+  },
+  {
+    "kata_arab": "ليلتين",
+    "latin": "leleteen",
+    "arti": "dua malam"
+  },
+  {
+    "kata_arab": "طويل",
+    "latin": "Taweel",
+    "arti": "tinggi"
+  },
+  {
+    "kata_arab": "الشهود",
+    "latin": "esh-shuhuud",
+    "arti": "para saksi"
+  },
+  {
+    "kata_arab": "ما بتنفع",
+    "latin": "ma btinfa'",
+    "arti": "tidak berguna"
+  },
+  {
+    "kata_arab": "لقضية",
+    "latin": "la-qaDiyyet",
+    "arti": "untuk kasus"
+  },
+  {
+    "kata_arab": "حطوه",
+    "latin": "HaTTuuh",
+    "arti": "mereka menaruhnya"
+  },
+  {
+    "kata_arab": "سجل",
+    "latin": "sajjal",
+    "arti": "mencatat"
+  },
+  {
+    "kata_arab": "المحقق",
+    "latin": "el-muHaqqeq",
+    "arti": "penyidik"
+  },
+  {
+    "kata_arab": "ملف",
+    "latin": "malaf",
+    "arti": "berkas"
+  },
+  {
+    "kata_arab": "بالمطار",
+    "latin": "bil-maTaar",
+    "arti": "di bandara"
+  },
+  {
+    "kata_arab": "قدام",
+    "latin": "guddaam",
+    "arti": "di depan"
+  },
+  {
+    "kata_arab": "العامل",
+    "latin": "el-'aamel",
+    "arti": "pekerja itu"
+  },
+  {
+    "kata_arab": "امبارح",
+    "latin": "imbareh",
+    "arti": "kemarin"
+  },
+  {
+    "kata_arab": "هجم",
+    "latin": "hajam",
+    "arti": "menyerang"
+  },
+  {
+    "kata_arab": "الشرطي",
+    "latin": "esh-shurti",
+    "arti": "polisi"
+  },
+  {
+    "kata_arab": "بين",
+    "latin": "bayyan",
+    "arti": "terlihat"
+  },
+  {
+    "kata_arab": "وجهه",
+    "latin": "wijho",
+    "arti": "wajahnya"
+  },
+  {
+    "kata_arab": "مهمة",
+    "latin": "muhimmeh",
+    "arti": "penting"
+  },
+  {
+    "kata_arab": "تجيب",
+    "latin": "tjib",
+    "arti": "kamu (laki-laki) membawa"
+  },
+  {
+    "kata_arab": "اعطيني",
+    "latin": "a'tini",
+    "arti": "berikan kepada saya"
+  },
+  {
+    "kata_arab": "دخل",
+    "latin": "dakhal",
+    "arti": "masuk"
+  },
+  {
+    "kata_arab": "واحد",
+    "latin": "wahed",
+    "arti": "seseorang"
+  },
+  {
+    "kata_arab": "اخذ",
+    "latin": "akhadh",
+    "arti": "mengambil"
+  },
+  {
+    "kata_arab": "مني",
+    "latin": "minni",
+    "arti": "dari saya"
+  },
+  {
+    "kata_arab": "للمحكمة",
+    "latin": "lil-mahkameh",
+    "arti": "untuk pengadilan"
+  },
+  {
+    "kata_arab": "وقعنا",
+    "latin": "waqqa'na",
+    "arti": "kami menandatangani"
+  },
+  {
+    "kata_arab": "سيارته",
+    "latin": "sayyarto",
+    "arti": "mobilnya"
+  },
+  {
+    "kata_arab": "علينا",
+    "latin": "'aleina",
+    "arti": "ke tempat kami"
+  },
+  {
+    "kata_arab": "مسكوا",
+    "latin": "masaku",
+    "arti": "mereka menangkap"
+  },
+  {
+    "kata_arab": "بالسوق",
+    "latin": "bis-suq",
+    "arti": "di pasar"
+  },
+  {
+    "kata_arab": "سمعوا",
+    "latin": "sim'u",
+    "arti": "mereka mendengarkan"
+  },
+  {
+    "kata_arab": "المستشفى",
+    "latin": "el-mustashfa",
+    "arti": "rumah sakit"
+  },
+  {
+    "kata_arab": "الضابط",
+    "latin": "ed-dabit",
+    "arti": "petugas polisi"
+  },
+  {
+    "kata_arab": "رحنا",
+    "latin": "rihna",
+    "arti": "kami pergi"
+  },
+  {
+    "kata_arab": "مبارح",
+    "latin": "mbarih",
+    "arti": "kemarin"
+  },
+  {
+    "kata_arab": "عملت",
+    "latin": "'milt",
+    "arti": "kamu lakukan"
+  },
+  {
+    "kata_arab": "بلغوا",
+    "latin": "ballaghu",
+    "arti": "mereka melapor"
+  },
+  {
+    "kata_arab": "تاخذ",
+    "latin": "taakhud",
+    "arti": "membawa / mengambil"
+  },
+  {
+    "kata_arab": "بالشارع",
+    "latin": "bi-sh-share'",
+    "arti": "di jalan"
+  },
+  {
+    "kata_arab": "سجلوا",
+    "latin": "sajjalu",
+    "arti": "mereka mencatat"
+  },
+  {
+    "kata_arab": "سويت",
+    "latin": "sawwayt",
+    "arti": "kamu (laki-laki) lakukan"
+  },
+  {
+    "kata_arab": "صاحب",
+    "latin": "sahib",
+    "arti": "pemilik"
+  },
+  {
+    "kata_arab": "مش",
+    "latin": "mish",
+    "arti": "bukan"
+  },
+  {
+    "kata_arab": "قبل",
+    "latin": "qabel",
+    "arti": "sebelum"
+  },
+  {
+    "kata_arab": "الدكتور",
+    "latin": "ed-doktor",
+    "arti": "dokter"
+  },
+  {
+    "kata_arab": "اعطاني",
+    "latin": "a'tani",
+    "arti": "memberi saya"
+  },
+  {
+    "kata_arab": "مغطي",
+    "latin": "mghatti",
+    "arti": "menutupi"
+  },
+  {
+    "kata_arab": "بقدر",
+    "latin": "baqdar",
+    "arti": "saya bisa"
+  },
+  {
+    "kata_arab": "شرطي",
+    "latin": "shurti",
+    "arti": "polisi"
+  },
+  {
+    "kata_arab": "اوقع",
+    "latin": "awwaqqe'",
+    "arti": "menandatangani"
+  },
+  {
+    "kata_arab": "بعد",
+    "latin": "ba'ed",
+    "arti": "setelah"
+  },
+  {
+    "kata_arab": "تعال",
+    "latin": "ta'al",
+    "arti": "kemarilah"
+  },
+  {
+    "kata_arab": "اكتب",
+    "latin": "oktob",
+    "arti": "tulislah"
+  },
+  {
+    "kata_arab": "بالمحل",
+    "latin": "bel-mahall",
+    "arti": "di toko"
+  },
+  {
+    "kata_arab": "الجزدان",
+    "latin": "el-juzdan",
+    "arti": "dompet"
+  },
+  {
+    "kata_arab": "خلصت",
+    "latin": "khalast",
+    "arti": "kamu selesai"
+  },
+  {
+    "kata_arab": "محكمة",
+    "latin": "mahkameh",
+    "arti": "pengadilan"
+  },
+  {
+    "kata_arab": "قدمت",
+    "latin": "gaddamt",
+    "arti": "saya mengajukan"
+  },
+  {
+    "kata_arab": "ورفضت",
+    "latin": "w-rafadit",
+    "arti": "dan saya menolak"
+  },
+  {
+    "kata_arab": "دخلوا",
+    "latin": "dakhalu",
+    "arti": "mereka masuk"
+  },
+  {
+    "kata_arab": "الشباك",
+    "latin": "esh-shubbak",
+    "arti": "jendela"
+  },
+  {
+    "kata_arab": "بتراقب",
+    "latin": "bitraagib",
+    "arti": "mengawasi"
+  },
+  {
+    "kata_arab": "شهود",
+    "latin": "shuhood",
+    "arti": "saksi-saksi"
+  },
+  {
+    "kata_arab": "سيارتي",
+    "latin": "sayyarti",
+    "arti": "mobil saya"
+  },
+  {
+    "kata_arab": "كتبوا",
+    "latin": "katabu",
+    "arti": "mereka menulis"
+  },
+  {
+    "kata_arab": "الكمبيوتر",
+    "latin": "el-kambyutar",
+    "arti": "komputer"
+  },
+  {
+    "kata_arab": "تحركت",
+    "latin": "taharrakat",
+    "arti": "bergerak"
+  },
+  {
+    "kata_arab": "حلينا",
+    "latin": "halleina",
+    "arti": "kami telah menyelesaikan"
+  },
+  {
+    "kata_arab": "تصوير",
+    "latin": "tasweer",
+    "arti": "memfoto/pengambilan gambar"
+  },
+  {
+    "kata_arab": "منتهية",
+    "latin": "muntahyyeh",
+    "arti": "kedaluwarsa"
+  },
+  {
+    "kata_arab": "مستحيل",
+    "latin": "mustaheel",
+    "arti": "mustahil/tidak mungkin"
+  },
+  {
+    "kata_arab": "خزنة",
+    "latin": "khazneh",
+    "arti": "brankas"
+  },
+  {
+    "kata_arab": "تاكسي",
+    "latin": "taksi",
+    "arti": "taksi"
+  },
+  {
+    "kata_arab": "مستودع",
+    "latin": "mustawda'",
+    "arti": "gudang"
+  },
+  {
+    "kata_arab": "قفله",
+    "latin": "qufloh",
+    "arti": "gemboknya"
+  },
+  {
+    "kata_arab": "لابس",
+    "latin": "laabes",
+    "arti": "memakai"
+  },
+  {
+    "kata_arab": "طاقية",
+    "latin": "taqiyyeh",
+    "arti": "topi"
+  },
+  {
+    "kata_arab": "اسحب",
+    "latin": "ishab",
+    "arti": "ambil / tariklah"
+  },
+  {
+    "kata_arab": "استنى",
+    "latin": "istanna",
+    "arti": "tunggulah"
+  },
+  {
+    "kata_arab": "بطاقة",
+    "latin": "bitaaqat",
+    "arti": "kartu"
+  },
+  {
+    "kata_arab": "طلعت",
+    "latin": "talla't",
+    "arti": "saya menerbitkan / mengeluarkan"
+  },
+  {
+    "kata_arab": "ناقصة",
+    "latin": "naaqsah",
+    "arti": "kurang"
+  },
+  {
+    "kata_arab": "صفحة",
+    "latin": "safhah",
+    "arti": "halaman"
+  },
+  {
+    "kata_arab": "ضايل",
+    "latin": "daayel",
+    "arti": "tersisa"
+  },
+  {
+    "kata_arab": "مشكلة",
+    "latin": "mushkileh",
+    "arti": "masalah"
+  }
+]

@@ -1,0 +1,2092 @@
+{
+  "Kantor Pos & Kurir": [
+    {
+      "kata_arab": "طرد",
+      "latin": "tard",
+      "arti": "paket",
+      "contoh_kalimat": "بدي ابعت هاد الطرد لاربد"
+    },
+    {
+      "kata_arab": "رقم التتبع",
+      "latin": "raqam it-tatabbu'",
+      "arti": "nomor resi",
+      "contoh_kalimat": "ابعثلي رقم التتبع عالواتس اب"
+    },
+    {
+      "kata_arab": "مندوب",
+      "latin": "manduub",
+      "arti": "kurir",
+      "contoh_kalimat": "المندوب برن عليك كمان شوي"
+    },
+    {
+      "kata_arab": "استلم",
+      "latin": "istalam",
+      "arti": "menerima / mengambil",
+      "contoh_kalimat": "اخوي استلم البوكس الصبح"
+    },
+    {
+      "kata_arab": "سلم",
+      "latin": "sallam",
+      "arti": "menyerahkan",
+      "contoh_kalimat": "سلمت الشحنة لمكتب البريد"
+    },
+    {
+      "kata_arab": "رمز بريدي",
+      "latin": "ramiz bariidi",
+      "arti": "kode pos",
+      "contoh_kalimat": "لازم تكتب الرمز البريدي صح"
+    },
+    {
+      "kata_arab": "وزن",
+      "latin": "wazin",
+      "arti": "berat",
+      "contoh_kalimat": "وزن الغرض اكتر من كيلو"
+    },
+    {
+      "kata_arab": "شحن سريع",
+      "latin": "shahen sarii'",
+      "arti": "kirim kilat",
+      "contoh_kalimat": "بدي شحن سريع لو سمحت"
+    },
+    {
+      "kata_arab": "شحن عادي",
+      "latin": "shahen 'aadi",
+      "arti": "kirim reguler",
+      "contoh_kalimat": "الشحن العادي بوخذ اسبوعين تقريبا"
+    },
+    {
+      "kata_arab": "دفع عند الاستلام",
+      "latin": "dafe' 'ind il-istilaam",
+      "arti": "bayar di tempat (COD)",
+      "contoh_kalimat": "بفضل الدفع عند الاستلام احسن"
+    },
+    {
+      "kata_arab": "توقيع",
+      "latin": "tawqii'",
+      "arti": "tanda tangan (kb)",
+      "contoh_kalimat": "لازم توقيعك على هاد الوصل"
+    },
+    {
+      "kata_arab": "لف",
+      "latin": "laff",
+      "arti": "membungkus",
+      "contoh_kalimat": "لف الاغراض منيح قبل الشحن"
+    },
+    {
+      "kata_arab": "تغليف",
+      "latin": "taghliif",
+      "arti": "pengemasan",
+      "contoh_kalimat": "التغليف ممتاز وما بتكسر الاشي"
+    },
+    {
+      "kata_arab": "لزق",
+      "latin": "lazzaq",
+      "arti": "menempelkan",
+      "contoh_kalimat": "لزق الورقة عجنب الطرد"
+    },
+    {
+      "kata_arab": "لزاق",
+      "latin": "lazzaaq",
+      "arti": "selotip / lakban",
+      "contoh_kalimat": "محتاج لزاق عريض للتسكير"
+    },
+    {
+      "kata_arab": "ببلز",
+      "latin": "babils",
+      "arti": "bubble wrap",
+      "contoh_kalimat": "حطيت ببلز عشان ما ينكسر"
+    },
+    {
+      "kata_arab": "جمارك",
+      "latin": "jamaarik",
+      "arti": "bea cukai",
+      "contoh_kalimat": "الطلب علقان هسا بالجمارك"
+    },
+    {
+      "kata_arab": "ضريبة",
+      "latin": "dariibeh",
+      "arti": "pajak",
+      "contoh_kalimat": "دفعت ضريبة زيادة عالمكتب"
+    },
+    {
+      "kata_arab": "فرع",
+      "latin": "far'",
+      "arti": "kantor cabang",
+      "contoh_kalimat": "روح على فرع الدوار السابع"
+    },
+    {
+      "kata_arab": "رقم الدور",
+      "latin": "raqam id-door",
+      "arti": "nomor antrean",
+      "contoh_kalimat": "اسحب رقم الدور واقعد استنى"
+    },
+    {
+      "kata_arab": "ضاع",
+      "latin": "daa'",
+      "arti": "hilang",
+      "contoh_kalimat": "خايف الطرد يكون ضاع بالطريق"
+    },
+    {
+      "kata_arab": "رن على",
+      "latin": "rann 'ala",
+      "arti": "menelepon",
+      "contoh_kalimat": "رن على الزبون قبل ماتروح"
+    },
+    {
+      "kata_arab": "شحن بري",
+      "latin": "shahen barri",
+      "arti": "pengiriman darat",
+      "contoh_kalimat": "الشحن البري ارخص للسعودية"
+    },
+    {
+      "kata_arab": "شحن جوي",
+      "latin": "shahen jawwi",
+      "arti": "pengiriman udara (kargo)",
+      "contoh_kalimat": "الشحن الجوي بوصل بايام قليلة"
+    },
+    {
+      "kata_arab": "صندوق بريد",
+      "latin": "sanduuq bariid",
+      "arti": "kotak pos",
+      "contoh_kalimat": "عندك صندوق بريد خاص فيك"
+    },
+    {
+      "kata_arab": "هوية",
+      "latin": "hawiyyeh",
+      "arti": "kartu identitas (KTP)",
+      "contoh_kalimat": "لازم هويتك الشخصية عشان تستلم"
+    },
+    {
+      "kata_arab": "مكتب شحن",
+      "latin": "maktab shahen",
+      "arti": "agen pengiriman",
+      "contoh_kalimat": "في مكتب شحن قريب هون"
+    },
+    {
+      "kata_arab": "اجرة توصيل",
+      "latin": "ujret tawsiil",
+      "arti": "ongkos kirim",
+      "contoh_kalimat": "قديش اجرة توصيل هاد الغرض؟"
+    },
+    {
+      "kata_arab": "لوكيشن",
+      "latin": "lokeshan",
+      "arti": "titik lokasi (share loc)",
+      "contoh_kalimat": "ابعت اللوكيشن ع الواتساب عشان اجيك"
+    },
+    {
+      "kata_arab": "بوليصة",
+      "latin": "boliisa",
+      "arti": "resi fisik / waybill",
+      "contoh_kalimat": "اطبع البوليصة قبل ما تروح"
+    },
+    {
+      "kata_arab": "راجع",
+      "latin": "raaji'",
+      "arti": "retur / pengembalian paket",
+      "contoh_kalimat": "الشحنة طلعت راجع عالمكتب اليوم"
+    }
+  ],
+  "Kantor Polisi & Pelaporan": [
+    {
+      "kata_arab": "مخفر",
+      "latin": "makhfar",
+      "arti": "kantor polisi",
+      "contoh_kalimat": "لازم تروح عالمخفر هسا تعمل بلاغ"
+    },
+    {
+      "kata_arab": "مركز امني",
+      "latin": "markaz amni",
+      "arti": "kantor polisi sektor",
+      "contoh_kalimat": "اي مركز امني قريب من هون؟"
+    },
+    {
+      "kata_arab": "بلاغ",
+      "latin": "balagh",
+      "arti": "laporan resmi",
+      "contoh_kalimat": "بدي اقدم بلاغ عن سرقة"
+    },
+    {
+      "kata_arab": "قدم بلاغ",
+      "latin": "qaddam balagh",
+      "arti": "membuat laporan",
+      "contoh_kalimat": "قدمت بلاغ بمخفر الشميساني مبارح"
+    },
+    {
+      "kata_arab": "ضبط",
+      "latin": "dabt",
+      "arti": "berita acara",
+      "contoh_kalimat": "الضابط كتب ضبط بالحادث كله"
+    },
+    {
+      "kata_arab": "افادة",
+      "latin": "ifadeh",
+      "arti": "keterangan/kesaksian",
+      "contoh_kalimat": "تعال وقع ع افادتك هون"
+    },
+    {
+      "kata_arab": "اخذ افادة",
+      "latin": "akhad ifadeh",
+      "arti": "meminta keterangan",
+      "contoh_kalimat": "الشرطي اخذ افادتي بسرعة وكتبها"
+    },
+    {
+      "kata_arab": "شاهد",
+      "latin": "shahed",
+      "arti": "saksi mata",
+      "contoh_kalimat": "في شاهد شاف الزلمة بيهرب"
+    },
+    {
+      "kata_arab": "شهادة",
+      "latin": "shahadeh",
+      "arti": "kesaksian",
+      "contoh_kalimat": "شهادتك بتساعدنا كثير بالقضية هاي"
+    },
+    {
+      "kata_arab": "شهد",
+      "latin": "shihed",
+      "arti": "bersaksi",
+      "contoh_kalimat": "انا شهدت عاللي صار بالشارع"
+    },
+    {
+      "kata_arab": "ضايع",
+      "latin": "daye'",
+      "arti": "hilang (sifat)",
+      "contoh_kalimat": "تلفوني ضايع من الصبح يا سيدي"
+    },
+    {
+      "kata_arab": "ضاع",
+      "latin": "da'",
+      "arti": "hilang (kerja)",
+      "contoh_kalimat": "ضاع جواز سفري بالسوق امبارح"
+    },
+    {
+      "kata_arab": "سرقة",
+      "latin": "sariqah",
+      "arti": "pencurian",
+      "contoh_kalimat": "صارت سرقة بالمحل جنبنا مبارح"
+    },
+    {
+      "kata_arab": "مسروق",
+      "latin": "masruq",
+      "arti": "kemalingan/curian",
+      "contoh_kalimat": "جزداني مسروق وفيه كل مصاريي"
+    },
+    {
+      "kata_arab": "حرامي",
+      "latin": "harami",
+      "arti": "pencuri",
+      "contoh_kalimat": "الحرامي هرب من شباك المطبخ"
+    },
+    {
+      "kata_arab": "نشال",
+      "latin": "nashshal",
+      "arti": "copet",
+      "contoh_kalimat": "دير بالك في نشالين بالبلد"
+    },
+    {
+      "kata_arab": "نشل",
+      "latin": "nashal",
+      "arti": "mencopet",
+      "contoh_kalimat": "نشل محفظتي بنص ازمة السير"
+    },
+    {
+      "kata_arab": "هوية",
+      "latin": "huwiyyeh",
+      "arti": "KTP/identitas",
+      "contoh_kalimat": "ضاعت هويتي الشخصية بالمجمع هون"
+    },
+    {
+      "kata_arab": "رخصة",
+      "latin": "rukhsah",
+      "arti": "SIM/izin berkendara",
+      "contoh_kalimat": "بدي بدل فاقد لرخصة السواقة"
+    },
+    {
+      "kata_arab": "حادث",
+      "latin": "hadeth",
+      "arti": "kecelakaan",
+      "contoh_kalimat": "صار حادث خفيف بين سيارتين"
+    },
+    {
+      "kata_arab": "كروكة",
+      "latin": "krokeh",
+      "arti": "sketsa kecelakaan lantas",
+      "contoh_kalimat": "اجا شرطي السير ورسم الكروكة"
+    },
+    {
+      "kata_arab": "اوصاف",
+      "latin": "awsaf",
+      "arti": "ciri-ciri fisik",
+      "contoh_kalimat": "اعطيني اوصاف المشتبه فيه بالضبط"
+    },
+    {
+      "kata_arab": "مشتبه فيه",
+      "latin": "mushtabah feeh",
+      "arti": "tersangka",
+      "contoh_kalimat": "مسكوا مشتبه فيه قريب من المكان"
+    },
+    {
+      "kata_arab": "مكان الحادث",
+      "latin": "makan el-hadeth",
+      "arti": "lokasi kejadian",
+      "contoh_kalimat": "الدوريات وصلوا لمكان الحادث بسرعة"
+    },
+    {
+      "kata_arab": "نمرة سيارة",
+      "latin": "nimret sayyara",
+      "arti": "plat nomor kendaraan",
+      "contoh_kalimat": "حفظت نمرة سيارة اللي خبطني"
+    },
+    {
+      "kata_arab": "شو صار",
+      "latin": "shu sar",
+      "arti": "apa yang terjadi",
+      "contoh_kalimat": "احكيلي بالتفصيل شو صار معك"
+    },
+    {
+      "kata_arab": "فجاة",
+      "latin": "faj'ah",
+      "arti": "tiba-tiba",
+      "contoh_kalimat": "فجاة طلع بوجهي وهجم علي"
+    },
+    {
+      "kata_arab": "بالاول",
+      "latin": "bil-awwal",
+      "arti": "pada awalnya",
+      "contoh_kalimat": "بالاول فكرته واحد بعرفه شخصيا"
+    },
+    {
+      "kata_arab": "تعرف على",
+      "latin": "t'arraf 'ala",
+      "arti": "mengenali wajah",
+      "contoh_kalimat": "بقدر اتعرف عليه لو شفته"
+    },
+    {
+      "kata_arab": "اعتداء",
+      "latin": "i'tida'",
+      "arti": "penganiayaan/penyerangan",
+      "contoh_kalimat": "التقرير الطبي بثبت حالة الاعتداء"
+    },
+    {
+      "kata_arab": "تقرير طبي",
+      "latin": "taqrir tibbi",
+      "arti": "visum/laporan medis",
+      "contoh_kalimat": "جيب تقرير طبي من المستشفى اول"
+    },
+    {
+      "kata_arab": "شكوى",
+      "latin": "shakwa",
+      "arti": "aduan/tuntutan",
+      "contoh_kalimat": "بدي اسحب الشكوى تصالحنا خلاص"
+    },
+    {
+      "kata_arab": "نظارة",
+      "latin": "naDHaara",
+      "arti": "sel tahanan sementara",
+      "contoh_kalimat": "حبسوه بالنظارة لحد ما يجي المدعي"
+    },
+    {
+      "kata_arab": "كبش",
+      "latin": "kabash",
+      "arti": "menciduk / menangkap",
+      "contoh_kalimat": "الامن كبشوه وهو عم يسرق"
+    },
+    {
+      "kata_arab": "كسر وخلع",
+      "latin": "kasir w-khal'",
+      "arti": "pembongkaran paksa",
+      "contoh_kalimat": "في اثار كسر وخلع بالباب"
+    },
+    {
+      "kata_arab": "بصمات",
+      "latin": "baSamaat",
+      "arti": "sidik jari",
+      "contoh_kalimat": "اجو رفعوا البصمات من البيت"
+    },
+    {
+      "kata_arab": "دورية",
+      "latin": "dawriyyeh",
+      "arti": "patroli polisi",
+      "contoh_kalimat": "مرت دورية نجدة بنص الشارع"
+    },
+    {
+      "kata_arab": "تنازل",
+      "latin": "tanaazul",
+      "arti": "surat damai / cabut perkara",
+      "contoh_kalimat": "بدي اوقع تنازل عن الشكوى"
+    },
+    {
+      "kata_arab": "ملثم",
+      "latin": "mlatham",
+      "arti": "bertopeng / berpenutup muka",
+      "contoh_kalimat": "كان ملثم وما بين وجهه"
+    }
+  ],
+  "Layanan Pemerintah": [
+    {
+      "kata_arab": "معاملة",
+      "latin": "mu'aamaleh",
+      "arti": "urusan berkas (pr)",
+      "contoh_kalimat": "لازم تمشي المعاملة بكير اليوم"
+    },
+    {
+      "kata_arab": "طابع مالي",
+      "latin": "taabi' maali",
+      "arti": "meterai pendapatan",
+      "contoh_kalimat": "اشتريت طابع مالي من المكتبة"
+    },
+    {
+      "kata_arab": "احوال مدنية",
+      "latin": "ahwaal madaniyyeh",
+      "arti": "kantor dukcapil (pr)",
+      "contoh_kalimat": "رحت ع الاحوال المدنية الصبح"
+    },
+    {
+      "kata_arab": "هوية",
+      "latin": "huwiyyeh",
+      "arti": "KTP (pr)",
+      "contoh_kalimat": "هويتي ضاعت وبدي اطلع غيرها"
+    },
+    {
+      "kata_arab": "دفتر عيلة",
+      "latin": "daftar 'eileh",
+      "arti": "kartu keluarga",
+      "contoh_kalimat": "جيب معك دفتر عيلة اصلي"
+    },
+    {
+      "kata_arab": "تصديق",
+      "latin": "tasdeeq",
+      "arti": "legalisasi",
+      "contoh_kalimat": "مكتب تصديق الشهادات بالطابق الثاني"
+    },
+    {
+      "kata_arab": "صورة شخصية",
+      "latin": "suura shakhsiyyeh",
+      "arti": "pasfoto (pr)",
+      "contoh_kalimat": "جيب اربع صور شخصية معك"
+    },
+    {
+      "kata_arab": "عبي",
+      "latin": "'abbi",
+      "arti": "isi (formulir)",
+      "contoh_kalimat": "عبي الخانات المطلوبة بالاسم كامل"
+    },
+    {
+      "kata_arab": "توقيع",
+      "latin": "tawqee'",
+      "arti": "tanda tangan",
+      "contoh_kalimat": "ناقص توقيع المدير على الورقة"
+    },
+    {
+      "kata_arab": "ختم",
+      "latin": "khatem",
+      "arti": "stempel",
+      "contoh_kalimat": "وين الختم الرسمي لهي المعاملة"
+    },
+    {
+      "kata_arab": "رسوم",
+      "latin": "rusuum",
+      "arti": "biaya retribusi",
+      "contoh_kalimat": "كم رسوم تجديد الهوية هسا"
+    },
+    {
+      "kata_arab": "محاسب",
+      "latin": "mhaaseb",
+      "arti": "kasir kantor",
+      "contoh_kalimat": "ادفع عند المحاسب قبل الشباك"
+    },
+    {
+      "kata_arab": "عدم محكومية",
+      "latin": "'adam mahkuumiyyeh",
+      "arti": "SKCK (surat catatan kepolisian) (pr)",
+      "contoh_kalimat": "طلعت عدم محكومية من الموقع"
+    },
+    {
+      "kata_arab": "بدل فاقد",
+      "latin": "badal faaqed",
+      "arti": "pengganti hilang",
+      "contoh_kalimat": "قدمت على بدل فاقد للهوية"
+    },
+    {
+      "kata_arab": "جدد",
+      "latin": "jaddad",
+      "arti": "perpanjang",
+      "contoh_kalimat": "بدي اجدد جواز سفري اليوم"
+    },
+    {
+      "kata_arab": "منتهي",
+      "latin": "muntahi",
+      "arti": "kedaluwarsa",
+      "contoh_kalimat": "الرخصة منتهية من شهرين تقريبا"
+    },
+    {
+      "kata_arab": "ورق ناقص",
+      "latin": "waraq naaqes",
+      "arti": "berkas kurang",
+      "contoh_kalimat": "الموظف حكى انه في ورق ناقص"
+    },
+    {
+      "kata_arab": "راجع",
+      "latin": "raaje'",
+      "arti": "datang kembali mengecek",
+      "contoh_kalimat": "راجعنا بعد اسبوع لتستلم المعاملة"
+    },
+    {
+      "kata_arab": "مراجعة",
+      "latin": "muraaja'ah",
+      "arti": "jadwal pengecekan berkas (pr)",
+      "contoh_kalimat": "يوم المراجعة بكون يوم الخميس"
+    },
+    {
+      "kata_arab": "سيستم معلق",
+      "latin": "sistem m'allaq",
+      "arti": "sistem eror / server down",
+      "contoh_kalimat": "السيستم معلق من نص ساعة"
+    },
+    {
+      "kata_arab": "براءة ذمة",
+      "latin": "baraa'et zimmeh",
+      "arti": "surat bebas tanggungan (pr)",
+      "contoh_kalimat": "جبت براءة ذمة من المالية"
+    },
+    {
+      "kata_arab": "ترخيص",
+      "latin": "tarkhees",
+      "arti": "kantor samsat perizinan",
+      "contoh_kalimat": "بدي اروح ع الترخيص الصبح"
+    },
+    {
+      "kata_arab": "رخصة سواقة",
+      "latin": "rukhset swaaqah",
+      "arti": "SIM (pr)",
+      "contoh_kalimat": "فحص رخصة سواقة كان صعب"
+    },
+    {
+      "kata_arab": "كشف راتب",
+      "latin": "kashf raateb",
+      "arti": "slip gaji",
+      "contoh_kalimat": "طلبوا كشف راتب لاخر شهرين"
+    },
+    {
+      "kata_arab": "صورة طبق الأصل",
+      "latin": "suura tibq el-asel",
+      "arti": "salinan legalisir (pr)",
+      "contoh_kalimat": "لازم صورة طبق الاصل عنها"
+    },
+    {
+      "kata_arab": "مرفقات",
+      "latin": "murfaqaat",
+      "arti": "dokumen lampiran",
+      "contoh_kalimat": "حط المرفقات بملف واحد بس"
+    },
+    {
+      "kata_arab": "تأمين صحي",
+      "latin": "ta'meen sahhi",
+      "arti": "kartu asuransi kesehatan",
+      "contoh_kalimat": "جددت بطاقة التأمين الصحي اليوم"
+    },
+    {
+      "kata_arab": "صندوق",
+      "latin": "sanduuq",
+      "arti": "loket pembayaran tunai",
+      "contoh_kalimat": "ادفع الفلوس عند الصندوق هناك"
+    },
+    {
+      "kata_arab": "وكالة عدلية",
+      "latin": "wikaaleh 'adliyyeh",
+      "arti": "surat kuasa notaris (pr)",
+      "contoh_kalimat": "عملت وكالة عدلية لأخوي الصغير"
+    },
+    {
+      "kata_arab": "شهادة ولادة",
+      "latin": "shahaadet wilaadeh",
+      "arti": "akta kelahiran (pr)",
+      "contoh_kalimat": "بدي اطلع شهادة ولادة جديدة"
+    },
+    {
+      "kata_arab": "استمارة",
+      "latin": "istimaarah",
+      "arti": "formulir",
+      "contoh_kalimat": "لازم تعبي هاي الاستمارة اول شي"
+    },
+    {
+      "kata_arab": "رقم الدور",
+      "latin": "raqam ed-door",
+      "arti": "nomor antrean",
+      "contoh_kalimat": "اسحب رقم الدور واستنى برا"
+    },
+    {
+      "kata_arab": "طابور",
+      "latin": "taaboor",
+      "arti": "antrean",
+      "contoh_kalimat": "الطابور اليوم واقف ومو ماشي بالمرة"
+    },
+    {
+      "kata_arab": "موظف الاستقبال",
+      "latin": "mwazzaf el-istiqbaal",
+      "arti": "petugas resepsionis",
+      "contoh_kalimat": "اسأل موظف الاستقبال وين تروح"
+    },
+    {
+      "kata_arab": "قدم",
+      "latin": "qaddam",
+      "arti": "mengajukan",
+      "contoh_kalimat": "بدي اقدم طلب جواز سفر جديد"
+    },
+    {
+      "kata_arab": "استلم",
+      "latin": "istalam",
+      "arti": "mengambil / menerima",
+      "contoh_kalimat": "متى بقدر استلم المعاملة جاهزة؟"
+    },
+    {
+      "kata_arab": "ساري المفعول",
+      "latin": "saari el-maf'ool",
+      "arti": "masih berlaku",
+      "contoh_kalimat": "لازم جواز سفرك يكون ساري المفعول"
+    }
+  ],
+  "Perpustakaan": [
+    {
+      "kata_arab": "بطاقة اشتراك",
+      "latin": "bitaaqat ishtiraak",
+      "arti": "kartu anggota",
+      "contoh_kalimat": "وين بقدر اطلع بطاقة اشتراك جديدة"
+    },
+    {
+      "kata_arab": "جدد",
+      "latin": "jaddad",
+      "arti": "memperpanjang (pinjaman)",
+      "contoh_kalimat": "بقدر اجدد استعارة الكتاب اونلاين"
+    },
+    {
+      "kata_arab": "غرامة تاخير",
+      "latin": "gharaamet ta'khiir",
+      "arti": "denda keterlambatan",
+      "contoh_kalimat": "علي غرامة تاخير لاني نسيت"
+    },
+    {
+      "kata_arab": "رف",
+      "latin": "raff",
+      "arti": "rak",
+      "contoh_kalimat": "الكتاب موجود على الرف الفوقاني"
+    },
+    {
+      "kata_arab": "مكتبة عامة",
+      "latin": "maktabeh 'aammeh",
+      "arti": "perpustakaan umum",
+      "contoh_kalimat": "مكتبة عبد الحميد شومان ممتازة"
+    },
+    {
+      "kata_arab": "طبعة",
+      "latin": "tab'ah",
+      "arti": "edisi / cetakan",
+      "contoh_kalimat": "بدي الطبعة الاخيرة من المعجم"
+    },
+    {
+      "kata_arab": "قسم المراجع",
+      "latin": "qisem el-maraje'",
+      "arti": "bagian referensi",
+      "contoh_kalimat": "ممنوع تطلع كتب قسم المراجع"
+    },
+    {
+      "kata_arab": "فهرس",
+      "latin": "fihris",
+      "arti": "katalog",
+      "contoh_kalimat": "شيكت على الفهرس بس ما لقيته"
+    },
+    {
+      "kata_arab": "رقم التصنيف",
+      "latin": "raqam et-tasniif",
+      "arti": "nomor klasifikasi / panggil",
+      "contoh_kalimat": "اعطيني رقم التصنيف عشان اساعدك"
+    },
+    {
+      "kata_arab": "حجز كتاب",
+      "latin": "hajaz ktaab",
+      "arti": "memesan buku",
+      "contoh_kalimat": "حجزت كتاب كان عند طالب ثاني"
+    },
+    {
+      "kata_arab": "مؤلف",
+      "latin": "mu'allif",
+      "arti": "penulis",
+      "contoh_kalimat": "مين مؤلف هادي الرواية المشهورة"
+    },
+    {
+      "kata_arab": "قاعة دراسة",
+      "latin": "qaa'et diraaseh",
+      "arti": "ruang belajar",
+      "contoh_kalimat": "قاعة الدراسة مليانة طلاب اليوم"
+    },
+    {
+      "kata_arab": "هدوء",
+      "latin": "huduu'",
+      "arti": "tenang / hening",
+      "contoh_kalimat": "لازم نحافظ على الهدوء هون"
+    },
+    {
+      "kata_arab": "ضايع",
+      "latin": "daaye'",
+      "arti": "hilang",
+      "contoh_kalimat": "الكتاب شكله ضايع مش عالرف"
+    },
+    {
+      "kata_arab": "نسخة",
+      "latin": "nuskha",
+      "arti": "salinan / kopi eksemplar",
+      "contoh_kalimat": "ضل بس نسخة وحدة بالمكتبة"
+    },
+    {
+      "kata_arab": "صور ورقة",
+      "latin": "sawwar waraqah",
+      "arti": "memfotokopi halaman",
+      "contoh_kalimat": "بدي اصور ورقة من المرجع"
+    },
+    {
+      "kata_arab": "ماكينة تصوير",
+      "latin": "makiinet taswiir",
+      "arti": "mesin fotokopi",
+      "contoh_kalimat": "ماكينة التصوير خربانة بالطابق الثاني"
+    },
+    {
+      "kata_arab": "كتاب الكتروني",
+      "latin": "ktaab eliktrooni",
+      "arti": "buku digital",
+      "contoh_kalimat": "نزل كتاب الكتروني من موقعهم"
+    },
+    {
+      "kata_arab": "رواية",
+      "latin": "riwaayeh",
+      "arti": "novel",
+      "contoh_kalimat": "خلصت قراءة الرواية بيومين بس"
+    },
+    {
+      "kata_arab": "طابق",
+      "latin": "taabiq",
+      "arti": "lantai (gedung)",
+      "contoh_kalimat": "قسم الادب موجود بالطابق الثالث"
+    },
+    {
+      "kata_arab": "امانات",
+      "latin": "amaanaat",
+      "arti": "penitipan barang / loker",
+      "contoh_kalimat": "اترك شنطتك عند قسم الامانات"
+    },
+    {
+      "kata_arab": "صامت",
+      "latin": "saamit",
+      "arti": "senyap / mode hening",
+      "contoh_kalimat": "حط تلفونك على الصامت جوة"
+    },
+    {
+      "kata_arab": "منتهي",
+      "latin": "muntahi",
+      "arti": "kedaluwarsa (kartu/tempo)",
+      "contoh_kalimat": "اشتراكك منتهي ولازم تجدده هسة"
+    },
+    {
+      "kata_arab": "دفع رسوم",
+      "latin": "dafa' rusuwm",
+      "arti": "membayar iuran",
+      "contoh_kalimat": "دفعت رسوم الاشتراك السنوي اليوم"
+    },
+    {
+      "kata_arab": "خربان",
+      "latin": "kharbaan",
+      "arti": "rusak",
+      "contoh_kalimat": "غلاف هادا الكتاب مقطوع وخربان"
+    },
+    {
+      "kata_arab": "سكانر",
+      "latin": "skannar",
+      "arti": "pemindai dokumen",
+      "contoh_kalimat": "بدي استعمل سكانر عشان الورق"
+    },
+    {
+      "kata_arab": "موعد التسليم",
+      "latin": "maw'ed et-tasliim",
+      "arti": "tenggat pengembalian",
+      "contoh_kalimat": "قرب موعد التسليم ولازم اخلص قراءة"
+    },
+    {
+      "kata_arab": "شيك على",
+      "latin": "shayyak 'ala",
+      "arti": "mengecek / memeriksa",
+      "contoh_kalimat": "ممكن تشيك عالكمبيوتر اذا الكتاب متوفر؟"
+    },
+    {
+      "kata_arab": "مش ملاقي",
+      "latin": "mish mlaaqi",
+      "arti": "tidak menemukan (lk)",
+      "contoh_kalimat": "مش ملاقي الكتاب اللي حكيتلي عنه"
+    },
+    {
+      "kata_arab": "مجلد",
+      "latin": "mujallad",
+      "arti": "jilid",
+      "contoh_kalimat": "بدي المجلد الاول من هالموسوعة الكبيرة"
+    },
+    {
+      "kata_arab": "سيستم",
+      "latin": "sistem",
+      "arti": "sistem katalog digital",
+      "contoh_kalimat": "الكتاب مكتوب عالسيستم انه مش موجود"
+    },
+    {
+      "kata_arab": "كرت",
+      "latin": "kart",
+      "arti": "kartu",
+      "contoh_kalimat": "نسيت كرت المكتبة بالبيت اليوم"
+    },
+    {
+      "kata_arab": "مسموح",
+      "latin": "masmooh",
+      "arti": "diperbolehkan",
+      "contoh_kalimat": "مسموح تستعير تلات كتب بس"
+    },
+    {
+      "kata_arab": "ختم",
+      "latin": "khatem",
+      "arti": "stempel",
+      "contoh_kalimat": "لازم تاخد ختم عند الباب"
+    },
+    {
+      "kata_arab": "ع جنب",
+      "latin": "'a janab",
+      "arti": "disisihkan",
+      "contoh_kalimat": "ممكن تحطلي هاد الكتاب ع جنب"
+    },
+    {
+      "kata_arab": "مدة",
+      "latin": "muddeh",
+      "arti": "durasi",
+      "contoh_kalimat": "قديش مدة الاستعارة لكل طالب"
+    }
+  ],
+  "Masjid & Tempat Ibadah": [
+    {
+      "kata_arab": "جامع",
+      "latin": "jaami'",
+      "arti": "masjid besar",
+      "contoh_kalimat": "بدنا نصلي الجمعة بالجامع الكبير"
+    },
+    {
+      "kata_arab": "اتوضى",
+      "latin": "itwadda",
+      "arti": "berwudu",
+      "contoh_kalimat": "لازم اتوضى قبل ما تبدا الصلاة"
+    },
+    {
+      "kata_arab": "صلى",
+      "latin": "salla",
+      "arti": "salat",
+      "contoh_kalimat": "صليت الظهر بالمسجد مع الجماعة"
+    },
+    {
+      "kata_arab": "اذن",
+      "latin": "addan",
+      "arti": "mengumandangkan azan",
+      "contoh_kalimat": "الشيخ اذن للعصر من خمس دقايق"
+    },
+    {
+      "kata_arab": "مؤذن",
+      "latin": "m'adden",
+      "arti": "muazin",
+      "contoh_kalimat": "صوت المؤذن هون كتير بريح القلب"
+    },
+    {
+      "kata_arab": "خطبة الجمعة",
+      "latin": "khutbat el-jum'ah",
+      "arti": "khotbah jumat",
+      "contoh_kalimat": "خطبة الجمعة اليوم كانت كتير مفيدة"
+    },
+    {
+      "kata_arab": "خطيب",
+      "latin": "khatiib",
+      "arti": "khatib",
+      "contoh_kalimat": "الخطيب حكى عن حسن الخلق اليوم"
+    },
+    {
+      "kata_arab": "محراب",
+      "latin": "mihraab",
+      "arti": "mihrab",
+      "contoh_kalimat": "الامام واقف بالمحراب بقرا قران"
+    },
+    {
+      "kata_arab": "سجادة صلاة",
+      "latin": "sajjaadet salaah",
+      "arti": "sajadah",
+      "contoh_kalimat": "فرشت سجادة صلاة نظيفة بالزاوية"
+    },
+    {
+      "kata_arab": "ركعة",
+      "latin": "rak'ah",
+      "arti": "rakaat",
+      "contoh_kalimat": "باقي ركعة وبتخلص صلاة المغرب"
+    },
+    {
+      "kata_arab": "ركع",
+      "latin": "raka'",
+      "arti": "rukuk",
+      "contoh_kalimat": "الامام ركع واحنا ركعنا وراه"
+    },
+    {
+      "kata_arab": "سجد",
+      "latin": "sajad",
+      "arti": "sujud",
+      "contoh_kalimat": "سجد الشيخ وطول كتير بالسجود"
+    },
+    {
+      "kata_arab": "سلم",
+      "latin": "sallam",
+      "arti": "mengucap salam (akhir salat)",
+      "contoh_kalimat": "لما سلم الامام خلصنا صلاتنا فورا"
+    },
+    {
+      "kata_arab": "منا ومنكم",
+      "latin": "minna w-minkum",
+      "arti": "dari kami dan kalian (balasan)",
+      "contoh_kalimat": "منا ومنكم ان شاء الله يا غالي"
+    },
+    {
+      "kata_arab": "صلاة جماعة",
+      "latin": "salaat jamaa'ah",
+      "arti": "salat berjemaah",
+      "contoh_kalimat": "صلاة جماعة بالمسجد اجرها اكبر بكتير"
+    },
+    {
+      "kata_arab": "مسبحة",
+      "latin": "masbaha",
+      "arti": "tasbih (alat)",
+      "contoh_kalimat": "نسيت مسبحتي الخشب على رف الكتب"
+    },
+    {
+      "kata_arab": "سبح",
+      "latin": "sabbah",
+      "arti": "bertasbih",
+      "contoh_kalimat": "قعد يسبح بعد ما سلم مباشرة"
+    },
+    {
+      "kata_arab": "استغفر",
+      "latin": "istaghfar",
+      "arti": "beristigfar",
+      "contoh_kalimat": "استغفر ربك عشان يرتاح قلبك دايما"
+    },
+    {
+      "kata_arab": "دعاء",
+      "latin": "du'aa'",
+      "arti": "doa",
+      "contoh_kalimat": "سمعنا دعاء حلو كتير بعد الصلاة"
+    },
+    {
+      "kata_arab": "دعى",
+      "latin": "da'a",
+      "arti": "berdoa",
+      "contoh_kalimat": "دعى لاهل بيته بالصحة والخير"
+    },
+    {
+      "kata_arab": "شلح",
+      "latin": "shalah",
+      "arti": "melepas (alas kaki/pakaian)",
+      "contoh_kalimat": "شلح بوطه قبل ما يفوت المصلى"
+    },
+    {
+      "kata_arab": "مصلى",
+      "latin": "musalla",
+      "arti": "ruang salat",
+      "contoh_kalimat": "المصلى نظيف وبارد وفيه تكييف"
+    },
+    {
+      "kata_arab": "صامت",
+      "latin": "saamit",
+      "arti": "mode senyap",
+      "contoh_kalimat": "حط تلفونك صامت احتراما لحرمة المكان"
+    },
+    {
+      "kata_arab": "وطي صوتك",
+      "latin": "watti sotak",
+      "arti": "pelankan suaramu",
+      "contoh_kalimat": "وطي صوتك الزلمة قاعد يقرا قران"
+    },
+    {
+      "kata_arab": "تراويح",
+      "latin": "taraawiiH",
+      "arti": "tarawih",
+      "contoh_kalimat": "صلينا التراويح كاملة بدون اي تعب"
+    },
+    {
+      "kata_arab": "وتر",
+      "latin": "witer",
+      "arti": "witir",
+      "contoh_kalimat": "بدنا نصلي ثلاث ركعات وتر"
+    },
+    {
+      "kata_arab": "مصحف",
+      "latin": "mushaf",
+      "arti": "mushaf Al-Qur'an",
+      "contoh_kalimat": "رجع المصحف محله عالرف بعد القراءة"
+    },
+    {
+      "kata_arab": "مسبوق",
+      "latin": "masbuuq",
+      "arti": "makmum masbuk",
+      "contoh_kalimat": "هو مسبوق فاتته ركعتين من العشا"
+    },
+    {
+      "kata_arab": "صندوق تبرعات",
+      "latin": "sanduuq tabarru'aat",
+      "arti": "kotak amal",
+      "contoh_kalimat": "حط ليرتين جوة صندوق تبرعات المسجد"
+    },
+    {
+      "kata_arab": "تقبل الله",
+      "latin": "taqabbal allah",
+      "arti": "semoga Allah menerima",
+      "contoh_kalimat": "تقبل الله يا جار كيف حالك"
+    },
+    {
+      "kata_arab": "لحق",
+      "latin": "lahhaq",
+      "arti": "keburu / sempat",
+      "contoh_kalimat": "بدي ألحق الصلاة مع الامام"
+    },
+    {
+      "kata_arab": "رص",
+      "latin": "rass",
+      "arti": "merapatkan",
+      "contoh_kalimat": "رصوا الصفوف وما تتركوا فراغ"
+    },
+    {
+      "kata_arab": "اقامة",
+      "latin": "iqaameh",
+      "arti": "ikamah",
+      "contoh_kalimat": "كم دقيقة ضايل على الاقامة"
+    },
+    {
+      "kata_arab": "شحاطة",
+      "latin": "shahhaatah",
+      "arti": "sandal jepit",
+      "contoh_kalimat": "وين الشحاطة عشان اروح اتغسل"
+    },
+    {
+      "kata_arab": "طفى",
+      "latin": "taffa",
+      "arti": "mematikan",
+      "contoh_kalimat": "طفى تلفونه قبل ما يبدا الفرض"
+    },
+    {
+      "kata_arab": "قصر",
+      "latin": "qassar",
+      "arti": "mengqasar salat",
+      "contoh_kalimat": "احنا مسافرين ولازم نقصر الصلاة"
+    },
+    {
+      "kata_arab": "كبر",
+      "latin": "kabbar",
+      "arti": "takbir (memulai salat)",
+      "contoh_kalimat": "بس يكبر الامام ادخل بالصلاة"
+    },
+    {
+      "kata_arab": "سووا الصفوف",
+      "latin": "sawwu is-sufuf",
+      "arti": "luruskan saf",
+      "contoh_kalimat": "سووا الصفوف وسدوا الفراغ بيناتكم"
+    }
+  ],
+  "Rumah Sakit & Rawat Inap": [
+    {
+      "kata_arab": "دخولية",
+      "latin": "dukhuliyyeh",
+      "arti": "biaya pendaftaran rawat inap",
+      "contoh_kalimat": "لازم تدفع الدخولية عند المحاسبة أول"
+    },
+    {
+      "kata_arab": "تأمين صحي",
+      "latin": "ta'meen sihhi",
+      "arti": "asuransi kesehatan",
+      "contoh_kalimat": "تأمينك الصحي بغطي هاي الغرفة؟"
+    },
+    {
+      "kata_arab": "غرفة مشتركة",
+      "latin": "ghurfeh mushtarakah",
+      "arti": "kamar rawat bersama",
+      "contoh_kalimat": "ما بدي غرفة مشتركة لو سمحت"
+    },
+    {
+      "kata_arab": "غرفة خصوصي",
+      "latin": "ghurfeh khususi",
+      "arti": "kamar VIP / privat",
+      "contoh_kalimat": "في مجال ننقل لغرفة خصوصي؟"
+    },
+    {
+      "kata_arab": "ممنوع الزيارة",
+      "latin": "mamnoo' ez-ziyarah",
+      "arti": "dilarang berkunjung",
+      "contoh_kalimat": "هاد القسم ممنوع الزيارة فيه"
+    },
+    {
+      "kata_arab": "مرافق",
+      "latin": "mraafeq",
+      "arti": "penunggu pasien (lk)",
+      "contoh_kalimat": "بس مسموح مرافق واحد بالليل"
+    },
+    {
+      "kata_arab": "كرت زيارة",
+      "latin": "kart ziyarah",
+      "arti": "kartu besuk",
+      "contoh_kalimat": "خد كرت الزيارة من البوابة"
+    },
+    {
+      "kata_arab": "ممرض مناوب",
+      "latin": "mumarrid mnaaweb",
+      "arti": "perawat jaga (lk)",
+      "contoh_kalimat": "وين الممرض المناوب بهاد الطابق؟"
+    },
+    {
+      "kata_arab": "حكيمة",
+      "latin": "hakeemeh",
+      "arti": "perawat (pr)",
+      "contoh_kalimat": "نادي على الحكيمة بسرعة لو سمحت"
+    },
+    {
+      "kata_arab": "كبسة الطوارئ",
+      "latin": "kabsat et-taware'",
+      "arti": "tombol panggil darurat",
+      "contoh_kalimat": "اكبس كبسة الطوارئ جنب التخت"
+    },
+    {
+      "kata_arab": "فحص دم",
+      "latin": "fahis damm",
+      "arti": "tes darah",
+      "contoh_kalimat": "بدهم ياخدو فحص دم هسا"
+    },
+    {
+      "kata_arab": "مغذي",
+      "latin": "mghadh-dhi",
+      "arti": "infus",
+      "contoh_kalimat": "المغذي خلص ولازم ينشال"
+    },
+    {
+      "kata_arab": "قسطرة",
+      "latin": "qastarah",
+      "arti": "kateter",
+      "contoh_kalimat": "ركبوا إلو قسطرة الصبح بدري"
+    },
+    {
+      "kata_arab": "إبرة",
+      "latin": "ibrah",
+      "arti": "suntikan",
+      "contoh_kalimat": "هاي الإبرة بتخفف الوجع بسرعة"
+    },
+    {
+      "kata_arab": "مسكن",
+      "latin": "musakken",
+      "arti": "obat pereda nyeri",
+      "contoh_kalimat": "اعطيني مسكن قوي راسي بنفجر"
+    },
+    {
+      "kata_arab": "ضغط دم",
+      "latin": "daghit damm",
+      "arti": "tekanan darah",
+      "contoh_kalimat": "قاست الحكيمة ضغط الدم وطلع تمام"
+    },
+    {
+      "kata_arab": "حرارة",
+      "latin": "hararah",
+      "arti": "suhu tubuh / demam",
+      "contoh_kalimat": "نزلت حرارته بعد الكمادات الباردة"
+    },
+    {
+      "kata_arab": "شاش",
+      "latin": "shaash",
+      "arti": "kasa perban",
+      "contoh_kalimat": "غيروا الشاش عن الجرح اليوم"
+    },
+    {
+      "kata_arab": "غيار",
+      "latin": "ghyaar",
+      "arti": "ganti perban / balutan",
+      "contoh_kalimat": "إجا وقت الغيار على العملية"
+    },
+    {
+      "kata_arab": "عناية حثيثة",
+      "latin": "'inaayeh hatheetheh",
+      "arti": "ICU",
+      "contoh_kalimat": "المريض لسا بالعناية الحثيثة جوا"
+    },
+    {
+      "kata_arab": "عملية",
+      "latin": "'amaliyyeh",
+      "arti": "operasi",
+      "contoh_kalimat": "العملية رح تبلش كمان نص ساعة"
+    },
+    {
+      "kata_arab": "تخدير",
+      "latin": "takhdeer",
+      "arti": "bius / anestesi",
+      "contoh_kalimat": "تأثير التخدير بلش يخف هسا"
+    },
+    {
+      "kata_arab": "تخريج",
+      "latin": "takhreej",
+      "arti": "kepulangan pasien",
+      "contoh_kalimat": "ورقة التخريج جاهزة عند الاستقبال"
+    },
+    {
+      "kata_arab": "تقرير طبي",
+      "latin": "taqreer tibbi",
+      "arti": "laporan medis",
+      "contoh_kalimat": "بدي تقرير طبي عشان شغلي"
+    },
+    {
+      "kata_arab": "سلامات",
+      "latin": "salamaat",
+      "arti": "semoga lekas sembuh",
+      "contoh_kalimat": "سلامات وما تشوف شر أبداً"
+    },
+    {
+      "kata_arab": "حمدلله عالسلامة",
+      "latin": "hamdillah 'as-salaameh",
+      "arti": "selamat atas kepulihanmu",
+      "contoh_kalimat": "ألف حمدلله عالسلامة بعد العملية"
+    },
+    {
+      "kata_arab": "ملف",
+      "latin": "malaf",
+      "arti": "rekam medis",
+      "contoh_kalimat": "الدكتور عم براجع ملف المريض"
+    },
+    {
+      "kata_arab": "صايم",
+      "latin": "saayem",
+      "arti": "puasa (medis)",
+      "contoh_kalimat": "لازم تضل صايم من نص الليل"
+    },
+    {
+      "kata_arab": "جرعة",
+      "latin": "jur'ah",
+      "arti": "dosis obat",
+      "contoh_kalimat": "أخدت الجرعة التانية بعد الغدا"
+    },
+    {
+      "kata_arab": "محاسبة",
+      "latin": "muhaasabeh",
+      "arti": "kasir rumah sakit",
+      "contoh_kalimat": "سوي براءة ذمة من المحاسبة"
+    },
+    {
+      "kata_arab": "اتنوم",
+      "latin": "itnawwam",
+      "arti": "dirawat inap / diopname",
+      "contoh_kalimat": "اخوي اتنوم بالمستشفى مبارح بالليل"
+    },
+    {
+      "kata_arab": "وقت الزيارة",
+      "latin": "wa'et ez-ziyaara",
+      "arti": "jam besuk",
+      "contoh_kalimat": "ايمتى ببلش وقت الزيارة هون؟"
+    },
+    {
+      "kata_arab": "كشفية",
+      "latin": "kashfiyyeh",
+      "arti": "biaya periksa dokter",
+      "contoh_kalimat": "كم كشفية الدكتور بهاي العيادة؟"
+    },
+    {
+      "kata_arab": "دور",
+      "latin": "door",
+      "arti": "nomor antrean / giliran",
+      "contoh_kalimat": "استنى دورك عند شباك التسجيل"
+    },
+    {
+      "kata_arab": "ممرضة",
+      "latin": "mumarrida",
+      "arti": "perawat (pr)",
+      "contoh_kalimat": "نادي الممرضة بسرعة مشان الله"
+    },
+    {
+      "kata_arab": "دايخ",
+      "latin": "daayikh",
+      "arti": "pusing / kliyengan (lk)",
+      "contoh_kalimat": "حاسس حالي دايخ ومش قادر اقوم"
+    },
+    {
+      "kata_arab": "بربيش",
+      "latin": "barbiish",
+      "arti": "selang medis / infus / kateter",
+      "contoh_kalimat": "دير بالك لا تشد البربيش بالغلط"
+    }
+  ],
+  "Hotel & Penginapan": [
+    {
+      "kata_arab": "هوية",
+      "latin": "hawiyyeh",
+      "arti": "kartu identitas",
+      "contoh_kalimat": "ممكن تعطيني هويتك لو سمحت؟"
+    },
+    {
+      "kata_arab": "كرت",
+      "latin": "kart",
+      "arti": "kartu kunci",
+      "contoh_kalimat": "كرت الباب مش راضي يفتح"
+    },
+    {
+      "kata_arab": "طابق",
+      "latin": "taabiq",
+      "arti": "lantai",
+      "contoh_kalimat": "غرفتك موجودة بالطابق الثالث فوق"
+    },
+    {
+      "kata_arab": "شنطة",
+      "latin": "shanta",
+      "arti": "koper / tas",
+      "contoh_kalimat": "ساعدني بالشنطة لو سمحت هون"
+    },
+    {
+      "kata_arab": "استلام الغرفة",
+      "latin": "istilaam el-ghurfeh",
+      "arti": "check-in",
+      "contoh_kalimat": "ايمتى موعد استلام الغرفة بالزبط؟"
+    },
+    {
+      "kata_arab": "مخدة",
+      "latin": "mkhaddeh",
+      "arti": "bantal",
+      "contoh_kalimat": "ممكن تجيبلي كمان مخدة زيادة؟"
+    },
+    {
+      "kata_arab": "شرشف",
+      "latin": "sharshaf",
+      "arti": "seprai",
+      "contoh_kalimat": "الشرشف وسخ وبده تغيير هسا"
+    },
+    {
+      "kata_arab": "مكيف",
+      "latin": "mkayyef",
+      "arti": "AC",
+      "contoh_kalimat": "المكيف بطلع صوت عالي ومزعج"
+    },
+    {
+      "kata_arab": "بلكونة",
+      "latin": "balkoneh",
+      "arti": "balkon",
+      "contoh_kalimat": "بدي غرفة مع بلكونة واسعة"
+    },
+    {
+      "kata_arab": "إطلالة",
+      "latin": "itlaaleh",
+      "arti": "pemandangan / view",
+      "contoh_kalimat": "الغرفة الها إطلالة حلوة كتير"
+    },
+    {
+      "kata_arab": "صابونة",
+      "latin": "saabuuneh",
+      "arti": "sabun",
+      "contoh_kalimat": "نسيتوا تحطوا صابونة بالحمام مبارح"
+    },
+    {
+      "kata_arab": "كواية",
+      "latin": "kawayeh",
+      "arti": "setrika",
+      "contoh_kalimat": "بتقدرو تبعتولي كواية ع الغرفة؟"
+    },
+    {
+      "kata_arab": "سشوار",
+      "latin": "seshwaar",
+      "arti": "pengering rambut",
+      "contoh_kalimat": "في سشوار شغال بالحمام هون؟"
+    },
+    {
+      "kata_arab": "نادي",
+      "latin": "naadi",
+      "arti": "gym / pusat kebugaran",
+      "contoh_kalimat": "بدي أتدرب بالنادي الرياضي اليوم"
+    },
+    {
+      "kata_arab": "كراج",
+      "latin": "garaaj",
+      "arti": "tempat parkir",
+      "contoh_kalimat": "وين بقدر أصف بكراج الفندق؟"
+    },
+    {
+      "kata_arab": "باسورد النت",
+      "latin": "basword en-net",
+      "arti": "kata sandi internet",
+      "contoh_kalimat": "شو باسورد النت لو سمحت؟"
+    },
+    {
+      "kata_arab": "خدمة الغرف",
+      "latin": "khedmet el-ghuraf",
+      "arti": "layanan kamar",
+      "contoh_kalimat": "رنيت على خدمة الغرف وما ردو"
+    },
+    {
+      "kata_arab": "غسيل",
+      "latin": "ghaseel",
+      "arti": "laundry / cucian",
+      "contoh_kalimat": "بدي أبعت أواعي ع الغسيل"
+    },
+    {
+      "kata_arab": "بوفيه",
+      "latin": "bofeh",
+      "arti": "prasmanan",
+      "contoh_kalimat": "الفطور بوفيه مفتوح ولا طلب؟"
+    },
+    {
+      "kata_arab": "قلاية بندورة",
+      "latin": "qallayet banduura",
+      "arti": "tumis tomat (khas Yordania)",
+      "contoh_kalimat": "عندهم قلاية بندورة زاكية كتير"
+    },
+    {
+      "kata_arab": "فاتورة",
+      "latin": "faatuura",
+      "arti": "tagihan",
+      "contoh_kalimat": "بدي أشوف الفاتورة قبل الدفع"
+    },
+    {
+      "kata_arab": "كاش",
+      "latin": "kaash",
+      "arti": "uang tunai",
+      "contoh_kalimat": "بقدر أدفع كاش مش بالبطاقة؟"
+    },
+    {
+      "kata_arab": "خربان",
+      "latin": "kharbaan",
+      "arti": "rusak (lk)",
+      "contoh_kalimat": "تلفون الغرفة خربان ما بشتغل"
+    },
+    {
+      "kata_arab": "تسليم الغرفة",
+      "latin": "tasleem el-ghurfeh",
+      "arti": "check-out",
+      "contoh_kalimat": "موعد تسليم الغرفة الساعة طنعش"
+    },
+    {
+      "kata_arab": "نظف",
+      "latin": "naddaf",
+      "arti": "membersihkan",
+      "contoh_kalimat": "نظف الغرفة منيح لو سمحت"
+    },
+    {
+      "kata_arab": "صحى",
+      "latin": "sahha",
+      "arti": "membangunkan",
+      "contoh_kalimat": "ممكن تصحيني بكرا الساعة سبعة؟"
+    },
+    {
+      "kata_arab": "صلح",
+      "latin": "sallah",
+      "arti": "memperbaiki",
+      "contoh_kalimat": "العامل صلح الحنفية اللي بالحمام"
+    },
+    {
+      "kata_arab": "بشكير",
+      "latin": "bashkiir",
+      "arti": "handuk mandi",
+      "contoh_kalimat": "بتقدر تبعتلي كمان بشكير كبير"
+    },
+    {
+      "kata_arab": "غلاية",
+      "latin": "ghallaayeh",
+      "arti": "teko listrik",
+      "contoh_kalimat": "الغلاية ما بتشتغل بالغرفة تبعتي"
+    },
+    {
+      "kata_arab": "معلق",
+      "latin": "m'allaq",
+      "arti": "macet / tersangkut",
+      "contoh_kalimat": "كرت الباب معلق ومش راضي يفتح"
+    },
+    {
+      "kata_arab": "مدد",
+      "latin": "maddad",
+      "arti": "memperpanjang (waktu)",
+      "contoh_kalimat": "بدي امدد الحجز لكمان يوم"
+    },
+    {
+      "kata_arab": "حاسب",
+      "latin": "haasab",
+      "arti": "membayar / melunasi",
+      "contoh_kalimat": "بدي احاسب هسا واطلع عالمطار"
+    }
+  ],
+  "Reservasi & Pemesanan": [
+    {
+      "kata_arab": "تذكرة",
+      "latin": "tazkara",
+      "arti": "tiket",
+      "contoh_kalimat": "اشتريت تذكرة للباص الصبح بدري"
+    },
+    {
+      "kata_arab": "تاكيد",
+      "latin": "ta'keed",
+      "arti": "konfirmasi",
+      "contoh_kalimat": "وصلك تاكيد الحجز ع التلفون؟"
+    },
+    {
+      "kata_arab": "كنسل",
+      "latin": "kansal",
+      "arti": "membatalkan",
+      "contoh_kalimat": "بدي اكنسل الحجز مش جاي"
+    },
+    {
+      "kata_arab": "الغاء",
+      "latin": "ilgha'",
+      "arti": "pembatalan",
+      "contoh_kalimat": "في رسوم على الغاء التذكرة؟"
+    },
+    {
+      "kata_arab": "موعد",
+      "latin": "maw'ed",
+      "arti": "jadwal / janji",
+      "contoh_kalimat": "غيرنا الموعد لساعة سبعة المسا"
+    },
+    {
+      "kata_arab": "اجل",
+      "latin": "ajjal",
+      "arti": "menunda",
+      "contoh_kalimat": "اجلوا موعد الطيارة لبكرا الصبح"
+    },
+    {
+      "kata_arab": "فل",
+      "latin": "full",
+      "arti": "penuh total",
+      "contoh_kalimat": "الفندق فل ما ضل غرف"
+    },
+    {
+      "kata_arab": "دور",
+      "latin": "door",
+      "arti": "antrean / giliran",
+      "contoh_kalimat": "قديش ضايل ليوصل دورنا هون؟"
+    },
+    {
+      "kata_arab": "قبل بوقت",
+      "latin": "qabl bi-waqt",
+      "arti": "lebih awal",
+      "contoh_kalimat": "لازم تحجز قبل بوقت احسن"
+    },
+    {
+      "kata_arab": "عربون",
+      "latin": "arboon",
+      "arti": "uang muka (DP)",
+      "contoh_kalimat": "دفعت عربون عشان اضمن الحجز"
+    },
+    {
+      "kata_arab": "كرت",
+      "latin": "kart",
+      "arti": "tiket / kartu",
+      "contoh_kalimat": "ورجيني كرت الدخول لو سمحت"
+    },
+    {
+      "kata_arab": "تراس",
+      "latin": "terras",
+      "arti": "teras / luar ruangan",
+      "contoh_kalimat": "في مجال نقعد ع التراس؟"
+    },
+    {
+      "kata_arab": "وسع",
+      "latin": "wusa'",
+      "arti": "ruang / tempat",
+      "contoh_kalimat": "ما في وسع لطاولة ثانية"
+    },
+    {
+      "kata_arab": "ممر",
+      "latin": "mamarr",
+      "arti": "lorong",
+      "contoh_kalimat": "بدك مقعد ع الممر احسن؟"
+    },
+    {
+      "kata_arab": "ريسبشن",
+      "latin": "resepshen",
+      "arti": "resepsionis",
+      "contoh_kalimat": "احكي مع الريسبشن مشان المفتاح"
+    },
+    {
+      "kata_arab": "رقم الحجز",
+      "latin": "raqam al-hajez",
+      "arti": "kode reservasi",
+      "contoh_kalimat": "ابعتلي رقم الحجز برسالة هسا"
+    },
+    {
+      "kata_arab": "محجوز",
+      "latin": "mahjooz",
+      "arti": "terpesan (lk)",
+      "contoh_kalimat": "هاد المكان محجوز لواحد ثاني"
+    },
+    {
+      "kata_arab": "ويتر",
+      "latin": "waytar",
+      "arti": "pelayan",
+      "contoh_kalimat": "نادي ع الويتر مشان نطلب"
+    },
+    {
+      "kata_arab": "كرسي اطفال",
+      "latin": "kursi atfal",
+      "arti": "kursi bayi/anak",
+      "contoh_kalimat": "لازمنا كرسي اطفال لو سمحت"
+    },
+    {
+      "kata_arab": "جوة",
+      "latin": "juwwa",
+      "arti": "di dalam (ruangan)",
+      "contoh_kalimat": "بنفضل نقعد جوة عشان البرد"
+    },
+    {
+      "kata_arab": "اطلالة",
+      "latin": "itlaaleh",
+      "arti": "pemandangan / view",
+      "contoh_kalimat": "المطعم هاد اله اطلالة بتجنن"
+    },
+    {
+      "kata_arab": "فضا",
+      "latin": "fada",
+      "arti": "menjadi kosong/luang",
+      "contoh_kalimat": "بس يفضا مكان رن علي"
+    },
+    {
+      "kata_arab": "تعديل",
+      "latin": "ta'deel",
+      "arti": "perubahan/revisi",
+      "contoh_kalimat": "بدي اعمل تعديل بسيط بالحجز"
+    },
+    {
+      "kata_arab": "خصم",
+      "latin": "khasem",
+      "arti": "diskon / potongan harga",
+      "contoh_kalimat": "في خصم اذا حجزنا اونلاين"
+    },
+    {
+      "kata_arab": "عرض",
+      "latin": "'ard",
+      "arti": "promo / penawaran",
+      "contoh_kalimat": "العرض شامل العشا مع التذكرة"
+    },
+    {
+      "kata_arab": "كاش",
+      "latin": "kaash",
+      "arti": "uang tunai",
+      "contoh_kalimat": "الدفع كاش ولا بتقبلو بطاقات"
+    },
+    {
+      "kata_arab": "لحساب",
+      "latin": "li-hsaab",
+      "arti": "tagihan / bon",
+      "contoh_kalimat": "هات الحساب لو سمحت بسرعة"
+    },
+    {
+      "kata_arab": "شامل",
+      "latin": "shaamel",
+      "arti": "termasuk (inklusif)",
+      "contoh_kalimat": "السعر شامل الضريبة والخدمة كلها"
+    },
+    {
+      "kata_arab": "زحمة",
+      "latin": "zahmeh",
+      "arti": "padat / ramai sekali",
+      "contoh_kalimat": "المطعم زحمة كثير يوم الجمعة"
+    },
+    {
+      "kata_arab": "عيد ميلاد",
+      "latin": "'eed meelaad",
+      "arti": "ulang tahun",
+      "contoh_kalimat": "الحجز هاد لمناسبة عيد ميلاد"
+    },
+    {
+      "kata_arab": "سيكشن",
+      "latin": "sekshan",
+      "arti": "seksi / bagian area",
+      "contoh_kalimat": "احجزلي بالسيكشن الهادي اللي فوق"
+    },
+    {
+      "kata_arab": "مطرح",
+      "latin": "matrah",
+      "arti": "tempat",
+      "contoh_kalimat": "في مطرح لاربعة اليوم بالليل؟"
+    },
+    {
+      "kata_arab": "تاخير",
+      "latin": "ta'khiir",
+      "arti": "keterlambatan",
+      "contoh_kalimat": "معكم ربع ساعة تاخير بس"
+    },
+    {
+      "kata_arab": "زبط",
+      "latin": "zabbat",
+      "arti": "mengatur",
+      "contoh_kalimat": "بتقدر تزبط الحجز لبكرة المساء؟"
+    },
+    {
+      "kata_arab": "كم شخص",
+      "latin": "kam shakhs",
+      "arti": "berapa orang",
+      "contoh_kalimat": "بدي اعرف كم شخص رح يجوا"
+    }
+  ],
+  "Keluhan & Komplain": [
+    {
+      "kata_arab": "خربان",
+      "latin": "kharbaan",
+      "arti": "rusak",
+      "contoh_kalimat": "الجهاز طلع خربان من اول يوم"
+    },
+    {
+      "kata_arab": "معطل",
+      "latin": "m'attal",
+      "arti": "rusak / mogok",
+      "contoh_kalimat": "المصعد معطل ومش شغال بالمرة"
+    },
+    {
+      "kata_arab": "ناقص",
+      "latin": "naaqis",
+      "arti": "kurang",
+      "contoh_kalimat": "الاكل وصل وناقص صحنين رز"
+    },
+    {
+      "kata_arab": "مش شغال",
+      "latin": "mish shagghal",
+      "arti": "tidak menyala / mati",
+      "contoh_kalimat": "المكيف مش شغال والجو حامي"
+    },
+    {
+      "kata_arab": "تعويض",
+      "latin": "ta'weedh",
+      "arti": "ganti rugi",
+      "contoh_kalimat": "لازم تعطوني تعويض على التاخير"
+    },
+    {
+      "kata_arab": "رجع مصاري",
+      "latin": "rajja' masaari",
+      "arti": "mengembalikan uang",
+      "contoh_kalimat": "بدي ترجعولي مصاريي هسا لو سمحت"
+    },
+    {
+      "kata_arab": "فاتورة",
+      "latin": "faatoora",
+      "arti": "tagihan / struk",
+      "contoh_kalimat": "الفاتورة فيها مبالغ زيادة وغلط"
+    },
+    {
+      "kata_arab": "نصاب",
+      "latin": "nassaab",
+      "arti": "penipu",
+      "contoh_kalimat": "المحل نصاب وما بتعامل معه"
+    },
+    {
+      "kata_arab": "مقلب",
+      "latin": "maqlab",
+      "arti": "jebakan / tertipu",
+      "contoh_kalimat": "والله اكلت مقلب كبير بهالطلبية"
+    },
+    {
+      "kata_arab": "مسلوق",
+      "latin": "maslooq",
+      "arti": "asal-asalan (pengerjaan)",
+      "contoh_kalimat": "الشغل طلع مسلوق وما عجبني"
+    },
+    {
+      "kata_arab": "بيعلق",
+      "latin": "bi'alliq",
+      "arti": "macet / nge-hang",
+      "contoh_kalimat": "التلفون بيعلق كل ما افتحه"
+    },
+    {
+      "kata_arab": "وسخ",
+      "latin": "wisikh",
+      "arti": "kotor",
+      "contoh_kalimat": "الصحن وسخ بدلوه بسرعة لو سمحت"
+    },
+    {
+      "kata_arab": "بايت",
+      "latin": "baayit",
+      "arti": "basi / menginap",
+      "contoh_kalimat": "الخبز بايت ومش طازة ابدا"
+    },
+    {
+      "kata_arab": "محروق",
+      "latin": "mahrooq",
+      "arti": "hangus / gosong",
+      "contoh_kalimat": "الساندويش محروق وما بقدر اكله"
+    },
+    {
+      "kata_arab": "بهدلة",
+      "latin": "bahdaleh",
+      "arti": "perlakuan buruk / kacau",
+      "contoh_kalimat": "المعاملة كانت بهدلة عندكم اليوم"
+    },
+    {
+      "kata_arab": "قلة ذوق",
+      "latin": "qillat zooq",
+      "arti": "tidak sopan",
+      "contoh_kalimat": "تصرف الموظف كان قلة ذوق"
+    },
+    {
+      "kata_arab": "ما بنسكت عنه",
+      "latin": "ma binsakat 'anno",
+      "arti": "tidak bisa didiamkan",
+      "contoh_kalimat": "الوضع هاد ما بنسكت عنه"
+    },
+    {
+      "kata_arab": "مش مزبوط",
+      "latin": "mish mazboot",
+      "arti": "tidak beres / keliru",
+      "contoh_kalimat": "الحساب مش مزبوط وفيه اغلاط"
+    },
+    {
+      "kata_arab": "تاخير",
+      "latin": "ta'kheer",
+      "arti": "keterlambatan",
+      "contoh_kalimat": "التاخير هاد عطل كل مواعيدي"
+    },
+    {
+      "kata_arab": "بضحك علي",
+      "latin": "byid-hak 'alayy",
+      "arti": "mempermainkan saya",
+      "contoh_kalimat": "حاسس المحل قاعد بضحك علي"
+    },
+    {
+      "kata_arab": "ما برضى",
+      "latin": "ma bardha",
+      "arti": "tidak terima / menolak",
+      "contoh_kalimat": "انا ما برضى بهيك خدمة"
+    },
+    {
+      "kata_arab": "سحب حاله",
+      "latin": "sahab haalo",
+      "arti": "kabur / lepas tanggung jawab",
+      "contoh_kalimat": "الموظف سحب حاله وتركني واقف"
+    },
+    {
+      "kata_arab": "ضحكوا علي",
+      "latin": "dahaku 'alayy",
+      "arti": "menipu saya",
+      "contoh_kalimat": "ضحكوا علي والبضاعة طلعت تقليد"
+    },
+    {
+      "kata_arab": "مش اصلي",
+      "latin": "mish asli",
+      "arti": "palsu / bukan orisinal",
+      "contoh_kalimat": "العطر هاد مش اصلي بالمرة"
+    },
+    {
+      "kata_arab": "مضروب",
+      "latin": "madroob",
+      "arti": "cacat / reject",
+      "contoh_kalimat": "البنطلون طلع مضروب وفيه خزق"
+    },
+    {
+      "kata_arab": "مكسور",
+      "latin": "maksoor",
+      "arti": "pecah / patah",
+      "contoh_kalimat": "الصحن مكسور من جوا الكرتونة"
+    },
+    {
+      "kata_arab": "مهزلة",
+      "latin": "mahzaleh",
+      "arti": "keterlaluan / lelucon",
+      "contoh_kalimat": "الخدمة عندكم صارت مهزلة حقيقية"
+    },
+    {
+      "kata_arab": "بلا فايدة",
+      "latin": "bila faaydeh",
+      "arti": "sia-sia / percuma",
+      "contoh_kalimat": "الحكي معكم صار بلا فايدة"
+    },
+    {
+      "kata_arab": "شو هالمسخرة",
+      "latin": "shu hal-maskhara",
+      "arti": "apa-apaan ini",
+      "contoh_kalimat": "شو هالمسخرة وين طلبي لهسا"
+    }
+  ],
+  "Layanan Pelanggan": [
+    {
+      "kata_arab": "خدمة الزباين",
+      "latin": "khidmet ez-zabayen",
+      "arti": "layanan pelanggan",
+      "contoh_kalimat": "حكيت مع خدمة الزباين الصبح"
+    },
+    {
+      "kata_arab": "موظف",
+      "latin": "mowazzaf",
+      "arti": "staf / agen (lk)",
+      "contoh_kalimat": "الموظف حكالي المشكلة رح تنحل"
+    },
+    {
+      "kata_arab": "شكوى",
+      "latin": "shakwa",
+      "arti": "keluhan / komplain",
+      "contoh_kalimat": "بدي أقدم شكوى رسمية هسا"
+    },
+    {
+      "kata_arab": "رقم الطلب",
+      "latin": "raqam et-talab",
+      "arti": "nomor pesanan",
+      "contoh_kalimat": "اعطيني رقم الطلب عشان أشيك"
+    },
+    {
+      "kata_arab": "رقم الشكوى",
+      "latin": "raqam esh-shakwa",
+      "arti": "nomor tiket keluhan",
+      "contoh_kalimat": "سجل عندك رقم الشكوى هاد"
+    },
+    {
+      "kata_arab": "عالخط",
+      "latin": "al-khatt",
+      "arti": "di telepon / menahan panggilan",
+      "contoh_kalimat": "خليك معي عالخط دقيقة بس"
+    },
+    {
+      "kata_arab": "علق",
+      "latin": "'allaq",
+      "arti": "macet / hang / membeku",
+      "contoh_kalimat": "السيستم علق ومش قابل يفتح"
+    },
+    {
+      "kata_arab": "خربان",
+      "latin": "kharban",
+      "arti": "rusak / error",
+      "contoh_kalimat": "الراوتر خربان وبده تبديل فوري"
+    },
+    {
+      "kata_arab": "بيشيك",
+      "latin": "bisheyyek",
+      "arti": "memeriksa / mengecek",
+      "contoh_kalimat": "الدعم الفني قاعد بيشيك عالخط"
+    },
+    {
+      "kata_arab": "دعم فني",
+      "latin": "da'em fanni",
+      "arti": "dukungan teknis",
+      "contoh_kalimat": "حولني على قسم الدعم الفني"
+    },
+    {
+      "kata_arab": "مسؤول",
+      "latin": "mas'oul",
+      "arti": "atasan / penanggung jawab",
+      "contoh_kalimat": "بدي أحكي مع المسؤول هسا"
+    },
+    {
+      "kata_arab": "رجع اتصل",
+      "latin": "rije' ittasal",
+      "arti": "menelepon kembali",
+      "contoh_kalimat": "الموظف رجع اتصل بعد ساعة"
+    },
+    {
+      "kata_arab": "رن على",
+      "latin": "rann 'ala",
+      "arti": "menelepon ke",
+      "contoh_kalimat": "رن على الرقم المجاني بسرعة"
+    },
+    {
+      "kata_arab": "رقم مجاني",
+      "latin": "raqam majjani",
+      "arti": "nomor bebas pulsa",
+      "contoh_kalimat": "هاد الرقم مجاني من أي شبكة"
+    },
+    {
+      "kata_arab": "متابعة",
+      "latin": "mutaba'ah",
+      "arti": "tindak lanjut (follow up)",
+      "contoh_kalimat": "الموضوع محتاج متابعة من الإدارة"
+    },
+    {
+      "kata_arab": "تابع الموضوع",
+      "latin": "tabe' el-mawdoo'",
+      "arti": "tindak lanjuti masalah ini",
+      "contoh_kalimat": "ياريت تتابع الموضوع بنفسك اليوم"
+    },
+    {
+      "kata_arab": "تأخير",
+      "latin": "ta'kheer",
+      "arti": "keterlambatan",
+      "contoh_kalimat": "بنعتذر كتير على هاد التأخير"
+    },
+    {
+      "kata_arab": "صلح",
+      "latin": "sallah",
+      "arti": "memperbaiki",
+      "contoh_kalimat": "الفني صلح العطل بسرعة كبيرة"
+    },
+    {
+      "kata_arab": "فاتورة",
+      "latin": "fatoorah",
+      "arti": "tagihan / bon",
+      "contoh_kalimat": "في غلط بقيمة هاي الفاتورة"
+    },
+    {
+      "kata_arab": "غلط بالحساب",
+      "latin": "ghalat bil-hsaab",
+      "arti": "kesalahan tagihan / akun",
+      "contoh_kalimat": "صار معي غلط بالحساب الشهري"
+    },
+    {
+      "kata_arab": "سجل",
+      "latin": "sajjel",
+      "arti": "catat / daftarkan",
+      "contoh_kalimat": "سجل عندك ملاحظة عن المشكلة"
+    },
+    {
+      "kata_arab": "بيعتذر",
+      "latin": "bi'tazer",
+      "arti": "meminta maaf",
+      "contoh_kalimat": "هو بيعتذر عن اللي صار"
+    },
+    {
+      "kata_arab": "عطل عام",
+      "latin": "'utal 'aam",
+      "arti": "gangguan massal",
+      "contoh_kalimat": "في عطل عام بكل المنطقة"
+    },
+    {
+      "kata_arab": "فني",
+      "latin": "fanni",
+      "arti": "teknisi",
+      "contoh_kalimat": "رح نبعت فني بكرة الصبح"
+    },
+    {
+      "kata_arab": "انحلت",
+      "latin": "inhallet",
+      "arti": "sudah beres / teratasi (pr)",
+      "contoh_kalimat": "الحمد لله المشكلة انحلت كاملة"
+    },
+    {
+      "kata_arab": "حولني",
+      "latin": "hawwalni",
+      "arti": "sambungkan saya (ke bagian lain)",
+      "contoh_kalimat": "بالله حولني على القسم المسؤول"
+    },
+    {
+      "kata_arab": "فاصل",
+      "latin": "faasel",
+      "arti": "terputus (koneksi/sinyal)",
+      "contoh_kalimat": "الخط فاصل ومش قادر اسمعك"
+    },
+    {
+      "kata_arab": "رد على",
+      "latin": "radd 'ala",
+      "arti": "mengangkat telepon",
+      "contoh_kalimat": "ما حدا رد على تلفوني اليوم"
+    },
+    {
+      "kata_arab": "دور",
+      "latin": "door",
+      "arti": "antrean / giliran",
+      "contoh_kalimat": "كم واحد لسا قبلي بالدور"
+    },
+    {
+      "kata_arab": "رفع طلب",
+      "latin": "rafa' talab",
+      "arti": "membuat tiket laporan",
+      "contoh_kalimat": "الموظف رفع طلب عشان المشكلة"
+    },
+    {
+      "kata_arab": "رصيد",
+      "latin": "raseed",
+      "arti": "pulsa / saldo",
+      "contoh_kalimat": "رصيدي خلص فجأة بدون سبب واضح"
+    }
+  ]
+}

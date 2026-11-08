@@ -1,0 +1,454 @@
+{
+  "Layanan Pemerintah": {
+    "seen": [
+      "الدور",
+      "حكومتنا",
+      "داخلية"
+    ],
+    "kept": [
+      {
+        "kata_arab": "الدور",
+        "latin": "ad-dawr",
+        "arti": "peran/giliran",
+        "contoh_kalimat": "وزي ما إنتو كلكم عارفين منيح، نصحتنا الحكومة إنو نعمل الدور الصغير المطلوب منا عشان نحافظ على سلامة الناس التانيين بعد الحظر الكلي للكوفيد .19 ولهلق الاعمال التجارية بعمان عم بتعاني من آثار الحظر الكلي اللي كتير ضر بإقتصادنا, وصار كل اللي بنتمناه هلق إنو نرجع نطلع جع الحياة لبلدنا.",
+        "topic_name": "Layanan Pemerintah"
+      },
+      {
+        "kata_arab": "حكومتنا",
+        "latin": "hukuumatna",
+        "arti": "pemerintah kami",
+        "contoh_kalimat": "وعنا هون بعمان عم يصير حظر مصغر، حكومتنا أعلنت عن حظر كلي أيام الجمع عشان تحاول تخلي الوضع تحت السيطرة.",
+        "topic_name": "Layanan Pemerintah"
+      },
+      {
+        "kata_arab": "داخلية",
+        "latin": "daakhiliyyeh",
+        "arti": "dalam (fem.)",
+        "contoh_kalimat": "خارجية ووحدة داخلية، قعدة الحديقة",
+        "topic_name": "Layanan Pemerintah"
+      }
+    ]
+  },
+  "Rumah Sakit & Rawat Inap": {
+    "seen": [
+      "بوجعني",
+      "معدتنا",
+      "ممغوصين"
+    ],
+    "kept": [
+      {
+        "kata_arab": "بوجعني",
+        "latin": "biwajji'ni",
+        "arti": "menyakitiku",
+        "contoh_kalimat": "قلبي بوجعني لما أشوف المحلات عم بتسكر لإنها مش قادرة تغطي تكاليفها وتضل بالسوق.",
+        "topic_name": "Rumah Sakit & Rawat Inap"
+      },
+      {
+        "kata_arab": "معدتنا",
+        "latin": "mi'idatna",
+        "arti": "lambung kami",
+        "contoh_kalimat": "راكبة على معدتنا حتى بعد",
+        "topic_name": "Rumah Sakit & Rawat Inap"
+      },
+      {
+        "kata_arab": "ممغوصين",
+        "latin": "mmaghsiin",
+        "arti": "kesakitan perut",
+        "contoh_kalimat": "حكا لسه ممغوصين انضحك علينا",
+        "topic_name": "Rumah Sakit & Rawat Inap"
+      }
+    ]
+  },
+  "Masjid & Tempat Ibadah": {
+    "seen": [
+      "الاسلامية",
+      "ربنا"
+    ],
+    "kept": [
+      {
+        "kata_arab": "الاسلامية",
+        "latin": "al-islaamiyyah",
+        "arti": "islami (fem.)",
+        "contoh_kalimat": "المسلمين بالأعياد الاسلامية مرتين بالسنه،",
+        "topic_name": "Masjid & Tempat Ibadah"
+      },
+      {
+        "kata_arab": "ربنا",
+        "latin": "rabbna",
+        "arti": "tuhan kami",
+        "contoh_kalimat": "إني مع ربنا ومع حالي،",
+        "topic_name": "Masjid & Tempat Ibadah"
+      }
+    ]
+  },
+  "Perpustakaan": {
+    "seen": [
+      "تدور",
+      "بالمجلة"
+    ],
+    "kept": [
+      {
+        "kata_arab": "تدور",
+        "latin": "tduwwir",
+        "arti": "kamu mencari",
+        "contoh_kalimat": "بس بتحب تدور على مطاعم",
+        "topic_name": "Perpustakaan"
+      },
+      {
+        "kata_arab": "بالمجلة",
+        "latin": "bil-majallah",
+        "arti": "di majalah",
+        "contoh_kalimat": "كتبتها تنزل بالمجلة بس شكله",
+        "topic_name": "Perpustakaan"
+      }
+    ]
+  },
+  "Hotel & Penginapan": {
+    "seen": [
+      "خزانة",
+      "مريحة",
+      "مريحين",
+      "وكنبايتين",
+      "وكنكون",
+      "ومريح",
+      "ومريحة",
+      "تلفزيون"
+    ],
+    "kept": [
+      {
+        "kata_arab": "خزانة",
+        "latin": "khazaanah",
+        "arti": "lemari",
+        "contoh_kalimat": "غرفتها، في خزانة أواعي كبيرة،",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "مريحة",
+        "latin": "mriiha",
+        "arti": "nyaman",
+        "contoh_kalimat": "للمطعم أجواء مريحة. ولما رحنا",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "مريحين",
+        "latin": "mriihiin",
+        "arti": "nyaman (jamak)",
+        "contoh_kalimat": "وكرسي وكنبايتين مريحين. والمكان لزيز",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "وكنبايتين",
+        "latin": "wa-kanabaayatayn",
+        "arti": "dan dua sofa",
+        "contoh_kalimat": "ومكتب، وكرسي وكنبايتين مريحين. والمكان",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "وكنكون",
+        "latin": "wa-kankuun",
+        "arti": "dan ber-ac",
+        "contoh_kalimat": "والمكان مسكر وكنكون، ومعظم الأوقات",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "ومريح",
+        "latin": "wa-mriih",
+        "arti": "dan nyaman",
+        "contoh_kalimat": "تخت حلو ومريح عالزاوية. وجمبو",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "ومريحة",
+        "latin": "wa-mriiha",
+        "arti": "dan nyaman (fem.)",
+        "contoh_kalimat": "تجربة ممتعة ومريحة كتير كتيير.",
+        "topic_name": "Hotel & Penginapan"
+      },
+      {
+        "kata_arab": "تلفزيون",
+        "latin": "tilifizyoon",
+        "arti": "televisi",
+        "contoh_kalimat": "تجيبوا طاولة تلفزيون جديدة وأنا",
+        "topic_name": "Hotel & Penginapan"
+      }
+    ]
+  },
+  "Kantor Pos & Kurir": {
+    "seen": [
+      "طابع",
+      "ونقلها",
+      "الظروف",
+      "بالبريد",
+      "بالبوكس",
+      "بتبعتي",
+      "كرتونة",
+      "يوصل",
+      "يبعثوا"
+    ],
+    "kept": [
+      {
+        "kata_arab": "طابع",
+        "latin": "taabi'",
+        "arti": "ciri khas/perangko",
+        "contoh_kalimat": "المكان بيعطيك طابع أردني حقيقي",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "ونقلها",
+        "latin": "wa-naqluha",
+        "arti": "dan mengantarkannya",
+        "contoh_kalimat": "تحضير الطلبية ونقلها عالسيارة. ولهذا",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "الظروف",
+        "latin": "azh-zhuruuf",
+        "arti": "amplop-amplop",
+        "contoh_kalimat": "انتي بعتي الظروف اللي كانوا",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "بالبريد",
+        "latin": "bil-bariid",
+        "arti": "lewat pos",
+        "contoh_kalimat": "تبعتيلي ياه بالبريد آه حبيبتي",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "بالبوكس",
+        "latin": "bil-boks",
+        "arti": "di dalam kotak",
+        "contoh_kalimat": "المقال وحطيته بالبوكس الأخضر بالجرار",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "بتبعتي",
+        "latin": "bitba'ti",
+        "arti": "kamu (pr) mengirim",
+        "contoh_kalimat": "ما تنسي بتبعتي المغلف للجريدة",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "كرتونة",
+        "latin": "kartoonah",
+        "arti": "kotak karton",
+        "contoh_kalimat": "شو هاي كرتونة بوظ دفعنا",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "يوصل",
+        "latin": "yousal",
+        "arti": "sampai",
+        "contoh_kalimat": "لتوصل الرسالة",
+        "topic_name": "Kantor Pos & Kurir"
+      },
+      {
+        "kata_arab": "يبعثوا",
+        "latin": "yeb'aso",
+        "arti": "mereka mengirim",
+        "contoh_kalimat": "يبعثوا رسائل",
+        "topic_name": "Kantor Pos & Kurir"
+      }
+    ]
+  },
+  "Keluhan & Komplain": {
+    "seen": [
+      "منرفزة",
+      "اخرتوني",
+      "انكسرت",
+      "اوف",
+      "خربتلي",
+      "مضايقك",
+      "يخرب",
+      "بنزعج",
+      "بتضايق",
+      "زعلان",
+      "المشكله"
+    ],
+    "kept": [
+      {
+        "kata_arab": "منرفزة",
+        "latin": "minarfazeh",
+        "arti": "gugup (pr)",
+        "contoh_kalimat": "لإلي وكنت منرفزة شوي. وكمان",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "اخرتوني",
+        "latin": "akhkhartuuni",
+        "arti": "kalian membuatku terlambat",
+        "contoh_kalimat": "صحي انتو اخرتوني انا بدي",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "انكسرت",
+        "latin": "inkasarat",
+        "arti": "pecah/rusak",
+        "contoh_kalimat": "هيك فجأة انكسرت منيح ان",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "اوف",
+        "latin": "uff",
+        "arti": "aduh (kesal)",
+        "contoh_kalimat": "انها بتشتغل اوف لا لا",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "خربتلي",
+        "latin": "kharrabtili",
+        "arti": "merusakkan milikku",
+        "contoh_kalimat": "ابو انصاف خربتلي الريل كان",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "مضايقك",
+        "latin": "mudaayiqak",
+        "arti": "yang menyusahkanmu",
+        "contoh_kalimat": "الإشي اللي مضايقك وتدافعي عن",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "يخرب",
+        "latin": "yikharrib",
+        "arti": "merusak",
+        "contoh_kalimat": "الكتكوت ببدأ يخرب البيت فلفل",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "بنزعج",
+        "latin": "bnez'aj",
+        "arti": "saya kesal",
+        "contoh_kalimat": "كثير بنزعج",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "بتضايق",
+        "latin": "bitdaya2",
+        "arti": "saya terganggu",
+        "contoh_kalimat": "كثير بتضايق",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "زعلان",
+        "latin": "za'lan",
+        "arti": "marah (lk)",
+        "contoh_kalimat": "هو زعلان",
+        "topic_name": "Keluhan & Komplain"
+      },
+      {
+        "kata_arab": "المشكله",
+        "latin": "il-mushkile",
+        "arti": "masalahnya",
+        "contoh_kalimat": "هي المشكله",
+        "topic_name": "Keluhan & Komplain"
+      }
+    ]
+  },
+  "Reservasi & Pemesanan": {
+    "seen": [
+      "يلغوا"
+    ],
+    "kept": [
+      {
+        "kata_arab": "يلغوا",
+        "latin": "yilghu",
+        "arti": "mereka membatalkan",
+        "contoh_kalimat": "أكيد رح يلغوا الهايك. بس",
+        "topic_name": "Reservasi & Pemesanan"
+      }
+    ]
+  },
+  "Kantor Polisi & Pelaporan": {
+    "seen": [
+      "الشرطة"
+    ],
+    "kept": [
+      {
+        "kata_arab": "الشرطة",
+        "latin": "ash-shurtah",
+        "arti": "polisi",
+        "contoh_kalimat": "حكيت له الشرطة عن عطا؟",
+        "topic_name": "Kantor Polisi & Pelaporan"
+      }
+    ]
+  },
+  "Layanan Pelanggan": {
+    "seen": [
+      "حل",
+      "حلها",
+      "ناطرني",
+      "تلفونات",
+      "ينطروا",
+      "الجواب",
+      "عالتليفون",
+      "يتصل",
+      "ناطرة"
+    ],
+    "kept": [
+      {
+        "kata_arab": "حل",
+        "latin": "hall",
+        "arti": "solusi",
+        "contoh_kalimat": "لازم الاقي حل اها عرفت",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "حلها",
+        "latin": "halha",
+        "arti": "solusinya",
+        "contoh_kalimat": "ستر أي حلها بصراحة يعني",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "ناطرني",
+        "latin": "natirni",
+        "arti": "menungguku",
+        "contoh_kalimat": "شو راح يكون ناطرني",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "تلفونات",
+        "latin": "talefonet",
+        "arti": "telepon-telepon",
+        "contoh_kalimat": "قبل ما يصير تلفونات",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "ينطروا",
+        "latin": "yentoro",
+        "arti": "mereka menunggu",
+        "contoh_kalimat": "ينطروا ايام واشهر",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "الجواب",
+        "latin": "ij-jaweb",
+        "arti": "jawaban",
+        "contoh_kalimat": "يوصل الجواب",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "عالتليفون",
+        "latin": "'at-talefon",
+        "arti": "di telepon",
+        "contoh_kalimat": "صارت الناس عالتليفون",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "يتصل",
+        "latin": "yettesel",
+        "arti": "dia menelepon",
+        "contoh_kalimat": "بده يتصل في",
+        "topic_name": "Layanan Pelanggan"
+      },
+      {
+        "kata_arab": "ناطرة",
+        "latin": "natra",
+        "arti": "menunggu (f)",
+        "contoh_kalimat": "قاعدة وناطرة",
+        "topic_name": "Layanan Pelanggan"
+      }
+    ]
+  }
+}

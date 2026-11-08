@@ -5,7 +5,9 @@
 //
 // Fitur:
 //  * Seret kata ke posisi tertentu (di baris Jawaban maupun di Bank kata).
-//  * Sisipkan kata DI ANTARA dua kata lain — posisi tujuan ditampilkan sebagai garis penanda sebelum dilepas.
+//  * Sisipkan kata DI ANTARA dua kata lain — gaya Duolingo: kata-kata di Jawaban bergeser membuka CELAH kosong
+//    selebar kata yang diseret (bukan garis penanda). Bank kata menjaga posisi tiap kata: kata yang sedang
+//    dipakai / diseret meninggalkan kotak abu-abu kosong di tempat asalnya, dan kembali ke sana saat dilepas.
 //  * Pindahkan BEBERAPA kata sekaligus: pilih beberapa kata lalu seret salah satunya.
 //  * Pilih banyak kata: tombol "Pilih banyak" (muncul checkbox di tiap kata), atau Ctrl/Cmd+klik (toggle)
 //    dan Shift+klik (rentang) di komputer.
@@ -26,6 +28,7 @@
 //   lx        : (id, en) => string  — helper dua bahasa
 
 import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import { createPortal } from "react-dom";
 
 const GREEN = "#7BAE9B";
 const GREEN_DARK = "#5a8a79";
@@ -210,6 +213,7 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
       if (!best || d < best.d) best = { group, d, rect: r };
     }
     if (!best || best.d > 90) return null;
+    if (best.group === "bank") return { group: "bank", index: 0, marker: null }; // bank: tiap kata punya slot tetap
 
     const list = stateRef.current[best.group].filter((i) => !idSet.has(i));
     if (list.length === 0) return { group: best.group, index: 0, marker: null };
@@ -254,12 +258,16 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
         const ids = s.has(id)
           ? [...cur.answer.filter((i) => s.has(i)), ...cur.bank.filter((i) => s.has(i))]
           : [id];
-        dragRef.current = { ids };
+        // ukuran kotak penampung = total lebar kata yang diseret (+ jarak antar kata), tinggi kata pertama
+        const rects = ids.map((i) => tileEls.current[i] && tileEls.current[i].getBoundingClientRect()).filter(Boolean);
+        const phW = rects.reduce((t, r) => t + r.width, 0) + 10 * Math.max(0, rects.length - 1);
+        const phH = rects.length ? Math.max(...rects.map((r) => r.height)) : 42;
+        dragRef.current = { ids, phW, phH };
       }
-      const { ids } = dragRef.current;
+      const { ids, phW, phH } = dragRef.current;
       const over = computeOver(ev.clientX, ev.clientY, ids);
       dragRef.current.over = over;
-      setDrag({ ids, x: ev.clientX, y: ev.clientY, over });
+      setDrag({ ids, x: ev.clientX, y: ev.clientY, over, phW, phH });
     };
 
     const finish = (ev, cancelled) => {
@@ -271,7 +279,8 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
         dragRef.current = null;
         setDrag(null);
         if (!cancelled && info && info.over) {
-          moveIds(info.ids, info.over.group, info.over.index);
+          if (info.over.group === "bank") moveToBankSorted(info.ids);
+          else moveIds(info.ids, info.over.group, info.over.index);
           clearSel();
         }
         return;
@@ -374,15 +383,58 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
             transition: "background .12s ease, border-color .12s ease",
           }}
         >
-          {ids.length === 0 && (
+          {group === "answer" && ids.length === 0 && !over && (
             <div style={{ width: "100%", textAlign: "center", color: "#a3b0aa", fontSize: 13, alignSelf: "center", direction: "ltr" }}>{emptyHint}</div>
           )}
-          {ids.map((id) => (
+          {renderItems(group, ids, over)}
+        </div>
+      </div>
+    );
+  };
+
+  // Daftar kata + KOTAK penampung di posisi sisip (menggantikan garis penanda). Kata yang sedang diseret
+  // disembunyikan dari posisi asalnya supaya kata-kata lain bergeser dan memberi tempat.
+  const renderItems = (group, ids, over) => {
+    // Bank: urutan tetap (slot per kata). Kata yang tidak ada di bank (dipakai di jawaban / sedang diseret)
+    // digantikan kotak abu-abu kosong seukuran kata itu.
+    if (group === "bank") {
+      const inBank = new Set(ids);
+      return Array.from({ length: n }, (_, id) => (inBank.has(id) && !draggingIds.has(id) ? tileEl(id, "bank", false) : ghostEl(id)));
+    }
+    // Jawaban: celah kosong selebar kata yang diseret (kata-kata lain bergeser).
+    const ph = over ? (
+      <div key="__ph" aria-hidden="true" style={{ width: drag.phW, height: drag.phH, flexShrink: 0, pointerEvents: "none", transition: "width .12s ease" }} />
+    ) : null;
+    const items = [];
+    let k = 0; // indeks di antara kata yang TIDAK sedang diseret
+    ids.forEach((id) => {
+      const isDragged = draggingIds.has(id);
+      if (!isDragged) {
+        if (ph && k === over.index) items.push(ph);
+        k++;
+      }
+      items.push(tileEl(id, group, isDragged));
+    });
+    if (ph && over.index >= k) items.push(ph);
+    return items;
+  };
+
+  const ghostEl = (id) => (
+    <div
+      key={`g${id}`}
+      aria-hidden="true"
+      style={{ ...tileStyle(id, "bank"), background: "#e9eeec", border: "1.5px solid transparent", boxShadow: "none", color: "transparent", opacity: 1, cursor: "default", pointerEvents: "none" }}
+    >
+      <span>{words[id]}</span>
+    </div>
+  );
+
+  const tileEl = (id, group, hidden) => {
+    return (
             <div
               key={id}
               ref={(el) => { if (el) tileEls.current[id] = el; else delete tileEls.current[id]; }}
               role="button"
-              className={`ls-tile${disabled ? " ls-locked" : ""}${sel.has(id) ? " ls-picked" : ""}`}
               tabIndex={disabled ? -1 : 0}
               onPointerDown={(e) => onTilePointerDown(e, id)}
               onKeyDown={(e) => {
@@ -393,20 +445,11 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
                   if (group === "bank") moveIds([id], "answer", stateRef.current.answer.length); else moveToBankSorted([id]);
                 }
               }}
-              style={tileStyle(id, group)}
+              style={hidden ? { ...tileStyle(id, group), display: "none" } : tileStyle(id, group)}
             >
               {showChecks && !disabled && checkbox(id)}
               <span>{words[id]}</span>
             </div>
-          ))}
-          {over && over.marker && (
-            <div
-              aria-hidden="true"
-              style={{ position: "absolute", left: over.marker.left - 2, top: over.marker.top, height: over.marker.height, width: 4, borderRadius: 3, background: GREEN, boxShadow: "0 0 0 3px rgba(123,174,155,0.25)", pointerEvents: "none" }}
-            />
-          )}
-        </div>
-      </div>
     );
   };
 
@@ -444,13 +487,14 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
       {renderGroup("answer", L("Jawabanmu", "Your answer"), L("Seret kata ke sini, atau ketuk kata di bawah", "Drag words here, or tap the words below"))}
       {renderGroup("bank", L("Kumpulan kata", "Word bank"), L("Semua kata sudah dipakai", "All words are used"))}
 
-      {/* bayangan kata saat diseret */}
-      {drag && (
+      {/* bayangan kata saat diseret. Dirender lewat portal ke <body>: kalau induknya memakai transform / zoom /
+          animasi (position: fixed jadi relatif terhadap induk itu), bayangan akan meleset jauh dari kursor. */}
+      {drag && createPortal(
         <div
           aria-hidden="true"
           style={{ position: "fixed", left: drag.x, top: drag.y, transform: "translate(-50%, -60%) rotate(-2deg)", pointerEvents: "none", zIndex: 1000, direction: rtl ? "rtl" : "ltr" }}
         >
-          <div className="ls-ghost" style={{ position: "relative" }}>
+          <div style={{ position: "relative" }}>
             {drag.ids.slice(0, 3).map((id, i) => (
               <div
                 key={id}
@@ -469,7 +513,8 @@ export default function WordOrderBoard({ words, rtl = false, disabled = false, o
               </span>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

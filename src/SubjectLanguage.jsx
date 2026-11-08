@@ -72,14 +72,101 @@ const shuffle = (arr) => {
   }
   return a;
 };
-const normalize = (str) =>
-  String(str || "")
-    .toLowerCase()
-    .replace(/[ً-ْ]/g, "") // harakat Arab
-    .replace(/[.,!?؟،;:"'()]/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
 const isArabic = (str) => /[؀-ۿ]/.test(str || "");
+
+// ---------- penilaian terjemahan yang fleksibel (tanpa AI) ----------
+// Soal "translate" tidak lagi harus sama persis: jawaban dibandingkan per KATA terhadap semua
+// jawaban yang diterima (ex.answers), dengan toleransi: huruf besar/kecil, tanda baca, harakat
+// & variasi huruf Arab (alif/ya/ta marbutah), singkatan dan sinonim umum, typo kecil, dan urutan
+// kata yang agak berbeda. Hasilnya SKOR 0..1, bukan sekadar benar/salah:
+//   >= GRADE_FULL  -> 1 (benar penuh)
+//   GRADE_PARTIAL..GRADE_FULL -> nilai sebagian (hampir tepat, TIDAK 100%)
+//   di bawah itu   -> 0
+// Mau lebih longgar untuk soal tertentu? Tambahkan saja variasi jawaban di ex.answers.
+const GRADE_FULL = 0.88;
+const GRADE_PARTIAL = 0.45;
+const SYN = {
+  tau: "tahu", aku: "saya", gue: "saya", gua: "saya", engkau: "kamu", kau: "kamu", anda: "kamu", kalian: "kalian",
+  nggak: "tidak", gak: "tidak", enggak: "tidak", tak: "tidak", tdk: "tidak", ga: "tidak",
+  udah: "sudah", telah: "sudah", sdh: "sudah", ingin: "mau", hendak: "mau", pengen: "mau",
+  gimana: "bagaimana", bagaimanakah: "bagaimana", kenapa: "mengapa", sebab: "karena", krn: "karena",
+  dapat: "bisa", mampu: "bisa", hanya: "cuma", sekadar: "cuma", sekedar: "cuma", cuman: "cuma",
+  dgn: "dengan", utk: "untuk", yg: "yang", dlm: "dalam", sbg: "sebagai", dr: "dari", tp: "tapi", tetapi: "tapi",
+  bohong: "dusta", berbohong: "dusta", berdusta: "dusta", pembohong: "pendusta", secara: "menurut", perawi: "orang", periwayat: "orang", rawi: "orang",
+  hadits: "hadis", hadist: "hadis", hadith: "hadis",
+  jg: "juga", bgt: "banget", sangat: "banget", amat: "banget", sekali: "banget",
+  yeah: "yes", yep: "yes", nope: "no", ok: "okay", gonna: "going", wanna: "want", gotta: "must",
+  kids: "children", kid: "child", begin: "start", commence: "start", buy: "purchase",
+};
+// Kata fungsi (penghubung/depan) bobotnya ringan: tidak muncul di jawaban tidak terlalu merusak makna.
+const STOP = new Set(["yang", "oleh", "untuk", "dan", "di", "ke", "dari", "dengan", "pada", "dalam", "ini", "akan", "para", "suatu", "sebuah", "of", "to", "in", "on", "at", "for", "and", "is", "are", "was", "were", "be", "that", "which"]);
+const wOf = (w) => (STOP.has(w) ? 0.35 : 1);
+const DROP = new Set(["adalah", "ialah", "merupakan", "a", "an", "the", "itu", "tersebut"]);
+const normText = (str) => {
+  let t = String(str || "").toLowerCase();
+  t = t
+    .replace(/[\u064B-\u065F\u0670\u0640]/g, "") // harakat & tatwil
+    .replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/ؤ/g, "و").replace(/ئ/g, "ي")
+    .replace(/won't/g, "will not").replace(/can't/g, "can not").replace(/n't/g, " not")
+    .replace(/'m\b/g, " am").replace(/'re\b/g, " are").replace(/'s\b/g, " is").replace(/'ll\b/g, " will").replace(/'ve\b/g, " have").replace(/'d\b/g, " would")
+    .replace(/[^\p{L}\p{N}\s]/gu, " ");
+  return t.split(/\s+/).filter(Boolean).map((w) => SYN[w] || w).filter((w) => !DROP.has(w));
+};
+const lev = (x, y) => {
+  const m = x.length, n = y.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (x[i - 1] === y[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[n];
+};
+// stem Indonesia sederhana (awalan me-/ber-/di-..., akhiran -kan/-an/-i/-nya) supaya "beli" ≈ "membeli"
+const stem = (w) => {
+  if (w.length < 6 || /[^a-z]/.test(w)) return w;
+  let r = w.replace(/^(meng|meny|mem|men|ber|ter|per|pem|pen|me|di|ke|se)/, "");
+  const noSuffix = r.replace(/(kan|nya|lah|kah|an|i)$/, "");
+  if (noSuffix.length >= 4) r = noSuffix; // akhiran dibuang hanya kalau sisa kata masih panjang
+  return r.length >= 3 ? r : w;
+};
+const tokSim = (x, y) => {
+  if (x === y) return 1;
+  if (stem(x) === stem(y)) return 0.95;
+  const L = Math.max(x.length, y.length);
+  if (L < 4) return 0; // kata pendek harus sama persis
+  const r = 1 - lev(x, y) / L;
+  return r >= 0.78 ? 0.9 : 0; // typo kecil
+};
+const lcsLen = (A, B) => {
+  const dp = Array.from({ length: A.length + 1 }, () => new Array(B.length + 1).fill(0));
+  for (let i = 1; i <= A.length; i++) for (let j = 1; j <= B.length; j++) dp[i][j] = A[i - 1] === B[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+  return dp[A.length][B.length];
+};
+const simScore = (user, ref) => {
+  if (!user.length || !ref.length) return 0;
+  const used = new Array(user.length).fill(false);
+  let hit = 0;
+  ref.forEach((rw) => {
+    let best = 0, bi = -1;
+    user.forEach((uw, i) => { if (used[i]) return; const sc = tokSim(uw, rw); if (sc > best) { best = sc; bi = i; } });
+    if (bi >= 0) { used[bi] = true; hit += best * wOf(rw); }
+  });
+  const userW = user.reduce((t, w) => t + wOf(w), 0), refW = ref.reduce((t, w) => t + wOf(w), 0);
+  const p = Math.min(1, hit / userW), r = Math.min(1, hit / refW);
+  const f1 = p + r ? (2 * p * r) / (p + r) : 0;
+  const order = Math.min(1, lcsLen(user, ref) / Math.max(user.length, ref.length));
+  return 0.9 * f1 + 0.1 * order;
+};
+// -> { score: 0..1, pct: 0..100 (kemiripan) }
+export function gradeAnswer(text, answers) {
+  const user = normText(text);
+  let best = 0;
+  (answers || []).forEach((a) => { best = Math.max(best, simScore(user, normText(a))); });
+  const score = best >= GRADE_FULL ? 1 : best >= GRADE_PARTIAL ? Math.min(0.8, Math.round(best * 100) / 100) : 0;
+  return { score, pct: Math.round(best * 100) };
+}
 
 // ---------- helper struktur course ----------
 function indexCourse(course) {
@@ -102,6 +189,13 @@ const courseIds = (c) => c.units.flatMap(unitIds);
 const countDone = (ids, done) => ids.reduce((n, id) => n + (done[id] ? 1 : 0), 0);
 const pct = (ids, done) => (ids.length === 0 ? 100 : Math.round((countDone(ids, done) / ids.length) * 100));
 const allDone = (ids, done) => ids.every((id) => done[id]);
+// Soal yang sudah dikerjakan tapi belum 100% (nilai terakhir < 1).
+const notPerfectIds = (ids, st) =>
+  ids.filter((id) => {
+    const a = st.answers && st.answers[id];
+    if (!a || !st.done[id]) return false;
+    return typeof a.lastScore === "number" ? a.lastScore < 1 : a.last === false;
+  });
 
 // Status: completed | current | available | locked, tergantung mode.
 // sequential = urut ketat, free = bebas, hybrid (default) = yang sedang
@@ -388,9 +482,11 @@ function ExerciseView({ ex: rawEx, lang, s, C, tx, langName, onAnswered, onNext,
   const [text, setText] = useState("");
   const [checked, setChecked] = useState(false);
   const [ok, setOk] = useState(false);
+  const [score, setScore] = useState(0); // 0..1 — nilai soal ini (bisa sebagian)
+  const [simPct, setSimPct] = useState(null);
   const [pick, setPick] = useState(null); // match: { side: "L"|"R", i } — boleh mulai dari Arab ATAU dari arti
   const [matched, setMatched] = useState({});
-  const [mistakes, setMistakes] = useState(0);
+  const [, setMistakes] = useState(0);
   const [wrongIdx, setWrongIdx] = useState([]); // indeks pasangan yang pernah salah dipasangkan
   const [flash, setFlash] = useState(null); // { a: {side,i}, b: {side,i} }
   const [showExit, setShowExit] = useState(false);
@@ -406,15 +502,17 @@ function ExerciseView({ ex: rawEx, lang, s, C, tx, langName, onAnswered, onNext,
   );
 
   const finish = (result) => {
-    setOk(result);
+    const sc = typeof result === "number" ? result : result ? 1 : 0;
+    setOk(sc >= 1);
+    setScore(sc);
     setChecked(true);
-    sfx.play(result ? "correct" : "wrong");
-    onAnswered(result);
+    sfx.play(sc >= 1 ? "correct" : "wrong");
+    onAnswered(sc);
   };
 
   const check = () => {
     if (checked) return;
-    if (ex.type === "translate") finish(ex.answers.map(normalize).includes(normalize(text)));
+    if (ex.type === "translate") { const g = gradeAnswer(text, ex.answers); setSimPct(g.pct); finish(g.score); }
     else finish(options[sel].orig === ex.answer);
   };
 
@@ -427,7 +525,7 @@ function ExerciseView({ ex: rawEx, lang, s, C, tx, langName, onAnswered, onNext,
       setMatched(next);
       setPick(null);
       if (Object.keys(next).length !== ex.pairs.length) sfx.play("correct");
-      if (Object.keys(next).length === ex.pairs.length) finish(mistakes === 0);
+      if (Object.keys(next).length === ex.pairs.length) finish(Math.max(0, 1 - wrongIdx.length / ex.pairs.length));
     } else {
       setMistakes((m) => m + 1);
       sfx.play("wrong");
@@ -562,15 +660,29 @@ function ExerciseView({ ex: rawEx, lang, s, C, tx, langName, onAnswered, onNext,
             <div className={`ls-feedback ${ok ? "ls-feedback-ok" : "ls-feedback-bad"}`} role="status" aria-live="polite" style={{ marginBottom: 12 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 700, fontSize: 16, color: ok ? "#3f8f5a" : "#d0494f" }}>
                 <span className="ls-feedback-icon" aria-hidden="true">{ok ? "✓" : "✕"}</span>
-                {ok ? tx("Betul!", "Correct!") : ex.type === "match" ? tx("Ada yang masih keliru", "Some matches were wrong") : tx("Kurang tepat", "Not quite")}
+                {ok ? tx("Betul!", "Correct!")
+                  : ex.type === "match" ? `${tx("Ada yang masih keliru", "Some matches were wrong")} · ${Math.round(score * 100)}%`
+                  : score > 0 ? `${tx("Hampir tepat", "Almost there")} · ${Math.round(score * 100)}%`
+                  : tx("Kurang tepat", "Not quite")}
               </div>
 
               {!ok && ex.type !== "match" && answerText ? (
                 <div style={{ marginTop: 6, fontSize: 14, color: "#444" }}>
                   {tx("Jawaban yang tepat: ", "Correct answer: ")}
                   <b dir={isArabic(answerText) ? "rtl" : "ltr"}>{answerText}</b>
+                  {ex.type === "translate" && score > 0 && (
+                    <div style={{ marginTop: 4, fontSize: 12.5, color: "#7a8782" }}>
+                      {tx("Intinya sudah mirip, tapi belum 100% — soal ini masuk Review supaya bisa diulang.", "Your meaning is close, but not 100% — this goes to Review so you can retry it.")}
+                    </div>
+                  )}
                 </div>
               ) : null}
+              {ok && ex.type === "translate" && answerText && normText(text).join(" ") !== normText(answerText).join(" ") && (
+                <div style={{ marginTop: 6, fontSize: 13, color: "#55625d" }}>
+                  {tx("Jawaban contoh: ", "Example answer: ")}
+                  <b dir={isArabic(answerText) ? "rtl" : "ltr"}>{answerText}</b>
+                </div>
+              )}
 
               {/* Match: tampilkan jawaban tepat HANYA untuk pasangan yang salah */}
               {!ok && ex.type === "match" && wrongPairs.length > 0 && (
@@ -775,7 +887,7 @@ export default function SubjectLanguage({
     const list = lesson.exercises;
     let idx = exerciseId ? list.findIndex((e) => e.id === exerciseId) : list.findIndex((e) => !state.done[e.id]);
     if (idx < 0) idx = 0;
-    setRun({ mode: "lesson", ctx: { unitId, sectionId, lessonId }, list, idx, correct: 0, answered: 0, xp: 0 });
+    setRun({ mode: "lesson", ctx: { unitId, sectionId, lessonId }, list, idx, correct: 0, answered: 0, xp: 0, missedIds: [] });
     setView("exercise");
   };
 
@@ -790,10 +902,28 @@ export default function SubjectLanguage({
     startLesson(m.unitId, m.sectionId, m.lessonId, exId);
   };
 
+  // Ulangi soal yang belum 100% (bebas pilih per lesson / section / unit).
+  const retryIds = (ids, label) => {
+    const list = ids.map((id) => index[id] && index[id].ex).filter(Boolean);
+    if (list.length === 0) return;
+    nav(tx("Menyiapkan soal ulang...", "Preparing your retry..."), label || "", () => {
+      setRun({ mode: "review", ctx: null, list, idx: 0, correct: 0, answered: 0, xp: 0, missedIds: [] });
+      setView("exercise");
+    });
+  };
+  const retryBtn = (ids, label, small) => (
+    <button
+      onClick={(e) => { e.stopPropagation(); retryIds(ids, label); }}
+      style={{ border: "1px solid #f0b4ae", background: "#fdeceb", color: "#b3382c", borderRadius: 999, padding: small ? "5px 12px" : "8px 16px", fontSize: small ? 12 : 13, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+    >
+      {tx(`Ulangi yang belum 100% (${ids.length})`, `Retry non-100% (${ids.length})`)}
+    </button>
+  );
+
   const startReview = () => {
     const list = shuffle(dueItems).slice(0, 20).map(([id]) => index[id].ex);
     if (list.length === 0) return;
-    setRun({ mode: "review", ctx: null, list, idx: 0, correct: 0, answered: 0, xp: 0 });
+    setRun({ mode: "review", ctx: null, list, idx: 0, correct: 0, answered: 0, xp: 0, missedIds: [] });
     setView("exercise");
   };
 
@@ -815,13 +945,15 @@ export default function SubjectLanguage({
   }, [view, run && run.idx, run && run.mode]);
 
   // ---------- jawaban ----------
-  const handleAnswered = (ok) => {
+  const handleAnswered = (res) => {
+    const score = typeof res === "number" ? res : res ? 1 : 0; // 0..1
+    const ok = score >= 1; // "benar penuh" — di bawah 100% tetap masuk Review
     const ex = run.list[run.idx];
     commit((st) => {
       const prev = st.answers[ex.id] || { attempts: 0, correct: 0, last: null };
       const bump = (bucket, key) => {
         const cur = (bucket[key] || { c: 0, t: 0 });
-        return { ...bucket, [key]: { c: cur.c + (ok ? 1 : 0), t: cur.t + 1 } };
+        return { ...bucket, [key]: { c: Math.round((cur.c + score) * 100) / 100, t: cur.t + 1 } };
       };
       // streak harian
       let streak = st.streak;
@@ -840,14 +972,14 @@ export default function SubjectLanguage({
       return {
         ...st,
         done: run.mode === "lesson" ? { ...st.done, [ex.id]: true } : st.done,
-        answers: { ...st.answers, [ex.id]: { attempts: prev.attempts + 1, correct: prev.correct + (ok ? 1 : 0), last: ok } },
+        answers: { ...st.answers, [ex.id]: { attempts: prev.attempts + 1, correct: Math.round((prev.correct + score) * 100) / 100, last: ok, lastScore: score } },
         skills: { language: bump(st.skills.language, ex.lang), subject: bump(st.skills.subject, ex.subj) },
         review,
-        xp: st.xp + (ok ? XP_CORRECT : 0),
+        xp: st.xp + Math.round(XP_CORRECT * score),
         streak,
       };
     });
-    setRun((r) => ({ ...r, correct: r.correct + (ok ? 1 : 0), answered: r.answered + 1, xp: r.xp + (ok ? XP_CORRECT : 0) }));
+    setRun((r) => ({ ...r, correct: Math.round((r.correct + score) * 100) / 100, answered: r.answered + 1, xp: r.xp + Math.round(XP_CORRECT * score), missedIds: ok ? (r.missedIds || []) : [...(r.missedIds || []), ex.id] }));
   };
 
   const handleNext = () => {
@@ -1158,6 +1290,7 @@ export default function SubjectLanguage({
           const status = unitStatuses[ui];
           const ids = unitIds(u);
           const isOpen = (openUnit === null ? status === "current" : openUnit === u.id);
+          const npUnit = notPerfectIds(ids, state);
           const secStatuses = statusList(u.sections, (x) => allDone(sectionIds(x), state.done), state.mode);
           return (
             <div key={u.id} style={{ ...card, opacity: status === "locked" ? 0.6 : 1, padding: 0, overflow: "hidden" }}>
@@ -1179,13 +1312,16 @@ export default function SubjectLanguage({
                   <div style={{ fontWeight: "bold" }}>Unit {ui + 1}</div>
                   <div style={{ fontSize: 13, color: "#666" }}>{titleOf(u, uiLang)}</div>
                   {status === "current" && <div style={{ fontSize: 11, color: "#3B9DE8", fontWeight: "bold", marginTop: 2 }}>{tx("SEDANG DIPELAJARI", "IN PROGRESS")}</div>}
+                  {npUnit.length > 0 && <div style={{ fontSize: 11, color: "#b3382c", fontWeight: "bold", marginTop: 2 }}>{tx(`${npUnit.length} soal belum 100%`, `${npUnit.length} not at 100%`)}</div>}
                 </div>
                 <span style={{ fontSize: 12, color: "#888" }}>{pct(ids, state.done)}%</span>
               </div>
               {isOpen && (
                 <div style={{ borderTop: "1px solid #eee", background: "#fafafa", padding: "6px 18px 10px" }}>
+                  {npUnit.length > 0 && <div style={{ padding: "8px 0 4px" }}>{retryBtn(npUnit, `Unit ${ui + 1}`)}</div>}
                   {u.sections.map((sec, si) => {
                     const ss = status === "locked" ? "locked" : secStatuses[si];
+                    const npSec = notPerfectIds(sectionIds(sec), state);
                     return (
                       <div
                         key={sec.id}
@@ -1203,7 +1339,10 @@ export default function SubjectLanguage({
                         }}
                       >
                         <span style={{ width: 20, display: "inline-flex", justifyContent: "center", color: statusColor[ss] }}>{statusIcon[ss]}</span>
-                        <span style={{ flex: 1, fontSize: 14 }}>{titleOf(sec, uiLang)}</span>
+                        <span style={{ flex: 1, fontSize: 14 }}>
+                          {titleOf(sec, uiLang)}
+                          {npSec.length > 0 && <span style={{ display: "block", fontSize: 11, color: "#b3382c", fontWeight: "bold" }}>{tx(`${npSec.length} belum 100%`, `${npSec.length} not at 100%`)}</span>}
+                        </span>
                         <span style={{ fontSize: 12, color: "#888" }}>{pct(sectionIds(sec), state.done)}%</span>
                       </div>
                     );
@@ -1252,24 +1391,30 @@ export default function SubjectLanguage({
             const p = v && v.t ? Math.round((v.c / v.t) * 100) : null;
             return (
               <div key={k} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, fontSize: 13 }}>
-                <span style={{ width: 130 }}>{langName(k)}</span>
-                <Bar value={p || 0} color={C.GREEN} />
+                <span style={{ width: 130 }}>
+                  {langName(k)}
+                  {p !== null && p < 70 && <span style={{ display: "block", fontSize: 10.5, fontWeight: 700, color: "#c2504b" }}>{tx("PERLU DIULANG", "NEEDS REVISION")}</span>}
+                </span>
+                <Bar value={p || 0} color={p !== null && p < 70 ? "#E0746F" : C.GREEN} />
                 <span style={{ width: 38, textAlign: "right", color: "#666" }}>{p === null ? "—" : `${p}%`}</span>
               </div>
             );
           })}
           <div style={{ fontWeight: "bold", margin: "14px 0 10px" }}>{tx("Pemahaman Materi", "Subject Knowledge")}</div>
           {Object.keys(state.skills.subject).length === 0 && <div style={{ fontSize: 13, color: "#888" }}>—</div>}
-          {Object.entries(state.skills.subject).map(([k, v]) => {
-            const p = Math.round((v.c / v.t) * 100);
-            return (
+          {Object.entries(state.skills.subject)
+            .map(([k, v]) => [k, v, Math.round((v.c / v.t) * 100)])
+            .sort((x, y) => x[2] - y[2]) // yang paling banyak salah di atas
+            .map(([k, v, p]) => (
               <div key={k} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8, fontSize: 13 }}>
-                <span style={{ width: 130 }}>{subjLabel(k)}</span>
-                <Bar value={p} color="#E0B23D" />
+                <span style={{ width: 130 }}>
+                  {subjLabel(k)}
+                  {p < 70 && <span style={{ display: "block", fontSize: 10.5, fontWeight: 700, color: "#c2504b" }}>{tx("PERLU DIULANG", "NEEDS REVISION")}</span>}
+                </span>
+                <Bar value={p} color={p < 70 ? "#E0746F" : "#E0B23D"} />
                 <span style={{ width: 38, textAlign: "right", color: "#666" }}>{p}%</span>
               </div>
-            );
-          })}
+            ))}
           {diagnosis && <div style={{ marginTop: 12, fontSize: 13, color: "#555", background: "#f5f8f7", padding: "10px 12px", borderRadius: 10 }}>{diagnosis}</div>}
         </div>
       </div>
@@ -1291,11 +1436,23 @@ export default function SubjectLanguage({
             <b>{sp}%</b>
           </div>
         </div>
+        {(() => {
+          const npSec = notPerfectIds(sectionIds(section), state);
+          return npSec.length > 0 ? (
+            <div style={{ ...card, background: "#fff7f6", border: "1px solid #f3d2ce" }}>
+              <div style={{ fontSize: 13, color: "#7a2f27", marginBottom: 8 }}>
+                {tx(`${npSec.length} soal di section ini selesai tapi belum 100%. Ulangi untuk menaikkan nilainya.`, `${npSec.length} exercises in this section are done but not at 100%. Retry them to raise your score.`)}
+              </div>
+              {retryBtn(npSec, titleOf(section, uiLang))}
+            </div>
+          ) : null;
+        })()}
         {section.lessons.map((l, li) => {
           const kind = LESSON_KINDS[l.kind] || { id: l.kind, en: l.kind, icon: "•" };
           const ids = lessonIds(l);
           const d = countDone(ids, state.done);
           const finished = d === ids.length;
+          const npLesson = notPerfectIds(ids, state);
           return (
             <div
               key={l.id}
@@ -1306,6 +1463,7 @@ export default function SubjectLanguage({
               <div style={{ flex: 1 }}>
                 <div style={{ fontWeight: "bold" }}>{li + 1}. {kind[uiLang === "en" ? "en" : "id"]}</div>
                 <div style={{ fontSize: 12, color: "#888" }}>{d}/{ids.length} {tx("soal", "exercises")}</div>
+                {npLesson.length > 0 && <div style={{ marginTop: 6 }}>{retryBtn(npLesson, kind[uiLang === "en" ? "en" : "id"], true)}</div>}
               </div>
               <span style={{ color: finished ? C.GREEN_DARK : "#b5c2bc", display: "flex" }}><Icon name={finished ? "check" : "chevron"} size={20} stroke={finished ? 2.6 : 1.8} /></span>
             </div>
@@ -1342,7 +1500,8 @@ export default function SubjectLanguage({
   if (view === "result" && run) {
     const finishedCourse = allDone(allIds, state.done);
     const acc = run.answered ? Math.round((run.correct / run.answered) * 100) : 0;
-    const missed = run.answered - run.correct;
+    const missedIds = run.missedIds || [];
+    const missed = missedIds.length;
     const title = run.mode === "review" ? tx("Review selesai", "Review complete") : finishedCourse ? tx("Course selesai", "Course complete") : tx("Lesson selesai", "Lesson complete");
     const msg = acc >= 90 ? tx("Hasil yang luar biasa. Pertahankan!", "Excellent work. Keep it up!")
       : acc >= 70 ? tx("Bagus! Sedikit lagi sempurna.", "Nice! Almost perfect.")
@@ -1361,11 +1520,24 @@ export default function SubjectLanguage({
           <div className="ls-enter" style={{ fontSize: 22, fontWeight: 800, color: "#1a2421", marginTop: 8 }}>{title}</div>
           <div style={{ fontSize: 13.5, color: "#6a7772", lineHeight: 1.6, margin: "6px auto 20px", maxWidth: 290 }}>{msg}</div>
           <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>
-            {stat(tx("Benar", "Correct"), <><CountUp to={run.correct} />/{run.answered}</>)}
+            {stat(tx("Nilai", "Score"), <><CountUp to={Math.round(run.correct * 10) / 10} />/{run.answered}</>)}
             {stat("XP", <CountUp to={run.xp} prefix="+" />, "#fff4d6")}
             {stat(tx("Ke Review", "To review"), missed, missed ? "#fdeceb" : undefined)}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            {missed > 0 && (
+              <button
+                style={{ ...s.lessonMainBtn, ...(run.mode === "lesson" && !finishedCourse ? { background: "#fdeceb", color: "#b8433f", boxShadow: "none" } : s.lessonBtnActive) }}
+                onClick={() => {
+                  const list = shuffle(missedIds.map((id) => index[id] && index[id].ex).filter(Boolean));
+                  if (list.length === 0) return;
+                  setRun({ mode: "review", ctx: null, list, idx: 0, correct: 0, answered: 0, xp: 0, missedIds: [] });
+                  setView("exercise");
+                }}
+              >
+                {tx(`ULANGI YANG SALAH (${missed})`, `RETRY MISSED (${missed})`)}
+              </button>
+            )}
             {run.mode === "lesson" && !finishedCourse && (
               <button style={{ ...s.lessonMainBtn, ...s.lessonBtnActive }} onClick={() => nav(tx("Menyiapkan soal berikutnya...", "Getting the next question ready..."), "", continueLearning)}>
                 {tx("LANJUTKAN", "CONTINUE")}

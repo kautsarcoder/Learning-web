@@ -23,6 +23,17 @@
 //     -> alternatif sinonim susun-kata. Soal yang dibuang langsung DIGANTI (maks 3 putaran)
 //     dengan umpan balik alasan penolakan.
 //
+// VERSI 2 (struktur Intermediate baru):
+//   * Tiap Unit = 4 bulatan PELAJARAN (4 segmen soal per bulatan) + 1 bulatan REVIEW (1 sesi, soal BARU
+//     dari kata-kata yang sama; bukan salinan soal pelajaran). Dulu 12 bulatan/unit seperti Beginner.
+//   * Tipe soal meniru contoh Duolingo: susun kalimat, ketuk pasangan, lengkapi kalimat, dengar lalu susun,
+//     bacaan + pertanyaan, lengkapi dialog, arti kata, dan soal BERGAMBAR (karakter planet bervariasi,
+//     field content.scene -> komponen <PlanetScene /> di aplikasi).
+//   * Kata di luar CSV BOLEH ditambahkan AI bila soal memang butuh, tapi WAJIB kosakata ammiyah Yordania:
+//     dideklarasikan lewat "extra_words", diperiksa AI judge kedua, dan dicatat di extra-words-intermediate-B*.json.
+//   CATATAN: Bagian yang SUDAH terlanjur di-commit dengan struktur 12 bulatan harus di-reset dulu
+//   (hapus levels/exercises topik Bagian itu) sebelum memakai struktur 4+1 ini.
+//
 // PENGGUNAAN
 //   Preview (tidak menulis apa pun ke database; hanya klasifikasi + kurasi):
 //     node scripts-generate-vocab/generate-intermediate.mjs --bagian 11 --csv kosakata-ammiyah.csv
@@ -40,14 +51,16 @@
 import "dotenv/config";
 import fs from "fs";
 import { pathToFileURL } from "node:url";
+import * as V2 from "./generate-vocab-v2.mjs";
+import {
+  loadExistingSignatures,
+  filterDuplicateExercises,
+} from "../lib/exercise-validator.mjs";
 import {
   supabase,
   ensureSubject,
   ensureUnit,
   ensureTopic,
-  ensureLevels,
-  buildLevelPlan,
-  STATIC_CONTENT_SLOTS,
   callLadiz,
   cleanJson,
   loadFlatVocabCsv,
@@ -58,7 +71,6 @@ import {
   topicHasIncompleteSegments,
   segmentsForNodeType,
   TARGET_MIN_PER_SEGMENT,
-  NARRATIVE_NODE_TYPES,
   summarizeExercise,
   refineExerciseQuality,
 } from "./generate-vocab-v2.mjs";
@@ -152,7 +164,41 @@ export const INTERMEDIATE_CURRICULUM = {
   },
 };
 
-const TARGET_WORDS_PER_TOPIC = 120; // Intermediate boleh lebih kaya kosakata dari Beginner (100)
+// Struktur unit Intermediate: 4 bulatan pelajaran + 1 bulatan review (static, 1 sesi).
+const INTERMEDIATE_PLAN = [
+  { order_index: 1, node_type: "lesson" },
+  { order_index: 2, node_type: "lesson" },
+  { order_index: 3, node_type: "lesson" },
+  { order_index: 4, node_type: "lesson" },
+  { order_index: 5, node_type: "review" },
+];
+const INTERMEDIATE_SLOTS = INTERMEDIATE_PLAN.filter((p) => p.node_type === "lesson");
+
+async function ensureIntermediateLevels(topicId) {
+  const rows = [];
+  for (const step of INTERMEDIATE_PLAN) {
+    const { data: existing } = await supabase.from("levels").select("*").eq("topic_id", topicId).eq("level_number", step.order_index).maybeSingle();
+    if (existing) { rows.push(existing); continue; }
+    const { data, error } = await supabase.from("levels").insert({ topic_id: topicId, level_number: step.order_index, node_type: step.node_type }).select().single();
+    if (error) throw error;
+    rows.push(data);
+  }
+  // Peringatan bila topik ini masih punya level lama (struktur 12 bulatan).
+  const { data: all } = await supabase.from("levels").select("level_number").eq("topic_id", topicId);
+  const extra = (all || []).filter((l) => l.level_number > INTERMEDIATE_PLAN.length);
+  if (extra.length) console.warn(`  ⚠ Topik ini masih punya ${extra.length} level lama (nomor > 5, struktur 12 bulatan). Reset dulu supaya unit hanya 4+1 bulatan.`);
+  return rows;
+}
+
+const TARGET_WORDS_PER_TOPIC = 120;
+// Unit dengan kosakata di bawah ini DILEWATI: 4 pelajaran x 4 segmen + review butuh puluhan panggilan AI,
+// dan dengan 1-9 kata semua soalnya berputar di kata yang sama (banyak duplikat, kuota habis percuma).
+// Tambah kosakata ke CSV dulu, atau turunkan batas lewat --min-words N (jangan terlalu kecil).
+const DEFAULT_MIN_WORDS_PER_UNIT = 15;
+// KOSAKATA DARI AI: unit yang kata CSV-nya kurang dari ini DILENGKAPI AI sampai target (kata ammiyah Yordania,
+// diperiksa AI judge kedua, disimpan di ai-vocab-intermediate-B*.json supaya tidak dibuat ulang tiap run).
+// Kata ini jadi vocab_items biasa (bisa jadi fokus soal), bukan sekadar pelengkap kalimat.
+const DEFAULT_TARGET_WORDS_PER_UNIT = 40;
 
 // ============================================================
 // 1. KLASIFIKASI kata -> salah satu dari 10 topik Bagian ini (atau TIDAK_COCOK)
@@ -292,9 +338,73 @@ async function curate(classified, curationFile) {
 // ============================================================
 // 3. PROMPT SOAL INTERMEDIATE
 // ============================================================
+// ------------------------------------------------------------
+// SOAL BERGAMBAR: karakter planet (komponen <PlanetScene /> di aplikasi). AI hanya boleh memilih dari
+// daftar ini; nilai di luar daftar dibuang oleh sanitizeScenes().
+// ------------------------------------------------------------
+export const SCENE_MOODS = ["happy", "excited", "sad", "surprised", "sleepy", "angry", "sick", "thinking", "cool"];
+export const SCENE_ACCESSORIES = ["none", "hat", "cap", "glasses", "scarf", "headphones", "crown", "bandage"];
+export const SCENE_COLORS = ["#7BAE9B", "#6FA8DC", "#B58FD6", "#F2A65A", "#E58FA8", "#8FC98F", "#E8C25A"];
+export const SCENE_PROPS = ["🩹","🍕","🍍","🏋️","💪","☕","🛏️","🏨","🔑","🧳","📦","✉️","📚","📖","🚌","🚗","✈️","🏥","💊","🌡️","🍎","🍞","🥛","🍽️","🧺","👕","👟","🎒","📱","💻","🕌","🏠","🌧️","☀️","❄️","🌊","🐱","🐶","🐟","🌳","🌹","⏰","📅","💰","🧾","🎁","🎂","🚪","🪟","🧹","🍳","🥗","🍉","⚽","🎵","📷","🖊️","✂️","🔥","💡","🚰","🛒","🧴","🪥","🧼","🛁","📞","🗺️","🎫","🚕","⛅","🌙","⭐"];
+
+export function sanitizeScenes(list, report) {
+  return list.filter((ex) => {
+    const sc = ex.content?.scene;
+    if (sc === undefined || sc === null) return true;
+    const ok = sc && typeof sc === "object"
+      && SCENE_MOODS.includes(sc.mood)
+      && SCENE_PROPS.includes(sc.prop)
+      && (!sc.accessory || SCENE_ACCESSORIES.includes(sc.accessory))
+      && (!sc.color || SCENE_COLORS.includes(sc.color));
+    if (ok) return true;
+    // soal "arti gambar" tidak punya arti tanpa gambar -> dibuang; fill_blank tetap utuh tanpa gambar.
+    if (ex.type === "translate_choice") { report.dropped.push(`translate_choice: scene gambar tidak valid (pakai HANYA nilai dari daftar) — ${summarizeExercise(ex)}`); return false; }
+    delete ex.content.scene;
+    return true;
+  });
+}
+
+// ------------------------------------------------------------
+// KATA TAMBAHAN di luar CSV: harus ammiyah Yordania. Diperiksa AI judge; soal yang memakai kata
+// ditolak dibuang. Kata yang disetujui dicatat supaya bisa kamu cek / masukkan ke CSV.
+// ------------------------------------------------------------
+async function judgeExtraWords(list, report, tag) {
+  const wanted = new Map();
+  for (const ex of list) for (const w of ex.extra_words || []) if (w?.kata_arab && !wanted.has(w.kata_arab)) wanted.set(w.kata_arab, w);
+  if (wanted.size === 0) return list.map((e) => { delete e.extra_words; return e; });
+  const items = [...wanted.values()];
+  const prompt = `Periksa kata-kata Arab berikut. Apakah TIAP kata benar-benar dipakai sehari-hari dalam bahasa Arab ammiyah/Levantine DIALEK YORDANIA
+(bukan Fusha murni, bukan dialek Mesir/Teluk/Maghrib, dan artinya sesuai)? Bersikap ketat; ragu = tidak.
+${items.map((w, i) => `${i + 1}. ${w.kata_arab} (${w.latin || "-"}) = ${w.arti || "-"}`).join("\n")}
+Balas HANYA JSON array: [ { "kata_arab": "...", "ok": true/false, "alasan": "singkat" }, ... ]`;
+  let verdicts = [];
+  try { verdicts = JSON.parse(cleanJson(await callLadiz(prompt, 2000))); } catch { verdicts = []; }
+  const okSet = new Set(verdicts.filter((v) => v && v.ok === true).map((v) => v.kata_arab));
+  const approved = items.filter((w) => okSet.has(w.kata_arab));
+  if (approved.length) {
+    const file = `extra-words-intermediate-${tag}.json`;
+    let prev = [];
+    try { prev = JSON.parse(fs.readFileSync(file, "utf-8")); } catch { prev = []; }
+    const have = new Set(prev.map((w) => w.kata_arab));
+    fs.writeFileSync(file, JSON.stringify([...prev, ...approved.filter((w) => !have.has(w.kata_arab))], null, 2));
+  }
+  return list.filter((ex) => {
+    const bad = (ex.extra_words || []).filter((w) => !okSet.has(w?.kata_arab));
+    delete ex.extra_words;
+    if (bad.length === 0) return true;
+    report.dropped.push(`${ex.type}: memakai kata tambahan yang BUKAN ammiyah Yordania (${bad.map((w) => w.kata_arab).join(", ")}) — ${summarizeExercise(ex)}`);
+    return false;
+  });
+}
+
 const SYSTEM_RULES = `Level: INTERMEDIATE — Bahasa Arab Levantine (dialek Yordania), BUKAN Arab Fusha. Kalimat lebih panjang
 dari level pemula: 5-9 kata, boleh memakai kata sambung (و، بس، لأن، إذا), negasi, kala lampau/akan, dan pola
-percakapan nyata. Tetap pakai HANYA kosakata dari daftar (bentuk gramatikalnya boleh disesuaikan; kata dasarnya tidak).
+percakapan nyata. Fokus pada kosakata dari daftar (bentuk gramatikalnya boleh disesuaikan; kata dasarnya tidak).
+KATA TAMBAHAN: bila sebuah kalimat BENAR-BENAR butuh kata yang tidak ada di daftar (kata ganti, kata kerja bantu, kata
+sambung, kata benda umum), boleh dipakai — tetapi WAJIB kosakata ammiyah DIALEK YORDANIA yang umum dipakai sehari-hari
+(bukan Fusha, bukan dialek lain), maksimal 2 kata tambahan per soal, dan WAJIB dideklarasikan di field soal:
+"extra_words": [{ "kata_arab": "...", "latin": "...", "arti": "..." }] (kosongkan [] bila tidak ada). Kata tambahan
+tidak boleh jadi jawaban fokus soal arti kata/matching; hanya pelengkap kalimat.
 
 ATURAN KUALITAS (WAJIB — sudah ada keluhan soal-soal sebelumnya yang cacat):
 1. NAMA ORANG: DILARANG memakai nama orang (Ahmad, Lara, Omar, Mariam, dst) di soal/opsi/kalimat. Pakai kata ganti,
@@ -348,6 +458,15 @@ FORMAT MATCHING PAIRS (5 pasang, kata berbeda-beda, makna tidak saling tumpang t
    "content": { "pairs": [{ "id": "p1", "left": "...arab...", "leftLatin": "...", "right": "...arti Indonesia..." }, ...5 pasang],
                 "rightOrder": ["p3", "p1", ...] } }
 
+FORMAT SOAL BERGAMBAR (karakter planet): tambahkan "scene" di dalam "content" soal fill_blank atau translate_choice
+ HANYA bila kata fokusnya benda/aksi/kondisi yang bisa digambarkan. "scene": { "mood": satu dari ${SCENE_MOODS.join(", ")}, "accessory":
+ satu dari ${SCENE_ACCESSORIES.join(", ")} (opsional), "color": satu dari ${SCENE_COLORS.join(", ")} (opsional; variasikan antar soal),
+ "prop": SATU emoji dari daftar ini yang paling cocok dengan kata fokus: ${SCENE_PROPS.join(" ")} }. Mood & aksesori harus cocok dengan
+ situasi (mis. jari berdarah -> mood "sad" + accessory "bandage" + prop "🩹"). JANGAN memakai emoji di luar daftar.
+ Soal "arti gambar": { "type": "translate_choice", "prompt": "Apa bahasa Arab untuk gambar ini?", ..., "content": { "scene": {...},
+ "promptText": "Pilih kata yang cocok dengan gambar", "options": [5 opsi Arab], "correctIndex": 0, "acceptedIndices": [0] } }
+ Maksimal 2 soal bergambar per sesi; sebar mood/warna/aksesori agar karakternya bervariasi.
+
 FORMAT SOAL PILIHAN:
  { "type": "translate_choice", "prompt": "Pilih terjemahan yang benar", "has_person_name": false, "vocab_used": ["..."],
    "cek_opsi_salah": ["..."], "content": { "promptText": "...(Indonesia, sebutkan gender bila perlu)...",
@@ -360,12 +479,34 @@ FORMAT SOAL PILIHAN:
  { "type": "listen_choose", "prompt": "Dengarkan lalu pilih jawaban yang benar", "has_person_name": false, "vocab_used": ["..."],
    "content": { "hasAudio": true, "options": [{ "latin": "...", "text": "..." }, ...4 opsi], "correctIndex": 0, "acceptedIndices": [0] } }`;
 
-const SHAPES = {
-  lesson: `Balas HANYA JSON array berisi 8-13 soal dengan KOMPOSISI WAJIB (level ini fokus SUSUN KALIMAT & MATCHING):
- - word_order: minimal 6 soal — minimal 2 varian (A) to_arabic, minimal 2 varian (B) to_indonesian, minimal 2 varian
+// Komposisi meniru contoh Duolingo: susun kalimat (dua arah + suara), ketuk pasangan, lengkapi kalimat,
+// arti kata, bacaan pendek, dialog pendek, dan soal bergambar.
+const MIXED_SHAPE = (n, wo, mp, extra) => `Balas HANYA JSON array berisi ${n} soal dengan KOMPOSISI WAJIB (level Intermediate: kalimat nyata, bukan kata lepas):
+ - word_order: minimal ${wo} soal — minimal 2 varian (A) to_arabic, minimal 2 varian (B) to_indonesian, minimal 2 varian
    SUARA (C dan D, masing-masing minimal 1).
- - matching_pairs: minimal 2 soal (masing-masing 5 pasang, kata-kata berbeda).
- - sisanya (0-5 soal): campuran translate_choice (5 opsi), fill_blank, translate_write, listen_choose (4 opsi).`,
+ - matching_pairs: minimal ${mp} soal ("Cocokkan kata dengan artinya", 5 pasang, kata-kata berbeda).
+ - fill_blank: minimal 2 soal ("Lengkapi kalimat ini", kalimat Arab 5-8 kata dengan SATU rumpang, 3 opsi); minimal 1 dari
+   soal ini BERGAMBAR (content.scene) bila ada kata yang bisa digambarkan.
+ - translate_choice: minimal 1 soal (arti kata / "arti gambar" dengan content.scene bila ada kata yang bisa digambarkan).
+ - reading_comprehension: 1 soal dengan bacaan pendek 2-3 kalimat Levantine + pertanyaan (format di bawah).
+ - dialogue_complete: 1 soal dengan dialog pendek 2-3 baris, tokoh A/B tanpa nama (format di bawah).
+${extra}
+ Format reading_comprehension dan dialogue_complete:
+ { "type": "reading_comprehension", "prompt": "Bacalah dan jawab pertanyaannya", "has_person_name": false, "vocab_used": ["..."],
+   "extra_words": [], "cek_opsi_salah": ["..."], "content": { "hasAudio": true, "passageLatin": "...", "passageText": "...arab...",
+   "passageMeaning": "...", "question": "...(Indonesia)...", "options": [{ "text": "..." }, ...3], "correctIndex": 0, "acceptedIndices": [0] } }
+ { "type": "dialogue_complete", "prompt": "Lengkapi percakapannya", "has_person_name": false, "vocab_used": ["..."], "extra_words": [],
+   "cek_opsi_salah": ["..."], "content": { "hasAudio": true, "dialogueLines": [
+   { "speaker": "A", "latin": "...", "text": "...", "meaning": "..." }, { "speaker": "B", "latin": "___", "text": "___", "blank": true } ],
+   "options": [{ "latin": "...", "text": "..." }, ...3], "correctIndex": 0, "acceptedIndices": [0] } }
+ SEMUA soal juga memuat field "extra_words" (array, boleh kosong).`;
+
+const SHAPES = {
+  lesson: MIXED_SHAPE("10-13", 5, 2, ""),
+
+  // Bulatan REVIEW: soal BARU (kalimat/konteks lain) dari kata-kata 4 pelajaran di unit yang sama.
+  review: MIXED_SHAPE("10-13", 4, 2, ` - Ini bulatan REVIEW: pakai kata dari daftar secara merata (sebar semua kata, jangan hanya beberapa), dengan kalimat
+   dan konteks BARU yang berbeda dari soal yang sudah ada (lihat daftar "SOAL INI SUDAH ADA").`),
 
   story: `Buat SATU cerita pendek (3-4 kalimat Levantine, tokoh TANPA nama bila bisa) yang merangkai kosakata di atas.
 Dari cerita itu buat 8-13 soal TOTAL:
@@ -393,7 +534,7 @@ Soal reading_comprehension/fill_blank: "hasAudio": true, "passageLatin", "passag
  { "type": "reading_comprehension", "prompt": "Pahami percakapannya, lalu jawab", ..., "content": { "passageLatin": "...", "passageText": "...", "question": "...", "options": [...3], "correctIndex": 0, "acceptedIndices": [0] } }`,
 };
 
-function buildPrompt({ bagianNo, topicName, nodeType, vocabList, avoidList, feedback }) {
+function buildPrompt({ bagianNo, topicName, nodeType, shape, vocabList, avoidList, feedback }) {
   const vocabText = vocabList
     .map((v) => `${v.kata_arab} (${v.latin}) = ${v.arti}${v.contoh_kalimat ? " — contoh: " + v.contoh_kalimat : ""}`)
     .join("\n");
@@ -411,7 +552,7 @@ ${vocabText}
 
 ${SYSTEM_RULES}
 
-${SHAPES[nodeType]}${avoid}${fb}
+${SHAPES[shape || nodeType]}${avoid}${fb}
 
 Pastikan bahasa Arab akurat. Balas HANYA JSON array, tanpa teks lain, tanpa markdown code fence.`;
 }
@@ -432,8 +573,8 @@ function compositionProblems(nodeType, list) {
   const mp = c.matching_pairs || 0;
   const audioWo = list.filter((e) => e.type === "word_order" && e.content?.audioOnly).length;
   const problems = [];
-  if (nodeType === "lesson") {
-    if (wo < 5) problems.push(`word_order baru ${wo} (butuh minimal 5-6)`);
+  if (nodeType === "lesson" || nodeType === "review") {
+    if (wo < (nodeType === "review" ? 4 : 5)) problems.push(`word_order baru ${wo} (butuh minimal ${nodeType === "review" ? 4 : 5})`);
     if (mp < 2) problems.push(`matching_pairs baru ${mp} (butuh minimal 2)`);
     if (audioWo < 2) problems.push(`word_order suara (audioOnly) baru ${audioWo} (butuh minimal 2)`);
   } else {
@@ -457,8 +598,8 @@ function limitNarrativeNames(list, report) {
   });
 }
 
-async function generateOnce({ bagianNo, topicName, nodeType, vocabList, avoidList, feedback, report }) {
-  const prompt = buildPrompt({ bagianNo, topicName, nodeType, vocabList, avoidList, feedback });
+async function generateOnce({ bagianNo, topicName, nodeType, shape, vocabList, avoidList, feedback, report }) {
+  const prompt = buildPrompt({ bagianNo, topicName, nodeType, shape, vocabList, avoidList, feedback });
   let parsed = null;
   let lastErr;
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -473,11 +614,16 @@ async function generateOnce({ bagianNo, topicName, nodeType, vocabList, avoidLis
   }
   if (!parsed) throw lastErr;
   if (!Array.isArray(parsed)) throw new Error("Respons AI bukan array soal.");
-  const pool = NARRATIVE_NODE_TYPES.includes(nodeType) ? limitNarrativeNames(parsed, report) : parsed;
-  return await refineExerciseQuality(pool, nodeType, report);
+  // Soal cerita/dialog (reading_comprehension, dialogue_complete) ikut aturan nama maks 3 per batch.
+  let pool = limitNarrativeNames(parsed, report);
+  pool = sanitizeScenes(pool, report);
+  pool = await judgeExtraWords(pool, report, `B${bagianNo}`);
+  // refineExerciseQuality memeriksa dengan aturan "lesson" (review memakai aturan yang sama).
+  return await refineExerciseQuality(pool, nodeType === "review" ? "lesson" : nodeType, report);
 }
 
-const MAX_ROUNDS = 3;
+// Tiap putaran = 1 panggilan AI besar + pemeriksaan (judge) AI. 2 putaran cukup; 3 putaran memboroskan kuota.
+const MAX_ROUNDS = 2;
 const MAX_PER_SEGMENT = 13;
 
 // ------------------------------------------------------------
@@ -521,7 +667,7 @@ export async function generateExercises(ctx) {
   const { nodeType, avoidList } = ctx;
   const accepted = [];
   const feedback = [];
-  const rounds = NARRATIVE_NODE_TYPES.includes(nodeType) ? 1 : MAX_ROUNDS;
+  const rounds = MAX_ROUNDS;
   for (let round = 1; round <= rounds; round++) {
     const report = { dropped: [] };
     const batch = await generateOnce({ ...ctx, avoidList: [...avoidList, ...accepted.map(summarizeExercise)], feedback, report });
@@ -529,7 +675,12 @@ export async function generateExercises(ctx) {
     feedback.push(...report.dropped);
     const comp = compositionProblems(nodeType, accepted);
     const enough = accepted.length >= TARGET_MIN_PER_SEGMENT;
-    if (enough && comp.length === 0) break;
+    // Hemat kuota: komposisi yang kurang ideal hanya jadi PERINGATAN bila jumlah soal sudah cukup;
+    // putaran tambahan hanya dilakukan kalau soal yang lolos masih kurang dari target.
+    if (enough) {
+      if (comp.length) console.warn(`  ⚠ Komposisi belum ideal (dibiarkan, jumlah soal sudah cukup): ${comp.join("; ")}`);
+      break;
+    }
     if (round < rounds) {
       const why = [!enough ? `baru ${accepted.length} soal lolos (target ${TARGET_MIN_PER_SEGMENT}+)` : null, ...comp].filter(Boolean).join("; ");
       console.log(`  ↻ Putaran ${round + 1}/${rounds}: ${why}`);
@@ -539,6 +690,143 @@ export async function generateExercises(ctx) {
     }
   }
   return orderExercises(attachAudioText(accepted.slice(0, MAX_PER_SEGMENT)));
+}
+
+// ============================================================
+// KOSAKATA TAMBAHAN DARI AI (untuk unit yang kata CSV-nya sedikit)
+// ============================================================
+const ARABIC_ONLY = /^[\u0600-\u06FF\s]+$/;
+const stripHarakat = (s) => (s || "").replace(/[\u064B-\u065F\u0670]/g, "");
+
+async function proposeTopicWords(topicName, hint, avoidWords, ask) {
+  const prompt = `Topik: "${topicName}" — ${hint}.
+Level INTERMEDIATE, Bahasa Arab Levantine DIALEK YORDANIA (ammiyah yang dipakai sehari-hari di Yordania/Amman; BUKAN Fusha, BUKAN dialek Mesir/Teluk/Maghrib).
+Buatkan ${ask} kata atau ungkapan pendek (1-3 kata) yang paling berguna untuk topik ini dan BELUM ada di daftar berikut:
+${avoidWords.slice(0, 120).join("، ")}
+
+ATURAN:
+- Hanya kosakata ammiyah Yordania yang BENAR-BENAR dipakai penutur; ragu = jangan masukkan.
+- Bentuk dasar: kata benda tunggal; kata kerja dalam bentuk yang lazim dipakai (mis. "بيبعت" / "بعت"). Jangan menempelkan awalan seperti و/ب/ال kecuali memang bagian kata.
+- Variasikan jenis kata (benda, kerja, sifat, ungkapan) dan sebar ke seluruh sub-topik.
+- Tanpa nama orang. Tanpa harakat di "kata_arab".
+- "latin": transliterasi gaya Levantine (mis. "taabi'", "bil-bariid"). "arti": bahasa Indonesia singkat (gender dalam kurung bila perlu, mis. "(pr)").
+- "contoh_kalimat": SATU kalimat ammiyah Yordania natural 4-8 kata yang memakai kata itu.
+Balas HANYA JSON array: [ { "kata_arab": "...", "latin": "...", "arti": "...", "contoh_kalimat": "..." }, ... ]`;
+  const raw = await callLadiz(prompt, 6000);
+  const list = JSON.parse(cleanJson(raw));
+  return Array.isArray(list) ? list : [];
+}
+
+async function judgeAmmiyahWords(items) {
+  if (!items.length) return [];
+  const prompt = `Periksa kata-kata Arab berikut. Untuk TIAP kata: (1) apakah benar dipakai sehari-hari dalam ammiyah DIALEK YORDANIA/Levantine (bukan Fusha murni / dialek lain), (2) apakah arti Indonesia dan transliterasinya benar, (3) apakah kalimat contoh natural? Bersikap ketat; ragu = false.
+${items.map((w, i) => `${i + 1}. ${w.kata_arab} (${w.latin}) = ${w.arti} — contoh: ${w.contoh_kalimat}`).join("\n")}
+Balas HANYA JSON array: [ { "kata_arab": "...", "ok": true/false, "alasan": "singkat" }, ... ]`;
+  let verdicts = [];
+  try { verdicts = JSON.parse(cleanJson(await callLadiz(prompt, 3000))); } catch { verdicts = []; }
+  const ok = new Set(verdicts.filter((v) => v && v.ok === true).map((v) => v.kata_arab));
+  return items.filter((w) => ok.has(w.kata_arab));
+}
+
+// Lengkapi tiap unit sampai `target` kata. Hasil di-cache per topik; run berikutnya memakai cache.
+async function topUpVocab({ groups, topics, tag, target, known, onlyTopic }) {
+  const file = `ai-vocab-intermediate-${tag}.json`;
+  let cache = {};
+  try { cache = JSON.parse(fs.readFileSync(file, "utf-8")); } catch { cache = {}; }
+  for (const [name, hint] of topics) {
+    if (onlyTopic && name !== onlyTopic) continue;
+    const g = (groups[name] ||= { topicName: name, unitNumber: topics.findIndex(([n]) => n === name) + 1, words: [] });
+    const have = new Set(g.words.map((w) => w.kata_arab));
+    // kata AI yang sudah pernah dibuat untuk topik ini (cache) ikut dipakai
+    for (const w of cache[name] || []) if (!have.has(w.kata_arab)) { g.words.push({ ...w, topic_name: name, source: "ai" }); have.add(w.kata_arab); }
+    let need = target - g.words.length;
+    if (need <= 0) continue;
+    console.log(`Kosakata "${name}": ${g.words.length} kata (CSV + cache) < target ${target} — AI melengkapi ${need} kata ammiyah Yordania...`);
+    for (let attempt = 1; attempt <= 3 && need > 0; attempt++) {
+      try {
+        const proposed = await proposeTopicWords(name, hint, [...have], Math.min(40, Math.ceil(need * 1.3) + 2));
+        const fresh = proposed.filter((w) => w && ARABIC_ONLY.test(stripHarakat(w.kata_arab || "")) && w.latin && w.arti && w.contoh_kalimat
+          && !have.has(w.kata_arab) && !known.has(w.kata_arab));
+        const approved = await judgeAmmiyahWords(fresh);
+        for (const w of approved) {
+          if (need <= 0) break;
+          const row = { kata_arab: stripHarakat(w.kata_arab).trim(), latin: w.latin.trim(), arti: w.arti.trim(), contoh_kalimat: w.contoh_kalimat.trim() };
+          if (have.has(row.kata_arab) || known.has(row.kata_arab)) continue;
+          g.words.push({ ...row, topic_name: name, source: "ai" });
+          (cache[name] ||= []).push(row);
+          have.add(row.kata_arab);
+          need--;
+        }
+        fs.writeFileSync(file, JSON.stringify(cache, null, 2));
+        console.log(`  putaran ${attempt}: ${approved.length}/${fresh.length} kata lolos pemeriksaan ammiyah; sisa kebutuhan ${Math.max(0, need)}.`);
+      } catch (err) {
+        if (err.quotaExceeded) { console.warn("  ⚠ Quota/koneksi AI bermasalah saat melengkapi kosakata; yang sudah jadi tersimpan."); return { incomplete: true }; }
+        console.warn(`  ⚠ Gagal melengkapi kosakata (putaran ${attempt}): ${err.message}`);
+      }
+    }
+  }
+  return { incomplete: false };
+}
+
+// ============================================================
+// REVIEW LEVEL (level 5, static, 1 sesi)
+// ============================================================
+async function reviewIsMissing(topicId) {
+  const { data: lv } = await supabase.from("levels").select("id").eq("topic_id", topicId).eq("level_number", 5).maybeSingle();
+  if (!lv) return false; // level belum dibuat -> ditangani ensureIntermediateLevels
+  const counts = await getSegmentExerciseCounts(lv.id);
+  return (counts[1] || 0) < TARGET_MIN_PER_SEGMENT;
+}
+
+// Simpan soal review. TIDAK menambah vocab_items (kata sudah milik 4 level pelajaran); exercise_vocab
+// dihubungkan ke vocab_items level-level pelajaran itu, supaya progres per-kata tetap tercatat.
+async function saveReviewContent(reviewLevel, lessonLevelIds, exercises, useAudio) {
+  const { data: vocabRows } = await supabase.from("vocab_items").select("id, kata_arab").in("level_id", lessonLevelIds);
+  const vocabIdByWord = new Map((vocabRows || []).map((v) => [v.kata_arab, v.id]));
+  const existingSignatures = await loadExistingSignatures(supabase, { levelId: reviewLevel.id, generatedForUserId: null });
+  const toInsert = filterDuplicateExercises(exercises, vocabIdByWord, existingSignatures);
+  console.log(`    (${exercises.length - toInsert.length} soal dilewati karena duplikat, ${toInsert.length} soal baru akan disimpan)`);
+  let orderIndex = 1;
+  for (const { ex, vocabUsedIds, signature } of toInsert) {
+    let audioUrl = null;
+    if (useAudio && typeof V2.generateAudio === "function" && typeof V2.uploadAudio === "function") {
+      let text = null;
+      if (ex.type === "listen_choose") text = ex.content?.options?.[0]?.text;
+      else if (ex.content?.hasAudio && ex.content?.passageText) text = ex.content.passageText;
+      else if (ex.content?.hasAudio && Array.isArray(ex.content?.dialogueLines)) text = ex.content.dialogueLines.map((l) => l.text).filter(Boolean).join(" ");
+      if (text) { const buf = await V2.generateAudio(text); audioUrl = await V2.uploadAudio(text, buf); }
+    }
+    const { data: inserted, error } = await supabase.from("exercises").insert({
+      level_id: reviewLevel.id, type: ex.type, order_index: orderIndex++, prompt: ex.prompt,
+      content: ex.content, audio_url: audioUrl, segment_number: 1, signature,
+    }).select().single();
+    if (error) { if (error.code === "23505") continue; throw error; }
+    for (const vocabId of vocabUsedIds) {
+      const { error: linkError } = await supabase.from("exercise_vocab").insert({ exercise_id: inserted.id, vocab_id: vocabId });
+      if (linkError && linkError.code !== "23505") throw linkError;
+    }
+  }
+}
+
+async function buildReviewLevel({ bagianNo, topicName, levelRows, useAudio }) {
+  const reviewLevel = levelRows.find((l) => l.level_number === 5);
+  const lessonLevels = levelRows.filter((l) => l.level_number <= 4);
+  if (!reviewLevel) return;
+  const counts = await getSegmentExerciseCounts(reviewLevel.id);
+  if ((counts[1] || 0) >= TARGET_MIN_PER_SEGMENT) { console.log(`  (lewati, review lengkap: ${counts[1]} soal)`); return; }
+  const { data: vocab } = await supabase.from("vocab_items").select("kata_arab, latin, arti, contoh_kalimat").in("level_id", lessonLevels.map((l) => l.id));
+  const all = vocab || [];
+  if (all.length === 0) { console.warn("  ⚠ Review: belum ada kosakata di 4 pelajaran — dilewati."); return; }
+  // Acak, maksimal 40 kata supaya prompt tidak membengkak; run berikutnya mengacak ulang.
+  const vocabList = [...all].sort(() => Math.random() - 0.5).slice(0, 40);
+  // Hindari soal yang sudah ada di 4 pelajaran + soal review yang sudah ada.
+  const avoidList = [];
+  for (const l of [...lessonLevels, reviewLevel]) avoidList.push(...(await getExistingExerciseSummaries(l.id)));
+  if (avoidList.length > 40) avoidList.splice(0, avoidList.length - 40);
+  console.log(`  Generating REVIEW (level 5) dari ${vocabList.length} kata...`);
+  const exercises = await generateExercises({ bagianNo, topicName, nodeType: "review", shape: "review", vocabList, avoidList });
+  console.log(`    → ${exercises.length} soal lolos: ${JSON.stringify(countByType(exercises))}`);
+  await saveReviewContent(reviewLevel, lessonLevels.map((l) => l.id), exercises, useAudio);
 }
 
 // ============================================================
@@ -553,6 +841,9 @@ async function main() {
   const onlyTopic = arg("--topic");
   const classifyLimit = arg("--classify-limit") ? Number(arg("--classify-limit")) : Infinity;
   const csvPath = arg("--csv") || "kosakata-ammiyah.csv";
+  const minWords = arg("--min-words") ? Number(arg("--min-words")) : DEFAULT_MIN_WORDS_PER_UNIT;
+  const targetWords = arg("--target-words") ? Number(arg("--target-words")) : DEFAULT_TARGET_WORDS_PER_UNIT;
+  const aiVocab = !args.includes("--no-ai-vocab");
 
   const cur = INTERMEDIATE_CURRICULUM[bagianNo];
   if (!cur) {
@@ -571,6 +862,7 @@ async function main() {
 
   let words = loadFlatVocabCsv(csvPath);
   console.log(`Membaca ${words.length} kata dari ${csvPath}...`);
+  const knownWords = new Set(words.map((w) => w.kata_arab)); // seluruh CSV: kata AI tidak boleh menduplikasi
 
   // Buang kata yang SUDAH dipakai Beginner (hasil kurasi beginner), supaya
   // tidak diajarkan dua kali. Sumber: curation-checkpoint.json dari generate-vocab-v2.
@@ -601,15 +893,23 @@ async function main() {
   for (const w of curated) {
     (groups[w.topic_name] ||= { topicName: w.topic_name, unitNumber: topicNo(w.topic_name), words: [] }).words.push(w);
   }
+  // Unit dengan kata CSV sedikit dilengkapi AI (ammiyah Yordania, diperiksa judge, di-cache).
+  if (aiVocab) await topUpVocab({ groups, topics, tag, target: targetWords, known: knownWords, onlyTopic });
   let groupList = Object.values(groups).sort((a, b) => a.unitNumber - b.unitNumber);
   if (onlyTopic) groupList = groupList.filter((g) => g.topicName === onlyTopic);
 
   fs.writeFileSync(`preview-intermediate-${tag}.json`, JSON.stringify(groupList, null, 2));
   console.log(`\nRingkasan Bagian ${bagianNo}:`);
+  let estCalls = 0;
   for (const [name] of topics) {
     const g = groups[name];
-    console.log(`  Unit ${String(topicNo(name)).padStart(2)} ${name}: ${g ? g.words.length : 0} kata${g ? "" : "  ← BELUM ADA KOSAKATA"}`);
+    const n = g ? g.words.length : 0;
+    const ok = n >= minWords;
+    if (ok) estCalls += 16 * 2 * 3 + 2 * 3; // 16 segmen x ~2 putaran x (1 generate + ~2 judge) + review
+    const nAi = g ? g.words.filter((w) => w.source === "ai").length : 0;
+    console.log(`  Unit ${String(topicNo(name)).padStart(2)} ${name}: ${n} kata${nAi ? ` (${nAi} dari AI, cek di ai-vocab-intermediate-${tag}.json)` : ""}${n === 0 ? "  ← BELUM ADA KOSAKATA" : ok ? "" : `  ← DILEWATI (kurang dari ${minWords} kata)`}`);
   }
+  console.log(`\nPerkiraan panggilan AI untuk unit yang diproses: ~${estCalls} (±; tiap unit ~100). Kuota habis di tengah? Jalankan lagi perintah yang sama — yang sudah jadi tidak diulang.`);
   if (!commit) {
     console.log(`\nMode preview — belum ada yang disimpan ke database. Detail: preview-intermediate-${tag}.json. Tambahkan --commit kalau sudah yakin.`);
     return;
@@ -620,28 +920,29 @@ async function main() {
   const changedTopicNames = [];
 
   for (const g of groupList) {
+    if (g.words.length < minWords) {
+      console.log(`\n(lewati Unit ${g.unitNumber} "${g.topicName}": hanya ${g.words.length} kata, minimal ${minWords}. Tambah kosakata ke CSV atau pakai --min-words.)`);
+      continue;
+    }
     console.log(`\nMemproses Bagian ${bagianNo}, Unit ${g.unitNumber} (${g.topicName})...`);
     const topic = await ensureTopic(unit.id, g.unitNumber, g.topicName);
     const newSignature = computeVocabSignature(g.words);
     if (topic.vocab_signature === newSignature) {
-      if (!(await topicHasIncompleteSegments(topic.id))) {
+      if (!(await topicHasIncompleteSegments(topic.id)) && !(await reviewIsMissing(topic.id))) {
         console.log("  (lewati — kosakata sama persis & semua segmen sudah lengkap)");
         continue;
       }
       console.log("  (kosakata sama, tapi ada segmen belum lengkap — lanjut top-up)");
     }
 
-    const levels = await ensureLevels(topic.id);
-    const plan = buildLevelPlan();
-    const vocabByLevel = await planNewWordPlacement(supabase, callLadiz, cleanJson, STATIC_CONTENT_SLOTS, topic.id, g.topicName, g.words);
+    const levels = await ensureIntermediateLevels(topic.id);
+    const plan = INTERMEDIATE_PLAN;
+    const vocabByLevel = await planNewWordPlacement(supabase, callLadiz, cleanJson, INTERMEDIATE_SLOTS, topic.id, g.topicName, g.words);
 
     for (let i = 0; i < levels.length; i++) {
       const step = plan[i];
       const levelRow = levels[i];
-      if (step.node_type === "practice" || step.node_type === "review") {
-        console.log(`  (lewati level ${step.order_index} "${step.node_type}" — adaptive)`);
-        continue;
-      }
+      if (step.node_type === "review") continue; // dikerjakan sesudah 4 pelajaran selesai (lihat di bawah)
       const vocabForLevel = vocabByLevel[step.order_index] || [];
       let fallbackVocab = null;
       const getVocab = async () => {
@@ -686,6 +987,16 @@ async function main() {
           console.error(`\n⚠ Segmen ${seg} (Unit ${g.unitNumber}, Level ${step.order_index}) gagal & DILEWATI: ${err.message}\n  Jalankan lagi nanti untuk mencoba ulang.\n`);
         }
       }
+    }
+    // ---- Bulatan REVIEW (level 5): 1 sesi soal BARU dari kata-kata 4 pelajaran ----
+    try {
+      await buildReviewLevel({ bagianNo, topicName: g.topicName, levelRows: levels, useAudio });
+    } catch (err) {
+      if (err.quotaExceeded) {
+        console.warn(`\n⚠ Quota/koneksi AI habis saat membuat REVIEW (Unit ${g.unitNumber}). Yang sudah diproses TERSIMPAN. Jalankan lagi perintah yang sama.\n`);
+        return;
+      }
+      console.error(`\n⚠ Review Unit ${g.unitNumber} gagal & DILEWATI: ${err.message}\n`);
     }
     changedTopicNames.push(g.topicName);
     const { error } = await supabase.from("topics").update({ vocab_signature: newSignature }).eq("id", topic.id);
